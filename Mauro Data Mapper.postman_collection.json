@@ -76,6 +76,169 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Plugins",
+					"item": [
+						{
+							"name": "Get Exporters",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/providers/exporters",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"providers",
+										"exporters"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Importers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/providers/exporters",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"providers",
+										"exporters"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Emailers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/providers/emailers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"providers",
+										"emailers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Dataloaders",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/providers/dataloaders",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"providers",
+										"dataloaders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Modules",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/modules",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"modules"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Rebuild Lucene Indexes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/rebuildLuceneIndexes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"rebuildLuceneIndexes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/status",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"status"
+							]
+						},
+						"description": "Get system information"
+					},
+					"response": []
+				},
+				{
+					"name": "Properties",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/properties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"properties"
+							]
+						},
+						"description": "Get the current values of system configuration properties"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"protocolProfileBehavior": {}
