@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "eb9cb4bd-4b58-47a3-9fd2-30d31a522fa5",
+		"name": "Mauro Data Mapper",
+		"description": "API calls for the Mauro Data Mapper",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"{{username}}\",\n\t\"password\" : \"{{password}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/authentication/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authentication",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "isAuthenticated",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/session/isAuthenticated",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"session",
+								"isAuthenticated"
+							]
+						},
+						"description": "Checks to see whether the current session has been authenticated\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/authentication/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authentication",
+								"logout"
+							]
+						},
+						"description": "Log out"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
