@@ -108,14 +108,14 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{base_url}}/admin/providers/exporters",
+									"raw": "{{base_url}}/admin/providers/importers",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"admin",
 										"providers",
-										"exporters"
+										"importers"
 									]
 								}
 							},
@@ -172,6 +172,289 @@
 									"path": [
 										"admin",
 										"modules"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Default Data Type Providers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/providers/defaultDataTypeProviders",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"providers",
+										"defaultDataTypeProviders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Data Model Importers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/providers/importers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"providers",
+										"importers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Data Model Exporters",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/providers/exporters",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"providers",
+										"exporters"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Pending Count",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/catalogueUsers/pendingCount",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"catalogueUsers",
+										"pendingCount"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Pending Users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/catalogueUsers/pending",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"catalogueUsers",
+										"pending"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Data Models",
+					"item": [
+						{
+							"name": "Data Types",
+							"item": [
+								{
+									"name": "Get Data Model Data Types",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataTypes",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataTypes"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Get Data Model Data Type by ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataTypes/{{data_type_id}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataTypes",
+												"{{data_type_id}}"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "List all Data Models",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Data Model by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Data Model Types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/types",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"types"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Data Model Hierarchy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": ""
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Diff Data Models",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/diff/{{compare_data_model_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"diff",
+										"{{compare_data_model_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "XML Export Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/export/{{xml_exporter_namespace}}/{{xml_exporter_name}}/{{xml_exporter_version}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"export",
+										"{{xml_exporter_namespace}}",
+										"{{xml_exporter_name}}",
+										"{{xml_exporter_version}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "JSON Export Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/export/{{json_exporter_namespace}}/{{json_exporter_name}}/{{json_exporter_version}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"export",
+										"{{json_exporter_namespace}}",
+										"{{json_exporter_name}}",
+										"{{json_exporter_version}}"
 									]
 								}
 							},
@@ -234,6 +517,42 @@
 							]
 						},
 						"description": "Get the current values of system configuration properties"
+					},
+					"response": []
+				},
+				{
+					"name": "Active Sessions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/activeSessions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"activeSessions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Emails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/emails",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"emails"
+							]
+						}
 					},
 					"response": []
 				}
