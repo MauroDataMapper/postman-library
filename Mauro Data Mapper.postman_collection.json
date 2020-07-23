@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "eb9cb4bd-4b58-47a3-9fd2-30d31a522fa5",
+		"_postman_id": "4a4d905c-81b9-486d-9075-7c7448f6ca82",
 		"name": "Mauro Data Mapper",
 		"description": "API calls for the Mauro Data Mapper",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -333,6 +333,188 @@
 							"_postman_isSubFolder": true
 						},
 						{
+							"name": "Summary Metadata",
+							"item": [
+								{
+									"name": "Add Metadata",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Example\",\n    \"description\": \"Value Distribution\",\n    \"summaryMetadataType\": \"MAP\",\n    \"summaryMetadataReports\": [\n        {\n            \"reportDate\": \"2020-01-29T07:31:57.519Z\",\n            \"reportValue\": \"{\\\"Female\\\":20562,\\\"Male\\\":17407,\\\"Unknown\\\":604}\"\n        },\n        {\n            \"reportDate\": \"2020-02-29T07:31:57.519Z\",\n            \"reportValue\": \"{\\\"Female\\\":19562,\\\"Male\\\":18407,\\\"Unknown\\\":704}\"\n        },\n        {\n            \"reportDate\": \"2020-03-29T07:31:57.519Z\",\n            \"reportValue\": \"{\\\"Female\\\":18562,\\\"Male\\\":19407,\\\"Unknown\\\":804}\"\n        },\n        {\n            \"reportDate\": \"2020-04-29T07:31:57.519Z\",\n            \"reportValue\": \"{\\\"Female\\\":17562,\\\"Male\\\":20407,\\\"Unknown\\\":904}\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/summaryMetadata",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"summaryMetadata"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "List all Metadata items",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/summaryMetadata",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"summaryMetadata"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Attachments",
+							"item": [
+								{
+									"name": "Add Attachment",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"fileName\": \"test3.txt\",\n    \"fileSize\": 3,\n    \"fileContents\": [12, 23, 32],\n    \"fileType\": \"text\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/referenceFiles",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"referenceFiles"
+											]
+										},
+										"description": "Add an attachment to a Data Model"
+									},
+									"response": []
+								},
+								{
+									"name": "List all Attachments",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/referenceFiles",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"referenceFiles"
+											]
+										},
+										"description": "Retrieve all attachments associated with a Data Model"
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "History",
+							"item": [
+								{
+									"name": "List all History changes by ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/edits",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"edits"
+											]
+										},
+										"description": "List all changes made to a given Data Model"
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Links",
+							"item": [
+								{
+									"name": "List all Semantic Links",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/semanticLinks",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"semanticLinks"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Add Link",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/semanticLinks",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"semanticLinks"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
 							"name": "List all Data Models",
 							"request": {
 								"method": "GET",
@@ -386,12 +568,20 @@
 							"response": []
 						},
 						{
-							"name": "Get Data Model Hierarchy",
+							"name": "Get Data Model Hierarchy (Diagram tab)",
 							"request": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": ""
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/hierarchy",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"hierarchy"
+									]
 								}
 							},
 							"response": []
@@ -459,6 +649,197 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Soft Delete Data Model by ID",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}?permanent=false",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}"
+									],
+									"query": [
+										{
+											"key": "permanent",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Permanent Delete Data Model by ID",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}?permanent=true",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}"
+									],
+									"query": [
+										{
+											"key": "permanent",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Classifiers",
+					"item": [
+						{
+							"name": "List all Classifiers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/classifiers/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"classifiers",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Classifier Details by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/classifiers/{{classifier_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"classifiers",
+										"{{classifier_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Classifiers by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/classifiers/{{classifier_id}}/classifiers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"classifiers",
+										"{{classifier_id}}",
+										"classifiers"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "CodeSets",
+					"item": [
+						{
+							"name": "Add CodeSet (New Model Version)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\": \"A new CodeSet\",\n    \"copyPermissions\": false,\n    \"copyDataFlows\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/codeSets/{{code_set_id}}/newModelVersion",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"codeSets",
+										"{{code_set_id}}",
+										"newModelVersion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add CodeSet (New Documentation Version)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"moveDataFlows\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/codeSets/{{code_set_id}}/newDocumentationVersion",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"codeSets",
+										"{{code_set_id}}",
+										"newDocumentationVersion"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get CodeSet by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/codeSets/{{code_set_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"codeSets",
+										"{{code_set_id}}"
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"protocolProfileBehavior": {},
@@ -521,7 +902,7 @@
 					"response": []
 				},
 				{
-					"name": "Active Sessions",
+					"name": "List all Active Sessions",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -539,7 +920,7 @@
 					"response": []
 				},
 				{
-					"name": "Emails",
+					"name": "List all Emails",
 					"request": {
 						"method": "GET",
 						"header": [],
