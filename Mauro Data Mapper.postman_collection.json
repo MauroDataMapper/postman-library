@@ -37,6 +37,70 @@
 					"response": []
 				},
 				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/authentication/logout",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authentication",
+								"logout"
+							]
+						},
+						"description": "Log out"
+					},
+					"response": []
+				},
+				{
+					"name": "Request account",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"emailAddress\": \"example@email.com\",\n    \"firstName\": \"First Name\",\n    \"lastName\": \"Last Name\",\n    \"organisation\": \"Organisation name\",\n    \"roleInOrganisation\": \"Software Engineer\",\n    \"password\": \"your-password\",\n    \"confirmPassword\": \"your-password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/catalogueUsers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"catalogueUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot password",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/catalogueUsers/resetPasswordLink/{{email}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"catalogueUsers",
+								"resetPasswordLink",
+								"{{email}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "isAuthenticated",
 					"request": {
 						"method": "GET",
@@ -54,25 +118,118 @@
 						"description": "Checks to see whether the current session has been authenticated\n"
 					},
 					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User details",
+					"item": [
+						{
+							"name": "Get user details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/catalogueUsers/{{user_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"catalogueUsers",
+										"{{user_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update user details",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"firstName\": \"First Name\",\n    \"lastName\": \"Last Last\",\n    \"organisation\": \"Organisation name\",\n    \"jobTitle\": \"Software Engineer\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/catalogueUsers/{{user_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"catalogueUsers",
+										"{{user_id}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Logout",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/authentication/logout",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"authentication",
-								"logout"
-							]
+					"name": "User preferences",
+					"item": [
+						{
+							"name": "Get user preferences",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/catalogueUsers/{{user_id}}/userPreferences",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"catalogueUsers",
+										"{{user_id}}",
+										"userPreferences"
+									]
+								}
+							},
+							"response": []
 						},
-						"description": "Log out"
-					},
-					"response": []
+						{
+							"name": "Update preferences",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"countPerTable\": 20,\n    \"counts\": [\n        5,\n        10,\n        20,\n        50\n    ],\n    \"expandMoreDescription\": true,\n    \"favourites\": [],\n    \"includeSupersededModels\": true,\n    \"showSupersededModels\": false,\n    \"showDeletedModels\": false,\n    \"dataFlowDiagramsSetting\": {}\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/catalogueUsers/{{user_id}}/userPreferences",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"catalogueUsers",
+										"{{user_id}}",
+										"userPreferences"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -239,8 +396,51 @@
 					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Users",
+					"name": "Manage users",
 					"item": [
+						{
+							"name": "Get all users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/catalogueUsers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"catalogueUsers"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Pending users",
+					"item": [
+						{
+							"name": "Get all Pending Users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/catalogueUsers/pending",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"catalogueUsers",
+										"pending"
+									]
+								}
+							},
+							"response": []
+						},
 						{
 							"name": "Pending Count",
 							"request": {
@@ -259,25 +459,28 @@
 								}
 							},
 							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "81a3ee40-706f-48b7-94b5-d1c6fd661398",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
 						},
 						{
-							"name": "Pending Users",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/admin/catalogueUsers/pending",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"admin",
-										"catalogueUsers",
-										"pending"
-									]
-								}
-							},
-							"response": []
+							"listen": "test",
+							"script": {
+								"id": "367cea26-ef9c-49ee-9f3f-4abfd0c1018f",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
 						}
 					],
 					"protocolProfileBehavior": {},
@@ -742,7 +945,7 @@
 							"response": []
 						},
 						{
-							"name": "Get Classifiers by ID",
+							"name": "Get Classifier's children by ID",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -755,6 +958,33 @@
 										"classifiers",
 										"{{classifier_id}}",
 										"classifiers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Classifier Details",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\": \"Label name\",\n    \"description\": \"Your description\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/classifiers/{{classifier_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"classifiers",
+										"{{classifier_id}}"
 									]
 								}
 							},
@@ -836,6 +1066,99 @@
 									"path": [
 										"codeSets",
 										"{{code_set_id}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Terminology",
+					"item": [
+						{
+							"name": "History",
+							"item": [
+								{
+									"name": "List all History changes by ID",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/terminologies/{{terminology_id}}/edits",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"terminologies",
+												"{{terminology_id}}",
+												"edits"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Get Terminology by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/terminologies/{{terminology_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"terminologies",
+										"{{terminology_id}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Folders",
+					"item": [
+						{
+							"name": "Get all folders",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get folder by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/{{folder_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{folder_id}}"
 									]
 								}
 							},
@@ -932,6 +1255,34 @@
 							"path": [
 								"admin",
 								"emails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"emailAddress\": \"email_address@email.com\",\n    \"firstName\": \"First name\",\n    \"lastName\": \"Last name\",\n    \"organisation\": \"Organisation name\",\n    \"jobTitle\": \"Software Engineer\",\n    \"groups\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/catalogueUsers/adminRegister",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"catalogueUsers",
+								"adminRegister"
 							]
 						}
 					},
