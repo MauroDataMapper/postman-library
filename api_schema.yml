@@ -1,6 +1,0 @@
-openapi: 3.0.0
-info:
-  version: 4.0.0-SNAPSHOT
-  title: Mauro Data Mapper
-servers:
-  - url: 'http://localhost:8080'
