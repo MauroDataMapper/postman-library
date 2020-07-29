@@ -1,11 +1,54 @@
 {
 	"info": {
-		"_postman_id": "4a4d905c-81b9-486d-9075-7c7448f6ca82",
+		"_postman_id": "4dbf55b5-0531-4836-abbc-2a394cbd0dcc",
 		"name": "Mauro Data Mapper",
-		"description": "API calls for the Mauro Data Mapper",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
+		{
+			"name": "Session",
+			"item": [
+				{
+					"name": "Is Authenticated Session",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/session/isAuthenticated",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"session",
+								"isAuthenticated"
+							]
+						},
+						"description": "Checks to see whether the current session has been authenticated\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Is Application Administration Session",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/session/isApplicationAdministration",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"session",
+								"isApplicationAdministration"
+							]
+						},
+						"description": "Checks to see whether the current session has been authenticated\n"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
 		{
 			"name": "Authentication",
 			"item": [
@@ -39,7 +82,7 @@
 				{
 					"name": "Logout",
 					"request": {
-						"method": "POST",
+						"method": "DELETE",
 						"header": [],
 						"url": {
 							"raw": "{{base_url}}/authentication/logout",
@@ -54,15 +97,923 @@
 						"description": "Log out"
 					},
 					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Data Models",
+			"item": [
+				{
+					"name": "Data Types",
+					"item": [
+						{
+							"name": "Get Data Model Data Types",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataTypes",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataTypes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Data Model Data Type by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataTypes/{{data_type_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataTypes",
+										"{{data_type_id}}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Request account",
+					"name": "Summary Metadata",
+					"item": [
+						{
+							"name": "Add Metadata",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Example\",\n    \"description\": \"Value Distribution\",\n    \"summaryMetadataType\": \"MAP\",\n    \"summaryMetadataReports\": [\n        {\n            \"reportDate\": \"2020-01-29T07:31:57.519Z\",\n            \"reportValue\": \"{\\\"Female\\\":20562,\\\"Male\\\":17407,\\\"Unknown\\\":604}\"\n        },\n        {\n            \"reportDate\": \"2020-02-29T07:31:57.519Z\",\n            \"reportValue\": \"{\\\"Female\\\":19562,\\\"Male\\\":18407,\\\"Unknown\\\":704}\"\n        },\n        {\n            \"reportDate\": \"2020-03-29T07:31:57.519Z\",\n            \"reportValue\": \"{\\\"Female\\\":18562,\\\"Male\\\":19407,\\\"Unknown\\\":804}\"\n        },\n        {\n            \"reportDate\": \"2020-04-29T07:31:57.519Z\",\n            \"reportValue\": \"{\\\"Female\\\":17562,\\\"Male\\\":20407,\\\"Unknown\\\":904}\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/summaryMetadata",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"summaryMetadata"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List all Metadata items",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/summaryMetadata",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"summaryMetadata"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Attachments",
+					"item": [
+						{
+							"name": "Add Attachment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fileName\": \"test3.txt\",\n    \"fileSize\": 3,\n    \"fileContents\": [12, 23, 32],\n    \"fileType\": \"text\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/referenceFiles",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"referenceFiles"
+									]
+								},
+								"description": "Add an attachment to a Data Model"
+							},
+							"response": []
+						},
+						{
+							"name": "List all Attachments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/referenceFiles",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"referenceFiles"
+									]
+								},
+								"description": "Retrieve all attachments associated with a Data Model"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "History",
+					"item": [
+						{
+							"name": "List all History changes by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/edits",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"edits"
+									]
+								},
+								"description": "List all changes made to a given Data Model"
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Links",
+					"item": [
+						{
+							"name": "List all Semantic Links",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/semanticLinks",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"semanticLinks"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Link",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/semanticLinks",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"semanticLinks"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Import / Export",
+					"item": [
+						{
+							"name": "XML Export Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/export/{{xml_exporter_namespace}}/{{xml_exporter_name}}/{{xml_exporter_version}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"export",
+										"{{xml_exporter_namespace}}",
+										"{{xml_exporter_name}}",
+										"{{xml_exporter_version}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "JSON Export Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/export/{{json_exporter_namespace}}/{{json_exporter_name}}/{{json_exporter_version}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"export",
+										"{{json_exporter_namespace}}",
+										"{{json_exporter_name}}",
+										"{{json_exporter_version}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Data Model Importers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/providers/importers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"providers",
+										"importers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Data Model Importers",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/providers/importers",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"providers",
+												"importers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 29 Jul 2020 11:53:07 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"name\": \"XmlImporterService\",\n        \"version\": \"3.0\",\n        \"displayName\": \"XML DataModel Importer\",\n        \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.importer\",\n        \"allowsExtraMetadataKeys\": true,\n        \"knownMetadataKeys\": [],\n        \"providerType\": \"DataModelImporter\",\n        \"paramClassType\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.importer.parameter.DataModelFileImporterProviderServiceParameters\",\n        \"canImportMultipleDomains\": true\n    },\n    {\n        \"name\": \"JsonImporterService\",\n        \"version\": \"2.0\",\n        \"displayName\": \"JSON DataModel Importer\",\n        \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.importer\",\n        \"allowsExtraMetadataKeys\": true,\n        \"knownMetadataKeys\": [],\n        \"providerType\": \"DataModelImporter\",\n        \"paramClassType\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.importer.parameter.DataModelFileImporterProviderServiceParameters\",\n        \"canImportMultipleDomains\": false\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Get Data Model Exporters",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/providers/exporters",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"providers",
+										"exporters"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Data Model Exporters",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/providers/exporters",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"providers",
+												"exporters"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 29 Jul 2020 11:46:23 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"name\": \"JsonExporterService\",\n        \"version\": \"2.0\",\n        \"displayName\": \"JSON DataModel Exporter\",\n        \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter\",\n        \"allowsExtraMetadataKeys\": true,\n        \"knownMetadataKeys\": [],\n        \"providerType\": \"DataModelExporter\",\n        \"fileExtension\": \"json\",\n        \"fileType\": \"text/json\",\n        \"canExportMultipleDomains\": false\n    },\n    {\n        \"name\": \"XmlExporterService\",\n        \"version\": \"3.0\",\n        \"displayName\": \"XML DataModel Exporter\",\n        \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter\",\n        \"allowsExtraMetadataKeys\": true,\n        \"knownMetadataKeys\": [],\n        \"providerType\": \"DataModelExporter\",\n        \"fileExtension\": \"xml\",\n        \"fileType\": \"text/xml\",\n        \"canExportMultipleDomains\": false\n    }\n]"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Permissions",
+					"item": [
+						{
+							"name": "List group roles for a datamodel",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/groupRoles",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"groupRoles"
+									]
+								},
+								"description": "Lists the group roles which are available to be assigned to the securable resource"
+							},
+							"response": [
+								{
+									"name": "List group roles for securable resource",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/folders/{{folder_id}}/groupRoles",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"folders",
+												"{{folder_id}}",
+												"groupRoles"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 29 Jul 2020 11:37:49 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"count\": 6,\n    \"items\": [\n        {\n            \"id\": \"ffebc3af-f0c5-408b-b1c8-1508d067be47\",\n            \"name\": \"container_admin\",\n            \"displayName\": \"Container Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": false,\n            \"parent\": \"eae76d34-d520-4369-8f03-f4fcc0b8b61e\"\n        },\n        {\n            \"id\": \"2f8c23f3-8c0e-4920-8af7-505d8007c25b\",\n            \"name\": \"container_group_admin\",\n            \"displayName\": \"Container Group Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true,\n            \"parent\": \"f686a892-8bcf-4bc8-82b3-208b174cd2e5\"\n        },\n        {\n            \"id\": \"f28580b5-97fe-4a02-bfd0-67f300eeeed5\",\n            \"name\": \"editor\",\n            \"displayName\": \"Editor\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": false,\n            \"parent\": \"ffebc3af-f0c5-408b-b1c8-1508d067be47\"\n        },\n        {\n            \"id\": \"8abca3f4-cdc3-451b-99f5-f548661dd1d3\",\n            \"name\": \"author\",\n            \"displayName\": \"Author\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": false,\n            \"parent\": \"f28580b5-97fe-4a02-bfd0-67f300eeeed5\"\n        },\n        {\n            \"id\": \"471d719a-dd51-4e45-a539-4e4d1e62a89b\",\n            \"name\": \"reviewer\",\n            \"displayName\": \"Reviewer\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": false,\n            \"parent\": \"8abca3f4-cdc3-451b-99f5-f548661dd1d3\"\n        },\n        {\n            \"id\": \"c7e04a3b-88c3-434f-80f2-2e8d82bfd4cd\",\n            \"name\": \"reader\",\n            \"displayName\": \"Reader\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": false,\n            \"parent\": \"471d719a-dd51-4e45-a539-4e4d1e62a89b\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Set readable by everyone",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/readByEveryone",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"readByEveryone"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Set readable by everyone",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/readByEveryone",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"readByEveryone"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Location",
+											"value": "http://localhost:8080/api/dataModels/03e7059c-b8c5-42e9-bc20-505076599826"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 29 Jul 2020 12:00:05 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"03e7059c-b8c5-42e9-bc20-505076599826\",\n    \"domainType\": \"DataModel\",\n    \"label\": \"Complex Test DataModel\",\n    \"description\": \"sed dolor est\",\n    \"availableActions\": [\n        \"delete\",\n        \"softDelete\",\n        \"update\",\n        \"save\",\n        \"show\",\n        \"comment\",\n        \"editDescription\"\n    ],\n    \"lastUpdated\": \"2020-07-29T12:00:05.252Z\",\n    \"classifiers\": [\n        {\n            \"id\": \"605aa52b-5371-4dec-a06e-7beebc6e80c8\",\n            \"label\": \"test classifier\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.85Z\"\n        },\n        {\n            \"id\": \"61b6e03a-d81f-4108-9404-3e7814b59fce\",\n            \"label\": \"test classifier2\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.853Z\"\n        }\n    ],\n    \"type\": \"Data Standard\",\n    \"documentationVersion\": \"1.0.0\",\n    \"finalised\": false,\n    \"readableByEveryone\": true,\n    \"readableByAuthenticatedUsers\": false,\n    \"author\": \"Clovis Padberg Sr.\",\n    \"organisation\": \"Wintheiser Group\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Remove readable by everyone",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/readByEveryone",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"readByEveryone"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Remove readable by everyone",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/readByEveryone",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"readByEveryone"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Location",
+											"value": "http://localhost:8080/api/dataModels/03e7059c-b8c5-42e9-bc20-505076599826"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 29 Jul 2020 12:00:35 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"03e7059c-b8c5-42e9-bc20-505076599826\",\n    \"domainType\": \"DataModel\",\n    \"label\": \"Complex Test DataModel\",\n    \"description\": \"sed dolor est\",\n    \"availableActions\": [\n        \"delete\",\n        \"softDelete\",\n        \"update\",\n        \"save\",\n        \"show\",\n        \"comment\",\n        \"editDescription\"\n    ],\n    \"lastUpdated\": \"2020-07-29T12:00:35.735Z\",\n    \"classifiers\": [\n        {\n            \"id\": \"61b6e03a-d81f-4108-9404-3e7814b59fce\",\n            \"label\": \"test classifier2\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.853Z\"\n        },\n        {\n            \"id\": \"605aa52b-5371-4dec-a06e-7beebc6e80c8\",\n            \"label\": \"test classifier\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.85Z\"\n        }\n    ],\n    \"type\": \"Data Standard\",\n    \"documentationVersion\": \"1.0.0\",\n    \"finalised\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"author\": \"Clovis Padberg Sr.\",\n    \"organisation\": \"Wintheiser Group\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Set readable by authenticated users",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/readByAuthenticated",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"readByAuthenticated"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Set readable by authenticated users",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/readByAuthenticated",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"readByAuthenticated"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Location",
+											"value": "http://localhost:8080/api/dataModels/03e7059c-b8c5-42e9-bc20-505076599826"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 29 Jul 2020 12:01:35 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"03e7059c-b8c5-42e9-bc20-505076599826\",\n    \"domainType\": \"DataModel\",\n    \"label\": \"Complex Test DataModel\",\n    \"description\": \"sed dolor est\",\n    \"availableActions\": [\n        \"delete\",\n        \"softDelete\",\n        \"update\",\n        \"save\",\n        \"show\",\n        \"comment\",\n        \"editDescription\"\n    ],\n    \"lastUpdated\": \"2020-07-29T12:01:35.735Z\",\n    \"classifiers\": [\n        {\n            \"id\": \"605aa52b-5371-4dec-a06e-7beebc6e80c8\",\n            \"label\": \"test classifier\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.85Z\"\n        },\n        {\n            \"id\": \"61b6e03a-d81f-4108-9404-3e7814b59fce\",\n            \"label\": \"test classifier2\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.853Z\"\n        }\n    ],\n    \"type\": \"Data Standard\",\n    \"documentationVersion\": \"1.0.0\",\n    \"finalised\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": true,\n    \"author\": \"Clovis Padberg Sr.\",\n    \"organisation\": \"Wintheiser Group\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Remove readable by authenticated users",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/readByAuthenticated",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"readByAuthenticated"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Remove readable by authenticated users",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/readByAuthenticated",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"readByAuthenticated"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Location",
+											"value": "http://localhost:8080/api/dataModels/03e7059c-b8c5-42e9-bc20-505076599826"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 29 Jul 2020 12:01:21 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"03e7059c-b8c5-42e9-bc20-505076599826\",\n    \"domainType\": \"DataModel\",\n    \"label\": \"Complex Test DataModel\",\n    \"description\": \"sed dolor est\",\n    \"availableActions\": [\n        \"delete\",\n        \"softDelete\",\n        \"update\",\n        \"save\",\n        \"show\",\n        \"comment\",\n        \"editDescription\"\n    ],\n    \"lastUpdated\": \"2020-07-29T12:00:35.735Z\",\n    \"classifiers\": [\n        {\n            \"id\": \"605aa52b-5371-4dec-a06e-7beebc6e80c8\",\n            \"label\": \"test classifier\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.85Z\"\n        },\n        {\n            \"id\": \"61b6e03a-d81f-4108-9404-3e7814b59fce\",\n            \"label\": \"test classifier2\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.853Z\"\n        }\n    ],\n    \"type\": \"Data Standard\",\n    \"documentationVersion\": \"1.0.0\",\n    \"finalised\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"author\": \"Clovis Padberg Sr.\",\n    \"organisation\": \"Wintheiser Group\"\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "List all Data Models",
 					"request": {
-						"method": "POST",
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataModels",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List all Data Models",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:43:46 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2,\n    \"items\": [\n        {\n            \"id\": \"03e7059c-b8c5-42e9-bc20-505076599826\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Complex Test DataModel\",\n            \"type\": \"Data Standard\",\n            \"classifiers\": [\n                {\n                    \"id\": \"605aa52b-5371-4dec-a06e-7beebc6e80c8\",\n                    \"label\": \"test classifier\",\n                    \"lastUpdated\": \"2020-07-28T10:45:07.85Z\"\n                },\n                {\n                    \"id\": \"61b6e03a-d81f-4108-9404-3e7814b59fce\",\n                    \"label\": \"test classifier2\",\n                    \"lastUpdated\": \"2020-07-28T10:45:07.853Z\"\n                }\n            ],\n            \"author\": \"admin person\",\n            \"organisation\": \"brc\"\n        },\n        {\n            \"id\": \"9ee42521-5ae1-4974-b9cb-ead70892c9d4\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Simple Test DataModel\",\n            \"type\": \"Data Standard\",\n            \"classifiers\": [\n                {\n                    \"id\": \"b6574050-8ea0-4f04-9c48-bc5194130d82\",\n                    \"label\": \"test classifier simple\",\n                    \"lastUpdated\": \"2020-07-28T10:45:10.267Z\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List all Data Models in Folder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/folders/{{folder_id}}/dataModels",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"folders",
+								"{{folder_id}}",
+								"dataModels"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List all Data Models in Folder",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/{{folder_id}}/dataModels",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{folder_id}}",
+										"dataModels"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:46:07 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2,\n    \"items\": [\n        {\n            \"id\": \"03e7059c-b8c5-42e9-bc20-505076599826\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Complex Test DataModel\",\n            \"type\": \"Data Standard\",\n            \"classifiers\": [\n                {\n                    \"id\": \"605aa52b-5371-4dec-a06e-7beebc6e80c8\",\n                    \"label\": \"test classifier\",\n                    \"lastUpdated\": \"2020-07-28T10:45:07.85Z\"\n                },\n                {\n                    \"id\": \"61b6e03a-d81f-4108-9404-3e7814b59fce\",\n                    \"label\": \"test classifier2\",\n                    \"lastUpdated\": \"2020-07-28T10:45:07.853Z\"\n                }\n            ],\n            \"author\": \"admin person\",\n            \"organisation\": \"brc\"\n        },\n        {\n            \"id\": \"9ee42521-5ae1-4974-b9cb-ead70892c9d4\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Simple Test DataModel\",\n            \"type\": \"Data Standard\",\n            \"classifiers\": [\n                {\n                    \"id\": \"b6574050-8ea0-4f04-9c48-bc5194130d82\",\n                    \"label\": \"test classifier simple\",\n                    \"lastUpdated\": \"2020-07-28T10:45:10.267Z\"\n                }\n            ]\n        }\n    ]\n}"
+						},
+						{
+							"name": "List all Data Models",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:43:46 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2,\n    \"items\": [\n        {\n            \"id\": \"03e7059c-b8c5-42e9-bc20-505076599826\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Complex Test DataModel\",\n            \"type\": \"Data Standard\",\n            \"classifiers\": [\n                {\n                    \"id\": \"605aa52b-5371-4dec-a06e-7beebc6e80c8\",\n                    \"label\": \"test classifier\",\n                    \"lastUpdated\": \"2020-07-28T10:45:07.85Z\"\n                },\n                {\n                    \"id\": \"61b6e03a-d81f-4108-9404-3e7814b59fce\",\n                    \"label\": \"test classifier2\",\n                    \"lastUpdated\": \"2020-07-28T10:45:07.853Z\"\n                }\n            ],\n            \"author\": \"admin person\",\n            \"organisation\": \"brc\"\n        },\n        {\n            \"id\": \"9ee42521-5ae1-4974-b9cb-ead70892c9d4\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Simple Test DataModel\",\n            \"type\": \"Data Standard\",\n            \"classifiers\": [\n                {\n                    \"id\": \"b6574050-8ea0-4f04-9c48-bc5194130d82\",\n                    \"label\": \"test classifier simple\",\n                    \"lastUpdated\": \"2020-07-28T10:45:10.267Z\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Data Model by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataModels/{{data_model_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"{{data_model_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Data Model by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:44:12 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"03e7059c-b8c5-42e9-bc20-505076599826\",\n    \"domainType\": \"DataModel\",\n    \"label\": \"Complex Test DataModel\",\n    \"availableActions\": [\n        \"delete\",\n        \"softDelete\",\n        \"update\",\n        \"save\",\n        \"show\",\n        \"comment\",\n        \"editDescription\"\n    ],\n    \"lastUpdated\": \"2020-07-28T10:45:11.922Z\",\n    \"classifiers\": [\n        {\n            \"id\": \"61b6e03a-d81f-4108-9404-3e7814b59fce\",\n            \"label\": \"test classifier2\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.853Z\"\n        },\n        {\n            \"id\": \"605aa52b-5371-4dec-a06e-7beebc6e80c8\",\n            \"label\": \"test classifier\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.85Z\"\n        }\n    ],\n    \"type\": \"Data Standard\",\n    \"documentationVersion\": \"1.0.0\",\n    \"finalised\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"author\": \"admin person\",\n    \"organisation\": \"brc\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit Data Model by ID",
+					"request": {
+						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"emailAddress\": \"example@email.com\",\n    \"firstName\": \"First Name\",\n    \"lastName\": \"Last Name\",\n    \"organisation\": \"Organisation name\",\n    \"roleInOrganisation\": \"Software Engineer\",\n    \"password\": \"your-password\",\n    \"confirmPassword\": \"your-password\"\n}",
+							"raw": "{\n    \"description\":\"{{$randomLoremWords}}\",\n    \"author\":\"{{$randomFullName}}\",\n    \"organisation\": \"{{$randomCompanyName}}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -70,52 +1021,442 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/catalogueUsers",
+							"raw": "{{base_url}}/dataModels/{{data_model_id}}",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
-								"catalogueUsers"
+								"dataModels",
+								"{{data_model_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Edit Data Model by ID",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"description\":\"{{$randomLoremWords}}\",\n    \"author\":\"{{$randomFullName}}\",\n    \"organisation\": \"{{$randomCompanyName}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Location",
+									"value": "http://localhost:8080/api/dataModels/03e7059c-b8c5-42e9-bc20-505076599826"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:57:33 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"03e7059c-b8c5-42e9-bc20-505076599826\",\n    \"domainType\": \"DataModel\",\n    \"label\": \"Complex Test DataModel\",\n    \"description\": \"sed dolor est\",\n    \"availableActions\": [\n        \"delete\",\n        \"softDelete\",\n        \"update\",\n        \"save\",\n        \"show\",\n        \"comment\",\n        \"editDescription\"\n    ],\n    \"lastUpdated\": \"2020-07-29T11:57:33.804Z\",\n    \"classifiers\": [\n        {\n            \"id\": \"605aa52b-5371-4dec-a06e-7beebc6e80c8\",\n            \"label\": \"test classifier\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.85Z\"\n        },\n        {\n            \"id\": \"61b6e03a-d81f-4108-9404-3e7814b59fce\",\n            \"label\": \"test classifier2\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.853Z\"\n        }\n    ],\n    \"type\": \"Data Standard\",\n    \"documentationVersion\": \"1.0.0\",\n    \"finalised\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"author\": \"Clovis Padberg Sr.\",\n    \"organisation\": \"Wintheiser Group\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Data Model Types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataModels/types",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"types"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Data Model Types",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/types",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"types"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:44:31 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    \"Data Asset\",\n    \"Data Standard\"\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Data Model Hierarchy (Diagram tab)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataModels/{{data_model_id}}/hierarchy",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"{{data_model_id}}",
+								"hierarchy"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Forgot password",
+					"name": "Diff Data Models",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/catalogueUsers/resetPasswordLink/{{email}}",
+							"raw": "{{base_url}}/dataModels/{{data_model_id}}/diff/{{compare_data_model_id}}",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
-								"catalogueUsers",
-								"resetPasswordLink",
-								"{{email}}"
+								"dataModels",
+								"{{data_model_id}}",
+								"diff",
+								"{{compare_data_model_id}}"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "isAuthenticated",
+					"name": "Soft Delete Data Model by ID",
 					"request": {
-						"method": "GET",
+						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/session/isAuthenticated",
+							"raw": "{{base_url}}/dataModels/{{data_model_id}}?permanent=false",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
-								"session",
-								"isAuthenticated"
+								"dataModels",
+								"{{data_model_id}}"
+							],
+							"query": [
+								{
+									"key": "permanent",
+									"value": "false"
+								}
 							]
+						}
+					},
+					"response": [
+						{
+							"name": "Soft Delete Data Model by ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}?permanent=false",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}"
+									],
+									"query": [
+										{
+											"key": "permanent",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Location",
+									"value": "http://localhost:8080/api/dataModels/03e7059c-b8c5-42e9-bc20-505076599826"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:54:23 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"03e7059c-b8c5-42e9-bc20-505076599826\",\n    \"domainType\": \"DataModel\",\n    \"label\": \"Complex Test DataModel\",\n    \"availableActions\": [\n        \"delete\",\n        \"softDelete\",\n        \"update\",\n        \"save\",\n        \"show\",\n        \"comment\",\n        \"editDescription\"\n    ],\n    \"lastUpdated\": \"2020-07-29T11:54:23.81Z\",\n    \"classifiers\": [\n        {\n            \"id\": \"605aa52b-5371-4dec-a06e-7beebc6e80c8\",\n            \"label\": \"test classifier\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.85Z\"\n        },\n        {\n            \"id\": \"61b6e03a-d81f-4108-9404-3e7814b59fce\",\n            \"label\": \"test classifier2\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.853Z\"\n        }\n    ],\n    \"type\": \"Data Standard\",\n    \"documentationVersion\": \"1.0.0\",\n    \"finalised\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"deleted\": true,\n    \"author\": \"admin person\",\n    \"organisation\": \"brc\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Permanent Delete Data Model by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataModels/{{$randomUUID}}?permanent=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"{{$randomUUID}}"
+							],
+							"query": [
+								{
+									"key": "permanent",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Permanent Delete Data Model by Not Found ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{$randomUUID}}?permanent=true",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{$randomUUID}}"
+									],
+									"query": [
+										{
+											"key": "permanent",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 12:05:03 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"path\": \"/api/dataModels/a3beabbc-2fd5-4958-8dcc-ff79954c2fe2\",\n    \"resource\": \"DataModel\",\n    \"id\": \"a3beabbc-2fd5-4958-8dcc-ff79954c2fe2\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Default Data Type Providers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataModels/providers/defaultDataTypeProviders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"providers",
+								"defaultDataTypeProviders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Default Data Type Providers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/providers/defaultDataTypeProviders",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"providers",
+										"defaultDataTypeProviders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:45:26 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"name\": \"DataTypeService\",\n        \"version\": \"1.0.0\",\n        \"displayName\": \"Basic Default DataTypes\",\n        \"dataTypes\": [\n            {\n                \"domainType\": \"PrimitiveType\",\n                \"label\": \"Text\",\n                \"description\": \"A piece of text\"\n            },\n            {\n                \"domainType\": \"PrimitiveType\",\n                \"label\": \"Number\",\n                \"description\": \"A whole number\"\n            },\n            {\n                \"domainType\": \"PrimitiveType\",\n                \"label\": \"Decimal\",\n                \"description\": \"A decimal number\"\n            },\n            {\n                \"domainType\": \"PrimitiveType\",\n                \"label\": \"Date\",\n                \"description\": \"A date\"\n            },\n            {\n                \"domainType\": \"PrimitiveType\",\n                \"label\": \"DateTime\",\n                \"description\": \"A date with a timestamp\"\n            },\n            {\n                \"domainType\": \"PrimitiveType\",\n                \"label\": \"Timestamp\",\n                \"description\": \"A timestamp\"\n            },\n            {\n                \"domainType\": \"PrimitiveType\",\n                \"label\": \"Boolean\",\n                \"description\": \"A true or false value\"\n            },\n            {\n                \"domainType\": \"PrimitiveType\",\n                \"label\": \"Duration\",\n                \"description\": \"A time period in arbitrary units\"\n            }\n        ]\n    }\n]"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Classifiers",
+			"item": [
+				{
+					"name": "List all Classifiers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/classifiers/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"classifiers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Classifier Details by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/classifiers/{{classifier_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"classifiers",
+								"{{classifier_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Classifier's children by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/classifiers/{{classifier_id}}/classifiers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"classifiers",
+								"{{classifier_id}}",
+								"classifiers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Classifier Details",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\": \"Label name\",\n    \"description\": \"Your description\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
-						"description": "Checks to see whether the current session has been authenticated\n"
+						"url": {
+							"raw": "{{base_url}}/classifiers/{{classifier_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"classifiers",
+								"{{classifier_id}}"
+							]
+						}
 					},
 					"response": []
 				}
@@ -123,7 +1464,1580 @@
 			"protocolProfileBehavior": {}
 		},
 		{
-			"name": "User",
+			"name": "Terminology",
+			"item": [
+				{
+					"name": "History",
+					"item": [
+						{
+							"name": "List all History changes by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/terminologies/{{terminology_id}}/edits",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"terminologies",
+										"{{terminology_id}}",
+										"edits"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Get Terminology by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/terminologies/{{terminology_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"terminologies",
+								"{{terminology_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "CodeSets",
+			"item": [
+				{
+					"name": "Add CodeSet (New Model Version)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\": \"A new CodeSet\",\n    \"copyPermissions\": false,\n    \"copyDataFlows\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/codeSets/{{code_set_id}}/newModelVersion",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"codeSets",
+								"{{code_set_id}}",
+								"newModelVersion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add CodeSet (New Documentation Version)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"moveDataFlows\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/codeSets/{{code_set_id}}/newDocumentationVersion",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"codeSets",
+								"{{code_set_id}}",
+								"newDocumentationVersion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get CodeSet by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/codeSets/{{code_set_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"codeSets",
+								"{{code_set_id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Folders",
+			"item": [
+				{
+					"name": "Get all folders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/folders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"folders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all folders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:28:16 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"6f319a88-86ab-4537-8c83-f0132d2dc503\",\n            \"label\": \"Development Folder\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.576Z\",\n            \"domainType\": \"Folder\",\n            \"hasChildFolders\": false\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get folder by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/folders/{{folder_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"folders",
+								"{{folder_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get folder by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/{{folder_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{folder_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:29:04 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6f319a88-86ab-4537-8c83-f0132d2dc503\",\n    \"label\": \"Development Folder\",\n    \"lastUpdated\": \"2020-07-28T10:45:07.576Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"update\",\n        \"delete\",\n        \"show\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new folder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\":\"{{$randomLoremSlug}}\",\n    \"description\": \"{{$randomLoremText}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/folders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"folders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create new folder with description",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\":\"{{$randomLoremSlug}}\",\n    \"description\": \"{{$randomLoremText}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/folders",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Location",
+									"value": "http://localhost:8080/api/folders/fdca6136-6083-4ec3-b85c-ec0990c57e65"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 12:07:10 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"fdca6136-6083-4ec3-b85c-ec0990c57e65\",\n    \"label\": \"corporis-maxime-enim\",\n    \"lastUpdated\": \"2020-07-29T12:07:10.331Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"update\",\n        \"delete\",\n        \"show\"\n    ],\n    \"description\": \"Odit et nemo nihil quos cupiditate ab ad.\"\n}"
+						},
+						{
+							"name": "Create new folder with no description",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\":\"{{$randomLoremSlug}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/folders",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Location",
+									"value": "http://localhost:8080/api/folders/651084dd-91db-475e-a061-b04e9f3823eb"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 12:07:31 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"651084dd-91db-475e-a061-b04e9f3823eb\",\n    \"label\": \"praesentium-voluptatum-laborum\",\n    \"lastUpdated\": \"2020-07-29T12:07:31.518Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"update\",\n        \"delete\",\n        \"show\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Permanent delete folder by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/folders/{{$randomUUID}}?permanent=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"folders",
+								"{{$randomUUID}}"
+							],
+							"query": [
+								{
+									"key": "permanent",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Permanent delete folder by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/7f7f26a8-bcf6-4fdb-832f-28866b64725b?permanent=true",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"7f7f26a8-bcf6-4fdb-832f-28866b64725b"
+									],
+									"query": [
+										{
+											"key": "permanent",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 12:09:23 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Permanent delete folder by not found id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/{{$randomUUID}}?permanent=true",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{$randomUUID}}"
+									],
+									"query": [
+										{
+											"key": "permanent",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 12:05:47 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"path\": \"/api/folders/490238ba-188d-4533-8ce8-91f3efb3b8e0\",\n    \"resource\": \"Folder\",\n    \"id\": \"490238ba-188d-4533-8ce8-91f3efb3b8e0\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Soft delete folder by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/folders/{{folder_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"folders",
+								"{{folder_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Permanent delete folder by not found id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/{{$randomUUID}}?permanent=true",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{$randomUUID}}"
+									],
+									"query": [
+										{
+											"key": "permanent",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 12:05:47 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"path\": \"/api/folders/490238ba-188d-4533-8ce8-91f3efb3b8e0\",\n    \"resource\": \"Folder\",\n    \"id\": \"490238ba-188d-4533-8ce8-91f3efb3b8e0\"\n}"
+						},
+						{
+							"name": "Soft delete folder by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/{{folder_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{folder_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Location",
+									"value": "http://localhost:8080/api/folders/6f319a88-86ab-4537-8c83-f0132d2dc503"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 12:09:00 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6f319a88-86ab-4537-8c83-f0132d2dc503\",\n    \"label\": \"Development Folder\",\n    \"deleted\": true,\n    \"lastUpdated\": \"2020-07-29T12:08:13.684Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"update\",\n        \"delete\",\n        \"show\"\n    ]\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Provider Services",
+					"item": [
+						{
+							"name": "Get Exporters",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/providers/exporters",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"providers",
+										"exporters"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Exporters",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/providers/exporters",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"providers",
+												"exporters"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 29 Jul 2020 11:17:09 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"name\": \"JsonExporterService\",\n        \"version\": \"2.0\",\n        \"displayName\": \"JSON DataModel Exporter\",\n        \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter\",\n        \"allowsExtraMetadataKeys\": true,\n        \"knownMetadataKeys\": [],\n        \"providerType\": \"DataModelExporter\",\n        \"fileExtension\": \"json\",\n        \"fileType\": \"text/json\",\n        \"canExportMultipleDomains\": false\n    },\n    {\n        \"name\": \"XmlExporterService\",\n        \"version\": \"3.0\",\n        \"displayName\": \"XML DataModel Exporter\",\n        \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter\",\n        \"allowsExtraMetadataKeys\": true,\n        \"knownMetadataKeys\": [],\n        \"providerType\": \"DataModelExporter\",\n        \"fileExtension\": \"xml\",\n        \"fileType\": \"text/xml\",\n        \"canExportMultipleDomains\": false\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Get Importers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/providers/importers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"providers",
+										"importers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Importers",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/providers/importers",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"providers",
+												"importers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 29 Jul 2020 11:17:16 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"name\": \"XmlImporterService\",\n        \"version\": \"3.0\",\n        \"displayName\": \"XML DataModel Importer\",\n        \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.importer\",\n        \"allowsExtraMetadataKeys\": true,\n        \"knownMetadataKeys\": [],\n        \"providerType\": \"DataModelImporter\",\n        \"paramClassType\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.importer.parameter.DataModelFileImporterProviderServiceParameters\",\n        \"canImportMultipleDomains\": true\n    },\n    {\n        \"name\": \"JsonImporterService\",\n        \"version\": \"2.0\",\n        \"displayName\": \"JSON DataModel Importer\",\n        \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.importer\",\n        \"allowsExtraMetadataKeys\": true,\n        \"knownMetadataKeys\": [],\n        \"providerType\": \"DataModelImporter\",\n        \"paramClassType\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.importer.parameter.DataModelFileImporterProviderServiceParameters\",\n        \"canImportMultipleDomains\": false\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Get Emailers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/providers/emailers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"providers",
+										"emailers"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Emailers",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/providers/emailers",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"providers",
+												"emailers"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 29 Jul 2020 11:17:23 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"name\": \"BasicEmailProviderService\",\n        \"version\": \"1.0\",\n        \"displayName\": \"Basic Email Provider\",\n        \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.core.provider.email\",\n        \"allowsExtraMetadataKeys\": true,\n        \"knownMetadataKeys\": [],\n        \"providerType\": \"Email\",\n        \"order\": 2147483647\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "Get Dataloaders",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/providers/dataloaders",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"providers",
+										"dataloaders"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Dataloaders",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/providers/dataloaders",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"providers",
+												"dataloaders"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 29 Jul 2020 11:17:29 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Catalogue Users",
+					"item": [
+						{
+							"name": "Pending users",
+							"item": [
+								{
+									"name": "Get all Pending Users",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/catalogueUsers/pending",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"catalogueUsers",
+												"pending"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Get all Pending Users",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/admin/catalogueUsers/pending",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"admin",
+														"catalogueUsers",
+														"pending"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 29 Jul 2020 11:18:10 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"cb6e53c3-ec6e-4569-8300-c5cc87b1162f\",\n            \"emailAddress\": \"pending@test.com\",\n            \"firstName\": \"pending\",\n            \"lastName\": \"User\",\n            \"pending\": true,\n            \"disabled\": false,\n            \"createdBy\": \"development@test.com\",\n            \"availableActions\": [\n                \"update\",\n                \"delete\",\n                \"show\"\n            ],\n            \"organisation\": \"Oxford\",\n            \"jobTitle\": \"tester\"\n        }\n    ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Pending Count",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/catalogueUsers/pendingCount",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"catalogueUsers",
+												"pendingCount"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Pending Count",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/admin/catalogueUsers/pendingCount",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"admin",
+														"catalogueUsers",
+														"pendingCount"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 29 Jul 2020 11:18:18 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"count\": 1\n}"
+										}
+									]
+								},
+								{
+									"name": "Reject Registration",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/catalogueUsers/{{user_id}}/rejectRegistration",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"catalogueUsers",
+												"{{user_id}}",
+												"rejectRegistration"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Approve Registration",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/catalogueUsers/{{user_id}}/approveRegistration",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"catalogueUsers",
+												"{{user_id}}",
+												"approveRegistration"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "e170cd31-8e5d-4c01-a2a2-351215327edf",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "90ac2226-af38-41e2-b86e-9a1082a0f79c",
+										"type": "text/javascript",
+										"exec": [
+											""
+										]
+									}
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						},
+						{
+							"name": "Add new user",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"emailAddress\": \"{{$randomEmail}}\",\n    \"firstName\": \"{{$randomFirstName}}\",\n    \"lastName\": \"{{$randomLastName}}\",\n    \"organisation\": \"Organisation name\",\n    \"jobTitle\": \"Software Engineer\",\n    \"groups\": []\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/admin/catalogueUsers/adminRegister",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"catalogueUsers",
+										"adminRegister"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Check user exists",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/catalogueUsers/{{$randomEmail}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"catalogueUsers",
+										"{{$randomEmail}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reset password",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/catalogueUsers/{{user_id}}/adminPasswordReset",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"catalogueUsers",
+										"{{user_id}}",
+										"adminPasswordReset"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Providers / Plugins",
+					"item": [
+						{
+							"name": "Get Modules",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/modules",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"modules"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Modules",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/modules",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"modules"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 29 Jul 2020 11:17:43 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"name\": \"Common\",\n        \"version\": \"4.0.0-SNAPSHOT\"\n    },\n    {\n        \"name\": \"Core\",\n        \"version\": \"4.0.0-SNAPSHOT\"\n    },\n    {\n        \"name\": \"PluginAuthenticationBasic\",\n        \"version\": \"4.0.0-SNAPSHOT\"\n    },\n    {\n        \"name\": \"Security\",\n        \"version\": \"4.0.0-SNAPSHOT\"\n    },\n    {\n        \"name\": \"PluginDatamodel\",\n        \"version\": \"4.0.0-SNAPSHOT\"\n    },\n    {\n        \"name\": \"PluginTerminology\",\n        \"version\": \"4.0.0-SNAPSHOT\"\n    },\n    {\n        \"name\": \"assetPipeline\",\n        \"version\": \"3.0.11\"\n    },\n    {\n        \"name\": \"cache\",\n        \"version\": \"4.0.3\"\n    },\n    {\n        \"name\": \"codecs\",\n        \"version\": \"4.0.3\"\n    },\n    {\n        \"name\": \"controllers\",\n        \"version\": \"4.0.3\"\n    },\n    {\n        \"name\": \"controllersAsync\",\n        \"version\": \"SNAPSHOT\"\n    },\n    {\n        \"name\": \"converters\",\n        \"version\": \"4.0.3\"\n    },\n    {\n        \"name\": \"core\",\n        \"version\": \"4.0.3\"\n    },\n    {\n        \"name\": \"dataSource\",\n        \"version\": \"4.0.3\"\n    },\n    {\n        \"name\": \"domainClass\",\n        \"version\": \"4.0.3\"\n    },\n    {\n        \"name\": \"eventBus\",\n        \"version\": \"SNAPSHOT\"\n    },\n    {\n        \"name\": \"hibernate\",\n        \"version\": \"7.0.2\"\n    },\n    {\n        \"name\": \"hibernateSearch\",\n        \"version\": \"2.3.0\"\n    },\n    {\n        \"name\": \"i18n\",\n        \"version\": \"4.0.3\"\n    },\n    {\n        \"name\": \"interceptors\",\n        \"version\": \"4.0.3\"\n    },\n    {\n        \"name\": \"jsonView\",\n        \"version\": \"2.0.0\"\n    },\n    {\n        \"name\": \"markupView\",\n        \"version\": \"2.0.0\"\n    },\n    {\n        \"name\": \"restResponder\",\n        \"version\": \"4.0.3\"\n    },\n    {\n        \"name\": \"services\",\n        \"version\": \"4.0.3\"\n    },\n    {\n        \"name\": \"urlMappings\",\n        \"version\": \"4.0.3\"\n    },\n    {\n        \"name\": \"java.base\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.compiler\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.datatransfer\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.desktop\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.instrument\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.logging\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.management\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.management.rmi\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.naming\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.net.http\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.prefs\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.rmi\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.scripting\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.security.jgss\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.security.sasl\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.smartcardio\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.sql\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.sql.rowset\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.transaction.xa\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.xml\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"java.xml.crypto\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.accessibility\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.attach\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.charsets\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.compiler\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.crypto.cryptoki\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.crypto.ec\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.dynalink\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.editpad\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.httpserver\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.internal.ed\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.internal.jvmstat\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.internal.le\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.internal.opt\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.jartool\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.javadoc\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.jconsole\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.jdeps\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.jdi\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.jdwp.agent\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.jfr\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.jlink\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.jshell\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.jsobject\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.jstatd\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.localedata\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.management\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.management.agent\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.management.jfr\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.naming.dns\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.naming.rmi\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.net\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.scripting.nashorn\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.sctp\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.security.auth\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.security.jgss\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.unsupported\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.unsupported.desktop\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.xml.dom\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"jdk.zipfs\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"openj9.cuda\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"openj9.dataaccess\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"openj9.dtfj\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"openj9.gpu\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"openj9.jvm\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"openj9.sharedclasses\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"openj9.traceformat\",\n        \"version\": \"12.0.2\"\n    },\n    {\n        \"name\": \"openj9.zosconditionhandling\",\n        \"version\": \"12.0.2\"\n    }\n]"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Session",
+					"item": [
+						{
+							"name": "List all Active Sessions",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/activeSessions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"activeSessions"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "List all Active Sessions",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/activeSessions",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"activeSessions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 29 Jul 2020 11:17:57 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"7DEB12FEB947EB176C8C2FBC26FF6DFC\",\n            \"lastAccessedDateTime\": \"2020-07-29T11:17:43.282Z\",\n            \"creationDateTime\": \"2020-07-29T10:59:17.623Z\",\n            \"userEmailAddress\": \"admin@maurodatamapper.com\",\n            \"lastAccessedUrl\": \"/api/admin/activeSessions\"\n        }\n    ]\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Permissions",
+					"item": [
+						{
+							"name": "Group Roles",
+							"item": [
+								{
+									"name": "List all group roles",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/groupRoles",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"groupRoles"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "List all application access group roles",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/availableApplicationAccess",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"availableApplicationAccess"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "List all application access group roles",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/admin/availableApplicationAccess",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"admin",
+														"availableApplicationAccess"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 29 Jul 2020 11:15:40 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"count\": 5,\n    \"items\": [\n        {\n            \"id\": \"f686a892-8bcf-4bc8-82b3-208b174cd2e5\",\n            \"name\": \"group_admin\",\n            \"displayName\": \"Group Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true,\n            \"parent\": \"bc3c93de-605b-4630-a41c-a3f66e071cc1\"\n        },\n        {\n            \"id\": \"2f8c23f3-8c0e-4920-8af7-505d8007c25b\",\n            \"name\": \"container_group_admin\",\n            \"displayName\": \"Container Group Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true,\n            \"parent\": \"f686a892-8bcf-4bc8-82b3-208b174cd2e5\"\n        },\n        {\n            \"id\": \"eae76d34-d520-4369-8f03-f4fcc0b8b61e\",\n            \"name\": \"site_admin\",\n            \"displayName\": \"Site Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true\n        },\n        {\n            \"id\": \"3629ecc1-24f7-45be-a33f-f8ef991ba4ea\",\n            \"name\": \"application_admin\",\n            \"displayName\": \"Application Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true,\n            \"parent\": \"eae76d34-d520-4369-8f03-f4fcc0b8b61e\"\n        },\n        {\n            \"id\": \"bc3c93de-605b-4630-a41c-a3f66e071cc1\",\n            \"name\": \"user_admin\",\n            \"displayName\": \"User Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true,\n            \"parent\": \"3629ecc1-24f7-45be-a33f-f8ef991ba4ea\"\n        }\n    ]\n}"
+										}
+									]
+								},
+								{
+									"name": "List all application group roles",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/applicationGroupRoles",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"applicationGroupRoles"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "List all application group roles",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/admin/applicationGroupRoles",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"admin",
+														"applicationGroupRoles"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 29 Jul 2020 11:16:21 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"count\": 5,\n    \"items\": [\n        {\n            \"id\": \"2f8c23f3-8c0e-4920-8af7-505d8007c25b\",\n            \"name\": \"container_group_admin\",\n            \"displayName\": \"Container Group Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true,\n            \"parent\": \"f686a892-8bcf-4bc8-82b3-208b174cd2e5\"\n        },\n        {\n            \"id\": \"f686a892-8bcf-4bc8-82b3-208b174cd2e5\",\n            \"name\": \"group_admin\",\n            \"displayName\": \"Group Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true,\n            \"parent\": \"bc3c93de-605b-4630-a41c-a3f66e071cc1\"\n        },\n        {\n            \"id\": \"eae76d34-d520-4369-8f03-f4fcc0b8b61e\",\n            \"name\": \"site_admin\",\n            \"displayName\": \"Site Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true\n        },\n        {\n            \"id\": \"3629ecc1-24f7-45be-a33f-f8ef991ba4ea\",\n            \"name\": \"application_admin\",\n            \"displayName\": \"Application Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true,\n            \"parent\": \"eae76d34-d520-4369-8f03-f4fcc0b8b61e\"\n        },\n        {\n            \"id\": \"bc3c93de-605b-4630-a41c-a3f66e071cc1\",\n            \"name\": \"user_admin\",\n            \"displayName\": \"User Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true,\n            \"parent\": \"3629ecc1-24f7-45be-a33f-f8ef991ba4ea\"\n        }\n    ]\n}"
+										},
+										{
+											"name": "List all application access group roles",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/admin/availableApplicationAccess",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"admin",
+														"availableApplicationAccess"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Wed, 29 Jul 2020 11:15:40 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"count\": 5,\n    \"items\": [\n        {\n            \"id\": \"f686a892-8bcf-4bc8-82b3-208b174cd2e5\",\n            \"name\": \"group_admin\",\n            \"displayName\": \"Group Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true,\n            \"parent\": \"bc3c93de-605b-4630-a41c-a3f66e071cc1\"\n        },\n        {\n            \"id\": \"2f8c23f3-8c0e-4920-8af7-505d8007c25b\",\n            \"name\": \"container_group_admin\",\n            \"displayName\": \"Container Group Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true,\n            \"parent\": \"f686a892-8bcf-4bc8-82b3-208b174cd2e5\"\n        },\n        {\n            \"id\": \"eae76d34-d520-4369-8f03-f4fcc0b8b61e\",\n            \"name\": \"site_admin\",\n            \"displayName\": \"Site Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true\n        },\n        {\n            \"id\": \"3629ecc1-24f7-45be-a33f-f8ef991ba4ea\",\n            \"name\": \"application_admin\",\n            \"displayName\": \"Application Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true,\n            \"parent\": \"eae76d34-d520-4369-8f03-f4fcc0b8b61e\"\n        },\n        {\n            \"id\": \"bc3c93de-605b-4630-a41c-a3f66e071cc1\",\n            \"name\": \"user_admin\",\n            \"displayName\": \"User Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true,\n            \"parent\": \"3629ecc1-24f7-45be-a33f-f8ef991ba4ea\"\n        }\n    ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Get group role by id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/groupRoles/{{$randomUUID}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"groupRoles",
+												"{{$randomUUID}}"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "UserGroups",
+					"item": [],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Rebuild Lucene Indexes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/rebuildLuceneIndexes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"rebuildLuceneIndexes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/status",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"status"
+							]
+						},
+						"description": "Get system information"
+					},
+					"response": [
+						{
+							"name": "Status",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/status",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:18:57 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"Mauro Data Mapper Version\": \"4.0.0-SNAPSHOT\",\n    \"Grails Version\": \"4.0.3\",\n    \"Java Version\": \"12.0.2\",\n    \"Java Vendor\": \"AdoptOpenJDK\",\n    \"OS Name\": \"Mac OS X\",\n    \"OS Version\": \"10.15.6\",\n    \"OS Architecture\": \"x86_64\",\n    \"Driver Manager Drivers Available\": [\n        {\n            \"class\": \"org.postgresql.Driver\",\n            \"version\": \"42.2\"\n        },\n        {\n            \"class\": \"org.h2.Driver\",\n            \"version\": \"1.4\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List all Api Properties",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/properties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"properties"
+							]
+						},
+						"description": "Get the current values of system configuration properties"
+					},
+					"response": [
+						{
+							"name": "List all Api Properties",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/properties",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"properties"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:00:22 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email.invite_edit.body\": \"Dear ${firstName},\\nYou have been invited to edit the model '${itemLabel}' in the Mauro Data Mapper at ${catalogueUrl}\\n\\nYour username / email address is: ${emailAddress}\\nYour password is: ${tempPassword}\\n and you will be asked to update this when you first log on.\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.admin_register.body\": \"Dear ${firstName},\\nYou have been given access to the Mauro Data Mapper at ${catalogueUrl} \\n\\nYour username / email address is: ${emailAddress} \\nYour password is: ${tempPassword} \\nand you will be asked to update this when you first log on.\\n\\nKind regards, the Mauro Data Mapper folks. \\n\\n(This is an automated mail).\",\n    \"email.admin_register.subject\": \"Mauro Data Mapper Registration\",\n    \"email.self_register.subject\": \"Mauro Data Mapper Registration\",\n    \"email.forgotten_password.subject\": \"Mauro Data Mapper Forgotten Password\",\n    \"email.invite_edit.subject\": \"Mauro Data Mapper Invitation\",\n    \"email.invite_view.subject\": \"Mauro Data Mapper Invitation\",\n    \"email.admin_confirm_registration.body\": \"Dear ${firstName},\\nYour registration for the Mauro Data Mapper at ${catalogueUrl} has been confirmed.\\n\\nYour username / email address is: ${emailAddress} \\nYou chose a password on registration, but can reset it from the login page.\\n\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.self_register.body\": \"Dear ${firstName},\\nYou have self-registered for the Mauro Data Mapper at ${catalogueUrl}\\n\\nYour username / email address is: ${emailAddress}\\nYour registration is marked as pending: you'll be sent another email when your request has been confirmed by an administrator. \\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.password_reset.body\": \"Dear ${firstName},\\nYour password has been reset for the Mauro Data Mapper at ${catalogueUrl}.\\n\\nYour new temporary password is: ${tempPassword} \\nand you will be asked to update this when you next log on.\\n\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.from.name\": \"Mauro Data Mapper\",\n    \"email.admin_confirm_registration.subject\": \"Mauro Data Mapper Registration - Confirmation\",\n    \"email.forgotten_password.body\": \"Dear ${firstName},\\nA request has been made to reset the password for the Mauro Data Mapper at ${catalogueUrl}.\\nIf you did not make this request please ignore this email.\\n\\nPlease use the following link to reset your password ${passwordResetLink}.\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.password_reset.subject\": \"Mauro Data Mapper Password Reset\",\n    \"email.invite_view.body\": \"Dear ${firstName},\\nYou have been invited to view the item '${itemLabel}' in the Mauro Data Mapper at ${catalogueUrl}\\n\\nYour username / email address is: ${emailAddress}\\nYour password is: ${tempPassword}\\n and you will be asked to update this when you first log on.\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.from.address\": \"username@gmail.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List all Emails",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/emails",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"emails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Api Properties",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/properties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"properties"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Catalogue Users",
 			"item": [
 				{
 					"name": "User details",
@@ -230,1044 +3144,32 @@
 					],
 					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
-				}
-			],
-			"protocolProfileBehavior": {}
-		},
-		{
-			"name": "Admin",
-			"item": [
-				{
-					"name": "Plugins",
-					"item": [
-						{
-							"name": "Get Exporters",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/admin/providers/exporters",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"admin",
-										"providers",
-										"exporters"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Importers",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/admin/providers/importers",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"admin",
-										"providers",
-										"importers"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Emailers",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/admin/providers/emailers",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"admin",
-										"providers",
-										"emailers"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Dataloaders",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/admin/providers/dataloaders",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"admin",
-										"providers",
-										"dataloaders"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Modules",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/admin/modules",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"admin",
-										"modules"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Default Data Type Providers",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/dataModels/providers/defaultDataTypeProviders",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"dataModels",
-										"providers",
-										"defaultDataTypeProviders"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Data Model Importers",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/dataModels/providers/importers",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"dataModels",
-										"providers",
-										"importers"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Data Model Exporters",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/dataModels/providers/exporters",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"dataModels",
-										"providers",
-										"exporters"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
 				},
 				{
-					"name": "Manage users",
-					"item": [
-						{
-							"name": "Get all users",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/catalogueUsers",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"catalogueUsers"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Pending users",
-					"item": [
-						{
-							"name": "Get all Pending Users",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/admin/catalogueUsers/pending",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"admin",
-										"catalogueUsers",
-										"pending"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Pending Count",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/admin/catalogueUsers/pendingCount",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"admin",
-										"catalogueUsers",
-										"pendingCount"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"event": [
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "81a3ee40-706f-48b7-94b5-d1c6fd661398",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						},
-						{
-							"listen": "test",
-							"script": {
-								"id": "367cea26-ef9c-49ee-9f3f-4abfd0c1018f",
-								"type": "text/javascript",
-								"exec": [
-									""
-								]
-							}
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Data Models",
-					"item": [
-						{
-							"name": "Data Types",
-							"item": [
-								{
-									"name": "Get Data Model Data Types",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataTypes",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"dataModels",
-												"{{data_model_id}}",
-												"dataTypes"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Get Data Model Data Type by ID",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataTypes/{{data_type_id}}",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"dataModels",
-												"{{data_model_id}}",
-												"dataTypes",
-												"{{data_type_id}}"
-											]
-										}
-									},
-									"response": []
-								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
-						},
-						{
-							"name": "Summary Metadata",
-							"item": [
-								{
-									"name": "Add Metadata",
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"name\": \"Example\",\n    \"description\": \"Value Distribution\",\n    \"summaryMetadataType\": \"MAP\",\n    \"summaryMetadataReports\": [\n        {\n            \"reportDate\": \"2020-01-29T07:31:57.519Z\",\n            \"reportValue\": \"{\\\"Female\\\":20562,\\\"Male\\\":17407,\\\"Unknown\\\":604}\"\n        },\n        {\n            \"reportDate\": \"2020-02-29T07:31:57.519Z\",\n            \"reportValue\": \"{\\\"Female\\\":19562,\\\"Male\\\":18407,\\\"Unknown\\\":704}\"\n        },\n        {\n            \"reportDate\": \"2020-03-29T07:31:57.519Z\",\n            \"reportValue\": \"{\\\"Female\\\":18562,\\\"Male\\\":19407,\\\"Unknown\\\":804}\"\n        },\n        {\n            \"reportDate\": \"2020-04-29T07:31:57.519Z\",\n            \"reportValue\": \"{\\\"Female\\\":17562,\\\"Male\\\":20407,\\\"Unknown\\\":904}\"\n        }\n    ]\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{base_url}}/dataModels/{{data_model_id}}/summaryMetadata",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"dataModels",
-												"{{data_model_id}}",
-												"summaryMetadata"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "List all Metadata items",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/dataModels/{{data_model_id}}/summaryMetadata",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"dataModels",
-												"{{data_model_id}}",
-												"summaryMetadata"
-											]
-										}
-									},
-									"response": []
-								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
-						},
-						{
-							"name": "Attachments",
-							"item": [
-								{
-									"name": "Add Attachment",
-									"request": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"fileName\": \"test3.txt\",\n    \"fileSize\": 3,\n    \"fileContents\": [12, 23, 32],\n    \"fileType\": \"text\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{base_url}}/dataModels/{{data_model_id}}/referenceFiles",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"dataModels",
-												"{{data_model_id}}",
-												"referenceFiles"
-											]
-										},
-										"description": "Add an attachment to a Data Model"
-									},
-									"response": []
-								},
-								{
-									"name": "List all Attachments",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/dataModels/{{data_model_id}}/referenceFiles",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"dataModels",
-												"{{data_model_id}}",
-												"referenceFiles"
-											]
-										},
-										"description": "Retrieve all attachments associated with a Data Model"
-									},
-									"response": []
-								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
-						},
-						{
-							"name": "History",
-							"item": [
-								{
-									"name": "List all History changes by ID",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/dataModels/{{data_model_id}}/edits",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"dataModels",
-												"{{data_model_id}}",
-												"edits"
-											]
-										},
-										"description": "List all changes made to a given Data Model"
-									},
-									"response": []
-								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
-						},
-						{
-							"name": "Links",
-							"item": [
-								{
-									"name": "List all Semantic Links",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/dataModels/{{data_model_id}}/semanticLinks",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"dataModels",
-												"{{data_model_id}}",
-												"semanticLinks"
-											]
-										}
-									},
-									"response": []
-								},
-								{
-									"name": "Add Link",
-									"request": {
-										"method": "POST",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/dataModels/{{data_model_id}}/semanticLinks",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"dataModels",
-												"{{data_model_id}}",
-												"semanticLinks"
-											]
-										}
-									},
-									"response": []
-								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
-						},
-						{
-							"name": "List all Data Models",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/dataModels",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"dataModels"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Data Model by ID",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/dataModels/{{data_model_id}}",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"dataModels",
-										"{{data_model_id}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Data Model Types",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/dataModels/types",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"dataModels",
-										"types"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Data Model Hierarchy (Diagram tab)",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/dataModels/{{data_model_id}}/hierarchy",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"dataModels",
-										"{{data_model_id}}",
-										"hierarchy"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Diff Data Models",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/dataModels/{{data_model_id}}/diff/{{compare_data_model_id}}",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"dataModels",
-										"{{data_model_id}}",
-										"diff",
-										"{{compare_data_model_id}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "XML Export Data Model",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/dataModels/{{data_model_id}}/export/{{xml_exporter_namespace}}/{{xml_exporter_name}}/{{xml_exporter_version}}",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"dataModels",
-										"{{data_model_id}}",
-										"export",
-										"{{xml_exporter_namespace}}",
-										"{{xml_exporter_name}}",
-										"{{xml_exporter_version}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "JSON Export Data Model",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/dataModels/{{data_model_id}}/export/{{json_exporter_namespace}}/{{json_exporter_name}}/{{json_exporter_version}}",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"dataModels",
-										"{{data_model_id}}",
-										"export",
-										"{{json_exporter_namespace}}",
-										"{{json_exporter_name}}",
-										"{{json_exporter_version}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Soft Delete Data Model by ID",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/dataModels/{{data_model_id}}?permanent=false",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"dataModels",
-										"{{data_model_id}}"
-									],
-									"query": [
-										{
-											"key": "permanent",
-											"value": "false"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Permanent Delete Data Model by ID",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/dataModels/{{data_model_id}}?permanent=true",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"dataModels",
-										"{{data_model_id}}"
-									],
-									"query": [
-										{
-											"key": "permanent",
-											"value": "true"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Classifiers",
-					"item": [
-						{
-							"name": "List all Classifiers",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/classifiers/",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"classifiers",
-										""
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Classifier Details by ID",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/classifiers/{{classifier_id}}",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"classifiers",
-										"{{classifier_id}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Classifier's children by ID",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/classifiers/{{classifier_id}}/classifiers",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"classifiers",
-										"{{classifier_id}}",
-										"classifiers"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Update Classifier Details",
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"label\": \"Label name\",\n    \"description\": \"Your description\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{base_url}}/classifiers/{{classifier_id}}",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"classifiers",
-										"{{classifier_id}}"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "CodeSets",
-					"item": [
-						{
-							"name": "Add CodeSet (New Model Version)",
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"label\": \"A new CodeSet\",\n    \"copyPermissions\": false,\n    \"copyDataFlows\": false\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{base_url}}/codeSets/{{code_set_id}}/newModelVersion",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"codeSets",
-										"{{code_set_id}}",
-										"newModelVersion"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Add CodeSet (New Documentation Version)",
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"moveDataFlows\": false\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{base_url}}/codeSets/{{code_set_id}}/newDocumentationVersion",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"codeSets",
-										"{{code_set_id}}",
-										"newDocumentationVersion"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get CodeSet by ID",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/codeSets/{{code_set_id}}",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"codeSets",
-										"{{code_set_id}}"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Terminology",
-					"item": [
-						{
-							"name": "History",
-							"item": [
-								{
-									"name": "List all History changes by ID",
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/terminologies/{{terminology_id}}/edits",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"terminologies",
-												"{{terminology_id}}",
-												"edits"
-											]
-										}
-									},
-									"response": []
-								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
-						},
-						{
-							"name": "Get Terminology by ID",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/terminologies/{{terminology_id}}",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"terminologies",
-										"{{terminology_id}}"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Folders",
-					"item": [
-						{
-							"name": "Get all folders",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/folders",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"folders"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get folder by ID",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/folders/{{folder_id}}",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"folders",
-										"{{folder_id}}"
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "Rebuild Lucene Indexes",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/admin/rebuildLuceneIndexes",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"admin",
-								"rebuildLuceneIndexes"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Status",
+					"name": "Get all users",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/admin/status",
+							"raw": "{{base_url}}/catalogueUsers",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
-								"admin",
-								"status"
-							]
-						},
-						"description": "Get system information"
-					},
-					"response": []
-				},
-				{
-					"name": "Properties",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/admin/properties",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"admin",
-								"properties"
-							]
-						},
-						"description": "Get the current values of system configuration properties"
-					},
-					"response": []
-				},
-				{
-					"name": "List all Active Sessions",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/admin/activeSessions",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"admin",
-								"activeSessions"
+								"catalogueUsers"
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "List all Emails",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/admin/emails",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"admin",
-								"emails"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Add new user",
+					"name": "Request account",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"emailAddress\": \"email_address@email.com\",\n    \"firstName\": \"First name\",\n    \"lastName\": \"Last name\",\n    \"organisation\": \"Organisation name\",\n    \"jobTitle\": \"Software Engineer\",\n    \"groups\": []\n}",
+							"raw": "{\n    \"emailAddress\": \"example@email.com\",\n    \"firstName\": \"First Name\",\n    \"lastName\": \"Last Name\",\n    \"organisation\": \"Organisation name\",\n    \"roleInOrganisation\": \"Software Engineer\",\n    \"password\": \"your-password\",\n    \"confirmPassword\": \"your-password\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1275,14 +3177,31 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/admin/catalogueUsers/adminRegister",
+							"raw": "{{base_url}}/catalogueUsers",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
-								"admin",
+								"catalogueUsers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot password",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/catalogueUsers/resetPasswordLink/{{email}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
 								"catalogueUsers",
-								"adminRegister"
+								"resetPasswordLink",
+								"{{email}}"
 							]
 						}
 					},
@@ -1290,6 +3209,369 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Edits",
+			"item": [
+				{
+					"name": "List all edits for a folder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/folders/{{folder_id}}/edits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"folders",
+								"{{folder_id}}",
+								"edits"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List all edits for a folder",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/{{folder_id}}/edits",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{folder_id}}",
+										"edits"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:30:18 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 0,\n    \"items\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "List all edits for a datamodel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataModels/{{data_model_id}}/edits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"{{data_model_id}}",
+								"edits"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List all edits for a folder",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/{{folder_id}}/edits",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{folder_id}}",
+										"edits"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:30:18 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 0,\n    \"items\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "List all edits for a dataclass",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataClasses/{{$randomUUID}}/edits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataClasses",
+								"{{$randomUUID}}",
+								"edits"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List all edits for a folder",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/{{folder_id}}/edits",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{folder_id}}",
+										"edits"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:30:18 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 0,\n    \"items\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "List all edits for a dataelement",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataElements/{{$randomUUID}}/edits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataElements",
+								"{{$randomUUID}}",
+								"edits"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List all edits for a folder",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/{{folder_id}}/edits",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{folder_id}}",
+										"edits"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:30:18 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 0,\n    \"items\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "List all edits for a terminology",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/terminologies/{{terminology_id}}/edits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"terminologies",
+								"{{terminology_id}}",
+								"edits"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List all edits for a folder",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/{{folder_id}}/edits",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{folder_id}}",
+										"edits"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:30:18 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 0,\n    \"items\": []\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Permissions",
+			"item": [
+				{
+					"name": "List group roles for a folder ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/folders/{{folder_id}}/groupRoles",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"folders",
+								"{{folder_id}}",
+								"groupRoles"
+							]
+						},
+						"description": "Lists the group roles which are available to be assigned to the securable resource"
+					},
+					"response": [
+						{
+							"name": "List group roles for securable resource",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/{{folder_id}}/groupRoles",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{folder_id}}",
+										"groupRoles"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:37:49 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 6,\n    \"items\": [\n        {\n            \"id\": \"ffebc3af-f0c5-408b-b1c8-1508d067be47\",\n            \"name\": \"container_admin\",\n            \"displayName\": \"Container Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": false,\n            \"parent\": \"eae76d34-d520-4369-8f03-f4fcc0b8b61e\"\n        },\n        {\n            \"id\": \"2f8c23f3-8c0e-4920-8af7-505d8007c25b\",\n            \"name\": \"container_group_admin\",\n            \"displayName\": \"Container Group Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true,\n            \"parent\": \"f686a892-8bcf-4bc8-82b3-208b174cd2e5\"\n        },\n        {\n            \"id\": \"f28580b5-97fe-4a02-bfd0-67f300eeeed5\",\n            \"name\": \"editor\",\n            \"displayName\": \"Editor\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": false,\n            \"parent\": \"ffebc3af-f0c5-408b-b1c8-1508d067be47\"\n        },\n        {\n            \"id\": \"8abca3f4-cdc3-451b-99f5-f548661dd1d3\",\n            \"name\": \"author\",\n            \"displayName\": \"Author\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": false,\n            \"parent\": \"f28580b5-97fe-4a02-bfd0-67f300eeeed5\"\n        },\n        {\n            \"id\": \"471d719a-dd51-4e45-a539-4e4d1e62a89b\",\n            \"name\": \"reviewer\",\n            \"displayName\": \"Reviewer\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": false,\n            \"parent\": \"8abca3f4-cdc3-451b-99f5-f548661dd1d3\"\n        },\n        {\n            \"id\": \"c7e04a3b-88c3-434f-80f2-2e8d82bfd4cd\",\n            \"name\": \"reader\",\n            \"displayName\": \"Reader\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": false,\n            \"parent\": \"471d719a-dd51-4e45-a539-4e4d1e62a89b\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
 		}
 	],
 	"protocolProfileBehavior": {}
