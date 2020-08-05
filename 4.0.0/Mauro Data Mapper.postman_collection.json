@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "4dbf55b5-0531-4836-abbc-2a394cbd0dcc",
 		"name": "Mauro Data Mapper",
+		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -77,12 +78,152 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Login - Invalid credentials",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\" : \"hello@test.com\",\n\t\"password\" : \"{{password}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/authentication/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Set-Cookie",
+									"value": "JSESSIONID=095815F4CE13DBAD53765381F4115B98; Path=/; HttpOnly"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 31 Jul 2020 14:45:07 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"path\": \"/api/authentication/login\",\n    \"additional\": \"Invalid credentials\"\n}"
+						},
+						{
+							"name": "Login - Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\" : \"{{username}}\",\n\t\"password\" : \"{{password}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/authentication/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 30 Jul 2020 08:56:43 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"a50cbdaf-c7a3-4e58-a02a-9257fb674a96\",\n    \"emailAddress\": \"admin@maurodatamapper.com\",\n    \"firstName\": \"Admin\",\n    \"lastName\": \"User\",\n    \"pending\": false,\n    \"disabled\": false,\n    \"createdBy\": \"admin@maurodatamapper.com\"\n}"
+						},
+						{
+							"name": "Login - Already logged in",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\" : \"{{username}}\",\n\t\"password\" : \"{{password}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/authentication/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"authentication",
+										"login"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 30 Jul 2020 09:01:37 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"timestamp\": 1596099697499,\n    \"status\": 409,\n    \"error\": \"Conflict\",\n    \"message\": \"A user is already logged in, logout first\",\n    \"path\": \"/api/authentication/login\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Logout",
 					"request": {
-						"method": "DELETE",
+						"method": "GET",
 						"header": [],
 						"url": {
 							"raw": "{{base_url}}/authentication/logout",
@@ -96,7 +237,36 @@
 						},
 						"description": "Log out"
 					},
-					"response": []
+					"response": [
+						{
+							"name": "Logout - Successful",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/authentication/logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"authentication",
+										"logout"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 30 Jul 2020 08:58:57 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -104,6 +274,129 @@
 		{
 			"name": "Data Models",
 			"item": [
+				{
+					"name": "Data Classes",
+					"item": [
+						{
+							"name": "List all Data Classes in Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataClasses"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "List all Data Classes",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataClasses"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 10:02:16 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"count\": 2,\n    \"items\": [\n        {\n            \"id\": \"992e24f3-0ae6-4c93-9fe0-8fbf25472cbf\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableD\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        },\n        {\n            \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableE\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Data Class by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataClasses",
+										"{{data_class_id}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Data Classes by ID",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataClasses",
+												"{{data_class_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 10:03:18 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n    \"domainType\": \"DataClass\",\n    \"label\": \"tableE\",\n    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"label\": \"TargetFlowDataModel\",\n            \"domainType\": \"DataModel\",\n            \"finalised\": false\n        }\n    ],\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T09:00:40.723Z\"\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
 				{
 					"name": "Data Types",
 					"item": [
@@ -145,6 +438,137 @@
 								}
 							},
 							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Data Elements",
+					"item": [
+						{
+							"name": "List all Data Elements in Data Class",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataClasses",
+										"{{data_class_id}}",
+										"dataElements"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "List all Data Elements in Data Class",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataClasses",
+												"{{data_class_id}}",
+												"dataElements"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 10:04:16 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"count\": 6,\n    \"items\": [\n        {\n            \"id\": \"3d212c82-5634-45a1-b250-0e2e49ad0ccb\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnE\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"label\": \"tableE\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"dataType\": {\n                \"id\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\",\n                \"domainType\": \"PrimitiveType\",\n                \"label\": \"string\",\n                \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"breadcrumbs\": [\n                    {\n                        \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                        \"label\": \"TargetFlowDataModel\",\n                        \"domainType\": \"DataModel\",\n                        \"finalised\": false\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": \"5c835c0c-b53b-4d93-9def-7771a1185852\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnR\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"label\": \"tableE\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"dataType\": {\n                \"id\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\",\n                \"domainType\": \"PrimitiveType\",\n                \"label\": \"string\",\n                \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"breadcrumbs\": [\n                    {\n                        \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                        \"label\": \"TargetFlowDataModel\",\n                        \"domainType\": \"DataModel\",\n                        \"finalised\": false\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": \"82633209-27f6-4507-a811-db9d70a0f90f\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnS\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"label\": \"tableE\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"dataType\": {\n                \"id\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\",\n                \"domainType\": \"PrimitiveType\",\n                \"label\": \"string\",\n                \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"breadcrumbs\": [\n                    {\n                        \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                        \"label\": \"TargetFlowDataModel\",\n                        \"domainType\": \"DataModel\",\n                        \"finalised\": false\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": \"dd6c059a-e2aa-43cf-b190-72fc619620ac\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnT\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"label\": \"tableE\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"dataType\": {\n                \"id\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\",\n                \"domainType\": \"PrimitiveType\",\n                \"label\": \"string\",\n                \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"breadcrumbs\": [\n                    {\n                        \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                        \"label\": \"TargetFlowDataModel\",\n                        \"domainType\": \"DataModel\",\n                        \"finalised\": false\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": \"95445e14-d9c6-4fb3-aaa3-f22e59e83558\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnU\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"label\": \"tableE\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"dataType\": {\n                \"id\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\",\n                \"domainType\": \"PrimitiveType\",\n                \"label\": \"string\",\n                \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"breadcrumbs\": [\n                    {\n                        \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                        \"label\": \"TargetFlowDataModel\",\n                        \"domainType\": \"DataModel\",\n                        \"finalised\": false\n                    }\n                ]\n            }\n        },\n        {\n            \"id\": \"bb190237-9da5-4953-ac3b-080e1b641906\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnV\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"label\": \"tableE\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"dataType\": {\n                \"id\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\",\n                \"domainType\": \"PrimitiveType\",\n                \"label\": \"string\",\n                \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"breadcrumbs\": [\n                    {\n                        \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                        \"label\": \"TargetFlowDataModel\",\n                        \"domainType\": \"DataModel\",\n                        \"finalised\": false\n                    }\n                ]\n            }\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Data Element by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataClasses",
+										"{{data_class_id}}",
+										"dataElements",
+										"{{data_element_id}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Data Element by ID",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataClasses",
+												"{{data_class_id}}",
+												"dataElements",
+												"{{data_element_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 10:05:35 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"3d212c82-5634-45a1-b250-0e2e49ad0ccb\",\n    \"domainType\": \"DataElement\",\n    \"label\": \"columnE\",\n    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"label\": \"TargetFlowDataModel\",\n            \"domainType\": \"DataModel\",\n            \"finalised\": false\n        },\n        {\n            \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"label\": \"tableE\",\n            \"domainType\": \"DataClass\"\n        }\n    ],\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T09:00:40.727Z\",\n    \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n    \"dataType\": {\n        \"id\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\",\n        \"domainType\": \"PrimitiveType\",\n        \"label\": \"string\",\n        \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n        \"breadcrumbs\": [\n            {\n                \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"label\": \"TargetFlowDataModel\",\n                \"domainType\": \"DataModel\",\n                \"finalised\": false\n            }\n        ]\n    }\n}"
+								}
+							]
 						}
 					],
 					"protocolProfileBehavior": {},
@@ -819,7 +1243,8 @@
 							"path": [
 								"dataModels"
 							]
-						}
+						},
+						"description": "This is a generic endpoint that will list all the datamodels in the system.\nIts more likely the list all datamodels by folder id is a more useful endpoint."
 					},
 					"response": [
 						{
@@ -915,22 +1340,24 @@
 							"body": "{\n    \"count\": 2,\n    \"items\": [\n        {\n            \"id\": \"03e7059c-b8c5-42e9-bc20-505076599826\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Complex Test DataModel\",\n            \"type\": \"Data Standard\",\n            \"classifiers\": [\n                {\n                    \"id\": \"605aa52b-5371-4dec-a06e-7beebc6e80c8\",\n                    \"label\": \"test classifier\",\n                    \"lastUpdated\": \"2020-07-28T10:45:07.85Z\"\n                },\n                {\n                    \"id\": \"61b6e03a-d81f-4108-9404-3e7814b59fce\",\n                    \"label\": \"test classifier2\",\n                    \"lastUpdated\": \"2020-07-28T10:45:07.853Z\"\n                }\n            ],\n            \"author\": \"admin person\",\n            \"organisation\": \"brc\"\n        },\n        {\n            \"id\": \"9ee42521-5ae1-4974-b9cb-ead70892c9d4\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Simple Test DataModel\",\n            \"type\": \"Data Standard\",\n            \"classifiers\": [\n                {\n                    \"id\": \"b6574050-8ea0-4f04-9c48-bc5194130d82\",\n                    \"label\": \"test classifier simple\",\n                    \"lastUpdated\": \"2020-07-28T10:45:10.267Z\"\n                }\n            ]\n        }\n    ]\n}"
 						},
 						{
-							"name": "List all Data Models",
+							"name": "List all Data Models in Folder - Folder not found",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{base_url}}/dataModels",
+									"raw": "{{base_url}}/folders/{{folder_id}}/dataModels",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
+										"folders",
+										"{{folder_id}}",
 										"dataModels"
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
+							"status": "Not Found",
+							"code": 404,
 							"_postman_previewlanguage": "json",
 							"header": [
 								{
@@ -943,11 +1370,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 29 Jul 2020 11:43:46 GMT"
+									"value": "Fri, 31 Jul 2020 14:48:07 GMT"
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"count\": 2,\n    \"items\": [\n        {\n            \"id\": \"03e7059c-b8c5-42e9-bc20-505076599826\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Complex Test DataModel\",\n            \"type\": \"Data Standard\",\n            \"classifiers\": [\n                {\n                    \"id\": \"605aa52b-5371-4dec-a06e-7beebc6e80c8\",\n                    \"label\": \"test classifier\",\n                    \"lastUpdated\": \"2020-07-28T10:45:07.85Z\"\n                },\n                {\n                    \"id\": \"61b6e03a-d81f-4108-9404-3e7814b59fce\",\n                    \"label\": \"test classifier2\",\n                    \"lastUpdated\": \"2020-07-28T10:45:07.853Z\"\n                }\n            ],\n            \"author\": \"admin person\",\n            \"organisation\": \"brc\"\n        },\n        {\n            \"id\": \"9ee42521-5ae1-4974-b9cb-ead70892c9d4\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Simple Test DataModel\",\n            \"type\": \"Data Standard\",\n            \"classifiers\": [\n                {\n                    \"id\": \"b6574050-8ea0-4f04-9c48-bc5194130d82\",\n                    \"label\": \"test classifier simple\",\n                    \"lastUpdated\": \"2020-07-28T10:45:10.267Z\"\n                }\n            ]\n        }\n    ]\n}"
+							"body": "{\n    \"path\": \"/api/folders/6f319a88-86ab-4537-8c83-f0132d2dc503/dataModels\",\n    \"resource\": \"Folder\",\n    \"id\": \"6f319a88-86ab-4537-8c83-f0132d2dc503\"\n}"
 						}
 					]
 				},
@@ -1003,6 +1430,67 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"id\": \"03e7059c-b8c5-42e9-bc20-505076599826\",\n    \"domainType\": \"DataModel\",\n    \"label\": \"Complex Test DataModel\",\n    \"availableActions\": [\n        \"delete\",\n        \"softDelete\",\n        \"update\",\n        \"save\",\n        \"show\",\n        \"comment\",\n        \"editDescription\"\n    ],\n    \"lastUpdated\": \"2020-07-28T10:45:11.922Z\",\n    \"classifiers\": [\n        {\n            \"id\": \"61b6e03a-d81f-4108-9404-3e7814b59fce\",\n            \"label\": \"test classifier2\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.853Z\"\n        },\n        {\n            \"id\": \"605aa52b-5371-4dec-a06e-7beebc6e80c8\",\n            \"label\": \"test classifier\",\n            \"lastUpdated\": \"2020-07-28T10:45:07.85Z\"\n        }\n    ],\n    \"type\": \"Data Standard\",\n    \"documentationVersion\": \"1.0.0\",\n    \"finalised\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"author\": \"admin person\",\n    \"organisation\": \"brc\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Finalise Data Model",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataModels/{{data_model_id}}/finalise",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"{{data_model_id}}",
+								"finalise"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Data Model by ID Copy",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/finalise",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"finalise"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Location",
+									"value": "http://localhost:8080/api/dataModels/9ee42521-5ae1-4974-b9cb-ead70892c9d4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 13:00:49 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"9ee42521-5ae1-4974-b9cb-ead70892c9d4\",\n    \"domainType\": \"DataModel\",\n    \"label\": \"Simple Test DataModel\",\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"softDelete\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-07-29T13:00:49.235Z\",\n    \"classifiers\": [\n        {\n            \"id\": \"b6574050-8ea0-4f04-9c48-bc5194130d82\",\n            \"label\": \"test classifier simple\",\n            \"lastUpdated\": \"2020-07-28T10:45:10.267Z\"\n        }\n    ],\n    \"type\": \"Data Standard\",\n    \"documentationVersion\": \"1.0.0\",\n    \"finalised\": true,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"dateFinalised\": \"2020-07-29T13:00:48.952Z\"\n}"
 						}
 					]
 				},
@@ -1824,90 +2312,33 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"id\": \"651084dd-91db-475e-a061-b04e9f3823eb\",\n    \"label\": \"praesentium-voluptatum-laborum\",\n    \"lastUpdated\": \"2020-07-29T12:07:31.518Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"update\",\n        \"delete\",\n        \"show\"\n    ]\n}"
-						}
-					]
-				},
-				{
-					"name": "Permanent delete folder by id",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/folders/{{$randomUUID}}?permanent=true",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"folders",
-								"{{$randomUUID}}"
-							],
-							"query": [
-								{
-									"key": "permanent",
-									"value": "true"
-								}
-							]
-						}
-					},
-					"response": [
-						{
-							"name": "Permanent delete folder by id",
-							"originalRequest": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/folders/7f7f26a8-bcf6-4fdb-832f-28866b64725b?permanent=true",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"folders",
-										"7f7f26a8-bcf6-4fdb-832f-28866b64725b"
-									],
-									"query": [
-										{
-											"key": "permanent",
-											"value": "true"
-										}
-									]
-								}
-							},
-							"status": "No Content",
-							"code": 204,
-							"_postman_previewlanguage": "plain",
-							"header": [
-								{
-									"key": "Date",
-									"value": "Wed, 29 Jul 2020 12:09:23 GMT"
-								}
-							],
-							"cookie": [],
-							"body": null
 						},
 						{
-							"name": "Permanent delete folder by not found id",
+							"name": "Create new folder - Label already exists",
 							"originalRequest": {
-								"method": "DELETE",
+								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\":\"nemo-voluptas-vero\",\n    \"description\": \"{{$randomLoremText}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
-									"raw": "{{base_url}}/folders/{{$randomUUID}}?permanent=true",
+									"raw": "{{base_url}}/folders",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
-										"folders",
-										"{{$randomUUID}}"
-									],
-									"query": [
-										{
-											"key": "permanent",
-											"value": "true"
-										}
+										"folders"
 									]
 								}
 							},
-							"status": "Not Found",
-							"code": 404,
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
 							"_postman_previewlanguage": "json",
 							"header": [
 								{
@@ -1920,11 +2351,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 29 Jul 2020 12:05:47 GMT"
+									"value": "Fri, 31 Jul 2020 14:46:50 GMT"
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"path\": \"/api/folders/490238ba-188d-4533-8ce8-91f3efb3b8e0\",\n    \"resource\": \"Folder\",\n    \"id\": \"490238ba-188d-4533-8ce8-91f3efb3b8e0\"\n}"
+							"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Property [label] of class [class uk.ac.ox.softeng.maurodatamapper.core.container.Folder] with value [nemo-voluptas-vero] must be unique\"\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -2026,6 +2457,134 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"id\": \"6f319a88-86ab-4537-8c83-f0132d2dc503\",\n    \"label\": \"Development Folder\",\n    \"deleted\": true,\n    \"lastUpdated\": \"2020-07-29T12:08:13.684Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"update\",\n        \"delete\",\n        \"show\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Edit folder by id",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\":\"{{$randomLoremParagraph}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/folders/{{folder_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"folders",
+								"{{folder_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Permanent delete folder by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/folders/{{$randomUUID}}?permanent=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"folders",
+								"{{$randomUUID}}"
+							],
+							"query": [
+								{
+									"key": "permanent",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Permanent delete folder by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/7f7f26a8-bcf6-4fdb-832f-28866b64725b?permanent=true",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"7f7f26a8-bcf6-4fdb-832f-28866b64725b"
+									],
+									"query": [
+										{
+											"key": "permanent",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 12:09:23 GMT"
+								}
+							],
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Permanent delete folder by not found id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/{{$randomUUID}}?permanent=true",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{$randomUUID}}"
+									],
+									"query": [
+										{
+											"key": "permanent",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 12:05:47 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"path\": \"/api/folders/490238ba-188d-4533-8ce8-91f3efb3b8e0\",\n    \"resource\": \"Folder\",\n    \"id\": \"490238ba-188d-4533-8ce8-91f3efb3b8e0\"\n}"
 						}
 					]
 				}
@@ -2614,6 +3173,42 @@
 							},
 							"response": [
 								{
+									"name": "List all Active Sessions - Not admin user",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/activeSessions",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"activeSessions"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 30 Jul 2020 09:02:52 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"path\": \"/api/admin/activeSessions\",\n    \"additional\": \"User must be an application administrator\"\n}"
+								},
+								{
 									"name": "List all Active Sessions",
 									"originalRequest": {
 										"method": "GET",
@@ -2648,6 +3243,42 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"7DEB12FEB947EB176C8C2FBC26FF6DFC\",\n            \"lastAccessedDateTime\": \"2020-07-29T11:17:43.282Z\",\n            \"creationDateTime\": \"2020-07-29T10:59:17.623Z\",\n            \"userEmailAddress\": \"admin@maurodatamapper.com\",\n            \"lastAccessedUrl\": \"/api/admin/activeSessions\"\n        }\n    ]\n}"
+								},
+								{
+									"name": "List all Active Sessions",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/admin/activeSessions",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"admin",
+												"activeSessions"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 30 Jul 2020 09:07:32 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"count\": 4,\n    \"items\": [\n        {\n            \"id\": \"C3F99C6144756BF678D4FCF2ED2CCD43\",\n            \"lastAccessedDateTime\": \"2020-07-30T09:06:44.441Z\",\n            \"creationDateTime\": \"2020-07-30T09:06:44.343Z\",\n            \"userEmailAddress\": \"admin@maurodatamapper.com\",\n            \"lastAccessedUrl\": \"/api/admin/activeSessions\"\n        },\n        {\n            \"id\": \"2A882BEFB4D9A3DBA1D6984EEBD95E37\",\n            \"lastAccessedDateTime\": \"2020-07-30T08:50:17.826Z\",\n            \"creationDateTime\": \"2020-07-30T08:49:35.121Z\",\n            \"userEmailAddress\": \"unlogged_user@mdm-core.com\",\n            \"lastAccessedUrl\": \"/api/tree/folders\"\n        },\n        {\n            \"id\": \"6C179EDA552A8961849ADA7954616A06\",\n            \"lastAccessedDateTime\": \"2020-07-30T08:51:50.261Z\",\n            \"creationDateTime\": \"2020-07-30T08:51:50.253Z\",\n            \"userEmailAddress\": \"unlogged_user@mdm-core.com\",\n            \"lastAccessedUrl\": \"/api/tree/folders\"\n        },\n        {\n            \"id\": \"D15B5225306C05F5C56EC2A0CA41612E\",\n            \"lastAccessedDateTime\": \"2020-07-30T09:03:39.006Z\",\n            \"creationDateTime\": \"2020-07-30T09:03:38.998Z\",\n            \"userEmailAddress\": \"unlogged_user@mdm-core.com\",\n            \"lastAccessedUrl\": \"/api/tree/folders\"\n        }\n    ]\n}"
 								}
 							]
 						}
@@ -3559,6 +4190,1230 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"count\": 6,\n    \"items\": [\n        {\n            \"id\": \"ffebc3af-f0c5-408b-b1c8-1508d067be47\",\n            \"name\": \"container_admin\",\n            \"displayName\": \"Container Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": false,\n            \"parent\": \"eae76d34-d520-4369-8f03-f4fcc0b8b61e\"\n        },\n        {\n            \"id\": \"2f8c23f3-8c0e-4920-8af7-505d8007c25b\",\n            \"name\": \"container_group_admin\",\n            \"displayName\": \"Container Group Administrator\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": true,\n            \"parent\": \"f686a892-8bcf-4bc8-82b3-208b174cd2e5\"\n        },\n        {\n            \"id\": \"f28580b5-97fe-4a02-bfd0-67f300eeeed5\",\n            \"name\": \"editor\",\n            \"displayName\": \"Editor\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": false,\n            \"parent\": \"ffebc3af-f0c5-408b-b1c8-1508d067be47\"\n        },\n        {\n            \"id\": \"8abca3f4-cdc3-451b-99f5-f548661dd1d3\",\n            \"name\": \"author\",\n            \"displayName\": \"Author\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": false,\n            \"parent\": \"f28580b5-97fe-4a02-bfd0-67f300eeeed5\"\n        },\n        {\n            \"id\": \"471d719a-dd51-4e45-a539-4e4d1e62a89b\",\n            \"name\": \"reviewer\",\n            \"displayName\": \"Reviewer\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": false,\n            \"parent\": \"8abca3f4-cdc3-451b-99f5-f548661dd1d3\"\n        },\n        {\n            \"id\": \"c7e04a3b-88c3-434f-80f2-2e8d82bfd4cd\",\n            \"name\": \"reader\",\n            \"displayName\": \"Reader\",\n            \"availableActions\": [],\n            \"createdBy\": \"mdm-security@maurodatamapper.com\",\n            \"applicationLevelRole\": false,\n            \"parent\": \"471d719a-dd51-4e45-a539-4e4d1e62a89b\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Tree",
+			"item": [
+				{
+					"name": "Folder tree",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/tree/folders",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tree",
+								"folders"
+							]
+						},
+						"description": "Get the folder tree.\nThis contains all folders, and the models inside the folders in a tree structure, which are readable by the user"
+					},
+					"response": [
+						{
+							"name": "Folder tree - Nothing readable",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/tree/folders",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"tree",
+										"folders"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Set-Cookie",
+									"value": "JSESSIONID=C1181DC9B8AC14CD59E07E1A6629C7C3; Path=/; HttpOnly"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 30 Jul 2020 08:53:35 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Data Flows",
+			"item": [
+				{
+					"name": "Data Class Components",
+					"item": [
+						{
+							"name": "List all Data Class Components in a Data Flow",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows",
+										"{{data_flow_id}}",
+										"dataClassComponents"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "List all Data Class Components in a Data Flow",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataFlows",
+												"{{data_flow_id}}",
+												"dataClassComponents"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 09:56:55 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"count\": 2,\n    \"items\": [\n        {\n            \"id\": \"7321e957-9e6e-426a-ac74-6c7e1e77ddd6\",\n            \"domainType\": \"DataClassComponent\",\n            \"label\": \"aToD\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n                    \"label\": \"Sample DataFlow\",\n                    \"domainType\": \"DataFlow\"\n                }\n            ],\n            \"dataFlow\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"sourceDataClasses\": [\n                {\n                    \"id\": \"640a90f2-9b54-4c71-a216-4d3fdc2bd897\",\n                    \"domainType\": \"DataClass\",\n                    \"label\": \"tableA\",\n                    \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                            \"label\": \"SourceFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        }\n                    ]\n                }\n            ],\n            \"targetDataClasses\": [\n                {\n                    \"id\": \"992e24f3-0ae6-4c93-9fe0-8fbf25472cbf\",\n                    \"domainType\": \"DataClass\",\n                    \"label\": \"tableD\",\n                    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                            \"label\": \"TargetFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n            \"domainType\": \"DataClassComponent\",\n            \"label\": \"bAndCToE\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n                    \"label\": \"Sample DataFlow\",\n                    \"domainType\": \"DataFlow\"\n                }\n            ],\n            \"dataFlow\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"sourceDataClasses\": [\n                {\n                    \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                    \"domainType\": \"DataClass\",\n                    \"label\": \"tableB\",\n                    \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                            \"label\": \"SourceFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        }\n                    ]\n                },\n                {\n                    \"id\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n                    \"domainType\": \"DataClass\",\n                    \"label\": \"tableC\",\n                    \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                            \"label\": \"SourceFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        }\n                    ]\n                }\n            ],\n            \"targetDataClasses\": [\n                {\n                    \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"domainType\": \"DataClass\",\n                    \"label\": \"tableE\",\n                    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                            \"label\": \"TargetFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Data Class Component by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows",
+										"{{data_flow_id}}",
+										"dataClassComponents",
+										"{{data_class_component_id}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Data Class Components by ID",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataFlows",
+												"{{data_flow_id}}",
+												"dataClassComponents",
+												"{{data_class_component_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 09:58:13 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n    \"domainType\": \"DataClassComponent\",\n    \"label\": \"bAndCToE\",\n    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"label\": \"TargetFlowDataModel\",\n            \"domainType\": \"DataModel\",\n            \"finalised\": false\n        },\n        {\n            \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"label\": \"Sample DataFlow\",\n            \"domainType\": \"DataFlow\"\n        }\n    ],\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T09:00:41.147Z\",\n    \"definition\": \"INSERT INTO TargetFlowDataModel.tableE\\nSELECT  \\n    b.columnE1                                      AS columnE,\\n    b.columnF                                       AS columnR,\\n    CONCAT(b.columnG,'_',c.columnJ)                 AS columnS,\\n    CASE\\n        WHEN b.columnH IS NULL THEN b.columnI\\n        ELSE b.columnH\\n    END                                             AS columnT,\\n    TRIM(c.columnJ)                                 AS columnU,\\n    CONCAT(c.columnL,' ',c.columnM,'--',b.columnG)  AS columnV\\nFROM SourceFlowDataModel.tableB b\\nINNER JOIN SourceFlowDataModel.tableC c ON b.columnE1 = c.columnE2\",\n    \"dataFlow\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n    \"sourceDataClasses\": [\n        {\n            \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableB\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        },\n        {\n            \"id\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableC\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        }\n    ],\n    \"targetDataClasses\": [\n        {\n            \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableE\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Add target Data Class to Data Class Component",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/target/{{data_class_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows",
+										"{{data_flow_id}}",
+										"dataClassComponents",
+										"{{data_class_component_id}}",
+										"target",
+										"{{data_class_id}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add target Data Class to Data Class Component",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/target/{{data_class_id}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataFlows",
+												"{{data_flow_id}}",
+												"dataClassComponents",
+												"{{data_class_component_id}}",
+												"target",
+												"{{data_class_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Location",
+											"value": "http://localhost:8080/dataClassComponent/show/3e671163-e824-455a-9882-1e88b8717fd5"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 10:12:24 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n    \"domainType\": \"DataClassComponent\",\n    \"label\": \"bAndCToE\",\n    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"label\": \"TargetFlowDataModel\",\n            \"domainType\": \"DataModel\",\n            \"finalised\": false\n        },\n        {\n            \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"label\": \"Sample DataFlow\",\n            \"domainType\": \"DataFlow\"\n        }\n    ],\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T10:12:24.608Z\",\n    \"definition\": \"INSERT INTO TargetFlowDataModel.tableE\\nSELECT  \\n    b.columnE1                                      AS columnE,\\n    b.columnF                                       AS columnR,\\n    CONCAT(b.columnG,'_',c.columnJ)                 AS columnS,\\n    CASE\\n        WHEN b.columnH IS NULL THEN b.columnI\\n        ELSE b.columnH\\n    END                                             AS columnT,\\n    TRIM(c.columnJ)                                 AS columnU,\\n    CONCAT(c.columnL,' ',c.columnM,'--',b.columnG)  AS columnV\\nFROM SourceFlowDataModel.tableB b\\nINNER JOIN SourceFlowDataModel.tableC c ON b.columnE1 = c.columnE2\",\n    \"dataFlow\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n    \"sourceDataClasses\": [\n        {\n            \"id\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableC\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        },\n        {\n            \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableB\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        }\n    ],\n    \"targetDataClasses\": [\n        {\n            \"id\": \"992e24f3-0ae6-4c93-9fe0-8fbf25472cbf\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableD\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        },\n        {\n            \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableE\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Remove target Data Class from Data Class Component",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/target/{{data_class_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows",
+										"{{data_flow_id}}",
+										"dataClassComponents",
+										"{{data_class_component_id}}",
+										"target",
+										"{{data_class_id}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Remove target Data Class from Data Class Component",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/target/{{data_class_id}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataFlows",
+												"{{data_flow_id}}",
+												"dataClassComponents",
+												"{{data_class_component_id}}",
+												"target",
+												"{{data_class_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Location",
+											"value": "http://localhost:8080/dataClassComponent/show/3e671163-e824-455a-9882-1e88b8717fd5"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 10:13:06 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n    \"domainType\": \"DataClassComponent\",\n    \"label\": \"bAndCToE\",\n    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"label\": \"TargetFlowDataModel\",\n            \"domainType\": \"DataModel\",\n            \"finalised\": false\n        },\n        {\n            \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"label\": \"Sample DataFlow\",\n            \"domainType\": \"DataFlow\"\n        }\n    ],\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T10:13:06.348Z\",\n    \"definition\": \"INSERT INTO TargetFlowDataModel.tableE\\nSELECT  \\n    b.columnE1                                      AS columnE,\\n    b.columnF                                       AS columnR,\\n    CONCAT(b.columnG,'_',c.columnJ)                 AS columnS,\\n    CASE\\n        WHEN b.columnH IS NULL THEN b.columnI\\n        ELSE b.columnH\\n    END                                             AS columnT,\\n    TRIM(c.columnJ)                                 AS columnU,\\n    CONCAT(c.columnL,' ',c.columnM,'--',b.columnG)  AS columnV\\nFROM SourceFlowDataModel.tableB b\\nINNER JOIN SourceFlowDataModel.tableC c ON b.columnE1 = c.columnE2\",\n    \"dataFlow\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n    \"sourceDataClasses\": [\n        {\n            \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableB\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        },\n        {\n            \"id\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableC\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        }\n    ],\n    \"targetDataClasses\": [\n        {\n            \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableE\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Add source Data Class to Data Class Component",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/source/{{data_class_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows",
+										"{{data_flow_id}}",
+										"dataClassComponents",
+										"{{data_class_component_id}}",
+										"source",
+										"{{data_class_id}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add source Data Class to Data Class Component",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/source/{{data_class_id}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataFlows",
+												"{{data_flow_id}}",
+												"dataClassComponents",
+												"{{data_class_component_id}}",
+												"source",
+												"{{data_class_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Location",
+											"value": "http://localhost:8080/dataClassComponent/show/3e671163-e824-455a-9882-1e88b8717fd5"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 10:14:31 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n    \"domainType\": \"DataClassComponent\",\n    \"label\": \"bAndCToE\",\n    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"label\": \"TargetFlowDataModel\",\n            \"domainType\": \"DataModel\",\n            \"finalised\": false\n        },\n        {\n            \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"label\": \"Sample DataFlow\",\n            \"domainType\": \"DataFlow\"\n        }\n    ],\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T10:14:31.64Z\",\n    \"definition\": \"INSERT INTO TargetFlowDataModel.tableE\\nSELECT  \\n    b.columnE1                                      AS columnE,\\n    b.columnF                                       AS columnR,\\n    CONCAT(b.columnG,'_',c.columnJ)                 AS columnS,\\n    CASE\\n        WHEN b.columnH IS NULL THEN b.columnI\\n        ELSE b.columnH\\n    END                                             AS columnT,\\n    TRIM(c.columnJ)                                 AS columnU,\\n    CONCAT(c.columnL,' ',c.columnM,'--',b.columnG)  AS columnV\\nFROM SourceFlowDataModel.tableB b\\nINNER JOIN SourceFlowDataModel.tableC c ON b.columnE1 = c.columnE2\",\n    \"dataFlow\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n    \"sourceDataClasses\": [\n        {\n            \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableB\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        },\n        {\n            \"id\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableC\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        },\n        {\n            \"id\": \"640a90f2-9b54-4c71-a216-4d3fdc2bd897\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableA\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        }\n    ],\n    \"targetDataClasses\": [\n        {\n            \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableE\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Remove source Data Class from Data Class Component",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/source/{{data_class_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows",
+										"{{data_flow_id}}",
+										"dataClassComponents",
+										"{{data_class_component_id}}",
+										"source",
+										"{{data_class_id}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Remove source Data Class from Data Class Component",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/source/{{data_class_id}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataFlows",
+												"{{data_flow_id}}",
+												"dataClassComponents",
+												"{{data_class_component_id}}",
+												"source",
+												"{{data_class_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Location",
+											"value": "http://localhost:8080/dataClassComponent/show/3e671163-e824-455a-9882-1e88b8717fd5"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 10:14:48 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n    \"domainType\": \"DataClassComponent\",\n    \"label\": \"bAndCToE\",\n    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"label\": \"TargetFlowDataModel\",\n            \"domainType\": \"DataModel\",\n            \"finalised\": false\n        },\n        {\n            \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"label\": \"Sample DataFlow\",\n            \"domainType\": \"DataFlow\"\n        }\n    ],\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T10:14:47.989Z\",\n    \"definition\": \"INSERT INTO TargetFlowDataModel.tableE\\nSELECT  \\n    b.columnE1                                      AS columnE,\\n    b.columnF                                       AS columnR,\\n    CONCAT(b.columnG,'_',c.columnJ)                 AS columnS,\\n    CASE\\n        WHEN b.columnH IS NULL THEN b.columnI\\n        ELSE b.columnH\\n    END                                             AS columnT,\\n    TRIM(c.columnJ)                                 AS columnU,\\n    CONCAT(c.columnL,' ',c.columnM,'--',b.columnG)  AS columnV\\nFROM SourceFlowDataModel.tableB b\\nINNER JOIN SourceFlowDataModel.tableC c ON b.columnE1 = c.columnE2\",\n    \"dataFlow\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n    \"sourceDataClasses\": [\n        {\n            \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableB\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        },\n        {\n            \"id\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableC\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        }\n    ],\n    \"targetDataClasses\": [\n        {\n            \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"domainType\": \"DataClass\",\n            \"label\": \"tableE\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Data Element Components",
+					"item": [
+						{
+							"name": "List all Data Element Components in Data Class Component",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/dataElementComponents",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows",
+										"{{data_flow_id}}",
+										"dataClassComponents",
+										"{{data_class_component_id}}",
+										"dataElementComponents"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "List all Data Element Components",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/dataElementComponents",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataFlows",
+												"{{data_flow_id}}",
+												"dataClassComponents",
+												"{{data_class_component_id}}",
+												"dataElementComponents"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 09:58:40 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"count\": 6,\n    \"items\": [\n        {\n            \"id\": \"8229d144-b022-4718-876a-b9c7c4695622\",\n            \"domainType\": \"DataElementComponent\",\n            \"label\": \"JOIN KEY\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n                    \"label\": \"Sample DataFlow\",\n                    \"domainType\": \"DataFlow\"\n                },\n                {\n                    \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n                    \"label\": \"bAndCToE\",\n                    \"domainType\": \"DataClassComponent\"\n                }\n            ],\n            \"dataClassComponent\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n            \"sourceDataElements\": [\n                {\n                    \"id\": \"67ee4008-86dc-4de0-baeb-0aea6a6ba163\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnE1\",\n                    \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                            \"label\": \"SourceFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                            \"label\": \"tableB\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                    \"dataType\": \"b6ad7711-3211-488d-9bf7-047f28ed2b69\"\n                },\n                {\n                    \"id\": \"cf3f4ce8-947b-4ba5-90cc-2200502b75e3\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnE2\",\n                    \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                            \"label\": \"SourceFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n                            \"label\": \"tableC\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n                    \"dataType\": \"b6ad7711-3211-488d-9bf7-047f28ed2b69\"\n                }\n            ],\n            \"targetDataElements\": [\n                {\n                    \"id\": \"3d212c82-5634-45a1-b250-0e2e49ad0ccb\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnE\",\n                    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                            \"label\": \"TargetFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                            \"label\": \"tableE\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"dataType\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\"\n                }\n            ]\n        },\n        {\n            \"id\": \"6d4a5289-fb19-4511-8a74-e10c9f1ddb42\",\n            \"domainType\": \"DataElementComponent\",\n            \"label\": \"Direct Copy\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n                    \"label\": \"Sample DataFlow\",\n                    \"domainType\": \"DataFlow\"\n                },\n                {\n                    \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n                    \"label\": \"bAndCToE\",\n                    \"domainType\": \"DataClassComponent\"\n                }\n            ],\n            \"dataClassComponent\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n            \"sourceDataElements\": [\n                {\n                    \"id\": \"6fdf65e7-e1c6-4320-a875-a00dfcf6b005\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnF\",\n                    \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                            \"label\": \"SourceFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                            \"label\": \"tableB\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                    \"dataType\": \"b6ad7711-3211-488d-9bf7-047f28ed2b69\"\n                }\n            ],\n            \"targetDataElements\": [\n                {\n                    \"id\": \"5c835c0c-b53b-4d93-9def-7771a1185852\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnR\",\n                    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                            \"label\": \"TargetFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                            \"label\": \"tableE\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"dataType\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\"\n                }\n            ]\n        },\n        {\n            \"id\": \"fddc5cb4-435d-46c8-a23c-45dad4f94db2\",\n            \"domainType\": \"DataElementComponent\",\n            \"label\": \"CONCAT\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n                    \"label\": \"Sample DataFlow\",\n                    \"domainType\": \"DataFlow\"\n                },\n                {\n                    \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n                    \"label\": \"bAndCToE\",\n                    \"domainType\": \"DataClassComponent\"\n                }\n            ],\n            \"dataClassComponent\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n            \"sourceDataElements\": [\n                {\n                    \"id\": \"00dc8fed-abb0-41bd-9486-476d97872923\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnJ\",\n                    \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                            \"label\": \"SourceFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n                            \"label\": \"tableC\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n                    \"dataType\": \"b6ad7711-3211-488d-9bf7-047f28ed2b69\"\n                },\n                {\n                    \"id\": \"e4d0b02d-55b0-4ef5-888f-287a68fbb927\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnG\",\n                    \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                            \"label\": \"SourceFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                            \"label\": \"tableB\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                    \"dataType\": \"21f70c83-8173-4945-9e26-73fb11e6d48d\"\n                }\n            ],\n            \"targetDataElements\": [\n                {\n                    \"id\": \"82633209-27f6-4507-a811-db9d70a0f90f\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnS\",\n                    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                            \"label\": \"TargetFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                            \"label\": \"tableE\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"dataType\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\"\n                }\n            ]\n        },\n        {\n            \"id\": \"253aa16b-bd46-410f-b945-ac91a64607f2\",\n            \"domainType\": \"DataElementComponent\",\n            \"label\": \"CASE\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n                    \"label\": \"Sample DataFlow\",\n                    \"domainType\": \"DataFlow\"\n                },\n                {\n                    \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n                    \"label\": \"bAndCToE\",\n                    \"domainType\": \"DataClassComponent\"\n                }\n            ],\n            \"dataClassComponent\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n            \"sourceDataElements\": [\n                {\n                    \"id\": \"c072d7f4-0e9e-4849-8c0c-9346ddb7eb7e\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnI\",\n                    \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                            \"label\": \"SourceFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                            \"label\": \"tableB\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                    \"dataType\": \"21f70c83-8173-4945-9e26-73fb11e6d48d\"\n                },\n                {\n                    \"id\": \"4e9435d7-036c-407d-8b37-547e22fe957a\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnH\",\n                    \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                            \"label\": \"SourceFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                            \"label\": \"tableB\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                    \"dataType\": \"b6ad7711-3211-488d-9bf7-047f28ed2b69\"\n                }\n            ],\n            \"targetDataElements\": [\n                {\n                    \"id\": \"dd6c059a-e2aa-43cf-b190-72fc619620ac\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnT\",\n                    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                            \"label\": \"TargetFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                            \"label\": \"tableE\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"dataType\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\"\n                }\n            ]\n        },\n        {\n            \"id\": \"8403fd23-eec8-42d6-a386-cd5f6f80d584\",\n            \"domainType\": \"DataElementComponent\",\n            \"label\": \"TRIM\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n                    \"label\": \"Sample DataFlow\",\n                    \"domainType\": \"DataFlow\"\n                },\n                {\n                    \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n                    \"label\": \"bAndCToE\",\n                    \"domainType\": \"DataClassComponent\"\n                }\n            ],\n            \"dataClassComponent\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n            \"sourceDataElements\": [\n                {\n                    \"id\": \"00dc8fed-abb0-41bd-9486-476d97872923\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnJ\",\n                    \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                            \"label\": \"SourceFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n                            \"label\": \"tableC\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n                    \"dataType\": \"b6ad7711-3211-488d-9bf7-047f28ed2b69\"\n                }\n            ],\n            \"targetDataElements\": [\n                {\n                    \"id\": \"95445e14-d9c6-4fb3-aaa3-f22e59e83558\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnU\",\n                    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                            \"label\": \"TargetFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                            \"label\": \"tableE\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"dataType\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\"\n                }\n            ]\n        },\n        {\n            \"id\": \"c3dd6bbd-1b62-4f50-b8e8-d0f56d3c8501\",\n            \"domainType\": \"DataElementComponent\",\n            \"label\": \"CONCAT\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n                    \"label\": \"Sample DataFlow\",\n                    \"domainType\": \"DataFlow\"\n                },\n                {\n                    \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n                    \"label\": \"bAndCToE\",\n                    \"domainType\": \"DataClassComponent\"\n                }\n            ],\n            \"dataClassComponent\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n            \"sourceDataElements\": [\n                {\n                    \"id\": \"e4d0b02d-55b0-4ef5-888f-287a68fbb927\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnG\",\n                    \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                            \"label\": \"SourceFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                            \"label\": \"tableB\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                    \"dataType\": \"21f70c83-8173-4945-9e26-73fb11e6d48d\"\n                },\n                {\n                    \"id\": \"40a78bce-a4d3-4fb1-bc34-f91569801c85\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnL\",\n                    \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                            \"label\": \"SourceFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n                            \"label\": \"tableC\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n                    \"dataType\": \"b6ad7711-3211-488d-9bf7-047f28ed2b69\"\n                },\n                {\n                    \"id\": \"16b5c5d1-07cd-401d-9448-f782a7af7022\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnM\",\n                    \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                            \"label\": \"SourceFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n                            \"label\": \"tableC\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n                    \"dataType\": \"21f70c83-8173-4945-9e26-73fb11e6d48d\"\n                }\n            ],\n            \"targetDataElements\": [\n                {\n                    \"id\": \"bb190237-9da5-4953-ac3b-080e1b641906\",\n                    \"domainType\": \"DataElement\",\n                    \"label\": \"columnV\",\n                    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                            \"label\": \"TargetFlowDataModel\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        },\n                        {\n                            \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                            \"label\": \"tableE\",\n                            \"domainType\": \"DataClass\"\n                        }\n                    ],\n                    \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"dataType\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\"\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Data Element Component by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/dataElementComponents/{{data_element_component_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows",
+										"{{data_flow_id}}",
+										"dataClassComponents",
+										"{{data_class_component_id}}",
+										"dataElementComponents",
+										"{{data_element_component_id}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get Data Element Components by ID",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/dataElementComponents/{{data_element_component_id}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataFlows",
+												"{{data_flow_id}}",
+												"dataClassComponents",
+												"{{data_class_component_id}}",
+												"dataElementComponents",
+												"{{data_element_component_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 09:59:58 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"8229d144-b022-4718-876a-b9c7c4695622\",\n    \"domainType\": \"DataElementComponent\",\n    \"label\": \"JOIN KEY\",\n    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"label\": \"TargetFlowDataModel\",\n            \"domainType\": \"DataModel\",\n            \"finalised\": false\n        },\n        {\n            \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"label\": \"Sample DataFlow\",\n            \"domainType\": \"DataFlow\"\n        },\n        {\n            \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n            \"label\": \"bAndCToE\",\n            \"domainType\": \"DataClassComponent\"\n        }\n    ],\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T09:00:41.149Z\",\n    \"definition\": null,\n    \"dataClassComponent\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n    \"sourceDataElements\": [\n        {\n            \"id\": \"67ee4008-86dc-4de0-baeb-0aea6a6ba163\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnE1\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                    \"label\": \"tableB\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n            \"dataType\": \"b6ad7711-3211-488d-9bf7-047f28ed2b69\"\n        },\n        {\n            \"id\": \"cf3f4ce8-947b-4ba5-90cc-2200502b75e3\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnE2\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n                    \"label\": \"tableC\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n            \"dataType\": \"b6ad7711-3211-488d-9bf7-047f28ed2b69\"\n        }\n    ],\n    \"targetDataElements\": [\n        {\n            \"id\": \"3d212c82-5634-45a1-b250-0e2e49ad0ccb\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnE\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"label\": \"tableE\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"dataType\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Add target Data Element to Data Element Component",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/dataElementComponents/{{data_element_component_id}}/target/{{data_element_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows",
+										"{{data_flow_id}}",
+										"dataClassComponents",
+										"{{data_class_component_id}}",
+										"dataElementComponents",
+										"{{data_element_component_id}}",
+										"target",
+										"{{data_element_id}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add target Data Element to Data Element Component",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/dataElementComponents/{{data_element_component_id}}/target/{{data_element_id}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataFlows",
+												"{{data_flow_id}}",
+												"dataClassComponents",
+												"{{data_class_component_id}}",
+												"dataElementComponents",
+												"{{data_element_component_id}}",
+												"target",
+												"{{data_element_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Location",
+											"value": "http://localhost:8080/dataElementComponent/show/8229d144-b022-4718-876a-b9c7c4695622"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 10:10:09 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"8229d144-b022-4718-876a-b9c7c4695622\",\n    \"domainType\": \"DataElementComponent\",\n    \"label\": \"JOIN KEY\",\n    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"label\": \"TargetFlowDataModel\",\n            \"domainType\": \"DataModel\",\n            \"finalised\": false\n        },\n        {\n            \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"label\": \"Sample DataFlow\",\n            \"domainType\": \"DataFlow\"\n        },\n        {\n            \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n            \"label\": \"bAndCToE\",\n            \"domainType\": \"DataClassComponent\"\n        }\n    ],\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T10:10:08.737Z\",\n    \"definition\": null,\n    \"dataClassComponent\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n    \"sourceDataElements\": [\n        {\n            \"id\": \"67ee4008-86dc-4de0-baeb-0aea6a6ba163\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnE1\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                    \"label\": \"tableB\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n            \"dataType\": \"b6ad7711-3211-488d-9bf7-047f28ed2b69\"\n        },\n        {\n            \"id\": \"cf3f4ce8-947b-4ba5-90cc-2200502b75e3\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnE2\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n                    \"label\": \"tableC\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n            \"dataType\": \"b6ad7711-3211-488d-9bf7-047f28ed2b69\"\n        }\n    ],\n    \"targetDataElements\": [\n        {\n            \"id\": \"3d212c82-5634-45a1-b250-0e2e49ad0ccb\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnE\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"label\": \"tableE\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"dataType\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\"\n        },\n        {\n            \"id\": \"5c835c0c-b53b-4d93-9def-7771a1185852\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnR\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"label\": \"tableE\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"dataType\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Remove target Data Element from Data Element Component",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/dataElementComponents/{{data_element_component_id}}/target/{{data_element_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows",
+										"{{data_flow_id}}",
+										"dataClassComponents",
+										"{{data_class_component_id}}",
+										"dataElementComponents",
+										"{{data_element_component_id}}",
+										"target",
+										"{{data_element_id}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Remove target Data Element from Data Element Component",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/dataElementComponents/{{data_element_component_id}}/target/{{data_element_id}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataFlows",
+												"{{data_flow_id}}",
+												"dataClassComponents",
+												"{{data_class_component_id}}",
+												"dataElementComponents",
+												"{{data_element_component_id}}",
+												"target",
+												"{{data_element_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Location",
+											"value": "http://localhost:8080/dataElementComponent/show/8229d144-b022-4718-876a-b9c7c4695622"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 10:10:46 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"8229d144-b022-4718-876a-b9c7c4695622\",\n    \"domainType\": \"DataElementComponent\",\n    \"label\": \"JOIN KEY\",\n    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"label\": \"TargetFlowDataModel\",\n            \"domainType\": \"DataModel\",\n            \"finalised\": false\n        },\n        {\n            \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"label\": \"Sample DataFlow\",\n            \"domainType\": \"DataFlow\"\n        },\n        {\n            \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n            \"label\": \"bAndCToE\",\n            \"domainType\": \"DataClassComponent\"\n        }\n    ],\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T10:10:46.899Z\",\n    \"definition\": null,\n    \"dataClassComponent\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n    \"sourceDataElements\": [\n        {\n            \"id\": \"cf3f4ce8-947b-4ba5-90cc-2200502b75e3\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnE2\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n                    \"label\": \"tableC\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"e27e7c6c-7f5f-4216-b202-6c8122451ef8\",\n            \"dataType\": \"b6ad7711-3211-488d-9bf7-047f28ed2b69\"\n        },\n        {\n            \"id\": \"67ee4008-86dc-4de0-baeb-0aea6a6ba163\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnE1\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                    \"label\": \"tableB\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n            \"dataType\": \"b6ad7711-3211-488d-9bf7-047f28ed2b69\"\n        }\n    ],\n    \"targetDataElements\": [\n        {\n            \"id\": \"3d212c82-5634-45a1-b250-0e2e49ad0ccb\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnE\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"label\": \"tableE\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"dataType\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Add source Data Element to Data Element Component",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/dataElementComponents/{{data_element_component_id}}/source/{{data_element_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows",
+										"{{data_flow_id}}",
+										"dataClassComponents",
+										"{{data_class_component_id}}",
+										"dataElementComponents",
+										"{{data_element_component_id}}",
+										"source",
+										"{{data_element_id}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Add source Data Element to Data Element Component",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/dataElementComponents/{{data_element_component_id}}/source/{{data_element_id}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataFlows",
+												"{{data_flow_id}}",
+												"dataClassComponents",
+												"{{data_class_component_id}}",
+												"dataElementComponents",
+												"{{data_element_component_id}}",
+												"source",
+												"{{data_element_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Location",
+											"value": "http://localhost:8080/dataElementComponent/show/6d4a5289-fb19-4511-8a74-e10c9f1ddb42"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 10:17:38 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"6d4a5289-fb19-4511-8a74-e10c9f1ddb42\",\n    \"domainType\": \"DataElementComponent\",\n    \"label\": \"Direct Copy\",\n    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"label\": \"TargetFlowDataModel\",\n            \"domainType\": \"DataModel\",\n            \"finalised\": false\n        },\n        {\n            \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"label\": \"Sample DataFlow\",\n            \"domainType\": \"DataFlow\"\n        },\n        {\n            \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n            \"label\": \"bAndCToE\",\n            \"domainType\": \"DataClassComponent\"\n        }\n    ],\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T10:17:38.895Z\",\n    \"definition\": null,\n    \"dataClassComponent\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n    \"sourceDataElements\": [\n        {\n            \"id\": \"6fdf65e7-e1c6-4320-a875-a00dfcf6b005\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnF\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                    \"label\": \"tableB\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n            \"dataType\": \"b6ad7711-3211-488d-9bf7-047f28ed2b69\"\n        },\n        {\n            \"id\": \"e4d0b02d-55b0-4ef5-888f-287a68fbb927\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnG\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                    \"label\": \"tableB\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n            \"dataType\": \"21f70c83-8173-4945-9e26-73fb11e6d48d\"\n        }\n    ],\n    \"targetDataElements\": [\n        {\n            \"id\": \"5c835c0c-b53b-4d93-9def-7771a1185852\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnR\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"label\": \"tableE\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"dataType\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Remove source Data Element from Data Element Component",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/dataElementComponents/{{data_element_component_id}}/source/{{data_element_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows",
+										"{{data_flow_id}}",
+										"dataClassComponents",
+										"{{data_class_component_id}}",
+										"dataElementComponents",
+										"{{data_element_component_id}}",
+										"source",
+										"{{data_element_id}}"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Remove source Data Element from Data Element Component",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}/dataClassComponents/{{data_class_component_id}}/dataElementComponents/{{data_element_component_id}}/source/{{data_element_id}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataFlows",
+												"{{data_flow_id}}",
+												"dataClassComponents",
+												"{{data_class_component_id}}",
+												"dataElementComponents",
+												"{{data_element_component_id}}",
+												"source",
+												"{{data_element_id}}"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Location",
+											"value": "http://localhost:8080/dataElementComponent/show/6d4a5289-fb19-4511-8a74-e10c9f1ddb42"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 10:18:04 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"6d4a5289-fb19-4511-8a74-e10c9f1ddb42\",\n    \"domainType\": \"DataElementComponent\",\n    \"label\": \"Direct Copy\",\n    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"label\": \"TargetFlowDataModel\",\n            \"domainType\": \"DataModel\",\n            \"finalised\": false\n        },\n        {\n            \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"label\": \"Sample DataFlow\",\n            \"domainType\": \"DataFlow\"\n        },\n        {\n            \"id\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n            \"label\": \"bAndCToE\",\n            \"domainType\": \"DataClassComponent\"\n        }\n    ],\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T10:18:04.099Z\",\n    \"definition\": null,\n    \"dataClassComponent\": \"3e671163-e824-455a-9882-1e88b8717fd5\",\n    \"sourceDataElements\": [\n        {\n            \"id\": \"6fdf65e7-e1c6-4320-a875-a00dfcf6b005\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnF\",\n            \"model\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                    \"label\": \"SourceFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n                    \"label\": \"tableB\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"08e2de4f-cf3c-4c17-9c00-d48ed12efdea\",\n            \"dataType\": \"b6ad7711-3211-488d-9bf7-047f28ed2b69\"\n        }\n    ],\n    \"targetDataElements\": [\n        {\n            \"id\": \"5c835c0c-b53b-4d93-9def-7771a1185852\",\n            \"domainType\": \"DataElement\",\n            \"label\": \"columnR\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                },\n                {\n                    \"id\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n                    \"label\": \"tableE\",\n                    \"domainType\": \"DataClass\"\n                }\n            ],\n            \"dataClass\": \"db5cba45-4d7f-4cc5-b792-ce753ae68b79\",\n            \"dataType\": \"fe99cb86-ee71-4ea5-ad4e-3f57fea1fa10\"\n        }\n    ]\n}"
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "List Data Flows relative to target Data Model",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"{{data_model_id}}",
+								"dataFlows"
+							]
+						},
+						"description": "This will list the entire chain of readable DataFlows from the provided data_model_id forwards and backwards"
+					},
+					"response": [
+						{
+							"name": "List Data Flows relative to target Data Model",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2020 09:51:34 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"domainType\": \"DataFlow\",\n            \"label\": \"Sample DataFlow\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ],\n            \"source\": {\n                \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"SourceFlowDataModel\",\n                \"type\": \"Data Asset\"\n            },\n            \"target\": {\n                \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"TargetFlowDataModel\",\n                \"type\": \"Data Asset\"\n            },\n            \"diagramLayout\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List Data Flows where Data Model is source",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows?type=source",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"{{data_model_id}}",
+								"dataFlows"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "source"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Data Flows where Data Model is source",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/e1758894-f8bf-4489-bf78-5f8177dabb1a/dataFlows?type=source",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"e1758894-f8bf-4489-bf78-5f8177dabb1a",
+										"dataFlows"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "source"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2020 09:54:48 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"domainType\": \"DataFlow\",\n            \"label\": \"Sample DataFlow\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ],\n            \"source\": {\n                \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"SourceFlowDataModel\",\n                \"type\": \"Data Asset\"\n            },\n            \"target\": {\n                \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"TargetFlowDataModel\",\n                \"type\": \"Data Asset\"\n            },\n            \"diagramLayout\": null\n        }\n    ]\n}"
+						},
+						{
+							"name": "List Data Flows where Data Model is source - none found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows?type=source",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "source"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2020 09:52:59 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 0,\n    \"items\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "List Data Flows where Data Model is target",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows?type=source",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"{{data_model_id}}",
+								"dataFlows"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "source"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Data Flows where Data Model is target",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows?type=target",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "target"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2020 09:54:05 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"domainType\": \"DataFlow\",\n            \"label\": \"Sample DataFlow\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ],\n            \"source\": {\n                \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"SourceFlowDataModel\",\n                \"type\": \"Data Asset\"\n            },\n            \"target\": {\n                \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"TargetFlowDataModel\",\n                \"type\": \"Data Asset\"\n            },\n            \"diagramLayout\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Data Flow by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"{{data_model_id}}",
+								"dataFlows",
+								"{{data_flow_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Data Flow by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows/{{data_flow_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows",
+										"{{data_flow_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2020 09:56:21 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n    \"domainType\": \"DataFlow\",\n    \"label\": \"Sample DataFlow\",\n    \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"label\": \"TargetFlowDataModel\",\n            \"domainType\": \"DataModel\",\n            \"finalised\": false\n        }\n    ],\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T09:00:41.27Z\",\n    \"definition\": null,\n    \"source\": {\n        \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n        \"domainType\": \"DataModel\",\n        \"label\": \"SourceFlowDataModel\",\n        \"type\": \"Data Asset\"\n    },\n    \"target\": {\n        \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n        \"domainType\": \"DataModel\",\n        \"label\": \"TargetFlowDataModel\",\n        \"type\": \"Data Asset\"\n    },\n    \"diagramLayout\": null\n}"
 						}
 					]
 				}
