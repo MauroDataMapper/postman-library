@@ -3554,7 +3554,7 @@
 										"userGroups",
 										"{{user_group_id}}",
 										"catalogueUsers",
-										"{{user_id_to_add_to_group}}"
+										"{{user_id_to_add_to_or_delete_from_group}}"
 									]
 								}
 							},
@@ -3574,7 +3574,7 @@
 										"userGroups",
 										"{{user_group_id}}",
 										"catalogueUsers",
-										"{{user_id_to_add_to_group}}"
+										"{{user_id_to_add_to_or_delete_from_group}}"
 									]
 								}
 							},
@@ -4223,6 +4223,42 @@
 							"body": "{\n    \"count\": 0,\n    \"items\": []\n}"
 						}
 					]
+				},
+				{
+					"name": "List all edits for a UserGroup",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/userGroups/{{user_group_id}}/edits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"userGroups",
+								"{{user_group_id}}",
+								"edits"
+							]
+						}
+					}
+				},
+				{
+					"name": "List all edits for a CatalogueUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/catalogueUsers/{{user_id_to_add_to_or_delete_from_group}}/edits",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"catalogueUsers",
+								"{{user_id_to_add_to_or_delete_from_group}}",
+								"edits"
+							]
+						}
+					}
 				}
 			],
 			"protocolProfileBehavior": {}
