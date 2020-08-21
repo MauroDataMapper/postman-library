@@ -1981,6 +1981,23 @@
 					"_postman_isSubFolder": true
 				},
 				{
+					"name": "List terminologies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/terminologies",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"terminologies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get Terminology by ID",
 					"request": {
 						"method": "GET",
@@ -1997,6 +2014,52 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Finalise Terminology",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/terminologies/{{terminology_id_to_finalise}}/finalise",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"terminologies",
+								"{{terminology_id_to_finalise}}",
+								"finalise"
+							]
+						}
+					}
+				},
+				{
+					"name": "Add Terminology (New Model Version)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\": \"A new Terminology\",\n    \"copyPermissions\": false,\n    \"copyDataFlows\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/terminologies/{{terminology_id_to_finalise}}/newModelVersion",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"terminologies",
+								"{{terminology_id_to_finalise}}",
+								"newModelVersion"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"protocolProfileBehavior": {}
@@ -2004,6 +2067,41 @@
 		{
 			"name": "CodeSets",
 			"item": [
+				{
+					"name": "List CodeSets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/codeSets",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"codeSets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get CodeSet by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/codeSets/{{code_set_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"codeSets",
+								"{{code_set_id}}"
+							]
+						}
+					},
+					"response": []
+				},
 				{
 					"name": "Add CodeSet (New Model Version)",
 					"request": {
@@ -2055,24 +2153,6 @@
 								"codeSets",
 								"{{code_set_id}}",
 								"newDocumentationVersion"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get CodeSet by ID",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/codeSets/{{code_set_id}}",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"codeSets",
-								"{{code_set_id}}"
 							]
 						}
 					},
@@ -3583,6 +3663,137 @@
 					],
 					"protocolProfileBehavior": {},
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Model and Documentation Superseded",
+					"item": [
+						{
+							"name": "Get DataModel Model superseded",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/tree/folders/dataModel/modelSuperseded",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"tree",
+										"folders",
+										"dataModel",
+										"modelSuperseded"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get DataModel Documentation superseded",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/tree/folders/dataModel/documentationSuperseded",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"tree",
+										"folders",
+										"dataModel",
+										"documentationSuperseded"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Terminology Model superseded",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/tree/folders/terminologies/modelSuperseded",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"tree",
+										"folders",
+										"terminologies",
+										"modelSuperseded"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Terminology Documentation superseded",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/tree/folders/terminologies/documentationSuperseded",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"tree",
+										"folders",
+										"terminologies",
+										"documentationSuperseded"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get CodeSet Model superseded",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/tree/folders/codeSets/modelSuperseded",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"tree",
+										"folders",
+										"codeSets",
+										"modelSuperseded"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get CodeSet Documentation superseded",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/tree/folders/codeSets/documentationSuperseded",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"tree",
+										"folders",
+										"codeSets",
+										"documentationSuperseded"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				},
 				{
 					"name": "Rebuild Lucene Indexes",
