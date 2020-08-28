@@ -7309,6 +7309,53 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Paths",
+			"item": [
+				{
+					"name": "Path dm:|dc:simple|de:simple data element",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataModels/{{data_model_id}}/path/dm%3A%7Cdc%3Asimple%7Cde%3Asimple%20data%20element",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"{{data_model_id}}",
+								"path",
+								"dm%3A%7Cdc%3Asimple%7Cde%3Asimple%20data%20element"
+							]
+						},
+						"description": "Checks path on current DataModel\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Path dm:Simple Test DataModel|dc:simple|de:simple data element",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/dataModels/path/dm%3ASimple%20Test%20DataModel%7Cdc%3Asimple%7Cde%3Asimple%20data%20element",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"path",
+								"dm%3ASimple%20Test%20DataModel%7Cdc%3Asimple%7Cde%3Asimple%20data%20element"
+							]
+						},
+						"description": "Checks path on labelled DataModel\n"
+					},
+					"response": []
+				}
+			],
+		"protocolProfileBehavior": {}
 		}
 	],
 	"variable": [
