@@ -7356,6 +7356,96 @@
 				}
 			],
 		"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Reference Data Models",
+			"item": [
+				{
+					"name": "List all Reference Data Models",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/referenceDataModels",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"referenceDataModels"
+							]
+						},
+						"description": "List all Reference Data Models"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Reference Data Model by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"referenceDataModels",
+								"{{reference_data_model_id}}"
+							]
+						},
+						"description": "Get Reference Data Model by ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Reference Data Types",
+					"item": [
+						{
+							"name": "Get Reference Data Types for a Reference Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/referenceDataTypes",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"{{reference_data_model_id}}",
+										"referenceDataTypes"
+									]
+								},
+								"description": "Get Reference Data Types for a Reference Data Model"
+							},
+							"response": []
+						},
+						{
+							"name": "Get a Reference Data Type for a Reference Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/referenceDataTypes/{{reference_data_type_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"{{reference_data_model_id}}",
+										"referenceDataTypes",
+                                        "{{reference_data_type_id}}"
+									]
+								},
+								"description": "Get a Reference Data Type for a Reference Data Model"
+							},
+							"response": []
+						}
+					]
+				}
+				
+			],
+		"protocolProfileBehavior": {}
 		}
 	],
 	"variable": [
