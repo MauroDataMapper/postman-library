@@ -7398,10 +7398,56 @@
 					"response": []
 				},
 				{
+					"name": "Reference Data Elements",
+					"item": [
+						{
+							"name": "List Reference Data Elements for a Reference Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/referenceDataElements",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"{{reference_data_model_id}}",
+										"referenceDataElements"
+									]
+								},
+								"description": "List Reference Data Elements for a Reference Data Model"
+							},
+							"response": []
+						},
+						{
+							"name": "Get a Reference Data Element for a Reference Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/referenceDataElements/{{reference_data_element_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"{{reference_data_model_id}}",
+										"referenceDataElements",
+                                        "{{reference_data_element_id}}"
+									]
+								},
+								"description": "Get a Reference Data Element for a Reference Data Model"
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "Reference Data Types",
 					"item": [
 						{
-							"name": "Get Reference Data Types for a Reference Data Model",
+							"name": "List Reference Data Types for a Reference Data Model",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -7416,7 +7462,7 @@
 										"referenceDataTypes"
 									]
 								},
-								"description": "Get Reference Data Types for a Reference Data Model"
+								"description": "List Reference Data Types for a Reference Data Model"
 							},
 							"response": []
 						},
