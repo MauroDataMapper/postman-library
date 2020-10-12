@@ -7398,6 +7398,83 @@
 					"response": []
 				},
 				{
+					"name": "List all Reference Data Models in a Folder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/folders/{{folder_id}}/referenceDataModels",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"folders",
+								"{{folder_id}}",
+								"referenceDataModels"
+							]
+						},
+						"description": "List all Reference Data Models in a Folder"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Reference Data Model in a Folder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\":\"{{$randomLoremSlug}}\",\n    \"description\": \"{{$randomLoremText}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/folders/{{folder_id}}/referenceDataModels",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"folders",
+								"{{folder_id}}",
+								"referenceDataModels"
+							]
+						},
+						"description": "Create a Reference Data Model in a Folder"
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Reference Data Model",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\":\"Updated {{$randomLoremSlug}}\",\n    \"description\": \"Updated {{$randomLoremText}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"referenceDataModels",
+								"{{reference_data_model_id}}"
+							]
+						},
+						"description": "Create a Reference Data Model in a Folder"
+					},
+					"response": []
+				},								
+				{
 					"name": "Reference Data Elements",
 					"item": [
 						{
