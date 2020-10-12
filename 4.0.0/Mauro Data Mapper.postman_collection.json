@@ -7517,6 +7517,65 @@
 								"description": "Get a Reference Data Element for a Reference Data Model"
 							},
 							"response": []
+						},
+						{
+							"name": "Create a Reference Data Element for a Reference Data Model",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\":\"A new Reference Data Element {{$randomLoremSlug}}\",\n    \"referenceDataType\": \"{{reference_data_type_id}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},								
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/referenceDataElements",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"{{reference_data_model_id}}",
+										"referenceDataElements"
+									]
+								},
+								"description": "Create a Reference Data Element for a Reference Data Model"
+							},
+							"response": []
+						},					
+						{
+							"name": "Update a Reference Data Element for a Reference Data Model",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\":\"Updated Organisation name\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},								
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/referenceDataElements/{{reference_data_element_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"{{reference_data_model_id}}",
+										"referenceDataElements",
+                                        "{{reference_data_element_id}}"
+									]
+								},
+								"description": "Get a Reference Data Element for a Reference Data Model"
+							},
+							"response": []
 						}
 					]
 				},
@@ -7561,6 +7620,65 @@
 									]
 								},
 								"description": "Get a Reference Data Type for a Reference Data Model"
+							},
+							"response": []
+						},
+						{
+							"name": "Create a Reference Data Type for a Reference Data Model",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\":\"A new Reference Data Type {{$randomLoremSlug}}\",\n \"domainType\":\"ReferencePrimitiveType\",\n   \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},								
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/referenceDataTypes",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"{{reference_data_model_id}}",
+										"referenceDataTypes"
+									]
+								},
+								"description": "Create a Reference Data Type for a Reference Data Model"
+							},
+							"response": []
+						},						
+						{
+							"name": "Update a Reference Data Type for a Reference Data Model",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\":\"Updated label {{$randomLoremSlug}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},								
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/referenceDataTypes/{{reference_data_type_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"{{reference_data_model_id}}",
+										"referenceDataTypes",
+                                        "{{reference_data_type_id}}"
+									]
+								},
+								"description": "Update a Reference Data Type for a Reference Data Model"
 							},
 							"response": []
 						}
