@@ -7683,6 +7683,52 @@
 							"response": []
 						}
 					]
+				},
+				{
+					"name": "Reference Data Values",
+					"item": [
+						{
+							"name": "List Reference Data Types for a Reference Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/referenceDataValues",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"{{reference_data_model_id}}",
+										"referenceDataValues"
+									]
+								},
+								"description": "List Reference Data Values for a Reference Data Model"
+							},
+							"response": []
+						},
+						{
+							"name": "Get a Reference Data Value for a Reference Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/referenceDataTypes/{{reference_data_value_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"{{reference_data_model_id}}",
+										"referenceDataValues",
+                                        "{{reference_data_value_id}}"
+									]
+								},
+								"description": "Get a Reference Data Value for a Reference Data Model"
+							},
+							"response": []
+						}	
+					]
 				}
 				
 			],
