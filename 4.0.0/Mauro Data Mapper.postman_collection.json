@@ -7688,7 +7688,7 @@
 					"name": "Reference Data Values",
 					"item": [
 						{
-							"name": "List Reference Data Types for a Reference Data Model",
+							"name": "List Reference Data Values for a Reference Data Model",
 							"request": {
 								"method": "GET",
 								"header": [],
@@ -7708,6 +7708,47 @@
 							"response": []
 						},
 						{
+							"name": "List Reference Data Values - formatted as rows - for a Reference Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/referenceDataValues?asRows=true",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"{{reference_data_model_id}}",
+										"referenceDataValues?asRows=true"
+									]
+								},
+								"description": "List Reference Data Values - formatted as rows - for a Reference Data Model"
+							},
+							"response": []
+						},
+						{
+							"name": "Search Reference Data Values - formatted as rows - for a Reference Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/referenceDataValues/search?asRows=true&search=Org",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"{{reference_data_model_id}}",
+										"referenceDataValues",
+										"search?asRows=true&search=Org"
+									]
+								},
+								"description": "Search Reference Data Values - formatted as rows - for a Reference Data Model"
+							},
+							"response": []
+						},						
+						{
 							"name": "Get a Reference Data Value for a Reference Data Model",
 							"request": {
 								"method": "GET",
@@ -7725,6 +7766,97 @@
 									]
 								},
 								"description": "Get a Reference Data Value for a Reference Data Model"
+							},
+							"response": []
+						}	
+					]
+				},
+				{
+					"name": "Import / Export",
+					"item": [
+						{
+							"name": "List Reference Data Model Importers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/providers/importers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"providers",
+										"importers"
+									]
+								},
+								"description": "List Reference Data Model Importers"
+							},
+							"response": []
+						},
+						{
+							"name": "List Reference Data Model Exporters",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/providers/exporters",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"providers",
+										"exporters"
+									]
+								},
+								"description": "List Reference Data Model Exporters"
+							},
+							"response": []
+						},
+						{
+							"name": "JSON Export Reference Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/export/uk.ac.ox.softeng.maurodatamapper.referencedata.provider.exporter/JsonExporterService/3.0",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"{{reference_data_model_id}}",
+										"export",
+										"uk.ac.ox.softeng.maurodatamapper.referencedata.provider.exporter",
+										"JsonExporterService",
+										"3.0"
+									]
+								},
+								"description": "JSON Export Reference Data Model"
+							},
+							"response": []
+						},						
+						{
+							"name": "XML Export Reference Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/export/uk.ac.ox.softeng.maurodatamapper.referencedata.provider.exporter/XmlExporterService/3.0",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"referenceDataModels",
+										"{{reference_data_model_id}}",
+										"export",
+										"uk.ac.ox.softeng.maurodatamapper.referencedata.provider.exporter",
+										"XmlExporterService",
+										"3.0"
+									]
+								},
+								"description": "XML Export Reference Data Model"
 							},
 							"response": []
 						}	
