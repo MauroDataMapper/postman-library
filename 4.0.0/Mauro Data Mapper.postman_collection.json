@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "14057e90-694a-4f03-aab5-0ce545f590bf",
+		"_postman_id": "df7dbbfb-d1aa-4f27-bec5-e7e9a53bfc8a",
 		"name": "Mauro Data Mapper",
 		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -47,8 +47,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Authentication",
@@ -268,8 +267,7 @@
 						}
 					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Data Models",
@@ -393,9 +391,7 @@
 								}
 							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Data Types",
@@ -555,6 +551,43 @@
 							},
 							"response": [
 								{
+									"name": "Get Data Model Data Types - None",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataTypes",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataTypes"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 10 Aug 2020 15:58:26 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"count\": 0,\n    \"items\": []\n}"
+								},
+								{
 									"name": "Get Data Model Data Types",
 									"originalRequest": {
 										"method": "POST",
@@ -603,43 +636,6 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"id\": \"895305cc-7cb9-4728-b9a6-947cd07c2d91\",\n    \"domainType\": \"PrimitiveType\",\n    \"label\": \"bus\",\n    \"model\": \"cce93898-a17a-4cad-925a-609d3202adc2\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"cce93898-a17a-4cad-925a-609d3202adc2\",\n            \"label\": \"perspiciatis-et-veritatis\",\n            \"domainType\": \"DataModel\",\n            \"finalised\": false\n        }\n    ],\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-10T15:59:48.693Z\"\n}"
-								},
-								{
-									"name": "Get Data Model Data Types - None",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataTypes",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"dataModels",
-												"{{data_model_id}}",
-												"dataTypes"
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 10 Aug 2020 15:58:26 GMT"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"count\": 0,\n    \"items\": []\n}"
 								}
 							]
 						},
@@ -670,43 +666,6 @@
 								}
 							},
 							"response": [
-								{
-									"name": "Get Data Model Data Types - None",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": {
-											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataTypes",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"dataModels",
-												"{{data_model_id}}",
-												"dataTypes"
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 10 Aug 2020 15:58:26 GMT"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"count\": 0,\n    \"items\": []\n}"
-								},
 								{
 									"name": "Add Eumeration DataType with metadata",
 									"originalRequest": {
@@ -756,6 +715,43 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"id\": \"ee97ab7d-375e-4d21-ae41-d1218b9ca45d\",\n    \"domainType\": \"EnumerationType\",\n    \"label\": \"Custom test - copy2\",\n    \"model\": \"ff2c356c-8748-4204-a9cd-17016f7dd6eb\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"ff2c356c-8748-4204-a9cd-17016f7dd6eb\",\n            \"label\": \"ea-reprehenderit-veritatis\",\n            \"domainType\": \"DataModel\",\n            \"finalised\": false\n        }\n    ],\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-24T11:48:55.723Z\",\n    \"enumerationValues\": [\n        {\n            \"index\": 0,\n            \"id\": \"afad6249-a05b-407d-a2f1-1561f57f48f0\",\n            \"key\": \"A\",\n            \"value\": \"Letter A..........\",\n            \"category\": null\n        },\n        {\n            \"index\": 1,\n            \"id\": \"0e4f2f69-50dc-4ebb-8ba5-fcbc52d930fa\",\n            \"key\": \"B\",\n            \"value\": \"Letter B..........\",\n            \"category\": null\n        }\n    ]\n}"
+								},
+								{
+									"name": "Get Data Model Data Types - None",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataTypes",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"dataTypes"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 10 Aug 2020 15:58:26 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"count\": 0,\n    \"items\": []\n}"
 								},
 								{
 									"name": "Get Data Model Data Types",
@@ -809,9 +805,7 @@
 								}
 							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Data Elements",
@@ -940,9 +934,7 @@
 								}
 							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Summary Metadata",
@@ -994,9 +986,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Attachments",
@@ -1176,9 +1166,7 @@
 								}
 							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "History",
@@ -1203,9 +1191,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Links",
@@ -1257,52 +1243,6 @@
 							},
 							"response": [
 								{
-									"name": "Add Link - Unusable Link Type",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"targetCatalogueItemDomainType\": \"DataModel\",\n    \"targetCatalogueItemId\" :  \"{{$randomUUID}}\",\n    \"linkType\": \"Is From\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{base_url}}/dataModels/{{data_model_id}}/semanticLinks",
-											"host": [
-												"{{base_url}}"
-											],
-											"path": [
-												"dataModels",
-												"{{data_model_id}}",
-												"semanticLinks"
-											]
-										}
-									},
-									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-									"code": 422,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Wed, 05 Aug 2020 14:23:48 GMT"
-										}
-									],
-									"cookie": [],
-									"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Property [linkType] of class [class uk.ac.ox.softeng.maurodatamapper.core.facet.SemanticLink] with value [IS_FROM] cannot be used \"\n        }\n    ]\n}"
-								},
-								{
 									"name": "Add Link",
 									"originalRequest": {
 										"method": "POST",
@@ -1351,60 +1291,60 @@
 									],
 									"cookie": [],
 									"body": "{\n    \"id\": \"597a8276-eff4-4bc7-b41f-6a31d69de175\",\n    \"linkType\": \"Refines\",\n    \"domainType\": \"SemanticLink\",\n    \"sourceCatalogueItem\": {\n        \"id\": \"dccfd96a-bbfc-4af5-99b9-2080a3b76a1e\",\n        \"domainType\": \"DataModel\",\n        \"label\": \"rem-ut-quia\"\n    },\n    \"targetCatalogueItem\": {\n        \"id\": \"58dcc4eb-2e9a-4d43-b318-067a487518eb\",\n        \"domainType\": \"DataModel\",\n        \"label\": \"vel-iusto-ad\"\n    }\n}"
+								},
+								{
+									"name": "Add Link - Unusable Link Type",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"targetCatalogueItemDomainType\": \"DataModel\",\n    \"targetCatalogueItemId\" :  \"{{$randomUUID}}\",\n    \"linkType\": \"Is From\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/dataModels/{{data_model_id}}/semanticLinks",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"{{data_model_id}}",
+												"semanticLinks"
+											]
+										}
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 05 Aug 2020 14:23:48 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Property [linkType] of class [class uk.ac.ox.softeng.maurodatamapper.core.facet.SemanticLink] with value [IS_FROM] cannot be used \"\n        }\n    ]\n}"
 								}
 							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Import / Export",
 					"item": [
-						{
-							"name": "XML Export Data Model",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/dataModels/{{data_model_id}}/export/{{xml_exporter_namespace}}/{{xml_exporter_name}}/{{xml_exporter_version}}",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"dataModels",
-										"{{data_model_id}}",
-										"export",
-										"{{xml_exporter_namespace}}",
-										"{{xml_exporter_name}}",
-										"{{xml_exporter_version}}"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "JSON Export Data Model",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/dataModels/{{data_model_id}}/export/{{json_exporter_namespace}}/{{json_exporter_name}}/{{json_exporter_version}}",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"dataModels",
-										"{{data_model_id}}",
-										"export",
-										"{{json_exporter_namespace}}",
-										"{{json_exporter_name}}",
-										"{{json_exporter_version}}"
-									]
-								}
-							},
-							"response": []
-						},
 						{
 							"name": "Get Data Model Importers",
 							"request": {
@@ -1520,7 +1460,29 @@
 							]
 						},
 						{
-							"name": "JSON Export Data Models",
+							"name": "Export Data Model",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/export/{{exporter_namespace}}/{{exporter_name}}/{{exporter_version}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"export",
+										"{{exporter_namespace}}",
+										"{{exporter_name}}",
+										"{{exporter_version}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export Data Models",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -1534,16 +1496,16 @@
 									}
 								},
 								"url": {
-									"raw": "{{base_url}}/dataModels/export/{{json_exporter_namespace}}/{{json_exporter_name}}/{{json_exporter_version}}",
+									"raw": "{{base_url}}/dataModels/export/{{exporter_namespace}}/{{exporter_name}}/{{exporter_version}}",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"dataModels",
 										"export",
-										"{{json_exporter_namespace}}",
-										"{{json_exporter_name}}",
-										"{{json_exporter_version}}"
+										"{{exporter_namespace}}",
+										"{{exporter_name}}",
+										"{{exporter_version}}"
 									]
 								}
 							},
@@ -1603,7 +1565,7 @@
 							]
 						},
 						{
-							"name": "JSON Import Data Model",
+							"name": "Import Data Model",
 							"request": {
 								"method": "POST",
 								"header": [],
@@ -1630,24 +1592,19 @@
 											"value": "{{folder_id}}",
 											"type": "text"
 										}
-									],
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
+									]
 								},
 								"url": {
-									"raw": "{{base_url}}/dataModels/import/{{json_importer_namespace}}/{{json_importer_name}}/{{json_importer_version}}",
+									"raw": "{{base_url}}/dataModels/import/{{importer_namespace}}/{{importer_name}}/{{importer_version}}",
 									"host": [
 										"{{base_url}}"
 									],
 									"path": [
 										"dataModels",
 										"import",
-										"{{json_importer_namespace}}",
-										"{{json_importer_name}}",
-										"{{json_importer_version}}"
+										"{{importer_namespace}}",
+										"{{importer_name}}",
+										"{{importer_version}}"
 									]
 								}
 							},
@@ -1706,9 +1663,7 @@
 								}
 							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Permissions",
@@ -2015,9 +1970,7 @@
 								}
 							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "List all Data Models",
@@ -2092,43 +2045,6 @@
 					},
 					"response": [
 						{
-							"name": "List all Data Models in Folder",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/folders/{{folder_id}}/dataModels",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"folders",
-										"{{folder_id}}",
-										"dataModels"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json;charset=UTF-8"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Wed, 29 Jul 2020 11:46:07 GMT"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"count\": 2,\n    \"items\": [\n        {\n            \"id\": \"03e7059c-b8c5-42e9-bc20-505076599826\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Complex Test DataModel\",\n            \"type\": \"Data Standard\",\n            \"classifiers\": [\n                {\n                    \"id\": \"605aa52b-5371-4dec-a06e-7beebc6e80c8\",\n                    \"label\": \"test classifier\",\n                    \"lastUpdated\": \"2020-07-28T10:45:07.85Z\"\n                },\n                {\n                    \"id\": \"61b6e03a-d81f-4108-9404-3e7814b59fce\",\n                    \"label\": \"test classifier2\",\n                    \"lastUpdated\": \"2020-07-28T10:45:07.853Z\"\n                }\n            ],\n            \"author\": \"admin person\",\n            \"organisation\": \"brc\"\n        },\n        {\n            \"id\": \"9ee42521-5ae1-4974-b9cb-ead70892c9d4\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Simple Test DataModel\",\n            \"type\": \"Data Standard\",\n            \"classifiers\": [\n                {\n                    \"id\": \"b6574050-8ea0-4f04-9c48-bc5194130d82\",\n                    \"label\": \"test classifier simple\",\n                    \"lastUpdated\": \"2020-07-28T10:45:10.267Z\"\n                }\n            ]\n        }\n    ]\n}"
-						},
-						{
 							"name": "List all Data Models in Folder - Folder not found",
 							"originalRequest": {
 								"method": "GET",
@@ -2164,6 +2080,43 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"path\": \"/api/folders/6f319a88-86ab-4537-8c83-f0132d2dc503/dataModels\",\n    \"resource\": \"Folder\",\n    \"id\": \"6f319a88-86ab-4537-8c83-f0132d2dc503\"\n}"
+						},
+						{
+							"name": "List all Data Models in Folder",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/{{folder_id}}/dataModels",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{folder_id}}",
+										"dataModels"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:46:07 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 2,\n    \"items\": [\n        {\n            \"id\": \"03e7059c-b8c5-42e9-bc20-505076599826\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Complex Test DataModel\",\n            \"type\": \"Data Standard\",\n            \"classifiers\": [\n                {\n                    \"id\": \"605aa52b-5371-4dec-a06e-7beebc6e80c8\",\n                    \"label\": \"test classifier\",\n                    \"lastUpdated\": \"2020-07-28T10:45:07.85Z\"\n                },\n                {\n                    \"id\": \"61b6e03a-d81f-4108-9404-3e7814b59fce\",\n                    \"label\": \"test classifier2\",\n                    \"lastUpdated\": \"2020-07-28T10:45:07.853Z\"\n                }\n            ],\n            \"author\": \"admin person\",\n            \"organisation\": \"brc\"\n        },\n        {\n            \"id\": \"9ee42521-5ae1-4974-b9cb-ead70892c9d4\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Simple Test DataModel\",\n            \"type\": \"Data Standard\",\n            \"classifiers\": [\n                {\n                    \"id\": \"b6574050-8ea0-4f04-9c48-bc5194130d82\",\n                    \"label\": \"test classifier simple\",\n                    \"lastUpdated\": \"2020-07-28T10:45:10.267Z\"\n                }\n            ]\n        }\n    ]\n}"
 						}
 					]
 				},
@@ -2677,56 +2630,6 @@
 					},
 					"response": [
 						{
-							"name": "Create new DataModel - Data Standard",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"label\":\"{{$randomLoremSlug}}\",\n    \"description\": \"{{$randomLoremText}}\",\n    \"modelType\": \"DATA_STANDARD\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{base_url}}/folders/{{folder_id}}/dataModels",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"folders",
-										"{{folder_id}}",
-										"dataModels"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Location",
-									"value": "http://localhost:8080/api/dataModels/cce93898-a17a-4cad-925a-609d3202adc2"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json;charset=UTF-8"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Wed, 05 Aug 2020 13:44:24 GMT"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"id\": \"cce93898-a17a-4cad-925a-609d3202adc2\",\n    \"domainType\": \"DataModel\",\n    \"label\": \"perspiciatis-et-veritatis\",\n    \"description\": \"Eveniet in assumenda aut. Blanditiis temporibus nihil qui officiis modi amet a dolor. Laborum laudantium esse quidem eveniet.\\n \\rNeque saepe molestiae est id. Ea accusamus porro velit corrupti dolore vel ipsum. Omnis voluptates laboriosam ipsum eius ullam architecto eos eligendi nam. Est repellendus est iste quae laborum.\\n \\rQuidem amet et perferendis quo explicabo facere sed nulla. Neque voluptates dolores. Aut ducimus voluptates velit nesciunt sed temporibus similique aut. Vitae at ut soluta. Nemo sit aliquam consectetur qui doloribus laboriosam consectetur ut sit. Aut natus nostrum consequatur qui consectetur fuga perspiciatis.\",\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"softDelete\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T13:44:24.259Z\",\n    \"type\": \"DATA_STANDARD\",\n    \"documentationVersion\": \"1.0.0\",\n    \"finalised\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false\n}"
-						},
-						{
 							"name": "Create new DataModel - Data Asset",
 							"originalRequest": {
 								"method": "POST",
@@ -2775,11 +2678,60 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"id\": \"88d69a59-4404-43a9-afd3-5dc106340b9c\",\n    \"domainType\": \"DataModel\",\n    \"label\": \"in-modi-distinctio\",\n    \"description\": \"Libero illo consequuntur recusandae.\",\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"softDelete\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T13:44:44.51Z\",\n    \"type\": \"DATA_ASSET\",\n    \"documentationVersion\": \"1.0.0\",\n    \"finalised\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false\n}"
+						},
+						{
+							"name": "Create new DataModel - Data Standard",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\":\"{{$randomLoremSlug}}\",\n    \"description\": \"{{$randomLoremText}}\",\n    \"modelType\": \"DATA_STANDARD\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/folders/{{folder_id}}/dataModels",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{folder_id}}",
+										"dataModels"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Location",
+									"value": "http://localhost:8080/api/dataModels/cce93898-a17a-4cad-925a-609d3202adc2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2020 13:44:24 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"cce93898-a17a-4cad-925a-609d3202adc2\",\n    \"domainType\": \"DataModel\",\n    \"label\": \"perspiciatis-et-veritatis\",\n    \"description\": \"Eveniet in assumenda aut. Blanditiis temporibus nihil qui officiis modi amet a dolor. Laborum laudantium esse quidem eveniet.\\n \\rNeque saepe molestiae est id. Ea accusamus porro velit corrupti dolore vel ipsum. Omnis voluptates laboriosam ipsum eius ullam architecto eos eligendi nam. Est repellendus est iste quae laborum.\\n \\rQuidem amet et perferendis quo explicabo facere sed nulla. Neque voluptates dolores. Aut ducimus voluptates velit nesciunt sed temporibus similique aut. Vitae at ut soluta. Nemo sit aliquam consectetur qui doloribus laboriosam consectetur ut sit. Aut natus nostrum consequatur qui consectetur fuga perspiciatis.\",\n    \"availableActions\": [\n        \"show\",\n        \"comment\",\n        \"editDescription\",\n        \"update\",\n        \"save\",\n        \"softDelete\",\n        \"delete\"\n    ],\n    \"lastUpdated\": \"2020-08-05T13:44:24.259Z\",\n    \"type\": \"DATA_STANDARD\",\n    \"documentationVersion\": \"1.0.0\",\n    \"finalised\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false\n}"
 						}
 					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Classifiers",
@@ -2866,8 +2818,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Terminology",
@@ -2894,9 +2845,148 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
+				},
+				{
+					"name": "Import / Export",
+					"item": [
+						{
+							"name": "Get Terminology Importers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/terminologies/providers/importers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"terminologies",
+										"providers",
+										"importers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Terminology Exporters",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/terminologies/providers/exporters",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"terminologies",
+										"providers",
+										"exporters"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export Terminology",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/terminologies/{{data_model_id}}/export/{{exporter_namespace}}/{{exporter_name}}/{{exporter_version}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"terminologies",
+										"{{data_model_id}}",
+										"export",
+										"{{exporter_namespace}}",
+										"{{exporter_name}}",
+										"{{exporter_version}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Export Terminologies",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"dataModelIds\": [\n        {{data_model_id}}\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/terminologies/export/{{exporter_namespace}}/{{exporter_name}}/{{exporter_version}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"terminologies",
+										"export",
+										"{{exporter_namespace}}",
+										"{{exporter_name}}",
+										"{{exporter_version}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Import Terminologies",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "importFile",
+											"type": "file",
+											"src": "/Users/oliverfreeman/Downloads/ddcore.json"
+										},
+										{
+											"key": "importAsNewDocumentationVersion",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "finalised",
+											"value": "false",
+											"type": "text"
+										},
+										{
+											"key": "folderId",
+											"value": "{{folder_id}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/terminologies/import/{{importer_namespace}}/{{importer_name}}/{{importer_version}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"terminologies",
+										"import",
+										"{{importer_namespace}}",
+										"{{importer_name}}",
+										"{{importer_version}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				},
 				{
 					"name": "List terminologies",
@@ -2979,9 +3069,75 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Permanent Delete Terminology by ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/terminologies/{{$randomUUID}}?permanent=true",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"terminologies",
+								"{{$randomUUID}}"
+							],
+							"query": [
+								{
+									"key": "permanent",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Permanent Delete Data Model by Not Found ID",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{$randomUUID}}?permanent=true",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{$randomUUID}}"
+									],
+									"query": [
+										{
+											"key": "permanent",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 12:05:03 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"path\": \"/api/dataModels/a3beabbc-2fd5-4958-8dcc-ff79954c2fe2\",\n    \"resource\": \"DataModel\",\n    \"id\": \"a3beabbc-2fd5-4958-8dcc-ff79954c2fe2\"\n}"
+						}
+					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "CodeSets",
@@ -3305,8 +3461,7 @@
 						}
 					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Folders",
@@ -3445,13 +3600,13 @@
 					},
 					"response": [
 						{
-							"name": "Create new folder with description",
+							"name": "Create new folder - Label already exists",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"label\":\"{{$randomLoremSlug}}\",\n    \"description\": \"{{$randomLoremText}}\"\n}",
+									"raw": "{\n    \"label\":\"nemo-voluptas-vero\",\n    \"description\": \"{{$randomLoremText}}\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3468,14 +3623,10 @@
 									]
 								}
 							},
-							"status": "Created",
-							"code": 201,
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
 							"_postman_previewlanguage": "json",
 							"header": [
-								{
-									"key": "Location",
-									"value": "http://localhost:8080/api/folders/fdca6136-6083-4ec3-b85c-ec0990c57e65"
-								},
 								{
 									"key": "Content-Type",
 									"value": "application/json;charset=UTF-8"
@@ -3486,11 +3637,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 29 Jul 2020 12:07:10 GMT"
+									"value": "Fri, 31 Jul 2020 14:46:50 GMT"
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"id\": \"fdca6136-6083-4ec3-b85c-ec0990c57e65\",\n    \"label\": \"corporis-maxime-enim\",\n    \"lastUpdated\": \"2020-07-29T12:07:10.331Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"update\",\n        \"delete\",\n        \"show\"\n    ],\n    \"description\": \"Odit et nemo nihil quos cupiditate ab ad.\"\n}"
+							"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Property [label] of class [class uk.ac.ox.softeng.maurodatamapper.core.container.Folder] with value [nemo-voluptas-vero] must be unique\"\n        }\n    ]\n}"
 						},
 						{
 							"name": "Create new folder with no description",
@@ -3541,13 +3692,13 @@
 							"body": "{\n    \"id\": \"651084dd-91db-475e-a061-b04e9f3823eb\",\n    \"label\": \"praesentium-voluptatum-laborum\",\n    \"lastUpdated\": \"2020-07-29T12:07:31.518Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"update\",\n        \"delete\",\n        \"show\"\n    ]\n}"
 						},
 						{
-							"name": "Create new folder - Label already exists",
+							"name": "Create new folder with description",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"label\":\"nemo-voluptas-vero\",\n    \"description\": \"{{$randomLoremText}}\"\n}",
+									"raw": "{\n    \"label\":\"{{$randomLoremSlug}}\",\n    \"description\": \"{{$randomLoremText}}\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3564,10 +3715,14 @@
 									]
 								}
 							},
-							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-							"code": 422,
+							"status": "Created",
+							"code": 201,
 							"_postman_previewlanguage": "json",
 							"header": [
+								{
+									"key": "Location",
+									"value": "http://localhost:8080/api/folders/fdca6136-6083-4ec3-b85c-ec0990c57e65"
+								},
 								{
 									"key": "Content-Type",
 									"value": "application/json;charset=UTF-8"
@@ -3578,11 +3733,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Fri, 31 Jul 2020 14:46:50 GMT"
+									"value": "Wed, 29 Jul 2020 12:07:10 GMT"
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Property [label] of class [class uk.ac.ox.softeng.maurodatamapper.core.container.Folder] with value [nemo-voluptas-vero] must be unique\"\n        }\n    ]\n}"
+							"body": "{\n    \"id\": \"fdca6136-6083-4ec3-b85c-ec0990c57e65\",\n    \"label\": \"corporis-maxime-enim\",\n    \"lastUpdated\": \"2020-07-29T12:07:10.331Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"update\",\n        \"delete\",\n        \"show\"\n    ],\n    \"description\": \"Odit et nemo nihil quos cupiditate ab ad.\"\n}"
 						}
 					]
 				},
@@ -3603,6 +3758,46 @@
 						}
 					},
 					"response": [
+						{
+							"name": "Soft delete folder by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/{{folder_id}}",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"{{folder_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Location",
+									"value": "http://localhost:8080/api/folders/6f319a88-86ab-4537-8c83-f0132d2dc503"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 12:09:00 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6f319a88-86ab-4537-8c83-f0132d2dc503\",\n    \"label\": \"Development Folder\",\n    \"deleted\": true,\n    \"lastUpdated\": \"2020-07-29T12:08:13.684Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"update\",\n        \"delete\",\n        \"show\"\n    ]\n}"
+						},
 						{
 							"name": "Permanent delete folder by not found id",
 							"originalRequest": {
@@ -3644,46 +3839,6 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"path\": \"/api/folders/490238ba-188d-4533-8ce8-91f3efb3b8e0\",\n    \"resource\": \"Folder\",\n    \"id\": \"490238ba-188d-4533-8ce8-91f3efb3b8e0\"\n}"
-						},
-						{
-							"name": "Soft delete folder by id",
-							"originalRequest": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/folders/{{folder_id}}",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"folders",
-										"{{folder_id}}"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Location",
-									"value": "http://localhost:8080/api/folders/6f319a88-86ab-4537-8c83-f0132d2dc503"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json;charset=UTF-8"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Wed, 29 Jul 2020 12:09:00 GMT"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"id\": \"6f319a88-86ab-4537-8c83-f0132d2dc503\",\n    \"label\": \"Development Folder\",\n    \"deleted\": true,\n    \"lastUpdated\": \"2020-07-29T12:08:13.684Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"update\",\n        \"delete\",\n        \"show\"\n    ]\n}"
 						}
 					]
 				},
@@ -3738,6 +3893,40 @@
 					},
 					"response": [
 						{
+							"name": "Permanent delete folder by id",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/folders/7f7f26a8-bcf6-4fdb-832f-28866b64725b?permanent=true",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders",
+										"7f7f26a8-bcf6-4fdb-832f-28866b64725b"
+									],
+									"query": [
+										{
+											"key": "permanent",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 12:09:23 GMT"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
 							"name": "Permanent delete folder by not found id",
 							"originalRequest": {
 								"method": "DELETE",
@@ -3778,40 +3967,6 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"path\": \"/api/folders/490238ba-188d-4533-8ce8-91f3efb3b8e0\",\n    \"resource\": \"Folder\",\n    \"id\": \"490238ba-188d-4533-8ce8-91f3efb3b8e0\"\n}"
-						},
-						{
-							"name": "Permanent delete folder by id",
-							"originalRequest": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/folders/7f7f26a8-bcf6-4fdb-832f-28866b64725b?permanent=true",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"folders",
-										"7f7f26a8-bcf6-4fdb-832f-28866b64725b"
-									],
-									"query": [
-										{
-											"key": "permanent",
-											"value": "true"
-										}
-									]
-								}
-							},
-							"status": "No Content",
-							"code": 204,
-							"_postman_previewlanguage": "plain",
-							"header": [
-								{
-									"key": "Date",
-									"value": "Wed, 29 Jul 2020 12:09:23 GMT"
-								}
-							],
-							"cookie": [],
-							"body": ""
 						}
 					]
 				},
@@ -3891,54 +4046,6 @@
 							"body": "{\n    \"id\": \"fdca6136-6083-4ec3-b85c-ec0990c57e65\",\n    \"label\": \"corporis-maxime-enim\",\n    \"lastUpdated\": \"2020-07-29T12:07:10.331Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"update\",\n        \"delete\",\n        \"show\"\n    ],\n    \"description\": \"Odit et nemo nihil quos cupiditate ab ad.\"\n}"
 						},
 						{
-							"name": "Create new folder with no description",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"label\":\"{{$randomLoremSlug}}\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{base_url}}/folders",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"folders"
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Location",
-									"value": "http://localhost:8080/api/folders/651084dd-91db-475e-a061-b04e9f3823eb"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json;charset=UTF-8"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Wed, 29 Jul 2020 12:07:31 GMT"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"id\": \"651084dd-91db-475e-a061-b04e9f3823eb\",\n    \"label\": \"praesentium-voluptatum-laborum\",\n    \"lastUpdated\": \"2020-07-29T12:07:31.518Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"update\",\n        \"delete\",\n        \"show\"\n    ]\n}"
-						},
-						{
 							"name": "Create new folder inside folder",
 							"originalRequest": {
 								"method": "POST",
@@ -3987,6 +4094,54 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"id\": \"657ccffb-fd58-4d87-a36a-bb0b3fbab4e3\",\n    \"label\": \"hic-nesciunt-reprehenderit\",\n    \"lastUpdated\": \"2020-08-05T13:39:09.806Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"show\",\n        \"update\",\n        \"delete\"\n    ],\n    \"description\": \"Illum et corporis minima. Qui rerum quos ex. Voluptate ipsam consequuntur quae. Fuga excepturi ullam. Excepturi sit quia fugiat sit sapiente voluptas. Harum aut tenetur sapiente et.\"\n}"
+						},
+						{
+							"name": "Create new folder with no description",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"label\":\"{{$randomLoremSlug}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/folders",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"folders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Location",
+									"value": "http://localhost:8080/api/folders/651084dd-91db-475e-a061-b04e9f3823eb"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 12:07:31 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"651084dd-91db-475e-a061-b04e9f3823eb\",\n    \"label\": \"praesentium-voluptatum-laborum\",\n    \"lastUpdated\": \"2020-07-29T12:07:31.518Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"update\",\n        \"delete\",\n        \"show\"\n    ]\n}"
 						},
 						{
 							"name": "Create new folder - Label already exists",
@@ -4213,8 +4368,7 @@
 						}
 					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Admin",
@@ -4454,9 +4608,7 @@
 								}
 							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Catalogue Users",
@@ -4623,7 +4775,6 @@
 								{
 									"listen": "prerequest",
 									"script": {
-										"id": "c1c89bda-0754-4a02-9dfa-67f20173748c",
 										"type": "text/javascript",
 										"exec": [
 											""
@@ -4633,16 +4784,13 @@
 								{
 									"listen": "test",
 									"script": {
-										"id": "230cd4c4-376e-4dc0-9a11-bcec3da2dbbc",
 										"type": "text/javascript",
 										"exec": [
 											""
 										]
 									}
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						},
 						{
 							"name": "Add new user",
@@ -4711,9 +4859,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Providers / Plugins",
@@ -4773,9 +4919,7 @@
 								}
 							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Session",
@@ -4827,11 +4971,11 @@
 										},
 										{
 											"key": "Date",
-											"value": "Wed, 29 Jul 2020 11:17:57 GMT"
+											"value": "Thu, 30 Jul 2020 09:07:32 GMT"
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"7DEB12FEB947EB176C8C2FBC26FF6DFC\",\n            \"lastAccessedDateTime\": \"2020-07-29T11:17:43.282Z\",\n            \"creationDateTime\": \"2020-07-29T10:59:17.623Z\",\n            \"userEmailAddress\": \"admin@maurodatamapper.com\",\n            \"lastAccessedUrl\": \"/api/admin/activeSessions\"\n        }\n    ]\n}"
+									"body": "{\n    \"count\": 4,\n    \"items\": [\n        {\n            \"id\": \"C3F99C6144756BF678D4FCF2ED2CCD43\",\n            \"lastAccessedDateTime\": \"2020-07-30T09:06:44.441Z\",\n            \"creationDateTime\": \"2020-07-30T09:06:44.343Z\",\n            \"userEmailAddress\": \"admin@maurodatamapper.com\",\n            \"lastAccessedUrl\": \"/api/admin/activeSessions\"\n        },\n        {\n            \"id\": \"2A882BEFB4D9A3DBA1D6984EEBD95E37\",\n            \"lastAccessedDateTime\": \"2020-07-30T08:50:17.826Z\",\n            \"creationDateTime\": \"2020-07-30T08:49:35.121Z\",\n            \"userEmailAddress\": \"unlogged_user@mdm-core.com\",\n            \"lastAccessedUrl\": \"/api/tree/folders\"\n        },\n        {\n            \"id\": \"6C179EDA552A8961849ADA7954616A06\",\n            \"lastAccessedDateTime\": \"2020-07-30T08:51:50.261Z\",\n            \"creationDateTime\": \"2020-07-30T08:51:50.253Z\",\n            \"userEmailAddress\": \"unlogged_user@mdm-core.com\",\n            \"lastAccessedUrl\": \"/api/tree/folders\"\n        },\n        {\n            \"id\": \"D15B5225306C05F5C56EC2A0CA41612E\",\n            \"lastAccessedDateTime\": \"2020-07-30T09:03:39.006Z\",\n            \"creationDateTime\": \"2020-07-30T09:03:38.998Z\",\n            \"userEmailAddress\": \"unlogged_user@mdm-core.com\",\n            \"lastAccessedUrl\": \"/api/tree/folders\"\n        }\n    ]\n}"
 								},
 								{
 									"name": "List all Active Sessions",
@@ -4863,11 +5007,11 @@
 										},
 										{
 											"key": "Date",
-											"value": "Thu, 30 Jul 2020 09:07:32 GMT"
+											"value": "Wed, 29 Jul 2020 11:17:57 GMT"
 										}
 									],
 									"cookie": [],
-									"body": "{\n    \"count\": 4,\n    \"items\": [\n        {\n            \"id\": \"C3F99C6144756BF678D4FCF2ED2CCD43\",\n            \"lastAccessedDateTime\": \"2020-07-30T09:06:44.441Z\",\n            \"creationDateTime\": \"2020-07-30T09:06:44.343Z\",\n            \"userEmailAddress\": \"admin@maurodatamapper.com\",\n            \"lastAccessedUrl\": \"/api/admin/activeSessions\"\n        },\n        {\n            \"id\": \"2A882BEFB4D9A3DBA1D6984EEBD95E37\",\n            \"lastAccessedDateTime\": \"2020-07-30T08:50:17.826Z\",\n            \"creationDateTime\": \"2020-07-30T08:49:35.121Z\",\n            \"userEmailAddress\": \"unlogged_user@mdm-core.com\",\n            \"lastAccessedUrl\": \"/api/tree/folders\"\n        },\n        {\n            \"id\": \"6C179EDA552A8961849ADA7954616A06\",\n            \"lastAccessedDateTime\": \"2020-07-30T08:51:50.261Z\",\n            \"creationDateTime\": \"2020-07-30T08:51:50.253Z\",\n            \"userEmailAddress\": \"unlogged_user@mdm-core.com\",\n            \"lastAccessedUrl\": \"/api/tree/folders\"\n        },\n        {\n            \"id\": \"D15B5225306C05F5C56EC2A0CA41612E\",\n            \"lastAccessedDateTime\": \"2020-07-30T09:03:39.006Z\",\n            \"creationDateTime\": \"2020-07-30T09:03:38.998Z\",\n            \"userEmailAddress\": \"unlogged_user@mdm-core.com\",\n            \"lastAccessedUrl\": \"/api/tree/folders\"\n        }\n    ]\n}"
+									"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"7DEB12FEB947EB176C8C2FBC26FF6DFC\",\n            \"lastAccessedDateTime\": \"2020-07-29T11:17:43.282Z\",\n            \"creationDateTime\": \"2020-07-29T10:59:17.623Z\",\n            \"userEmailAddress\": \"admin@maurodatamapper.com\",\n            \"lastAccessedUrl\": \"/api/admin/activeSessions\"\n        }\n    ]\n}"
 								},
 								{
 									"name": "List all Active Sessions - Not admin user",
@@ -4907,9 +5051,7 @@
 								}
 							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Permissions",
@@ -5100,13 +5242,9 @@
 									},
 									"response": []
 								}
-							],
-							"protocolProfileBehavior": {},
-							"_postman_isSubFolder": true
+							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "User Groups",
@@ -5205,9 +5343,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Model and Documentation Superseded",
@@ -5338,9 +5474,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Rebuild Lucene Indexes",
@@ -5417,62 +5551,6 @@
 					]
 				},
 				{
-					"name": "List all Api Properties",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/admin/properties",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"admin",
-								"properties"
-							]
-						},
-						"description": "Get the current values of system configuration properties"
-					},
-					"response": [
-						{
-							"name": "List all Api Properties",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/admin/properties",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"admin",
-										"properties"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json;charset=UTF-8"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Wed, 29 Jul 2020 11:00:22 GMT"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"email.invite_edit.body\": \"Dear ${firstName},\\nYou have been invited to edit the model '${itemLabel}' in the Mauro Data Mapper at ${catalogueUrl}\\n\\nYour username / email address is: ${emailAddress}\\nYour password is: ${tempPassword}\\n and you will be asked to update this when you first log on.\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.admin_register.body\": \"Dear ${firstName},\\nYou have been given access to the Mauro Data Mapper at ${catalogueUrl} \\n\\nYour username / email address is: ${emailAddress} \\nYour password is: ${tempPassword} \\nand you will be asked to update this when you first log on.\\n\\nKind regards, the Mauro Data Mapper folks. \\n\\n(This is an automated mail).\",\n    \"email.admin_register.subject\": \"Mauro Data Mapper Registration\",\n    \"email.self_register.subject\": \"Mauro Data Mapper Registration\",\n    \"email.forgotten_password.subject\": \"Mauro Data Mapper Forgotten Password\",\n    \"email.invite_edit.subject\": \"Mauro Data Mapper Invitation\",\n    \"email.invite_view.subject\": \"Mauro Data Mapper Invitation\",\n    \"email.admin_confirm_registration.body\": \"Dear ${firstName},\\nYour registration for the Mauro Data Mapper at ${catalogueUrl} has been confirmed.\\n\\nYour username / email address is: ${emailAddress} \\nYou chose a password on registration, but can reset it from the login page.\\n\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.self_register.body\": \"Dear ${firstName},\\nYou have self-registered for the Mauro Data Mapper at ${catalogueUrl}\\n\\nYour username / email address is: ${emailAddress}\\nYour registration is marked as pending: you'll be sent another email when your request has been confirmed by an administrator. \\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.password_reset.body\": \"Dear ${firstName},\\nYour password has been reset for the Mauro Data Mapper at ${catalogueUrl}.\\n\\nYour new temporary password is: ${tempPassword} \\nand you will be asked to update this when you next log on.\\n\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.from.name\": \"Mauro Data Mapper\",\n    \"email.admin_confirm_registration.subject\": \"Mauro Data Mapper Registration - Confirmation\",\n    \"email.forgotten_password.body\": \"Dear ${firstName},\\nA request has been made to reset the password for the Mauro Data Mapper at ${catalogueUrl}.\\nIf you did not make this request please ignore this email.\\n\\nPlease use the following link to reset your password ${passwordResetLink}.\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.password_reset.subject\": \"Mauro Data Mapper Password Reset\",\n    \"email.invite_view.body\": \"Dear ${firstName},\\nYou have been invited to view the item '${itemLabel}' in the Mauro Data Mapper at ${catalogueUrl}\\n\\nYour username / email address is: ${emailAddress}\\nYour password is: ${tempPassword}\\n and you will be asked to update this when you first log on.\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.from.address\": \"username@gmail.com\"\n}"
-						}
-					]
-				},
-				{
 					"name": "List all Emails",
 					"request": {
 						"method": "GET",
@@ -5489,36 +5567,8 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "Edit Api Properties",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{base_url}}/admin/properties",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"admin",
-								"properties"
-							]
-						}
-					},
-					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Catalogue Users",
@@ -5571,9 +5621,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "User preferences",
@@ -5625,9 +5673,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Get all users",
@@ -5691,8 +5737,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Edits",
@@ -6020,8 +6065,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Permissions",
@@ -6084,8 +6128,7 @@
 						}
 					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Tree",
@@ -6145,7 +6188,7 @@
 							"body": "[\n    {\n        \"id\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n        \"domainType\": \"Folder\",\n        \"label\": \"Development Folder\",\n        \"hasChildren\": true,\n        \"deleted\": false,\n        \"children\": [\n            {\n                \"id\": \"657ccffb-fd58-4d87-a36a-bb0b3fbab4e3\",\n                \"domainType\": \"Folder\",\n                \"label\": \"hic-nesciunt-reprehenderit\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"parentFolder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"children\": [\n                    {\n                        \"id\": \"9d25fef8-746b-4654-8648-494938b315d0\",\n                        \"domainType\": \"Folder\",\n                        \"label\": \"aspernatur-quam-facilis\",\n                        \"hasChildren\": false,\n                        \"deleted\": false,\n                        \"parentFolder\": \"657ccffb-fd58-4d87-a36a-bb0b3fbab4e3\"\n                    },\n                    {\n                        \"id\": \"73d6228b-ebe6-4f1f-9544-89e3dcea7ab2\",\n                        \"domainType\": \"Folder\",\n                        \"label\": \"soluta-rerum-sed\",\n                        \"hasChildren\": true,\n                        \"deleted\": false,\n                        \"parentFolder\": \"657ccffb-fd58-4d87-a36a-bb0b3fbab4e3\",\n                        \"children\": [\n                            {\n                                \"id\": \"dccfd96a-bbfc-4af5-99b9-2080a3b76a1e\",\n                                \"domainType\": \"DataModel\",\n                                \"label\": \"rem-ut-quia\",\n                                \"hasChildren\": false,\n                                \"deleted\": false,\n                                \"finalised\": false,\n                                \"superseded\": false,\n                                \"documentationVersion\": \"1.0.0\",\n                                \"folder\": \"73d6228b-ebe6-4f1f-9544-89e3dcea7ab2\",\n                                \"type\": \"DATA_STANDARD\"\n                            }\n                        ]\n                    },\n                    {\n                        \"id\": \"e9204957-b42c-435e-9a98-7e8238558611\",\n                        \"domainType\": \"DataModel\",\n                        \"label\": \"eligendi-voluptatibus-ea\",\n                        \"hasChildren\": false,\n                        \"deleted\": false,\n                        \"finalised\": false,\n                        \"superseded\": false,\n                        \"documentationVersion\": \"1.0.0\",\n                        \"folder\": \"657ccffb-fd58-4d87-a36a-bb0b3fbab4e3\",\n                        \"type\": \"DATA_ASSET\"\n                    },\n                    {\n                        \"id\": \"58dcc4eb-2e9a-4d43-b318-067a487518eb\",\n                        \"domainType\": \"DataModel\",\n                        \"label\": \"vel-iusto-ad\",\n                        \"hasChildren\": false,\n                        \"deleted\": false,\n                        \"finalised\": false,\n                        \"superseded\": false,\n                        \"documentationVersion\": \"1.0.0\",\n                        \"folder\": \"657ccffb-fd58-4d87-a36a-bb0b3fbab4e3\",\n                        \"type\": \"DATA_ASSET\"\n                    }\n                ]\n            },\n            {\n                \"id\": \"c00bdf30-a8bc-42de-95e6-f23f715a83fd\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"Complex Test DataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Standard\"\n            },\n            {\n                \"id\": \"cfa35775-5e49-437d-9fbe-d06ee6927624\",\n                \"domainType\": \"Terminology\",\n                \"label\": \"Complex Test Terminology\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Terminology\"\n            },\n            {\n                \"id\": \"5b3a3549-41ea-423a-a4d3-3224165addc8\",\n                \"domainType\": \"CodeSet\",\n                \"label\": \"Simple Test CodeSet\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": true,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"CodeSet\"\n            },\n            {\n                \"id\": \"8ff86efc-8c44-40a5-808a-bc7e0c492e73\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"Simple Test DataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Standard\"\n            },\n            {\n                \"id\": \"4ebbbda7-fc9f-4cf0-809a-a4aabc74f68f\",\n                \"domainType\": \"Terminology\",\n                \"label\": \"Simple Test Terminology\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Terminology\"\n            },\n            {\n                \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"SourceFlowDataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Asset\"\n            },\n            {\n                \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"TargetFlowDataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Asset\"\n            },\n            {\n                \"id\": \"88d69a59-4404-43a9-afd3-5dc106340b9c\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"in-modi-distinctio\",\n                \"hasChildren\": false,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"DATA_ASSET\"\n            },\n            {\n                \"id\": \"cce93898-a17a-4cad-925a-609d3202adc2\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"perspiciatis-et-veritatis\",\n                \"hasChildren\": false,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"DATA_STANDARD\"\n            },\n            {\n                \"id\": \"c0c2dadd-d090-42c9-a365-804f333a2864\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"rerum-nulla-officiis\",\n                \"hasChildren\": false,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Standard\"\n            }\n        ]\n    }\n]"
 						},
 						{
-							"name": "Folder tree - Nested Folders",
+							"name": "Folder tree",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -6174,11 +6217,11 @@
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 05 Aug 2020 13:46:14 GMT"
+									"value": "Wed, 05 Aug 2020 12:05:25 GMT"
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"id\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n        \"domainType\": \"Folder\",\n        \"label\": \"Development Folder\",\n        \"hasChildren\": true,\n        \"deleted\": false,\n        \"children\": [\n            {\n                \"id\": \"657ccffb-fd58-4d87-a36a-bb0b3fbab4e3\",\n                \"domainType\": \"Folder\",\n                \"label\": \"hic-nesciunt-reprehenderit\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"parentFolder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"children\": [\n                    {\n                        \"id\": \"e9204957-b42c-435e-9a98-7e8238558611\",\n                        \"domainType\": \"DataModel\",\n                        \"label\": \"eligendi-voluptatibus-ea\",\n                        \"hasChildren\": false,\n                        \"deleted\": false,\n                        \"finalised\": false,\n                        \"superseded\": false,\n                        \"documentationVersion\": \"1.0.0\",\n                        \"folder\": \"657ccffb-fd58-4d87-a36a-bb0b3fbab4e3\",\n                        \"type\": \"DATA_ASSET\"\n                    },\n                    {\n                        \"id\": \"58dcc4eb-2e9a-4d43-b318-067a487518eb\",\n                        \"domainType\": \"DataModel\",\n                        \"label\": \"vel-iusto-ad\",\n                        \"hasChildren\": false,\n                        \"deleted\": false,\n                        \"finalised\": false,\n                        \"superseded\": false,\n                        \"documentationVersion\": \"1.0.0\",\n                        \"folder\": \"657ccffb-fd58-4d87-a36a-bb0b3fbab4e3\",\n                        \"type\": \"DATA_ASSET\"\n                    }\n                ]\n            },\n            {\n                \"id\": \"c00bdf30-a8bc-42de-95e6-f23f715a83fd\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"Complex Test DataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Standard\"\n            },\n            {\n                \"id\": \"cfa35775-5e49-437d-9fbe-d06ee6927624\",\n                \"domainType\": \"Terminology\",\n                \"label\": \"Complex Test Terminology\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Terminology\"\n            },\n            {\n                \"id\": \"5b3a3549-41ea-423a-a4d3-3224165addc8\",\n                \"domainType\": \"CodeSet\",\n                \"label\": \"Simple Test CodeSet\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": true,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"CodeSet\"\n            },\n            {\n                \"id\": \"8ff86efc-8c44-40a5-808a-bc7e0c492e73\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"Simple Test DataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Standard\"\n            },\n            {\n                \"id\": \"4ebbbda7-fc9f-4cf0-809a-a4aabc74f68f\",\n                \"domainType\": \"Terminology\",\n                \"label\": \"Simple Test Terminology\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Terminology\"\n            },\n            {\n                \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"SourceFlowDataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Asset\"\n            },\n            {\n                \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"TargetFlowDataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Asset\"\n            },\n            {\n                \"id\": \"88d69a59-4404-43a9-afd3-5dc106340b9c\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"in-modi-distinctio\",\n                \"hasChildren\": false,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"DATA_ASSET\"\n            },\n            {\n                \"id\": \"cce93898-a17a-4cad-925a-609d3202adc2\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"perspiciatis-et-veritatis\",\n                \"hasChildren\": false,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"DATA_STANDARD\"\n            },\n            {\n                \"id\": \"c0c2dadd-d090-42c9-a365-804f333a2864\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"rerum-nulla-officiis\",\n                \"hasChildren\": false,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Standard\"\n            }\n        ]\n    }\n]"
+							"body": "[\n    {\n        \"id\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n        \"domainType\": \"Folder\",\n        \"label\": \"Development Folder\",\n        \"hasChildren\": true,\n        \"deleted\": false,\n        \"children\": [\n            {\n                \"id\": \"c00bdf30-a8bc-42de-95e6-f23f715a83fd\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"Complex Test DataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Standard\"\n            },\n            {\n                \"id\": \"cfa35775-5e49-437d-9fbe-d06ee6927624\",\n                \"domainType\": \"Terminology\",\n                \"label\": \"Complex Test Terminology\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Terminology\"\n            },\n            {\n                \"id\": \"5b3a3549-41ea-423a-a4d3-3224165addc8\",\n                \"domainType\": \"CodeSet\",\n                \"label\": \"Simple Test CodeSet\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": true,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"CodeSet\"\n            },\n            {\n                \"id\": \"8ff86efc-8c44-40a5-808a-bc7e0c492e73\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"Simple Test DataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Standard\"\n            },\n            {\n                \"id\": \"4ebbbda7-fc9f-4cf0-809a-a4aabc74f68f\",\n                \"domainType\": \"Terminology\",\n                \"label\": \"Simple Test Terminology\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Terminology\"\n            },\n            {\n                \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"SourceFlowDataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Asset\"\n            },\n            {\n                \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"TargetFlowDataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Asset\"\n            }\n        ]\n    }\n]"
 						},
 						{
 							"name": "Folder tree - Nothing readable",
@@ -6221,7 +6264,7 @@
 							"body": "[]"
 						},
 						{
-							"name": "Folder tree",
+							"name": "Folder tree - Nested Folders",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -6250,16 +6293,15 @@
 								},
 								{
 									"key": "Date",
-									"value": "Wed, 05 Aug 2020 12:05:25 GMT"
+									"value": "Wed, 05 Aug 2020 13:46:14 GMT"
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"id\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n        \"domainType\": \"Folder\",\n        \"label\": \"Development Folder\",\n        \"hasChildren\": true,\n        \"deleted\": false,\n        \"children\": [\n            {\n                \"id\": \"c00bdf30-a8bc-42de-95e6-f23f715a83fd\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"Complex Test DataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Standard\"\n            },\n            {\n                \"id\": \"cfa35775-5e49-437d-9fbe-d06ee6927624\",\n                \"domainType\": \"Terminology\",\n                \"label\": \"Complex Test Terminology\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Terminology\"\n            },\n            {\n                \"id\": \"5b3a3549-41ea-423a-a4d3-3224165addc8\",\n                \"domainType\": \"CodeSet\",\n                \"label\": \"Simple Test CodeSet\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": true,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"CodeSet\"\n            },\n            {\n                \"id\": \"8ff86efc-8c44-40a5-808a-bc7e0c492e73\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"Simple Test DataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Standard\"\n            },\n            {\n                \"id\": \"4ebbbda7-fc9f-4cf0-809a-a4aabc74f68f\",\n                \"domainType\": \"Terminology\",\n                \"label\": \"Simple Test Terminology\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Terminology\"\n            },\n            {\n                \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"SourceFlowDataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Asset\"\n            },\n            {\n                \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"TargetFlowDataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Asset\"\n            }\n        ]\n    }\n]"
+							"body": "[\n    {\n        \"id\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n        \"domainType\": \"Folder\",\n        \"label\": \"Development Folder\",\n        \"hasChildren\": true,\n        \"deleted\": false,\n        \"children\": [\n            {\n                \"id\": \"657ccffb-fd58-4d87-a36a-bb0b3fbab4e3\",\n                \"domainType\": \"Folder\",\n                \"label\": \"hic-nesciunt-reprehenderit\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"parentFolder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"children\": [\n                    {\n                        \"id\": \"e9204957-b42c-435e-9a98-7e8238558611\",\n                        \"domainType\": \"DataModel\",\n                        \"label\": \"eligendi-voluptatibus-ea\",\n                        \"hasChildren\": false,\n                        \"deleted\": false,\n                        \"finalised\": false,\n                        \"superseded\": false,\n                        \"documentationVersion\": \"1.0.0\",\n                        \"folder\": \"657ccffb-fd58-4d87-a36a-bb0b3fbab4e3\",\n                        \"type\": \"DATA_ASSET\"\n                    },\n                    {\n                        \"id\": \"58dcc4eb-2e9a-4d43-b318-067a487518eb\",\n                        \"domainType\": \"DataModel\",\n                        \"label\": \"vel-iusto-ad\",\n                        \"hasChildren\": false,\n                        \"deleted\": false,\n                        \"finalised\": false,\n                        \"superseded\": false,\n                        \"documentationVersion\": \"1.0.0\",\n                        \"folder\": \"657ccffb-fd58-4d87-a36a-bb0b3fbab4e3\",\n                        \"type\": \"DATA_ASSET\"\n                    }\n                ]\n            },\n            {\n                \"id\": \"c00bdf30-a8bc-42de-95e6-f23f715a83fd\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"Complex Test DataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Standard\"\n            },\n            {\n                \"id\": \"cfa35775-5e49-437d-9fbe-d06ee6927624\",\n                \"domainType\": \"Terminology\",\n                \"label\": \"Complex Test Terminology\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Terminology\"\n            },\n            {\n                \"id\": \"5b3a3549-41ea-423a-a4d3-3224165addc8\",\n                \"domainType\": \"CodeSet\",\n                \"label\": \"Simple Test CodeSet\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": true,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"CodeSet\"\n            },\n            {\n                \"id\": \"8ff86efc-8c44-40a5-808a-bc7e0c492e73\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"Simple Test DataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Standard\"\n            },\n            {\n                \"id\": \"4ebbbda7-fc9f-4cf0-809a-a4aabc74f68f\",\n                \"domainType\": \"Terminology\",\n                \"label\": \"Simple Test Terminology\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Terminology\"\n            },\n            {\n                \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"SourceFlowDataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Asset\"\n            },\n            {\n                \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"TargetFlowDataModel\",\n                \"hasChildren\": true,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Asset\"\n            },\n            {\n                \"id\": \"88d69a59-4404-43a9-afd3-5dc106340b9c\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"in-modi-distinctio\",\n                \"hasChildren\": false,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"DATA_ASSET\"\n            },\n            {\n                \"id\": \"cce93898-a17a-4cad-925a-609d3202adc2\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"perspiciatis-et-veritatis\",\n                \"hasChildren\": false,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"DATA_STANDARD\"\n            },\n            {\n                \"id\": \"c0c2dadd-d090-42c9-a365-804f333a2864\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"rerum-nulla-officiis\",\n                \"hasChildren\": false,\n                \"deleted\": false,\n                \"finalised\": false,\n                \"superseded\": false,\n                \"documentationVersion\": \"1.0.0\",\n                \"folder\": \"6034e074-2b86-4d8f-a1a4-f7d7457cb1b8\",\n                \"type\": \"Data Standard\"\n            }\n        ]\n    }\n]"
 						}
 					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Data Flows",
@@ -6675,9 +6717,7 @@
 								}
 							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Data Element Components",
@@ -7114,9 +7154,7 @@
 								}
 							]
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "List Data Flows relative to target Data Model",
@@ -7201,49 +7239,6 @@
 					},
 					"response": [
 						{
-							"name": "List Data Flows where Data Model is source - none found",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows?type=source",
-									"host": [
-										"{{base_url}}"
-									],
-									"path": [
-										"dataModels",
-										"{{data_model_id}}",
-										"dataFlows"
-									],
-									"query": [
-										{
-											"key": "type",
-											"value": "source"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Content-Type",
-									"value": "application/json;charset=UTF-8"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Date",
-									"value": "Wed, 05 Aug 2020 09:52:59 GMT"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"count\": 0,\n    \"items\": []\n}"
-						},
-						{
 							"name": "List Data Flows where Data Model is source",
 							"originalRequest": {
 								"method": "GET",
@@ -7285,6 +7280,49 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"6aea52f1-bea5-4044-a9de-e175a5251ccf\",\n            \"domainType\": \"DataFlow\",\n            \"label\": \"Sample DataFlow\",\n            \"model\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n            \"breadcrumbs\": [\n                {\n                    \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                    \"label\": \"TargetFlowDataModel\",\n                    \"domainType\": \"DataModel\",\n                    \"finalised\": false\n                }\n            ],\n            \"source\": {\n                \"id\": \"e1758894-f8bf-4489-bf78-5f8177dabb1a\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"SourceFlowDataModel\",\n                \"type\": \"Data Asset\"\n            },\n            \"target\": {\n                \"id\": \"5c90bdbb-75b3-49f2-84bb-3c37f3b6b936\",\n                \"domainType\": \"DataModel\",\n                \"label\": \"TargetFlowDataModel\",\n                \"type\": \"Data Asset\"\n            },\n            \"diagramLayout\": null\n        }\n    ]\n}"
+						},
+						{
+							"name": "List Data Flows where Data Model is source - none found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/dataModels/{{data_model_id}}/dataFlows?type=source",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"dataModels",
+										"{{data_model_id}}",
+										"dataFlows"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "source"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Aug 2020 09:52:59 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 0,\n    \"items\": []\n}"
 						}
 					]
 				},
@@ -7416,8 +7454,7 @@
 						}
 					]
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Paths",
@@ -7463,8 +7500,7 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
 		},
 		{
 			"name": "Reference Data Models",
@@ -7572,9 +7608,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Reference Data Types",
@@ -7679,9 +7713,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Reference Data Values",
@@ -7784,9 +7816,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "Import / Export",
@@ -7877,9 +7907,7 @@
 							},
 							"response": []
 						}
-					],
-					"protocolProfileBehavior": {},
-					"_postman_isSubFolder": true
+					]
 				},
 				{
 					"name": "List all Reference Data Models",
@@ -7995,17 +8023,167 @@
 					},
 					"response": []
 				}
-			],
-			"protocolProfileBehavior": {}
+			]
+		},
+		{
+			"name": "Api Properties",
+			"item": [
+				{
+					"name": "List all Api Properties",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/properties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"properties"
+							]
+						},
+						"description": "Get the current values of system configuration properties"
+					},
+					"response": [
+						{
+							"name": "List all Api Properties",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/properties",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"properties"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:00:22 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email.invite_edit.body\": \"Dear ${firstName},\\nYou have been invited to edit the model '${itemLabel}' in the Mauro Data Mapper at ${catalogueUrl}\\n\\nYour username / email address is: ${emailAddress}\\nYour password is: ${tempPassword}\\n and you will be asked to update this when you first log on.\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.admin_register.body\": \"Dear ${firstName},\\nYou have been given access to the Mauro Data Mapper at ${catalogueUrl} \\n\\nYour username / email address is: ${emailAddress} \\nYour password is: ${tempPassword} \\nand you will be asked to update this when you first log on.\\n\\nKind regards, the Mauro Data Mapper folks. \\n\\n(This is an automated mail).\",\n    \"email.admin_register.subject\": \"Mauro Data Mapper Registration\",\n    \"email.self_register.subject\": \"Mauro Data Mapper Registration\",\n    \"email.forgotten_password.subject\": \"Mauro Data Mapper Forgotten Password\",\n    \"email.invite_edit.subject\": \"Mauro Data Mapper Invitation\",\n    \"email.invite_view.subject\": \"Mauro Data Mapper Invitation\",\n    \"email.admin_confirm_registration.body\": \"Dear ${firstName},\\nYour registration for the Mauro Data Mapper at ${catalogueUrl} has been confirmed.\\n\\nYour username / email address is: ${emailAddress} \\nYou chose a password on registration, but can reset it from the login page.\\n\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.self_register.body\": \"Dear ${firstName},\\nYou have self-registered for the Mauro Data Mapper at ${catalogueUrl}\\n\\nYour username / email address is: ${emailAddress}\\nYour registration is marked as pending: you'll be sent another email when your request has been confirmed by an administrator. \\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.password_reset.body\": \"Dear ${firstName},\\nYour password has been reset for the Mauro Data Mapper at ${catalogueUrl}.\\n\\nYour new temporary password is: ${tempPassword} \\nand you will be asked to update this when you next log on.\\n\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.from.name\": \"Mauro Data Mapper\",\n    \"email.admin_confirm_registration.subject\": \"Mauro Data Mapper Registration - Confirmation\",\n    \"email.forgotten_password.body\": \"Dear ${firstName},\\nA request has been made to reset the password for the Mauro Data Mapper at ${catalogueUrl}.\\nIf you did not make this request please ignore this email.\\n\\nPlease use the following link to reset your password ${passwordResetLink}.\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.password_reset.subject\": \"Mauro Data Mapper Password Reset\",\n    \"email.invite_view.body\": \"Dear ${firstName},\\nYou have been invited to view the item '${itemLabel}' in the Mauro Data Mapper at ${catalogueUrl}\\n\\nYour username / email address is: ${emailAddress}\\nYour password is: ${tempPassword}\\n and you will be asked to update this when you first log on.\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.from.address\": \"username@gmail.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List all publically visible Api Properties",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/properties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"properties"
+							]
+						},
+						"description": "Get the current values of system configuration properties"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Api Property",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/properties/{{api_property_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"properties",
+								"{{api_property_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Api Property",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/properties/{{api_property_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"properties",
+								"{{api_property_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Api Property",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"key\": \"{{$randomNoun}}.{{$randomNoun}}.{{$randomNoun}}\",\n    \"value\": \"{{$randomPhrase}}\",\n    \"publiclyVisible\": {{$randomBoolean}},\n    \"category\": \"{{$randomNoun}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/properties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"properties"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"variable": [
 		{
-			"id": "baseUrl",
 			"key": "baseUrl",
 			"value": "http://localhost:3000",
 			"type": "string"
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
