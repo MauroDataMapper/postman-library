@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "df7dbbfb-d1aa-4f27-bec5-e7e9a53bfc8a",
+		"_postman_id": "a3d54321-2148-4877-a9d4-a3ef938d9b13",
 		"name": "Mauro Data Mapper",
 		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -8675,6 +8675,91 @@
 			"name": "Federation",
 			"item": [
 				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Create new Subscribed Catalogue",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"url\": \"http://www.google.com\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test1\",\r\n    \"description\": \"Test description\",\r\n    \"refreshPeriod\": 7\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/subscribedCatalogues",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"subscribedCatalogues"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Subscribed Catalogue",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"url\": \"http://www.bbc.co.uk\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/subscribedCatalogues/5529d40c-60e4-42a0-ad8a-d11e8d5ea84f",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"subscribedCatalogues",
+										"5529d40c-60e4-42a0-ad8a-d11e8d5ea84f"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Subscribed Catalogue",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/subscribedCatalogues/b73f3b26-d8d2-4e1d-801d-6c2dbe66b819",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"subscribedCatalogues",
+										"b73f3b26-d8d2-4e1d-801d-6c2dbe66b819"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "List all subscribed catalogues",
 					"request": {
 						"method": "GET",
@@ -9406,6 +9491,45 @@
 							"body": "{\n    \"id\": \"449b9430-bddc-4c3e-9241-a8ed08cd01c0\",\n    \"subscribedModelId\": \"cd09a7ed-c872-4a95-825c-0af0266734df\",\n    \"folderId\": \"7b63bd7f-3098-425b-82be-da2107e0f2b4\",\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"localModelId\": \"cf20dbc5-559e-4782-8749-ce628964fb4a\",\n    \"lastRead\": \"2021-06-28T11:09:53.717Z\"\n}"
 						}
 					]
+				},
+				{
+					"name": "Federate subscribed model",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/subscribedModels/{{subscribed_model_id}}/federate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"subscribedModels",
+								"{{subscribed_model_id}}",
+								"federate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Subscribed Model",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels/{{subscribed_model_id}}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"subscribedCatalogues",
+								"{{subscribed_catalogue_id}}",
+								"subscribedModels",
+								"{{subscribed_model_id}}"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
