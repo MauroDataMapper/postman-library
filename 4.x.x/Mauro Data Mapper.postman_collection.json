@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "a3d54321-2148-4877-a9d4-a3ef938d9b13",
+		"_postman_id": "10fa8de1-ce51-4f3e-ae2d-bb154ab73330",
 		"name": "Mauro Data Mapper",
 		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -8536,6 +8536,118 @@
 					]
 				},
 				{
+					"name": "List all Api Properties as CSV",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/properties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"properties"
+							]
+						},
+						"description": "Get the current values of system configuration properties"
+					},
+					"response": [
+						{
+							"name": "List all Api Properties as CSV",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/properties",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"properties"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:00:22 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email.invite_edit.body\": \"Dear ${firstName},\\nYou have been invited to edit the model '${itemLabel}' in the Mauro Data Mapper at ${catalogueUrl}\\n\\nYour username / email address is: ${emailAddress}\\nYour password is: ${tempPassword}\\n and you will be asked to update this when you first log on.\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.admin_register.body\": \"Dear ${firstName},\\nYou have been given access to the Mauro Data Mapper at ${catalogueUrl} \\n\\nYour username / email address is: ${emailAddress} \\nYour password is: ${tempPassword} \\nand you will be asked to update this when you first log on.\\n\\nKind regards, the Mauro Data Mapper folks. \\n\\n(This is an automated mail).\",\n    \"email.admin_register.subject\": \"Mauro Data Mapper Registration\",\n    \"email.self_register.subject\": \"Mauro Data Mapper Registration\",\n    \"email.forgotten_password.subject\": \"Mauro Data Mapper Forgotten Password\",\n    \"email.invite_edit.subject\": \"Mauro Data Mapper Invitation\",\n    \"email.invite_view.subject\": \"Mauro Data Mapper Invitation\",\n    \"email.admin_confirm_registration.body\": \"Dear ${firstName},\\nYour registration for the Mauro Data Mapper at ${catalogueUrl} has been confirmed.\\n\\nYour username / email address is: ${emailAddress} \\nYou chose a password on registration, but can reset it from the login page.\\n\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.self_register.body\": \"Dear ${firstName},\\nYou have self-registered for the Mauro Data Mapper at ${catalogueUrl}\\n\\nYour username / email address is: ${emailAddress}\\nYour registration is marked as pending: you'll be sent another email when your request has been confirmed by an administrator. \\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.password_reset.body\": \"Dear ${firstName},\\nYour password has been reset for the Mauro Data Mapper at ${catalogueUrl}.\\n\\nYour new temporary password is: ${tempPassword} \\nand you will be asked to update this when you next log on.\\n\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.from.name\": \"Mauro Data Mapper\",\n    \"email.admin_confirm_registration.subject\": \"Mauro Data Mapper Registration - Confirmation\",\n    \"email.forgotten_password.body\": \"Dear ${firstName},\\nA request has been made to reset the password for the Mauro Data Mapper at ${catalogueUrl}.\\nIf you did not make this request please ignore this email.\\n\\nPlease use the following link to reset your password ${passwordResetLink}.\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.password_reset.subject\": \"Mauro Data Mapper Password Reset\",\n    \"email.invite_view.body\": \"Dear ${firstName},\\nYou have been invited to view the item '${itemLabel}' in the Mauro Data Mapper at ${catalogueUrl}\\n\\nYour username / email address is: ${emailAddress}\\nYour password is: ${tempPassword}\\n and you will be asked to update this when you first log on.\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.from.address\": \"username@gmail.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List all Api Properties as XML",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/admin/properties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"properties"
+							]
+						},
+						"description": "Get the current values of system configuration properties"
+					},
+					"response": [
+						{
+							"name": "List all Api Properties as XML",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/admin/properties",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"admin",
+										"properties"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 29 Jul 2020 11:00:22 GMT"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"email.invite_edit.body\": \"Dear ${firstName},\\nYou have been invited to edit the model '${itemLabel}' in the Mauro Data Mapper at ${catalogueUrl}\\n\\nYour username / email address is: ${emailAddress}\\nYour password is: ${tempPassword}\\n and you will be asked to update this when you first log on.\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.admin_register.body\": \"Dear ${firstName},\\nYou have been given access to the Mauro Data Mapper at ${catalogueUrl} \\n\\nYour username / email address is: ${emailAddress} \\nYour password is: ${tempPassword} \\nand you will be asked to update this when you first log on.\\n\\nKind regards, the Mauro Data Mapper folks. \\n\\n(This is an automated mail).\",\n    \"email.admin_register.subject\": \"Mauro Data Mapper Registration\",\n    \"email.self_register.subject\": \"Mauro Data Mapper Registration\",\n    \"email.forgotten_password.subject\": \"Mauro Data Mapper Forgotten Password\",\n    \"email.invite_edit.subject\": \"Mauro Data Mapper Invitation\",\n    \"email.invite_view.subject\": \"Mauro Data Mapper Invitation\",\n    \"email.admin_confirm_registration.body\": \"Dear ${firstName},\\nYour registration for the Mauro Data Mapper at ${catalogueUrl} has been confirmed.\\n\\nYour username / email address is: ${emailAddress} \\nYou chose a password on registration, but can reset it from the login page.\\n\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.self_register.body\": \"Dear ${firstName},\\nYou have self-registered for the Mauro Data Mapper at ${catalogueUrl}\\n\\nYour username / email address is: ${emailAddress}\\nYour registration is marked as pending: you'll be sent another email when your request has been confirmed by an administrator. \\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.password_reset.body\": \"Dear ${firstName},\\nYour password has been reset for the Mauro Data Mapper at ${catalogueUrl}.\\n\\nYour new temporary password is: ${tempPassword} \\nand you will be asked to update this when you next log on.\\n\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.from.name\": \"Mauro Data Mapper\",\n    \"email.admin_confirm_registration.subject\": \"Mauro Data Mapper Registration - Confirmation\",\n    \"email.forgotten_password.body\": \"Dear ${firstName},\\nA request has been made to reset the password for the Mauro Data Mapper at ${catalogueUrl}.\\nIf you did not make this request please ignore this email.\\n\\nPlease use the following link to reset your password ${passwordResetLink}.\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.password_reset.subject\": \"Mauro Data Mapper Password Reset\",\n    \"email.invite_view.body\": \"Dear ${firstName},\\nYou have been invited to view the item '${itemLabel}' in the Mauro Data Mapper at ${catalogueUrl}\\n\\nYour username / email address is: ${emailAddress}\\nYour password is: ${tempPassword}\\n and you will be asked to update this when you first log on.\\nKind regards, the Mauro Data Mapper folks.\\n\\n(This is an automated mail).\",\n    \"email.from.address\": \"username@gmail.com\"\n}"
+						}
+					]
+				},
+				{
 					"name": "List all publically visible Api Properties",
 					"request": {
 						"method": "GET",
@@ -8611,6 +8723,163 @@
 							"options": {
 								"raw": {
 									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/properties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Api Property Collection",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"key\": \"{{$randomNoun}}.{{$randomNoun}}.{{$randomNoun}}\",\n    \"value\": \"{{$randomPhrase}}\",\n    \"publiclyVisible\": {{$randomBoolean}},\n    \"category\": \"{{$randomNoun}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/properties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Api Property from CSV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"key\": \"{{$randomNoun}}.{{$randomNoun}}.{{$randomNoun}}\",\n    \"value\": \"{{$randomPhrase}}\",\n    \"publiclyVisible\": {{$randomBoolean}},\n    \"category\": \"{{$randomNoun}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/properties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Api Property Collection from CSV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"key\": \"{{$randomNoun}}.{{$randomNoun}}.{{$randomNoun}}\",\n    \"value\": \"{{$randomPhrase}}\",\n    \"publiclyVisible\": {{$randomBoolean}},\n    \"category\": \"{{$randomNoun}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/properties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Api Property from XML",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version='1.0'?>\n<apiProperty>\n    <key>an.xml.key</key>\n    <value>An XML value</value>\n    <category>XML</category>\n    <publiclyVisible>false</publiclyVisible>\n</apiProperty>",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/admin/properties",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"admin",
+								"properties"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new Api Property Collection from XML",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/xml",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<?xml version='1.0'?>\n<apiProperty>\n    <key>an.xml.key</key>\n    <value>An XML value</value>\n    <category>XML</category>\n    <publiclyVisible>false</publiclyVisible>\n</apiProperty>",
+							"options": {
+								"raw": {
+									"language": "text"
 								}
 							}
 						},
