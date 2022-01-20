@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "44e4b70e-de8a-4ecf-8f90-0d359bdc1502",
+		"_postman_id": "a3d54321-2148-4877-a9d4-a3ef938d9b13",
 		"name": "Mauro Data Mapper",
 		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
