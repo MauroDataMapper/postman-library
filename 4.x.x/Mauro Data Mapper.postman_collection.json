@@ -10337,6 +10337,98 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Profiles",
+			"item": [
+				{
+					"name": "List many profiles for many items of a DataModel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"multiFacetAwareItems\": [\n        {\n            \"multiFacetAwareItemDomainType\": \"dataElement\",\n            \"multiFacetAwareItemId\": \"97757635-d1da-4c03-86d8-ba90efbd5670\"\n        },\n        {\n            \"multiFacetAwareItemDomainType\": \"dataElement\",\n            \"multiFacetAwareItemId\": \"0a8c9022-c5d9-4d0f-b426-86d70aee5c74\"\n        }\n    ],\n    \"profileProviderServices\": [\n        {\n            \"name\": \"ExampleProfile\",\n            \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.profile.provider\"\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/dataModels/d6bd1e63-079e-42ce-ad96-67fc83561b28/profile/getMany",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"d6bd1e63-079e-42ce-ad96-67fc83561b28",
+								"profile",
+								"getMany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate many profiles for many items of a DataModel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"count\": 2,\n    \"profilesProvided\": [\n        {\n            \"profile\": {\n                \"sections\": [\n                    {\n                        \"name\": \"Properties\",\n                        \"description\": null,\n                        \"fields\": [\n                            {\n                                \"fieldName\": \"Prop1\",\n                                \"metadataPropertyName\": \"Property1\",\n                                \"description\": null,\n                                \"maxMultiplicity\": 1,\n                                \"minMultiplicity\": 1,\n                                \"allowedValues\": [],\n                                \"regularExpression\": null,\n                                \"dataType\": \"string\",\n                                \"derived\": false,\n                                \"derivedFrom\": null,\n                                \"uneditable\": false,\n                                \"defaultValue\": \"x\",\n                                \"editableAfterFinalisation\": true,\n                                \"currentValue\": \"ABC\"\n                            },\n                            {\n                                \"fieldName\": \"Prop2\",\n                                \"metadataPropertyName\": \"Prop2\",\n                                \"description\": null,\n                                \"maxMultiplicity\": 1,\n                                \"minMultiplicity\": 1,\n                                \"allowedValues\": [],\n                                \"regularExpression\": null,\n                                \"dataType\": \"string\",\n                                \"derived\": false,\n                                \"derivedFrom\": null,\n                                \"uneditable\": false,\n                                \"defaultValue\": \"y\",\n                                \"editableAfterFinalisation\": true,\n                                \"currentValue\": \"DEF\"\n                            }\n                        ]\n                    }\n                ],\n                \"id\": \"97757635-d1da-4c03-86d8-ba90efbd5670\",\n                \"label\": \"ElementInChild\",\n                \"domainType\": \"DataElement\"\n            },\n            \"profileProviderService\": {\n                \"name\": \"ExampleProfile\",\n                \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.profile.provider\",\n                \"version\": \"main\"\n            }\n        },\n        {\n            \"profile\": {\n                \"sections\": [\n                    {\n                        \"name\": \"Properties\",\n                        \"description\": null,\n                        \"fields\": [\n                            {\n                                \"fieldName\": \"Prop1\",\n                                \"metadataPropertyName\": \"Property1\",\n                                \"description\": null,\n                                \"maxMultiplicity\": 1,\n                                \"minMultiplicity\": 1,\n                                \"allowedValues\": [],\n                                \"regularExpression\": null,\n                                \"dataType\": \"string\",\n                                \"derived\": false,\n                                \"derivedFrom\": null,\n                                \"uneditable\": false,\n                                \"defaultValue\": \"x\",\n                                \"editableAfterFinalisation\": true,\n                                \"currentValue\": \"MNO\"\n                            },\n                            {\n                                \"fieldName\": \"Prop2\",\n                                \"metadataPropertyName\": \"Prop2\",\n                                \"description\": null,\n                                \"maxMultiplicity\": 1,\n                                \"minMultiplicity\": 1,\n                                \"allowedValues\": [],\n                                \"regularExpression\": null,\n                                \"dataType\": \"string\",\n                                \"derived\": false,\n                                \"derivedFrom\": null,\n                                \"uneditable\": false,\n                                \"defaultValue\": \"y\",\n                                \"editableAfterFinalisation\": true,\n                                \"currentValue\": \"RSTU\"\n                            }\n                        ]\n                    }\n                ],\n                \"id\": \"0a8c9022-c5d9-4d0f-b426-86d70aee5c74\",\n                \"label\": \"grandchild element\",\n                \"domainType\": \"DataElement\"\n            },\n            \"profileProviderService\": {\n                \"name\": \"ExampleProfile\",\n                \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.profile.provider\",\n                \"version\": \"main\"\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/dataModels/d6bd1e63-079e-42ce-ad96-67fc83561b28/profile/validateMany",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"d6bd1e63-079e-42ce-ad96-67fc83561b28",
+								"profile",
+								"validateMany"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save many profiles for many items of a DataModel Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"count\": 2,\n    \"profilesProvided\": [\n        {\n            \"profile\": {\n                \"sections\": [\n                    {\n                        \"name\": \"Properties\",\n                        \"description\": null,\n                        \"fields\": [\n                            {\n                                \"fieldName\": \"Prop1\",\n                                \"metadataPropertyName\": \"Property1\",\n                                \"description\": null,\n                                \"maxMultiplicity\": 1,\n                                \"minMultiplicity\": 1,\n                                \"allowedValues\": [],\n                                \"regularExpression\": null,\n                                \"dataType\": \"string\",\n                                \"derived\": false,\n                                \"derivedFrom\": null,\n                                \"uneditable\": false,\n                                \"defaultValue\": \"x\",\n                                \"editableAfterFinalisation\": true,\n                                \"currentValue\": \"ABC\"\n                            },\n                            {\n                                \"fieldName\": \"Prop2\",\n                                \"metadataPropertyName\": \"Prop2\",\n                                \"description\": null,\n                                \"maxMultiplicity\": 1,\n                                \"minMultiplicity\": 1,\n                                \"allowedValues\": [],\n                                \"regularExpression\": null,\n                                \"dataType\": \"string\",\n                                \"derived\": false,\n                                \"derivedFrom\": null,\n                                \"uneditable\": false,\n                                \"defaultValue\": \"y\",\n                                \"editableAfterFinalisation\": true,\n                                \"currentValue\": \"DEF\"\n                            }\n                        ]\n                    }\n                ],\n                \"id\": \"97757635-d1da-4c03-86d8-ba90efbd5670\",\n                \"label\": \"ElementInChild\",\n                \"domainType\": \"DataElement\"\n            },\n            \"profileProviderService\": {\n                \"name\": \"ExampleProfile\",\n                \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.profile.provider\",\n                \"version\": \"main\"\n            }\n        },\n        {\n            \"profile\": {\n                \"sections\": [\n                    {\n                        \"name\": \"Properties\",\n                        \"description\": null,\n                        \"fields\": [\n                            {\n                                \"fieldName\": \"Prop1\",\n                                \"metadataPropertyName\": \"Property1\",\n                                \"description\": null,\n                                \"maxMultiplicity\": 1,\n                                \"minMultiplicity\": 1,\n                                \"allowedValues\": [],\n                                \"regularExpression\": null,\n                                \"dataType\": \"string\",\n                                \"derived\": false,\n                                \"derivedFrom\": null,\n                                \"uneditable\": false,\n                                \"defaultValue\": \"x\",\n                                \"editableAfterFinalisation\": true,\n                                \"currentValue\": \"MNO\"\n                            },\n                            {\n                                \"fieldName\": \"Prop2\",\n                                \"metadataPropertyName\": \"Prop2\",\n                                \"description\": null,\n                                \"maxMultiplicity\": 1,\n                                \"minMultiplicity\": 1,\n                                \"allowedValues\": [],\n                                \"regularExpression\": null,\n                                \"dataType\": \"string\",\n                                \"derived\": false,\n                                \"derivedFrom\": null,\n                                \"uneditable\": false,\n                                \"defaultValue\": \"y\",\n                                \"editableAfterFinalisation\": true,\n                                \"currentValue\": \"RSTU\"\n                            }\n                        ]\n                    }\n                ],\n                \"id\": \"0a8c9022-c5d9-4d0f-b426-86d70aee5c74\",\n                \"label\": \"grandchild element\",\n                \"domainType\": \"DataElement\"\n            },\n            \"profileProviderService\": {\n                \"name\": \"ExampleProfile\",\n                \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.profile.provider\",\n                \"version\": \"main\"\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/dataModels/d6bd1e63-079e-42ce-ad96-67fc83561b28/profile/saveMany",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"dataModels",
+								"d6bd1e63-079e-42ce-ad96-67fc83561b28",
+								"profile",
+								"saveMany"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	],
 	"variable": [
