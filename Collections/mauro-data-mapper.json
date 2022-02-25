@@ -9170,7 +9170,74 @@
                 },
                 "url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/semanticLinks"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "30a0e9ca-5217-47c3-8301-0f4695d42d4c",
+                  "name": "Create Semantic Link (Refines)",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"targetMultiFacetAwareItemDomainType\": \"{{target_domain_type}}\",\n    \"targetMultiFacetAwareItemId\": \"{{target_domain_id}}\",\n    \"linkType\": \"Refines\",\n    \"unconfirmed\": {{$randomBoolean}}\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/semanticLinks"
+                  },
+                  "status": "Created",
+                  "code": 201,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Access-Control-Request-Method"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "Location",
+                      "value": "http://localhost:8080/semanticLink/show/a5683890-a23f-41ef-be46-e19763fbd20c"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json;charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Language",
+                      "value": "en-GB"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 25 Feb 2022 14:51:50 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"id\": \"a5683890-a23f-41ef-be46-e19763fbd20c\",\n    \"linkType\": \"Refines\",\n    \"domainType\": \"SemanticLink\",\n    \"unconfirmed\": true,\n    \"sourceMultiFacetAwareItem\": {\n        \"id\": \"30cc1d52-4063-4e40-acb4-d153011384b3\",\n        \"domainType\": \"DataClass\",\n        \"label\": \"et maiores nam\",\n        \"model\": \"c9c0cba5-ff1e-4d23-8ac3-61a4e7e00017\",\n        \"breadcrumbs\": [\n            {\n                \"id\": \"c9c0cba5-ff1e-4d23-8ac3-61a4e7e00017\",\n                \"label\": \"qui consectetur aut\",\n                \"domainType\": \"DataModel\",\n                \"finalised\": false\n            }\n        ]\n    },\n    \"targetMultiFacetAwareItem\": {\n        \"id\": \"c9c0cba5-ff1e-4d23-8ac3-61a4e7e00017\",\n        \"domainType\": \"DataModel\",\n        \"label\": \"qui consectetur aut\"\n    }\n}"
+                }
+              ]
             },
             {
               "name": "Create Semantic Link (Does Not Refine) Copy",
@@ -42821,7 +42888,7 @@
   ],
   "variable": [
     {
-      "id": "97d80b56-a6eb-48ca-aad1-c509a2a70b64",
+      "id": "4d7d39b1-6d01-4895-a6eb-fd41c0bef332",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
