@@ -9350,21 +9350,21 @@
               },
               "response": [
                 {
-                  "id": "44979710-165f-4c4c-8516-6f806a540e56",
+                  "id": "de5d472c-3e17-4e07-afa5-8319e1431cd1",
                   "name": "Update Semantic Link",
                   "originalRequest": {
                     "method": "PUT",
                     "header": [],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n    \"targetMultiFacetAwareItemDomainType\": \"{{target_domain_type}}\",\n    \"targetMultiFacetAwareItemId\": \"{{target_domain_id}}\",\n    \"domainType\": \"SemanticLink\",\n    \"linkType\": \"Refines\",\n    \"unconfirmed\": {{$randomBoolean}}\n}",
+                      "raw": "{\n    \"targetMultiFacetAwareItemDomainType\": \"{{target_domain_type}}\",\n    \"targetMultiFacetAwareItemId\": \"{{target_domain_id}}\",\n    \"linkType\": \"Refines\",\n    \"unconfirmed\": {{$randomBoolean}}\n}",
                       "options": {
                         "raw": {
                           "language": "json"
                         }
                       }
                     },
-                    "url": "{{base_url}}/{{domain_type}}/{{domain_id}}/semanticLinks/{{semantic_link_id}}"
+                    "url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/semanticLinks/{{semantic_link_id}}"
                   },
                   "status": "OK",
                   "code": 200,
@@ -9384,7 +9384,7 @@
                     },
                     {
                       "key": "Location",
-                      "value": "http://localhost:8080/semanticLink/show/470af828-d406-49c7-a959-d91783bdc6c1"
+                      "value": "http://localhost:8080/semanticLink/show/cfe58e3b-d768-470b-ac93-1f6038a1c6d8"
                     },
                     {
                       "key": "Content-Type",
@@ -9400,7 +9400,7 @@
                     },
                     {
                       "key": "Date",
-                      "value": "Fri, 11 Feb 2022 15:38:49 GMT"
+                      "value": "Fri, 25 Feb 2022 14:53:16 GMT"
                     },
                     {
                       "key": "Keep-Alive",
@@ -9413,7 +9413,7 @@
                   ],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"id\": \"470af828-d406-49c7-a959-d91783bdc6c1\",\n    \"linkType\": \"Refines\",\n    \"domainType\": \"SemanticLink\",\n    \"unconfirmed\": true,\n    \"sourceMultiFacetAwareItem\": {\n        \"id\": \"64654b2b-9e38-4a41-988e-70fe26676604\",\n        \"domainType\": \"DataModel\",\n        \"label\": \"DataModel name\"\n    },\n    \"targetMultiFacetAwareItem\": {\n        \"id\": \"9bb6fc43-8512-4ba0-9d63-9a0dbc3d1927\",\n        \"domainType\": \"DataModel\",\n        \"label\": \"Complex Test DataModel\"\n    }\n}"
+                  "body": "{\n    \"id\": \"cfe58e3b-d768-470b-ac93-1f6038a1c6d8\",\n    \"linkType\": \"Refines\",\n    \"domainType\": \"SemanticLink\",\n    \"unconfirmed\": false,\n    \"sourceMultiFacetAwareItem\": {\n        \"id\": \"30cc1d52-4063-4e40-acb4-d153011384b3\",\n        \"domainType\": \"DataClass\",\n        \"label\": \"et maiores nam\",\n        \"model\": \"c9c0cba5-ff1e-4d23-8ac3-61a4e7e00017\",\n        \"breadcrumbs\": [\n            {\n                \"id\": \"c9c0cba5-ff1e-4d23-8ac3-61a4e7e00017\",\n                \"label\": \"qui consectetur aut\",\n                \"domainType\": \"DataModel\",\n                \"finalised\": false\n            }\n        ]\n    },\n    \"targetMultiFacetAwareItem\": {\n        \"id\": \"c9c0cba5-ff1e-4d23-8ac3-61a4e7e00017\",\n        \"domainType\": \"DataModel\",\n        \"label\": \"qui consectetur aut\"\n    }\n}"
                 }
               ]
             },
@@ -42888,7 +42888,7 @@
   ],
   "variable": [
     {
-      "id": "230f1b10-0dc5-48e6-990a-36d1fbb3a970",
+      "id": "72631638-9278-486a-80a0-068438bf401b",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
