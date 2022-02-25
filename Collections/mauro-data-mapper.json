@@ -9261,21 +9261,21 @@
               },
               "response": [
                 {
-                  "id": "e6e1a4c1-4247-4029-a613-d7e97e774ec7",
-                  "name": "Create Semantic Link (Does Not Refine)",
+                  "id": "a78888db-9eb0-4e17-a042-373a28d20e21",
+                  "name": "Create Semantic Link (Does Not Refine) Copy",
                   "originalRequest": {
                     "method": "POST",
                     "header": [],
                     "body": {
                       "mode": "raw",
-                      "raw": "{\n    \"targetMultiFacetAwareItemDomainType\": \"{{target_domain_type}}\",\n    \"targetMultiFacetAwareItemId\": \"{{target_domain_id}}\",\n    \"domainType\": \"SemanticLink\",\n    \"linkType\": \"Does Not Refine\"\n}",
+                      "raw": "{\n    \"targetMultiFacetAwareItemDomainType\": \"{{target_domain_type}}\",\n    \"targetMultiFacetAwareItemId\": \"{{target_domain_id}}\",\n    \"linkType\": \"Does Not Refine\",\n    \"unconfirmed\": {{$randomBoolean}}\n}",
                       "options": {
                         "raw": {
                           "language": "json"
                         }
                       }
                     },
-                    "url": "{{base_url}}/{{domain_type}}/{{domain_id}}/semanticLinks"
+                    "url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/semanticLinks"
                   },
                   "status": "Created",
                   "code": 201,
@@ -9295,7 +9295,7 @@
                     },
                     {
                       "key": "Location",
-                      "value": "http://localhost:8080/semanticLink/show/027c5f1f-b41d-4b1d-a73a-a98abf7863de"
+                      "value": "http://localhost:8080/semanticLink/show/cfe58e3b-d768-470b-ac93-1f6038a1c6d8"
                     },
                     {
                       "key": "Content-Type",
@@ -9311,7 +9311,7 @@
                     },
                     {
                       "key": "Date",
-                      "value": "Thu, 10 Feb 2022 17:06:00 GMT"
+                      "value": "Fri, 25 Feb 2022 14:52:34 GMT"
                     },
                     {
                       "key": "Keep-Alive",
@@ -9324,7 +9324,7 @@
                   ],
                   "cookie": [],
                   "responseTime": null,
-                  "body": "{\n    \"id\": \"027c5f1f-b41d-4b1d-a73a-a98abf7863de\",\n    \"linkType\": \"Does Not Refine\",\n    \"domainType\": \"SemanticLink\",\n    \"unconfirmed\": false,\n    \"sourceMultiFacetAwareItem\": {\n        \"id\": \"64654b2b-9e38-4a41-988e-70fe26676604\",\n        \"domainType\": \"DataModel\",\n        \"label\": \"DataModel name\"\n    },\n    \"targetMultiFacetAwareItem\": {\n        \"id\": \"9bb6fc43-8512-4ba0-9d63-9a0dbc3d1927\",\n        \"domainType\": \"DataModel\",\n        \"label\": \"Complex Test DataModel\"\n    }\n}"
+                  "body": "{\n    \"id\": \"cfe58e3b-d768-470b-ac93-1f6038a1c6d8\",\n    \"linkType\": \"Does Not Refine\",\n    \"domainType\": \"SemanticLink\",\n    \"unconfirmed\": false,\n    \"sourceMultiFacetAwareItem\": {\n        \"id\": \"30cc1d52-4063-4e40-acb4-d153011384b3\",\n        \"domainType\": \"DataClass\",\n        \"label\": \"et maiores nam\",\n        \"model\": \"c9c0cba5-ff1e-4d23-8ac3-61a4e7e00017\",\n        \"breadcrumbs\": [\n            {\n                \"id\": \"c9c0cba5-ff1e-4d23-8ac3-61a4e7e00017\",\n                \"label\": \"qui consectetur aut\",\n                \"domainType\": \"DataModel\",\n                \"finalised\": false\n            }\n        ]\n    },\n    \"targetMultiFacetAwareItem\": {\n        \"id\": \"c9c0cba5-ff1e-4d23-8ac3-61a4e7e00017\",\n        \"domainType\": \"DataModel\",\n        \"label\": \"qui consectetur aut\"\n    }\n}"
                 }
               ]
             },
@@ -9339,7 +9339,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"targetMultiFacetAwareItemDomainType\": \"{{target_domain_type}}\",\n    \"targetMultiFacetAwareItemId\": \"{{target_domain_id}}\",\n    \"domainType\": \"SemanticLink\",\n    \"linkType\": \"Refines\",\n    \"unconfirmed\": {{$randomBoolean}}\n}",
+                  "raw": "{\n    \"targetMultiFacetAwareItemDomainType\": \"{{target_domain_type}}\",\n    \"targetMultiFacetAwareItemId\": \"{{target_domain_id}}\",\n    \"linkType\": \"Refines\",\n    \"unconfirmed\": {{$randomBoolean}}\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -42888,7 +42888,7 @@
   ],
   "variable": [
     {
-      "id": "0403c00e-fa10-48a0-bfe0-ab6aa60dadd0",
+      "id": "230f1b10-0dc5-48e6-990a-36d1fbb3a970",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
