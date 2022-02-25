@@ -9250,7 +9250,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"targetMultiFacetAwareItemDomainType\": \"{{target_domain_type}}\",\n    \"targetMultiFacetAwareItemId\": \"{{target_domain_id}}\",\n    \"domainType\": \"SemanticLink\",\n    \"linkType\": \"Does Not Refine\",\n    \"unconfirmed\": {{$randomBoolean}}\n}",
+                  "raw": "{\n    \"targetMultiFacetAwareItemDomainType\": \"{{target_domain_type}}\",\n    \"targetMultiFacetAwareItemId\": \"{{target_domain_id}}\",\n    \"linkType\": \"Does Not Refine\",\n    \"unconfirmed\": {{$randomBoolean}}\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -9259,74 +9259,7 @@
                 },
                 "url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/semanticLinks"
               },
-              "response": [
-                {
-                  "id": "e6e1a4c1-4247-4029-a613-d7e97e774ec7",
-                  "name": "Create Semantic Link (Does Not Refine)",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"targetMultiFacetAwareItemDomainType\": \"{{target_domain_type}}\",\n    \"targetMultiFacetAwareItemId\": \"{{target_domain_id}}\",\n    \"domainType\": \"SemanticLink\",\n    \"linkType\": \"Does Not Refine\"\n}",
-                      "options": {
-                        "raw": {
-                          "language": "json"
-                        }
-                      }
-                    },
-                    "url": "{{base_url}}/{{domain_type}}/{{domain_id}}/semanticLinks"
-                  },
-                  "status": "Created",
-                  "code": 201,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Vary",
-                      "value": "Origin"
-                    },
-                    {
-                      "key": "Vary",
-                      "value": "Access-Control-Request-Method"
-                    },
-                    {
-                      "key": "Vary",
-                      "value": "Access-Control-Request-Headers"
-                    },
-                    {
-                      "key": "Location",
-                      "value": "http://localhost:8080/semanticLink/show/027c5f1f-b41d-4b1d-a73a-a98abf7863de"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json;charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Language",
-                      "value": "en-GB"
-                    },
-                    {
-                      "key": "Transfer-Encoding",
-                      "value": "chunked"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Thu, 10 Feb 2022 17:06:00 GMT"
-                    },
-                    {
-                      "key": "Keep-Alive",
-                      "value": "timeout=60"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"id\": \"027c5f1f-b41d-4b1d-a73a-a98abf7863de\",\n    \"linkType\": \"Does Not Refine\",\n    \"domainType\": \"SemanticLink\",\n    \"unconfirmed\": false,\n    \"sourceMultiFacetAwareItem\": {\n        \"id\": \"64654b2b-9e38-4a41-988e-70fe26676604\",\n        \"domainType\": \"DataModel\",\n        \"label\": \"DataModel name\"\n    },\n    \"targetMultiFacetAwareItem\": {\n        \"id\": \"9bb6fc43-8512-4ba0-9d63-9a0dbc3d1927\",\n        \"domainType\": \"DataModel\",\n        \"label\": \"Complex Test DataModel\"\n    }\n}"
-                }
-              ]
+              "response": []
             },
             {
               "name": "Update Semantic Link",
@@ -42888,7 +42821,7 @@
   ],
   "variable": [
     {
-      "id": "4d7d39b1-6d01-4895-a6eb-fd41c0bef332",
+      "id": "079d6936-c7b8-496c-8a19-f4b602d03a85",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
