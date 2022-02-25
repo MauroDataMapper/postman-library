@@ -9170,74 +9170,7 @@
                 },
                 "url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/semanticLinks"
               },
-              "response": [
-                {
-                  "id": "4dea7336-cf90-440d-8467-78f5ee74b466",
-                  "name": "Create Semantic Link (Refines)",
-                  "originalRequest": {
-                    "method": "POST",
-                    "header": [],
-                    "body": {
-                      "mode": "raw",
-                      "raw": "{\n    \"targetMultiFacetAwareItemDomainType\": \"{{target_domain_type}}\",\n    \"targetMultiFacetAwareItemId\": \"{{target_domain_id}}\",\n    \"domainType\": \"SemanticLink\",\n    \"linkType\": \"Refines\"\n}",
-                      "options": {
-                        "raw": {
-                          "language": "json"
-                        }
-                      }
-                    },
-                    "url": "{{base_url}}/{{domain_type}}/{{domain_id}}/semanticLinks"
-                  },
-                  "status": "Created",
-                  "code": 201,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Vary",
-                      "value": "Origin"
-                    },
-                    {
-                      "key": "Vary",
-                      "value": "Access-Control-Request-Method"
-                    },
-                    {
-                      "key": "Vary",
-                      "value": "Access-Control-Request-Headers"
-                    },
-                    {
-                      "key": "Location",
-                      "value": "http://localhost:8080/semanticLink/show/c80b20d7-1608-40ec-91c8-bd1f7b86fee5"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json;charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Language",
-                      "value": "en-GB"
-                    },
-                    {
-                      "key": "Transfer-Encoding",
-                      "value": "chunked"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Thu, 10 Feb 2022 17:06:16 GMT"
-                    },
-                    {
-                      "key": "Keep-Alive",
-                      "value": "timeout=60"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"id\": \"c80b20d7-1608-40ec-91c8-bd1f7b86fee5\",\n    \"linkType\": \"Refines\",\n    \"domainType\": \"SemanticLink\",\n    \"unconfirmed\": false,\n    \"sourceMultiFacetAwareItem\": {\n        \"id\": \"64654b2b-9e38-4a41-988e-70fe26676604\",\n        \"domainType\": \"DataModel\",\n        \"label\": \"DataModel name\"\n    },\n    \"targetMultiFacetAwareItem\": {\n        \"id\": \"9bb6fc43-8512-4ba0-9d63-9a0dbc3d1927\",\n        \"domainType\": \"DataModel\",\n        \"label\": \"Complex Test DataModel\"\n    }\n}"
-                }
-              ]
+              "response": []
             },
             {
               "name": "Create Semantic Link (Does Not Refine) Copy",
@@ -42888,7 +42821,7 @@
   ],
   "variable": [
     {
-      "id": "4af64919-6aab-4fa3-a94c-5796e7e2564a",
+      "id": "97d80b56-a6eb-48ca-aad1-c509a2a70b64",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
