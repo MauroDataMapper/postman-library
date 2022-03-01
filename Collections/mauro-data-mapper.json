@@ -6612,65 +6612,7 @@
                 "header": [],
                 "url": "{{base_url}}/folders/{{folder_id}}/folder/{{destination_folder_id}}"
               },
-              "response": [
-                {
-                  "id": "5c9aee16-a5cb-4151-a99a-d920b5ffe67d",
-                  "name": "Move Folder",
-                  "originalRequest": {
-                    "method": "PUT",
-                    "header": [],
-                    "url": "{{base_url}}/folders/{{folder_id}}/folder/{{destination_folder_id}}"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Vary",
-                      "value": "Origin"
-                    },
-                    {
-                      "key": "Vary",
-                      "value": "Access-Control-Request-Method"
-                    },
-                    {
-                      "key": "Vary",
-                      "value": "Access-Control-Request-Headers"
-                    },
-                    {
-                      "key": "Location",
-                      "value": "http://localhost:8080/api/folders/adbcd4d8-48c6-4b86-902a-bbbdaeb7b8e2"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json;charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Language",
-                      "value": "en-GB"
-                    },
-                    {
-                      "key": "Transfer-Encoding",
-                      "value": "chunked"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Thu, 10 Feb 2022 11:56:13 GMT"
-                    },
-                    {
-                      "key": "Keep-Alive",
-                      "value": "timeout=60"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"id\": \"adbcd4d8-48c6-4b86-902a-bbbdaeb7b8e2\",\n    \"label\": \"necessitatibus facilis saepe\",\n    \"lastUpdated\": \"2022-02-10T11:56:13.207Z\",\n    \"domainType\": \"Folder\",\n    \"hasChildFolders\": false,\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"availableActions\": [\n        \"comment\",\n        \"delete\",\n        \"editDescription\",\n        \"save\",\n        \"show\",\n        \"softDelete\",\n        \"update\"\n    ],\n    \"description\": \"Placeat neque ea ipsa reprehenderit provident necessitatibus rem similique tempora. Eligendi quaerat sunt eos ipsum in laudantium ullam minus aperiam. Ut dicta in dolor quo. Atque beatae molestias amet aut vitae eius voluptatibus laudantium nobis.\"\n}"
-                }
-              ]
+              "response": []
             },
             {
               "name": "Search in Folder",
@@ -42959,7 +42901,7 @@
   ],
   "variable": [
     {
-      "id": "d30f3a42-f169-4183-83ad-f4383179ec50",
+      "id": "ae483192-84ca-4b5d-a6b1-8be19ce1d225",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
