@@ -6610,7 +6610,7 @@
               "request": {
                 "method": "PUT",
                 "header": [],
-                "url": "{{base_url}}/folders/{{folder_id}}/folder/{{destination_folder_id}}"
+                "url": "{{base_url}}/folders/{{folder_id}}/folder/root"
               },
               "response": []
             },
@@ -32959,6 +32959,64 @@
                   "cookie": [],
                   "responseTime": null,
                   "body": "{\n    \"id\": \"aadeb0d0-89e2-4c66-866b-86e6791fb68b\",\n    \"domainType\": \"TermRelationship\",\n    \"label\": \"auxiliary\",\n    \"model\": \"d5cb2c2f-5c15-44d0-a77d-6226a9416fce\",\n    \"breadcrumbs\": [\n        {\n            \"id\": \"d5cb2c2f-5c15-44d0-a77d-6226a9416fce\",\n            \"label\": \"Complex Test Terminology\",\n            \"domainType\": \"Terminology\",\n            \"finalised\": false\n        },\n        {\n            \"id\": \"053ce59c-274b-437a-beb5-73ecf997aa28\",\n            \"label\": \"CTT10: Complex Test Term 10\",\n            \"domainType\": \"Term\"\n        }\n    ],\n    \"availableActions\": [\n        \"comment\",\n        \"delete\",\n        \"editDescription\",\n        \"save\",\n        \"show\",\n        \"update\"\n    ],\n    \"lastUpdated\": \"2022-02-18T14:29:16.863Z\",\n    \"relationshipType\": {\n        \"id\": \"8953c588-6cd8-42a9-a624-6efec482d3a0\",\n        \"domainType\": \"TermRelationshipType\",\n        \"label\": \"auxiliary\",\n        \"model\": \"d5cb2c2f-5c15-44d0-a77d-6226a9416fce\",\n        \"breadcrumbs\": [\n            {\n                \"id\": \"d5cb2c2f-5c15-44d0-a77d-6226a9416fce\",\n                \"label\": \"Complex Test Terminology\",\n                \"domainType\": \"Terminology\",\n                \"finalised\": false\n            }\n        ],\n        \"displayLabel\": \"mobile\"\n    },\n    \"sourceTerm\": {\n        \"id\": \"053ce59c-274b-437a-beb5-73ecf997aa28\",\n        \"domainType\": \"Term\",\n        \"label\": \"CTT10: Complex Test Term 10\",\n        \"model\": \"d5cb2c2f-5c15-44d0-a77d-6226a9416fce\",\n        \"breadcrumbs\": [\n            {\n                \"id\": \"d5cb2c2f-5c15-44d0-a77d-6226a9416fce\",\n                \"label\": \"Complex Test Terminology\",\n                \"domainType\": \"Terminology\",\n                \"finalised\": false\n            }\n        ],\n        \"code\": \"CTT10\",\n        \"definition\": \"Complex Test Term 10\"\n    },\n    \"targetTerm\": {\n        \"id\": \"e1bc9226-54f6-4bb8-acac-995abb338dd4\",\n        \"domainType\": \"Term\",\n        \"label\": \"CTT00: Complex Test Term 00\",\n        \"model\": \"d5cb2c2f-5c15-44d0-a77d-6226a9416fce\",\n        \"breadcrumbs\": [\n            {\n                \"id\": \"d5cb2c2f-5c15-44d0-a77d-6226a9416fce\",\n                \"label\": \"Complex Test Terminology\",\n                \"domainType\": \"Terminology\",\n                \"finalised\": false\n            }\n        ],\n        \"description\": \"This is a very important description\",\n        \"code\": \"CTT00\",\n        \"definition\": \"Complex Test Term 00\",\n        \"url\": \"https://google.co.uk\"\n    }\n}"
+                },
+                {
+                  "id": "736fc8ee-9499-473f-873b-3d17f4ab49fb",
+                  "name": "Create by Terminology and Term",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"relationshipType\": {\n        \"id\": \"{{term_relationship_type_id}}\"\n    },\n    \"sourceTerm\": {\n        \"id\": \"0ab1be61-0912-404c-94f0-6d2a9a5b736d\"\n    },\n    \"targetTerm\": {\n        \"id\": \"{{target_term_id}}\"\n    }\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": "{{base_url}}/terminologies/{{terminology_id}}/terms/{{term_id}}/termRelationships"
+                  },
+                  "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+                  "code": 422,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Access-Control-Request-Method"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json;charset=UTF-8"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 02 Mar 2022 12:01:04 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Term Relationship must define one of its Terms as the termId requested\"\n        }\n    ]\n}"
                 }
               ]
             },
@@ -42901,7 +42959,7 @@
   ],
   "variable": [
     {
-      "id": "ae483192-84ca-4b5d-a6b1-8be19ce1d225",
+      "id": "ccefc8d5-747d-48df-bbb6-8c0fe05a7e03",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
