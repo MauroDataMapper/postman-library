@@ -5906,7 +5906,7 @@
                 "auth": {
                   "type": "apikey",
                   "apikey": {
-                    "value": "997f0ee3-b6ba-4cc6-8b21-3161dcd8645d",
+                    "value": "98641ebe-fa5d-4926-8c5a-ae6528484f5c",
                     "key": "apiKey"
                   }
                 },
@@ -42970,7 +42970,7 @@
   ],
   "variable": [
     {
-      "id": "0a3d26ca-7ff0-4585-9dc5-6998a416ecc8",
+      "id": "5cdcb17c-1371-43b9-b2fa-b8cb693deff5",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
