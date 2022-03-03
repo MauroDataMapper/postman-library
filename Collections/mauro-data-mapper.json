@@ -5903,6 +5903,13 @@
                 "disableBodyPruning": true
               },
               "request": {
+                "auth": {
+                  "type": "apikey",
+                  "apikey": {
+                    "value": "997f0ee3-b6ba-4cc6-8b21-3161dcd8645d",
+                    "key": "apiKey"
+                  }
+                },
                 "method": "GET",
                 "header": [],
                 "url": "{{base_url}}/folders"
@@ -33014,7 +33021,11 @@
                       "value": "keep-alive"
                     }
                   ],
-                  "cookie": [],
+                  "cookie": [
+                    {
+                      "expires": "Invalid Date"
+                    }
+                  ],
                   "responseTime": null,
                   "body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Term Relationship must define one of its Terms as the termId requested\"\n        }\n    ]\n}"
                 }
@@ -42959,7 +42970,7 @@
   ],
   "variable": [
     {
-      "id": "ccefc8d5-747d-48df-bbb6-8c0fe05a7e03",
+      "id": "0a3d26ca-7ff0-4585-9dc5-6998a416ecc8",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
