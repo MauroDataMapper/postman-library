@@ -21501,19 +21501,6 @@
               ]
             },
             {
-              "name": "Delete all Unused Data Classes in Data Model",
-              "id": "0f981a18-1157-4f8c-bb3a-824cd74ecdb1",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "DELETE",
-                "header": [],
-                "url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/clean"
-              },
-              "response": []
-            },
-            {
               "name": "Search in Data Model",
               "id": "49f86b51-85a8-45a8-9bc6-5dc1043c70cf",
               "protocolProfileBehavior": {
@@ -42944,7 +42931,7 @@
   ],
   "variable": [
     {
-      "id": "e98bb67b-4074-46b4-9b89-2746b4c31385",
+      "id": "deb33878-7334-40a9-a2b5-eefddc2ed80e",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
