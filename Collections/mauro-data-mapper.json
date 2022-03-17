@@ -35104,19 +35104,6 @@
               ]
             },
             {
-              "name": "Delete all unused ReferenceDataTypes",
-              "id": "b4f16eec-52bc-40a6-a998-2a33c65d0268",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "DELETE",
-                "header": [],
-                "url": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/referenceDataTypes/clean"
-              },
-              "response": []
-            },
-            {
               "name": "Search ReferenceData Model",
               "id": "644e36e8-da12-462e-932d-e718766dc73d",
               "protocolProfileBehavior": {
@@ -42970,7 +42957,7 @@
   ],
   "variable": [
     {
-      "id": "8391328f-6e9c-42b8-af32-a2e71b2d6f49",
+      "id": "b1c296f4-eec4-407f-b042-d7739eb24c39",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
