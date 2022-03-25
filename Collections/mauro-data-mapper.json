@@ -42499,7 +42499,7 @@
               ]
             },
             {
-              "name": "Validate profile (default version) for profiled object",
+              "name": "Validate profile (latest version) for profiled object",
               "id": "c5f9335c-0f02-4345-a9fc-bf71b245c330",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -42516,7 +42516,7 @@
                     }
                   }
                 },
-                "url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/profile/{{profile_namespace}}/{{profile_name}}/{{profile_version}}/validate"
+                "url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/profile/{{profile_namespace}}/{{profile_name}}/validate"
               },
               "response": [
                 {
@@ -43101,7 +43101,7 @@
   ],
   "variable": [
     {
-      "id": "e55e92d9-cbae-4e41-a2e3-80c1e2f1aede",
+      "id": "c854fb29-76b3-42b9-a4e9-4db52f04aa85",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
