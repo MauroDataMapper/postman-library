@@ -42414,7 +42414,7 @@
               ]
             },
             {
-              "name": "Save profile to profiled object Copy",
+              "name": "Validate profile for profiled object",
               "id": "3da83ecc-0861-469d-8934-f8bc9b64bd82",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -43016,7 +43016,7 @@
   ],
   "variable": [
     {
-      "id": "bb0a5704-4d97-4b26-9443-70a7ae5ca2c3",
+      "id": "fcfc7125-e515-4259-81a6-bf25f74204f6",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
