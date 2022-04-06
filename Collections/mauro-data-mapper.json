@@ -15327,6 +15327,112 @@
                   ]
                 },
                 {
+                  "name": "Save User Image using JSON",
+                  "id": "6afae651-78bf-4715-ae6e-97b5ee249112",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "key": "fileContents",
+                          "type": "file",
+                          "src": "/Users/oliverfreeman/Desktop/Screenshot 2022-04-06 at 11.27.33.png"
+                        },
+                        {
+                          "key": "fileType",
+                          "value": "image/png",
+                          "type": "text"
+                        }
+                      ]
+                    },
+                    "url": "{{base_url}}/catalogueUsers/{{catalogue_user_id}}/image"
+                  },
+                  "response": [
+                    {
+                      "id": "8ce7ab92-8f34-4663-a2cd-7e86bd3672e4",
+                      "name": "Save User Image",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "formdata",
+                          "formdata": [
+                            {
+                              "key": "fileContents",
+                              "type": "file",
+                              "src": "/Users/oliverfreeman/Desktop/Screenshot 2022-04-06 at 11.27.33.png"
+                            },
+                            {
+                              "key": "fileType",
+                              "value": "image/png",
+                              "type": "text"
+                            }
+                          ],
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": "{{base_url}}/catalogueUsers/{{catalogue_user_id}}/image"
+                      },
+                      "status": "Created",
+                      "code": 201,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Vary",
+                          "value": "Origin"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Access-Control-Request-Method"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Access-Control-Request-Headers"
+                        },
+                        {
+                          "key": "Location",
+                          "value": "http://localhost:8080/api/userImageFiles/436a8789-5dd4-4a14-84f3-e2f78713ac72"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json;charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Language",
+                          "value": "en-GB"
+                        },
+                        {
+                          "key": "Transfer-Encoding",
+                          "value": "chunked"
+                        },
+                        {
+                          "key": "Date",
+                          "value": "Wed, 06 Apr 2022 10:29:47 GMT"
+                        },
+                        {
+                          "key": "Keep-Alive",
+                          "value": "timeout=60"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"id\": \"436a8789-5dd4-4a14-84f3-e2f78713ac72\",\n    \"domainType\": \"UserImageFile\",\n    \"lastUpdated\": \"2022-04-06T10:29:41.662Z\",\n    \"fileSize\": 1525830,\n    \"fileType\": \"image/png\",\n    \"fileName\": \"936c3b32-501c-4d22-9cda-3d1d9f807366-profile\",\n    \"userId\": \"936c3b32-501c-4d22-9cda-3d1d9f807366\"\n}"
+                    }
+                  ]
+                },
+                {
                   "name": "Update User Image using form data",
                   "id": "f84c6bc5-d3ec-4dc0-b5ad-3e7586b3c733",
                   "protocolProfileBehavior": {
@@ -43544,7 +43650,7 @@
   ],
   "variable": [
     {
-      "id": "9693accf-b3f7-45cc-83f8-2141db3db753",
+      "id": "b3f49b59-e777-4833-b09e-e024d75bc37d",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
