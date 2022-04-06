@@ -5353,6 +5353,146 @@
               "id": "5e323552-b989-4dad-827e-1068c17ecedd"
             },
             {
+              "name": "Import / Export",
+              "item": [
+                {
+                  "name": "List all exporter providers",
+                  "id": "f1e0c421-9cfd-4c02-af57-846ed682611a",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{base_url}}/folders/providers/exporters"
+                  },
+                  "response": [
+                    {
+                      "id": "fe2090c3-3b6c-402f-8b56-26ebe3af9aba",
+                      "name": "List all exporter providers",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": "{{base_url}}/folders/providers/exporters"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Vary",
+                          "value": "Origin"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Access-Control-Request-Method"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Access-Control-Request-Headers"
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "application/json;charset=UTF-8"
+                        },
+                        {
+                          "key": "Content-Language",
+                          "value": "en-GB"
+                        },
+                        {
+                          "key": "Transfer-Encoding",
+                          "value": "chunked"
+                        },
+                        {
+                          "key": "Date",
+                          "value": "Mon, 21 Feb 2022 09:40:55 GMT"
+                        },
+                        {
+                          "key": "Keep-Alive",
+                          "value": "timeout=60"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "[\n    {\n        \"name\": \"FolderJsonExporterService\",\n        \"version\": \"${json-unit.matches:version}\",\n        \"displayName\": \"JSON Folder Exporter\",\n        \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.core.container.provider.exporter\",\n        \"allowsExtraMetadataKeys\": true,\n        \"knownMetadataKeys\": [],\n        \"providerType\": \"FolderExporter\",\n        \"fileExtension\": \"json\",\n        \"fileType\": \"text/json\",\n        \"canExportMultipleDomains\": false\n    }\n]"
+                    }
+                  ]
+                },
+                {
+                  "name": "Export Folder",
+                  "id": "cf9a8d01-1814-41b8-93ec-ed18b62a1669",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{base_url}}/folders/{{folder_id}}/export/{{exporter_namespace}}/{{exporter_name}}/{{exporter_version}}"
+                  },
+                  "response": [
+                    {
+                      "id": "6885fad9-42c4-4275-9f80-07aa33183d13",
+                      "name": "Export Folder",
+                      "originalRequest": {
+                        "method": "GET",
+                        "header": [],
+                        "url": "{{base_url}}/folders/{{folder_id}}/export/{{exporter_namespace}}/{{exporter_name}}/{{exporter_version}}"
+                      },
+                      "status": "OK",
+                      "code": 200,
+                      "_postman_previewlanguage": "json",
+                      "header": [
+                        {
+                          "key": "Vary",
+                          "value": "Origin"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Access-Control-Request-Method"
+                        },
+                        {
+                          "key": "Vary",
+                          "value": "Access-Control-Request-Headers"
+                        },
+                        {
+                          "key": "Content-Disposition",
+                          "value": "attachment;filename=\"a ut voluptatem.json\""
+                        },
+                        {
+                          "key": "Content-Type",
+                          "value": "text/json;charset=utf-8"
+                        },
+                        {
+                          "key": "Transfer-Encoding",
+                          "value": "chunked"
+                        },
+                        {
+                          "key": "Date",
+                          "value": "Mon, 21 Feb 2022 09:44:39 GMT"
+                        },
+                        {
+                          "key": "Keep-Alive",
+                          "value": "timeout=60"
+                        },
+                        {
+                          "key": "Connection",
+                          "value": "keep-alive"
+                        }
+                      ],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"folder\": {\n        \"id\": \"bfc3ba60-1928-4f78-9fad-46961d91fa5d\",\n        \"label\": \"Development Folder\",\n        \"lastUpdated\": \"2022-03-25T17:04:32.352Z\",\n        \"domainType\": \"Folder\"\n    },\n    \"exportMetadata\": {\n        \"exportedBy\": \"Admin User\",\n        \"exportedOn\": \"2022-03-25T17:09:29.538Z\",\n        \"exporter\": {\n            \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.core.container.provider.exporter\",\n            \"name\": \"FolderJsonExporterService\",\n            \"version\": \"1.0\"\n        }\n    }\n}"
+                    }
+                  ]
+                }
+              ],
+              "id": "e89b43fc-9962-44c2-b24b-a668463fb0ae"
+            },
+            {
               "name": "Inside Versioned Folders",
               "item": [
                 {
@@ -35129,19 +35269,6 @@
               "response": []
             },
             {
-              "name": "Get ReferenceData Model Hierarchy",
-              "id": "4294dd30-df68-42d0-86c5-810dfdfd85d8",
-              "protocolProfileBehavior": {
-                "disableBodyPruning": true
-              },
-              "request": {
-                "method": "GET",
-                "header": [],
-                "url": "{{base_url}}/referenceDataModels/{{reference_data_model_id}}/hierarchy"
-              },
-              "response": []
-            },
-            {
               "name": "Move ReferenceData Model to folder",
               "id": "f371355e-6115-4b88-b22f-9f456a8cc21e",
               "protocolProfileBehavior": {
@@ -43101,7 +43228,7 @@
   ],
   "variable": [
     {
-      "id": "08c5285f-dd7e-4ca7-842e-ae45f7030eb4",
+      "id": "457d16b7-ba91-4eec-8146-2181b863c5a7",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
