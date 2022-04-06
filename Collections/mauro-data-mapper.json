@@ -15192,7 +15192,7 @@
               "id": "128f6acb-e487-4890-8ad9-89bbcb2711c6"
             },
             {
-              "name": "User Images",
+              "name": "User Image",
               "item": [],
               "id": "3e572b61-effa-4720-a349-6d3a7f72d999"
             },
@@ -43233,7 +43233,7 @@
   ],
   "variable": [
     {
-      "id": "6c659ff1-a50b-47ea-9713-b8c647ae4ce4",
+      "id": "8df26395-e367-4a2e-ae41-46606fb9b37b",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
