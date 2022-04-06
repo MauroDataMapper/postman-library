@@ -15216,7 +15216,8 @@
                       "query": [
                         {
                           "key": "size",
-                          "value": "10"
+                          "value": "10",
+                          "description": "Pixel width and height of resizing image"
                         }
                       ]
                     }
@@ -43738,7 +43739,7 @@
   ],
   "variable": [
     {
-      "id": "f567161c-2cdc-4e60-add7-28da6f9135d4",
+      "id": "a5219af4-129c-414d-a0e8-488ed4e2bf14",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
