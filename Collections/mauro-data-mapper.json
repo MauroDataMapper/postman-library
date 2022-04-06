@@ -15193,7 +15193,20 @@
             },
             {
               "name": "User Image",
-              "item": [],
+              "item": [
+                {
+                  "name": "New Request",
+                  "id": "60d8a071-94be-4e72-af4f-5e033dd2ba90",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": []
+                  },
+                  "response": []
+                }
+              ],
               "id": "3e572b61-effa-4720-a349-6d3a7f72d999"
             },
             {
@@ -43233,7 +43246,7 @@
   ],
   "variable": [
     {
-      "id": "8df26395-e367-4a2e-ae41-46606fb9b37b",
+      "id": "4341ad82-fbbb-4747-9e7a-f97dd2d674eb",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
