@@ -15208,14 +15208,29 @@
                   "response": []
                 },
                 {
-                  "name": "Save User Image",
+                  "name": "Save User Image using form data",
                   "id": "2e72d7fa-71b9-4754-9bc9-f6d0c303fea9",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
                   },
                   "request": {
-                    "method": "GET",
+                    "method": "POST",
                     "header": [],
+                    "body": {
+                      "mode": "formdata",
+                      "formdata": [
+                        {
+                          "key": "fileContents",
+                          "type": "file",
+                          "src": "/Users/oliverfreeman/Desktop/Screenshot 2022-04-06 at 11.27.33.png"
+                        },
+                        {
+                          "key": "fileType",
+                          "value": "image/png",
+                          "type": "text"
+                        }
+                      ]
+                    },
                     "url": "{{base_url}}/catalogueUsers/{{catalogue_user_id}}/image"
                   },
                   "response": [
@@ -43338,7 +43353,7 @@
   ],
   "variable": [
     {
-      "id": "dfd3ef46-3f3b-4fa8-881c-5c71c6386dab",
+      "id": "d10ed33b-a88c-431c-b5db-de1fd767dc46",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
