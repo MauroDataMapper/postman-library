@@ -15195,7 +15195,7 @@
               "name": "User Image",
               "item": [
                 {
-                  "name": "New Request",
+                  "name": "Get User Image",
                   "id": "60d8a071-94be-4e72-af4f-5e033dd2ba90",
                   "protocolProfileBehavior": {
                     "disableBodyPruning": true
@@ -43246,7 +43246,7 @@
   ],
   "variable": [
     {
-      "id": "4341ad82-fbbb-4747-9e7a-f97dd2d674eb",
+      "id": "44a58ee3-cfa7-4302-bd7e-4a23eab68bf6",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
