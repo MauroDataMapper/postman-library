@@ -15208,6 +15208,19 @@
                   "response": []
                 },
                 {
+                  "name": "Delete User Image",
+                  "id": "b18fca5d-7f3c-4732-b387-0cab4c7e9add",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{base_url}}/catalogueUsers/{{catalogue_user_id}}/image"
+                  },
+                  "response": []
+                },
+                {
                   "name": "Save User Image using form data",
                   "id": "2e72d7fa-71b9-4754-9bc9-f6d0c303fea9",
                   "protocolProfileBehavior": {
@@ -43531,7 +43544,7 @@
   ],
   "variable": [
     {
-      "id": "cedb10fc-40bd-4f0f-9101-c142ffa7ad0b",
+      "id": "2aa2de84-8e2a-4c59-9163-24d0b44d8321",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
