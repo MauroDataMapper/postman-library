@@ -15214,7 +15214,7 @@
                     "disableBodyPruning": true
                   },
                   "request": {
-                    "method": "GET",
+                    "method": "DELETE",
                     "header": [],
                     "url": "{{base_url}}/catalogueUsers/{{catalogue_user_id}}/image"
                   },
@@ -43544,7 +43544,7 @@
   ],
   "variable": [
     {
-      "id": "2aa2de84-8e2a-4c59-9163-24d0b44d8321",
+      "id": "9693accf-b3f7-45cc-83f8-2141db3db753",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
