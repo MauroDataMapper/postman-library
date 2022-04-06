@@ -15202,7 +15202,8 @@
                   },
                   "request": {
                     "method": "GET",
-                    "header": []
+                    "header": [],
+                    "url": "{{base_url}}/catalogueUsers/{{catalogue_user_id}}/image"
                   },
                   "response": []
                 }
@@ -43246,7 +43247,7 @@
   ],
   "variable": [
     {
-      "id": "44a58ee3-cfa7-4302-bd7e-4a23eab68bf6",
+      "id": "d57a76ff-c805-42c0-bb66-ae99f6178fc5",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
