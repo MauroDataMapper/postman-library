@@ -15206,6 +15206,19 @@
                     "url": "{{base_url}}/catalogueUsers/{{catalogue_user_id}}/image"
                   },
                   "response": []
+                },
+                {
+                  "name": "Save User Image",
+                  "id": "2e72d7fa-71b9-4754-9bc9-f6d0c303fea9",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{base_url}}/catalogueUsers/{{catalogue_user_id}}/image"
+                  },
+                  "response": []
                 }
               ],
               "id": "3e572b61-effa-4720-a349-6d3a7f72d999"
@@ -43247,7 +43260,7 @@
   ],
   "variable": [
     {
-      "id": "d57a76ff-c805-42c0-bb66-ae99f6178fc5",
+      "id": "f8a5a429-54af-4e62-8d44-59207af8d0e4",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
