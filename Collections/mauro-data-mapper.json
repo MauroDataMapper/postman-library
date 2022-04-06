@@ -15192,6 +15192,11 @@
               "id": "128f6acb-e487-4890-8ad9-89bbcb2711c6"
             },
             {
+              "name": "New Folder",
+              "item": [],
+              "id": "3e572b61-effa-4720-a349-6d3a7f72d999"
+            },
+            {
               "name": "Get all users",
               "id": "1be37bff-d2db-4e68-9783-2cf0e87b0823",
               "protocolProfileBehavior": {
@@ -43228,7 +43233,7 @@
   ],
   "variable": [
     {
-      "id": "457d16b7-ba91-4eec-8146-2181b863c5a7",
+      "id": "b031433d-b60a-42e9-a20f-f7da164cba2d",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
