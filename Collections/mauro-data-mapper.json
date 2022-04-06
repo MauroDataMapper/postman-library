@@ -15320,7 +15320,7 @@
                     "disableBodyPruning": true
                   },
                   "request": {
-                    "method": "POST",
+                    "method": "PUT",
                     "header": [],
                     "body": {
                       "mode": "formdata",
@@ -43459,7 +43459,7 @@
   ],
   "variable": [
     {
-      "id": "b9e5c745-40ed-4f34-bf97-159a6276f15c",
+      "id": "921605a3-ec75-4242-9173-a614884da74a",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
