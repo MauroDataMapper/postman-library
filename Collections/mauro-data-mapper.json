@@ -9499,7 +9499,7 @@
                 "header": [],
                 "body": {
                   "mode": "raw",
-                  "raw": "{\n    \"targetMultiFacetAwareItemDomainType\": \"{{target_domain_type}}\",\n    \"targetMultiFacetAwareItemId\": \"{{target_domain_id}}\",\n    \"linkType\": \"Refines\",\n    \"unconfirmed\": {{$randomBoolean}}\n}",
+                  "raw": "{\n    \"unconfirmed\": true\n}",
                   "options": {
                     "raw": {
                       "language": "json"
@@ -43739,7 +43739,7 @@
   ],
   "variable": [
     {
-      "id": "fdf05b4d-3187-42e0-a9c3-866f64a3f81b",
+      "id": "0b7f5f6d-78de-46b1-ae13-82486743a2ea",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
