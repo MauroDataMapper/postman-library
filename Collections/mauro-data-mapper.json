@@ -9400,7 +9400,7 @@
               ]
             },
             {
-              "name": "Create Semantic Link (Does Not Refine) Copy",
+              "name": "Create Semantic Link (Does Not Refine)",
               "id": "9d1497bf-1616-4346-984f-292ac4fb891c",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -43739,7 +43739,7 @@
   ],
   "variable": [
     {
-      "id": "a5219af4-129c-414d-a0e8-488ed4e2bf14",
+      "id": "e1c593a7-ed06-494e-b6cf-2182844e092c",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
