@@ -42488,7 +42488,25 @@
               "request": {
                 "method": "GET",
                 "header": [],
-                "url": "{{base_url}}/published/models/{{published_model_id}}/newerVersions"
+                "url": {
+                  "raw": "{{base_url}}/published/models/{{published_model_id}}/newerVersions?format=xml",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "published",
+                    "models",
+                    "{{published_model_id}}",
+                    "newerVersions"
+                  ],
+                  "query": [
+                    {
+                      "key": "format",
+                      "value": "xml",
+                      "type": "text"
+                    }
+                  ]
+                }
               },
               "response": [
                 {
@@ -44132,7 +44150,7 @@
   ],
   "variable": [
     {
-      "id": "1feb5559-d83a-4bb7-bcc9-243db65fb5d1",
+      "id": "7365297a-2f23-4895-976c-2f20cd40bac1",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
