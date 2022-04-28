@@ -42078,7 +42078,77 @@
                 "header": [],
                 "url": "{{base_url}}/published/models"
               },
-              "response": []
+              "response": [
+                {
+                  "id": "350cd09f-f940-4bbc-b2c8-38b12be7df07",
+                  "name": "List all published models as XML",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{base_url}}/published/models?format=xml",
+                      "host": [
+                        "{{base_url}}"
+                      ],
+                      "path": [
+                        "published",
+                        "models"
+                      ],
+                      "query": [
+                        {
+                          "key": "format",
+                          "value": "xml",
+                          "type": "text"
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "xml",
+                  "header": [
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Access-Control-Request-Method"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "text/xml;charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Language",
+                      "value": "en-GB"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Thu, 28 Apr 2022 13:36:34 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "<?xml version='1.0'?>\n<index>\n    <authority>\n        <label>Mauro Data Mapper</label>\n        <url>http://localhost</url>\n    </authority>\n    <lastUpdated>2022-04-28T13:36:34.055Z</lastUpdated>\n    <publishedModels></publishedModels>\n</index>"
+                }
+              ]
             },
             {
               "name": "List all published models as Atom feed",
@@ -43760,7 +43830,7 @@
   ],
   "variable": [
     {
-      "id": "9bd52881-95b1-46ef-9083-1f0eb97c6918",
+      "id": "1b5610fa-f0eb-4225-8827-4f3bc3ba76aa",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
