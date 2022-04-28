@@ -41968,51 +41968,6 @@
               },
               "response": [
                 {
-                  "id": "3b2c6514-45a7-4b65-aaa7-9cdb255bcd36",
-                  "name": "List all published models",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": "{{base_url_other}}/published/models"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Set-Cookie",
-                      "value": "JSESSIONID=D2529B3580322CE90C56E29C22247AD4; Path=/; HttpOnly"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json;charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Language",
-                      "value": "en-GB"
-                    },
-                    {
-                      "key": "Transfer-Encoding",
-                      "value": "chunked"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Mon, 28 Jun 2021 10:17:16 GMT"
-                    },
-                    {
-                      "key": "Keep-Alive",
-                      "value": "timeout=60"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"authority\": {\n        \"label\": \"Mauro Data Mapper Two\",\n        \"url\": \"http://localhost\"\n    },\n    \"lastUpdated\": \"2021-06-28T10:17:16.967Z\",\n    \"publishedModels\": []\n}"
-                },
-                {
                   "id": "2a9cc010-266c-4d82-86be-0c7801baa2ac",
                   "name": "List all published models with available models",
                   "originalRequest": {
@@ -44108,7 +44063,7 @@
   ],
   "variable": [
     {
-      "id": "5cf94f0e-4ffb-4be7-be9e-c16864f297fa",
+      "id": "f1441dcb-dcba-48e8-818f-0cbfeaf3ed5a",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
