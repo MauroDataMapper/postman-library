@@ -42013,51 +42013,6 @@
                   "body": "{\n    \"authority\": {\n        \"label\": \"Mauro Data Mapper Two\",\n        \"url\": \"http://localhost\"\n    },\n    \"lastUpdated\": \"2021-06-28T10:17:16.967Z\",\n    \"publishedModels\": []\n}"
                 },
                 {
-                  "id": "64f119fd-a3a1-44f5-aa9b-0d29585579f8",
-                  "name": "List all published models With Available models",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": "{{base_url_other}}/published/models"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Set-Cookie",
-                      "value": "JSESSIONID=9D95E183AA7814F254F2042C7137E56D; Path=/; HttpOnly"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json;charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Language",
-                      "value": "en-GB"
-                    },
-                    {
-                      "key": "Transfer-Encoding",
-                      "value": "chunked"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Mon, 28 Jun 2021 10:24:40 GMT"
-                    },
-                    {
-                      "key": "Keep-Alive",
-                      "value": "timeout=60"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"authority\": {\n        \"label\": \"Mauro Data Mapper Two\",\n        \"url\": \"http://localhost\"\n    },\n    \"lastUpdated\": \"2021-06-28T09:00:26.398Z\",\n    \"publishedModels\": [\n        {\n            \"modelId\": \"29e4c643-eb76-47f1-8a5e-df5201b89b25\",\n            \"title\": \"Finalised Example Test DataModel 1.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2021-06-28T09:00:25.498Z\",\n            \"dateCreated\": \"2021-06-28T09:00:25.443Z\",\n            \"datePublished\": \"2021-06-28T09:00:25.479Z\"\n        },\n        {\n            \"modelId\": \"895c5b6e-6b63-4f3d-a31f-e7f2b3d87ed3\",\n            \"title\": \"Model Version Tree DataModel 2.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2021-06-28T09:00:26.064Z\",\n            \"dateCreated\": \"2021-06-28T09:00:25.989Z\",\n            \"datePublished\": \"2021-06-28T09:00:26.044Z\"\n        },\n        {\n            \"modelId\": \"bfc0865f-1d5f-4958-917f-4b2f7b995951\",\n            \"title\": \"Model Version Tree DataModel fork 1.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2021-06-28T09:00:25.877Z\",\n            \"dateCreated\": \"2021-06-28T09:00:25.849Z\",\n            \"datePublished\": \"2021-06-28T09:00:25.859Z\"\n        },\n        {\n            \"modelId\": \"9b305188-f2d1-4758-9433-141d198b5c82\",\n            \"title\": \"Model Version Tree DataModel 5.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2021-06-28T09:00:26.398Z\",\n            \"dateCreated\": \"2021-06-28T09:00:26.374Z\",\n            \"datePublished\": \"2021-06-28T09:00:26.382Z\"\n        },\n        {\n            \"modelId\": \"203762fb-27ca-4573-ae7f-19b249fc3335\",\n            \"title\": \"Model Version Tree DataModel 4.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2021-06-28T09:00:26.284Z\",\n            \"dateCreated\": \"2021-06-28T09:00:26.203Z\",\n            \"datePublished\": \"2021-06-28T09:00:26.264Z\"\n        },\n        {\n            \"modelId\": \"cd09a7ed-c872-4a95-825c-0af0266734df\",\n            \"title\": \"Model Version Tree DataModel 1.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2021-06-28T09:00:25.676Z\",\n            \"dateCreated\": \"2021-06-28T09:00:25.552Z\",\n            \"datePublished\": \"2021-06-28T09:00:25.559Z\"\n        },\n        {\n            \"modelId\": \"cfe5a85d-8095-4061-ad15-4a1130653399\",\n            \"title\": \"Model Version Tree DataModel 3.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2021-06-28T09:00:26.14Z\",\n            \"dateCreated\": \"2021-06-28T09:00:26.113Z\",\n            \"datePublished\": \"2021-06-28T09:00:26.122Z\"\n        }\n    ]\n}"
-                },
-                {
                   "id": "2a9cc010-266c-4d82-86be-0c7801baa2ac",
                   "name": "List all published models as available models",
                   "originalRequest": {
@@ -43792,7 +43747,7 @@
   ],
   "variable": [
     {
-      "id": "bd6526cd-f88a-45fc-a21b-1b5ec4a1e97c",
+      "id": "19353834-2288-42d0-81ab-12f29f3d5ad5",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
