@@ -42413,114 +42413,7 @@
                 "header": [],
                 "url": "{{base_url}}/published/models/{{published_model_id}}/newerVersions"
               },
-              "response": [
-                {
-                  "id": "37f8a120-e973-4a9f-a482-74c48c40f7e9",
-                  "name": "List all newer published models",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": "{{base_url}}/published/models/{{published_model_id}}/newerVersions"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Vary",
-                      "value": "Origin"
-                    },
-                    {
-                      "key": "Vary",
-                      "value": "Access-Control-Request-Method"
-                    },
-                    {
-                      "key": "Vary",
-                      "value": "Access-Control-Request-Headers"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json;charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Language",
-                      "value": "en-GB"
-                    },
-                    {
-                      "key": "Transfer-Encoding",
-                      "value": "chunked"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Sun, 20 Feb 2022 12:46:07 GMT"
-                    },
-                    {
-                      "key": "Keep-Alive",
-                      "value": "timeout=60"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"lastUpdated\": \"2022-02-20T12:46:07.792Z\",\n    \"newerPublishedModels\": []\n}"
-                },
-                {
-                  "id": "e28b547c-ac25-4ba0-815b-7f6779f384a2",
-                  "name": "List all newer published models",
-                  "originalRequest": {
-                    "method": "GET",
-                    "header": [],
-                    "url": "{{base_url}}/published/models/{{published_model_id}}/newerVersions"
-                  },
-                  "status": "OK",
-                  "code": 200,
-                  "_postman_previewlanguage": "json",
-                  "header": [
-                    {
-                      "key": "Vary",
-                      "value": "Origin"
-                    },
-                    {
-                      "key": "Vary",
-                      "value": "Access-Control-Request-Method"
-                    },
-                    {
-                      "key": "Vary",
-                      "value": "Access-Control-Request-Headers"
-                    },
-                    {
-                      "key": "Content-Type",
-                      "value": "application/json;charset=UTF-8"
-                    },
-                    {
-                      "key": "Content-Language",
-                      "value": "en-GB"
-                    },
-                    {
-                      "key": "Transfer-Encoding",
-                      "value": "chunked"
-                    },
-                    {
-                      "key": "Date",
-                      "value": "Thu, 28 Apr 2022 13:40:21 GMT"
-                    },
-                    {
-                      "key": "Keep-Alive",
-                      "value": "timeout=60"
-                    },
-                    {
-                      "key": "Connection",
-                      "value": "keep-alive"
-                    }
-                  ],
-                  "cookie": [],
-                  "responseTime": null,
-                  "body": "{\n    \"lastUpdated\": \"2022-04-27T16:13:27.551Z\",\n    \"newerPublishedModels\": [\n        {\n            \"modelId\": \"08f62071-39ce-4b90-b275-94e4a134072d\",\n            \"title\": \"Model Version Tree DataModel 2.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"2.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:26.764Z\",\n            \"dateCreated\": \"2022-04-27T16:13:26.365Z\",\n            \"datePublished\": \"2022-04-27T16:13:26.734Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"previousModelId\": \"7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"49579892-76ac-4d21-8365-1779269388a7\",\n            \"title\": \"Model Version Tree DataModel 3.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"3.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:26.919Z\",\n            \"dateCreated\": \"2022-04-27T16:13:26.866Z\",\n            \"datePublished\": \"2022-04-27T16:13:26.895Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"previousModelId\": \"08f62071-39ce-4b90-b275-94e4a134072d\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"86b986e2-3b37-4296-99a6-fa61b9ec90ad\",\n            \"title\": \"Model Version Tree DataModel 4.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"4.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:27.248Z\",\n            \"dateCreated\": \"2022-04-27T16:13:27.021Z\",\n            \"datePublished\": \"2022-04-27T16:13:27.223Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"previousModelId\": \"49579892-76ac-4d21-8365-1779269388a7\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"3417072f-7333-4e9e-a0d8-1207d99b7c36\",\n            \"title\": \"Model Version Tree DataModel 5.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"5.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:27.551Z\",\n            \"dateCreated\": \"2022-04-27T16:13:27.487Z\",\n            \"datePublished\": \"2022-04-27T16:13:27.523Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"previousModelId\": \"86b986e2-3b37-4296-99a6-fa61b9ec90ad\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        }\n    ]\n}"
-                }
-              ]
+              "response": []
             }
           ],
           "id": "789631d8-b3fa-4bc0-a638-ae3da78c798f"
@@ -44019,7 +43912,7 @@
   ],
   "variable": [
     {
-      "id": "1606a1c5-c82f-4052-b46d-9a89462e2343",
+      "id": "74842a9b-c343-49a3-b58b-2c11a5f8189e",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
