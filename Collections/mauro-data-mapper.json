@@ -42935,7 +42935,7 @@
               "response": [
                 {
                   "id": "38aad150-7582-43d1-8815-a189a3074f6d",
-                  "name": "Get profile for profiled object",
+                  "name": "Get empty profile",
                   "originalRequest": {
                     "method": "GET",
                     "header": [],
@@ -44263,7 +44263,7 @@
   ],
   "variable": [
     {
-      "id": "849c6057-d0f6-4cd0-a870-21b8a432d90f",
+      "id": "fd291ca8-1e86-435f-8fd4-72ff3e6071a6",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
