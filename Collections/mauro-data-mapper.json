@@ -21215,6 +21215,52 @@
                       "body": "{\n    \"intersects\": [\n        \"0dac203c-3494-4898-a067-54d0b48266c7\",\n        \"eef5278d-c7a3-4b9c-bc0f-4f0d7910954e\"\n    ]\n}"
                     }
                   ]
+                },
+                {
+                  "name": "Find the intersections between a source and many target data models, limited to a defined set of data elements",
+                  "id": "18b425c7-664c-4d7c-b68e-800e88fd7d70",
+                  "protocolProfileBehavior": {
+                    "disableBodyPruning": true
+                  },
+                  "request": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"targetDataModelIds\": [\"d6fc69cc-7901-474c-b223-c2c88e42d41a\", \"0398c58c-5fa9-4ae8-8203-2b885000ed6a\"],\n    \"dataElementIds\": [\"d0581d1d-9fda-4338-8380-835f40afafe2\", \"3de9ea4f-0178-4d96-94ff-4999e660c3ee\"]\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": "{{base_url}}/dataModels/5e76fb05-72af-40d0-96fd-447944ec6ea3/intersectsMany"
+                  },
+                  "response": [
+                    {
+                      "id": "1cdf1944-1cf5-4a42-9cda-95746f835ac4",
+                      "name": "Find the intersections between a source and many target data models, limited to a defined set of data elements",
+                      "originalRequest": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                          "mode": "raw",
+                          "raw": "{\n    \"targetDataModelIds\": [\"d6fc69cc-7901-474c-b223-c2c88e42d41a\", \"0398c58c-5fa9-4ae8-8203-2b885000ed6a\"],\n    \"dataElementIds\": [\"d0581d1d-9fda-4338-8380-835f40afafe2\", \"3de9ea4f-0178-4d96-94ff-4999e660c3ee\"]\n}",
+                          "options": {
+                            "raw": {
+                              "language": "json"
+                            }
+                          }
+                        },
+                        "url": "{{base_url}}/dataModels/{{data_model_id}}/intersectsMany"
+                      },
+                      "_postman_previewlanguage": "Text",
+                      "header": [],
+                      "cookie": [],
+                      "responseTime": null,
+                      "body": "{\n    \"items\": [\n        {\n            \"sourceDataModelId\": \"5e76fb05-72af-40d0-96fd-447944ec6ea3\",\n            \"targetDataModelId\": \"d6fc69cc-7901-474c-b223-c2c88e42d41a\",\n            \"intersects\": [\"d0581d1d-9fda-4338-8380-835f40afafe2\", \"3de9ea4f-0178-4d96-94ff-4999e660c3ee\"]\n        },\n        {\n            \"sourceDataModelId\": \"5e76fb05-72af-40d0-96fd-447944ec6ea3\",\n            \"targetDataModelId\": \"0398c58c-5fa9-4ae8-8203-2b885000ed6a\",\n            \"intersects\": [\"3de9ea4f-0178-4d96-94ff-4999e660c3ee\"]\n        }\n    ]\n}"
+                    }
+                  ]
                 }
               ],
               "id": "1d1ed97b-db56-4987-a6da-1f3ebbb9ca11"
@@ -42876,6 +42922,73 @@
               ]
             },
             {
+              "name": "Get empty profile for provider",
+              "id": "fc7e8eef-495d-49f1-b3c3-b3495ed4a043",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/profiles/{{profile_namespace}}/{{profile_name}}"
+              },
+              "response": [
+                {
+                  "id": "38aad150-7582-43d1-8815-a189a3074f6d",
+                  "name": "Get profile for profiled object",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": "{{base_url}}/profiles/{{profile_namespace}}/{{profile_name}}/{{resource_domain_type}}/{{resource_domain_id}}"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Access-Control-Request-Method"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json;charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Language",
+                      "value": "en-GB"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Sun, 20 Feb 2022 12:00:04 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"sections\": [\n        {\n            \"name\": \"Profile Specification\",\n            \"description\": \"The details necessary for this Data Model to be used as the specification for a dynamic profile.\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Metadata namespace\",\n                    \"metadataPropertyName\": \"metadataNamespace\",\n                    \"description\": \"The namespace under which properties of this profile will be stored\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"allowedValues\": null,\n                    \"regularExpression\": null,\n                    \"dataType\": \"string\",\n                    \"derived\": false,\n                    \"derivedFrom\": null,\n                    \"uneditable\": false,\n                    \"defaultValue\": null,\n                    \"editableAfterFinalisation\": true,\n                    \"currentValue\": \"\"\n                },\n                {\n                    \"fieldName\": \"Applicable for domains\",\n                    \"metadataPropertyName\": \"domainsApplicable\",\n                    \"description\": \"Determines which types of catalogue item can be profiled using this profile.  For example, 'DataModel'.  Separate multiple domains with a semi-colon (';').  Leave blank to allow this profile to be applicable to any catalogue item.\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"allowedValues\": null,\n                    \"regularExpression\": null,\n                    \"dataType\": \"string\",\n                    \"derived\": false,\n                    \"derivedFrom\": null,\n                    \"uneditable\": false,\n                    \"defaultValue\": null,\n                    \"editableAfterFinalisation\": true,\n                    \"currentValue\": \"\"\n                },\n                {\n                    \"fieldName\": \"Can be edited after finalisation\",\n                    \"metadataPropertyName\": \"editableAfterFinalisation\",\n                    \"description\": \"Defines if the profile can be edited after the model has been finalised. This defaults to false.\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"allowedValues\": null,\n                    \"regularExpression\": null,\n                    \"dataType\": \"boolean\",\n                    \"derived\": false,\n                    \"derivedFrom\": null,\n                    \"uneditable\": false,\n                    \"defaultValue\": null,\n                    \"editableAfterFinalisation\": true,\n                    \"currentValue\": \"\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"213312b6-e61a-44d7-808b-868a44de1890\",\n    \"label\": \"Complex Test DataModel\",\n    \"domainType\": \"DataModel\"\n}"
+                }
+              ]
+            },
+            {
               "name": "Save profile for profiled object",
               "id": "3f9770d5-0c2c-4601-8721-d1b3b9620a3c",
               "protocolProfileBehavior": {
@@ -44150,7 +44263,7 @@
   ],
   "variable": [
     {
-      "id": "45c2c71d-5b98-489f-b6c5-5b6ca1e951cd",
+      "id": "cee06387-2ce9-48df-915d-afc9a6b1e403",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
