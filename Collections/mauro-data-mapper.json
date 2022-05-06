@@ -9188,7 +9188,7 @@
                     }
                   }
                 },
-                "url": "{{base_url}}/catalogueItems/search"
+                "url": "{{base_url}}/catalogueItems/{{resource_domain_type}}/{{resource_domain_id}}/search"
               },
               "response": [
                 {
@@ -44348,7 +44348,7 @@
   ],
   "variable": [
     {
-      "id": "afe0d723-1ae4-4a20-8b58-9c311b59cf87",
+      "id": "e00e2c25-8aa5-4845-83a3-2ed7647ebf6f",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
