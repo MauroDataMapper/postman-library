@@ -44327,8 +44327,17 @@
             "disableBodyPruning": true
           },
           "request": {
-            "method": "GET",
+            "method": "POST",
             "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"domainTypes\": [\"DataModel\"],\n    \"dataModelTypes\": [\"Data Standard\"],\n    \"searchTerm\": \"Test\",\n    \"sort\": \"label\",\n    \"order\": \"asc\",\n    \"offset\": 0,\n    \"max\": 100\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
             "url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/profile/{{profile_namespace}}/{{profile_name}}/{{profile_version}}"
           },
           "response": [
@@ -44415,7 +44424,7 @@
   ],
   "variable": [
     {
-      "id": "7e51f7cb-4d1d-4cbc-b836-5087ede81b16",
+      "id": "d569e883-36de-48c2-bb01-8be4bee7df3e",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
