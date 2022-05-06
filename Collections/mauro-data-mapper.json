@@ -44338,7 +44338,7 @@
                 }
               }
             },
-            "url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/profile/{{profile_namespace}}/{{profile_name}}/search"
+            "url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/profiles/{{profile_namespace}}/{{profile_name}}/search"
           },
           "response": []
         },
@@ -44392,7 +44392,7 @@
   ],
   "variable": [
     {
-      "id": "799f6b6b-06d8-411f-a269-6711e7310ff1",
+      "id": "84ab6b70-9635-492e-ba06-072bdc0fbedd",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
