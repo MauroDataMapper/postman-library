@@ -21319,7 +21319,7 @@
                         }
                       }
                     },
-                    "url": "{{base_url}}/dataModels/5e76fb05-72af-40d0-96fd-447944ec6ea3/intersectsMany"
+                    "url": "{{base_url}}/dataModels/{{data_model_id}}/intersectsMany"
                   },
                   "response": [
                     {
@@ -44392,7 +44392,7 @@
   ],
   "variable": [
     {
-      "id": "84ab6b70-9635-492e-ba06-072bdc0fbedd",
+      "id": "428f14d6-376b-4a01-ab51-1d9670bc97be",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
