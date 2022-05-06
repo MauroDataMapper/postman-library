@@ -9171,7 +9171,7 @@
               ]
             },
             {
-              "name": "Search inside Catalogue Item",
+              "name": "Prefix label search inside Catalogue Item",
               "id": "e5ec6685-107e-4149-9bcb-6c2212f81508",
               "protocolProfileBehavior": {
                 "disableBodyPruning": true
@@ -44348,7 +44348,7 @@
   ],
   "variable": [
     {
-      "id": "e00e2c25-8aa5-4845-83a3-2ed7647ebf6f",
+      "id": "fcf1ca34-8a04-4233-b315-9f129e3330f5",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
