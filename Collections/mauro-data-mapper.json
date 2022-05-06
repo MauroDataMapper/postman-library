@@ -44395,6 +44395,82 @@
               "body": "{\n    \"sections\": [\n        {\n            \"name\": \"Profile Specification\",\n            \"description\": \"The details necessary for this Data Model to be used as the specification for a dynamic profile.\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Metadata namespace\",\n                    \"metadataPropertyName\": \"metadataNamespace\",\n                    \"description\": \"The namespace under which properties of this profile will be stored\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"allowedValues\": null,\n                    \"regularExpression\": null,\n                    \"dataType\": \"string\",\n                    \"derived\": false,\n                    \"derivedFrom\": null,\n                    \"uneditable\": false,\n                    \"defaultValue\": null,\n                    \"editableAfterFinalisation\": true,\n                    \"currentValue\": \"danyka.org\"\n                },\n                {\n                    \"fieldName\": \"Applicable for domains\",\n                    \"metadataPropertyName\": \"domainsApplicable\",\n                    \"description\": \"Determines which types of catalogue item can be profiled using this profile.  For example, 'DataModel'.  Separate multiple domains with a semi-colon (';').  Leave blank to allow this profile to be applicable to any catalogue item.\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"allowedValues\": null,\n                    \"regularExpression\": null,\n                    \"dataType\": \"string\",\n                    \"derived\": false,\n                    \"derivedFrom\": null,\n                    \"uneditable\": false,\n                    \"defaultValue\": null,\n                    \"editableAfterFinalisation\": true,\n                    \"currentValue\": \"dataModels\"\n                },\n                {\n                    \"fieldName\": \"Can be edited after finalisation\",\n                    \"metadataPropertyName\": \"editableAfterFinalisation\",\n                    \"description\": \"Defines if the profile can be edited after the model has been finalised. This defaults to false.\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"allowedValues\": null,\n                    \"regularExpression\": null,\n                    \"dataType\": \"boolean\",\n                    \"derived\": false,\n                    \"derivedFrom\": null,\n                    \"uneditable\": false,\n                    \"defaultValue\": null,\n                    \"editableAfterFinalisation\": true,\n                    \"currentValue\": \"true\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"213312b6-e61a-44d7-808b-868a44de1890\",\n    \"label\": \"Complex Test DataModel\",\n    \"domainType\": \"DataModel\"\n}"
             }
           ]
+        },
+        {
+          "name": "Search inside object and include profile fields in response Copy",
+          "id": "634bd7dd-ee84-4cd3-8b27-9dd1d6c5b199",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"domainTypes\": [\"DataModel\"],\n    \"dataModelTypes\": [\"Data Standard\"],\n    \"searchTerm\": \"Test\",\n    \"sort\": \"label\",\n    \"order\": \"asc\",\n    \"offset\": 0,\n    \"max\": 100\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{base_url}}/profiles/{{profile_namespace}}/{{profile_name}}/{{resource_domain_type}}/{{resource_domain_id}}/search"
+          },
+          "response": [
+            {
+              "id": "e4dba021-83dc-4168-9df4-ee95a28659f4",
+              "name": "Get profile for profiled object",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/profile/{{profile_namespace}}/{{profile_name}}/{{profile_version}}"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Vary",
+                  "value": "Origin"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Method"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Access-Control-Request-Headers"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json;charset=UTF-8"
+                },
+                {
+                  "key": "Content-Language",
+                  "value": "en-GB"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 20 Feb 2022 12:17:05 GMT"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=60"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n    \"sections\": [\n        {\n            \"name\": \"Profile Specification\",\n            \"description\": \"The details necessary for this Data Model to be used as the specification for a dynamic profile.\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Metadata namespace\",\n                    \"metadataPropertyName\": \"metadataNamespace\",\n                    \"description\": \"The namespace under which properties of this profile will be stored\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"allowedValues\": null,\n                    \"regularExpression\": null,\n                    \"dataType\": \"string\",\n                    \"derived\": false,\n                    \"derivedFrom\": null,\n                    \"uneditable\": false,\n                    \"defaultValue\": null,\n                    \"editableAfterFinalisation\": true,\n                    \"currentValue\": \"danyka.org\"\n                },\n                {\n                    \"fieldName\": \"Applicable for domains\",\n                    \"metadataPropertyName\": \"domainsApplicable\",\n                    \"description\": \"Determines which types of catalogue item can be profiled using this profile.  For example, 'DataModel'.  Separate multiple domains with a semi-colon (';').  Leave blank to allow this profile to be applicable to any catalogue item.\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"allowedValues\": null,\n                    \"regularExpression\": null,\n                    \"dataType\": \"string\",\n                    \"derived\": false,\n                    \"derivedFrom\": null,\n                    \"uneditable\": false,\n                    \"defaultValue\": null,\n                    \"editableAfterFinalisation\": true,\n                    \"currentValue\": \"dataModels\"\n                },\n                {\n                    \"fieldName\": \"Can be edited after finalisation\",\n                    \"metadataPropertyName\": \"editableAfterFinalisation\",\n                    \"description\": \"Defines if the profile can be edited after the model has been finalised. This defaults to false.\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"allowedValues\": null,\n                    \"regularExpression\": null,\n                    \"dataType\": \"boolean\",\n                    \"derived\": false,\n                    \"derivedFrom\": null,\n                    \"uneditable\": false,\n                    \"defaultValue\": null,\n                    \"editableAfterFinalisation\": true,\n                    \"currentValue\": \"true\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"213312b6-e61a-44d7-808b-868a44de1890\",\n    \"label\": \"Complex Test DataModel\",\n    \"domainType\": \"DataModel\"\n}"
+            }
+          ]
         }
       ],
       "id": "8ef10223-83fb-4680-bfe0-76bd2d32d41a"
@@ -44424,7 +44500,7 @@
   ],
   "variable": [
     {
-      "id": "d569e883-36de-48c2-bb01-8be4bee7df3e",
+      "id": "4203b299-14b1-484c-bc2b-e4d4eafcc67e",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
