@@ -9169,6 +9169,91 @@
                   "body": "{\n    \"count\": 6,\n    \"items\": [\n        {\n            \"id\": \"9bb6fc43-8512-4ba0-9d63-9a0dbc3d1927\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Complex Test DataModel\"\n        },\n        {\n            \"id\": \"5c367b8e-5af4-4205-84c1-d257e2afc423\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Finalised Example Test DataModel\"\n        },\n        {\n            \"id\": \"1a80e01d-ff1e-4dcb-a229-0a5a4b0098b4\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Finalised Example Test DataModel\"\n        },\n        {\n            \"id\": \"afc10f2a-25fa-4bb4-b3e0-c66a71711f99\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"SM test\"\n        },\n        {\n            \"id\": \"96065271-c4e6-49be-87f4-0e16084beb6e\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"SM test 2\"\n        },\n        {\n            \"id\": \"8bec3817-7704-42d6-95b5-dee9c8aba69b\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Simple Test DataModel\"\n        }\n    ]\n}"
                 }
               ]
+            },
+            {
+              "name": "Search inside Catalogue Item",
+              "id": "e5ec6685-107e-4149-9bcb-6c2212f81508",
+              "protocolProfileBehavior": {
+                "disableBodyPruning": true
+              },
+              "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"domainTypes\": [\"DataModel\"],\n    \"dataModelTypes\": [\"Data Standard\"],\n    \"searchTerm\": \"Test\",\n    \"sort\": \"label\",\n    \"order\": \"asc\",\n    \"offset\": 0,\n    \"max\": 100\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": "{{base_url}}/catalogueItems/search"
+              },
+              "response": [
+                {
+                  "id": "df15be9a-a832-4d88-9844-ef90930d9627",
+                  "name": "Search Catalogue Items",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"domainTypes\": [\"DataModel\"],\n    \"dataModelTypes\": [\"Data Standard\"],\n    \"searchTerm\": \"Test\",\n    \"sort\": \"label\",\n    \"order\": \"asc\",\n    \"offset\": 0,\n    \"max\": 100\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": "{{base_url}}/catalogueItems/search"
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Vary",
+                      "value": "Origin"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Access-Control-Request-Method"
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Access-Control-Request-Headers"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json;charset=UTF-8"
+                    },
+                    {
+                      "key": "Content-Language",
+                      "value": "en-GB"
+                    },
+                    {
+                      "key": "Transfer-Encoding",
+                      "value": "chunked"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Thu, 10 Feb 2022 16:04:02 GMT"
+                    },
+                    {
+                      "key": "Keep-Alive",
+                      "value": "timeout=60"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "responseTime": null,
+                  "body": "{\n    \"count\": 6,\n    \"items\": [\n        {\n            \"id\": \"9bb6fc43-8512-4ba0-9d63-9a0dbc3d1927\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Complex Test DataModel\"\n        },\n        {\n            \"id\": \"5c367b8e-5af4-4205-84c1-d257e2afc423\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Finalised Example Test DataModel\"\n        },\n        {\n            \"id\": \"1a80e01d-ff1e-4dcb-a229-0a5a4b0098b4\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Finalised Example Test DataModel\"\n        },\n        {\n            \"id\": \"afc10f2a-25fa-4bb4-b3e0-c66a71711f99\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"SM test\"\n        },\n        {\n            \"id\": \"96065271-c4e6-49be-87f4-0e16084beb6e\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"SM test 2\"\n        },\n        {\n            \"id\": \"8bec3817-7704-42d6-95b5-dee9c8aba69b\",\n            \"domainType\": \"DataModel\",\n            \"label\": \"Simple Test DataModel\"\n        }\n    ]\n}"
+                }
+              ]
             }
           ],
           "id": "2f45b65c-f539-4671-acff-4d9995275538"
@@ -44263,7 +44348,7 @@
   ],
   "variable": [
     {
-      "id": "ae662e9b-32ee-4f04-894d-36293b8338b3",
+      "id": "afe0d723-1ae4-4a20-8b58-9c311b59cf87",
       "key": "base_url",
       "value": "http://localhost/api",
       "type": "string"
