@@ -20737,6 +20737,78 @@
 											"cookie": [],
 											"responseTime": null,
 											"body": "{\n    \"dataModel\": {\n        \"id\": \"df14c019-1cae-4930-8e64-de3a98950a3a\",\n        \"label\": \"a ut voluptatem\",\n        \"description\": \"Edited description.\",\n        \"lastUpdated\": \"2022-02-18T16:00:21.025Z\",\n        \"type\": \"Data Standard\",\n        \"author\": \"Jeannie Lowe Sr.\",\n        \"organisation\": \"Kunze - Kreiger\",\n        \"documentationVersion\": \"1.0.0\",\n        \"finalised\": false,\n        \"authority\": {\n            \"id\": \"070f2168-88f9-486d-839e-9f67b5d04d1f\",\n            \"url\": \"http://localhost\",\n            \"label\": \"Mauro Data Mapper\"\n        },\n        \"dataTypes\": [\n            {\n                \"id\": \"043c1891-33f6-4e5b-a313-16cd5d18358e\",\n                \"label\": \"Data Type\",\n                \"lastUpdated\": \"2022-02-18T15:42:04.17Z\",\n                \"domainType\": \"PrimitiveType\"\n            },\n            {\n                \"id\": \"fee152cb-deee-4baa-a3ec-eb8fb2dfb00a\",\n                \"label\": \"String\",\n                \"lastUpdated\": \"2022-02-18T16:00:21.023Z\",\n                \"domainType\": \"PrimitiveType\"\n            }\n        ],\n        \"childDataClasses\": [\n            {\n                \"id\": \"28d494d7-3a2b-4945-9d42-8605a86f4a9d\",\n                \"label\": \"Data Class\",\n                \"lastUpdated\": \"2022-02-18T16:00:25.355Z\",\n                \"dataElements\": [\n                    {\n                        \"id\": \"e6c44ca9-058f-42f9-aa86-8b7be477c648\",\n                        \"label\": \"Data Element\",\n                        \"lastUpdated\": \"2022-02-18T16:09:20.705Z\",\n                        \"dataType\": {\n                            \"id\": \"fee152cb-deee-4baa-a3ec-eb8fb2dfb00a\",\n                            \"label\": \"String\",\n                            \"lastUpdated\": \"2022-02-18T16:00:21.023Z\",\n                            \"domainType\": \"PrimitiveType\"\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"exportMetadata\": {\n        \"exportedBy\": \"Admin User\",\n        \"exportedOn\": \"2022-02-21T09:44:21.961Z\",\n        \"exporter\": {\n            \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter\",\n            \"name\": \"DataModelJsonExporterService\",\n            \"version\": \"3.1\"\n        }\n    }\n}"
+										},
+										{
+											"id": "31bcfe56-f63d-43f6-be5f-7a996ccdb95f",
+											"name": "Export Data Model",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/dataModels/{{data_model_id}}/export/{{exporter_namespace}}/{{exporter_name}}/{{exporter_version}}?asynchronous=true",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"dataModels",
+														"{{data_model_id}}",
+														"export",
+														"{{exporter_namespace}}",
+														"{{exporter_name}}",
+														"{{exporter_version}}"
+													],
+													"query": [
+														{
+															"key": "asynchronous",
+															"value": "true"
+														}
+													]
+												}
+											},
+											"status": "Accepted",
+											"code": 202,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 19 May 2022 13:56:37 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"770b309b-1185-4b65-b010-7fff6c5a6ff9\",\n    \"jobName\": \"Export DataModel 3e4e0bbd-7055-4057-b59d-ede02c0eec0c using uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter : DataModelJsonExporterService : 3.1\",\n    \"startedByUser\": \"unlogged_user@mdm-core.com\",\n    \"dateTimeStarted\": \"2022-05-19T13:56:37.576Z\",\n    \"status\": \"CREATED\",\n    \"location\": \"/api/asyncJobs/770b309b-1185-4b65-b010-7fff6c5a6ff9\"\n}"
 										}
 									]
 								},
@@ -44495,7 +44567,7 @@
 	],
 	"variable": [
 		{
-			"id": "66b90578-5cf7-4dbe-b06b-c6d0d70e33b9",
+			"id": "2bb2a252-2ec9-4331-a648-a9987eaad19e",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
