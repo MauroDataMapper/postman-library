@@ -13596,7 +13596,47 @@
 				},
 				{
 					"name": "Domain Exports",
-					"item": [],
+					"item": [
+						{
+							"name": "List Readable Domain Exports",
+							"id": "922c76d7-04d1-4840-9d0f-e1557cc901f3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/asyncJobs"
+							},
+							"response": []
+						},
+						{
+							"name": "Get AsyncJob by Id Copy",
+							"id": "78dd2333-b8f6-4739-8cfa-a1b9759f09f3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/asyncJobs/{{async_job_id}}"
+							},
+							"response": []
+						},
+						{
+							"name": "Cancel AsyncJob Copy",
+							"id": "790f5b2a-9374-429d-9bf4-548ee3d0b975",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{base_url}}/asyncJobs/{{async_job_id}}"
+							},
+							"response": []
+						}
+					],
 					"id": "2a23cb75-a2d5-4bb7-81a8-91cf164310fd"
 				}
 			],
@@ -44442,7 +44482,7 @@
 	],
 	"variable": [
 		{
-			"id": "be1f48ce-bc00-4022-a3c2-705b9514cb88",
+			"id": "c9442b8d-104f-40b2-81ed-ae7cea22ac24",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
