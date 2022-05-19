@@ -13593,6 +13593,11 @@
 						}
 					],
 					"id": "351305e8-341d-4ca7-a401-02e50fbdbfc7"
+				},
+				{
+					"name": "New Folder",
+					"item": [],
+					"id": "2a23cb75-a2d5-4bb7-81a8-91cf164310fd"
 				}
 			],
 			"id": "82739933-dc32-48c1-b774-69ad1097d787"
@@ -44437,7 +44442,7 @@
 	],
 	"variable": [
 		{
-			"id": "42ade6f4-5cbb-4d85-a458-6e6ea1bf5ba7",
+			"id": "83956451-1803-44e8-aa33-b7f3f5d8f387",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
