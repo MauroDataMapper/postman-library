@@ -13573,7 +13573,8 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": "{{base_url}}/asyncJobs/{{asyncJobId}}"
 							},
 							"response": []
 						}
@@ -44423,7 +44424,7 @@
 	],
 	"variable": [
 		{
-			"id": "b707c547-5384-4e47-b7f0-df6c55053b48",
+			"id": "045ca6ef-e9d3-4b44-a548-bfda3db8ec0b",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
