@@ -13553,14 +13553,15 @@
 					"name": "Async Jobs",
 					"item": [
 						{
-							"name": "New Request",
+							"name": "List Readable Async Jobs",
 							"id": "86cf823f-f868-492e-b202-2a4cb18e3fac",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": "{{base_url}}/asyncJobs"
 							},
 							"response": []
 						}
@@ -44410,7 +44411,7 @@
 	],
 	"variable": [
 		{
-			"id": "3d08432b-846e-480f-86d7-31cb3714f703",
+			"id": "db683d61-1aad-46b2-bf4c-5d6461dcb435",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
