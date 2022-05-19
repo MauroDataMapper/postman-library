@@ -13635,6 +13635,18 @@
 								"url": "{{base_url}}/domainExports/{{domain_export_id}}"
 							},
 							"response": []
+						},
+						{
+							"name": "Download Domain Export file",
+							"id": "1240b54e-e972-4325-a5dd-490fa344a28a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "2a23cb75-a2d5-4bb7-81a8-91cf164310fd"
@@ -44482,7 +44494,7 @@
 	],
 	"variable": [
 		{
-			"id": "d469a614-aa5e-4e9a-af4c-1302bccccaf8",
+			"id": "35d452da-03c7-49c3-99a9-9fe59f6cc63c",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
