@@ -13632,7 +13632,19 @@
 							"request": {
 								"method": "DELETE",
 								"header": [],
-								"url": "{{base_url}}/asyncJobs/{{async_job_id}}"
+								"url": "{{base_url}}/domainExports/{{domain_export_id}}"
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "1240b54e-e972-4325-a5dd-490fa344a28a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
 							},
 							"response": []
 						}
@@ -44482,7 +44494,7 @@
 	],
 	"variable": [
 		{
-			"id": "baa20982-7c71-44d8-8cec-5840cf5e67ae",
+			"id": "2d1e35d4-2ec3-478f-b958-4192d0c994e8",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
