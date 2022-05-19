@@ -13606,7 +13606,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{base_url}}/asyncJobs"
+								"url": "{{base_url}}/domainExports"
 							},
 							"response": []
 						},
@@ -44482,7 +44482,7 @@
 	],
 	"variable": [
 		{
-			"id": "c9442b8d-104f-40b2-81ed-ae7cea22ac24",
+			"id": "4e7854ff-a23d-4ca4-a728-aad9e51c81dd",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
