@@ -13566,7 +13566,7 @@
 							"response": []
 						},
 						{
-							"name": "New Request",
+							"name": "Get AsyncJob by Id",
 							"id": "8da0aa3b-a19c-4913-a17f-6b65d2e939cc",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -44423,7 +44423,7 @@
 	],
 	"variable": [
 		{
-			"id": "e1ddd697-8e56-4756-9858-c822f458c2e2",
+			"id": "b707c547-5384-4e47-b7f0-df6c55053b48",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
