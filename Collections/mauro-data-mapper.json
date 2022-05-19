@@ -13635,18 +13635,6 @@
 								"url": "{{base_url}}/domainExports/{{domain_export_id}}"
 							},
 							"response": []
-						},
-						{
-							"name": "New Request",
-							"id": "1240b54e-e972-4325-a5dd-490fa344a28a",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": []
-							},
-							"response": []
 						}
 					],
 					"id": "2a23cb75-a2d5-4bb7-81a8-91cf164310fd"
@@ -44494,7 +44482,7 @@
 	],
 	"variable": [
 		{
-			"id": "2d1e35d4-2ec3-478f-b958-4192d0c994e8",
+			"id": "d469a614-aa5e-4e9a-af4c-1302bccccaf8",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
