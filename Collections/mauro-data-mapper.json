@@ -13563,7 +13563,61 @@
 								"header": [],
 								"url": "{{base_url}}/asyncJobs"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "0be52a5b-858d-4bd3-a064-c9e6d6c8d2f8",
+									"name": "List Readable Async Jobs",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/asyncJobs"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 19 May 2022 13:57:15 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"770b309b-1185-4b65-b010-7fff6c5a6ff9\",\n            \"jobName\": \"Export DataModel 3e4e0bbd-7055-4057-b59d-ede02c0eec0c using uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter : DataModelJsonExporterService : 3.1\",\n            \"startedByUser\": \"unlogged_user@mdm-core.com\",\n            \"dateTimeStarted\": \"2022-05-19T13:56:37.576Z\",\n            \"status\": \"FAILED\",\n            \"message\": \"could not execute batch; SQL [insert into core.domain_export (version, export_file_type, multi_domain_export, date_created, exporter_namespace, export_file_name, last_updated, path, exported_domain_ids, exported_domain_type, exporter_name, exported_domain_id, export_data, created_by, exporter_version, export_content_type, id) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute batch\",\n            \"location\": \"/api/asyncJobs/770b309b-1185-4b65-b010-7fff6c5a6ff9\"\n        }\n    ]\n}"
+								}
+							]
 						},
 						{
 							"name": "Get AsyncJob by Id",
@@ -44588,7 +44642,7 @@
 	],
 	"variable": [
 		{
-			"id": "97c62148-37b7-4355-9284-9f6f8321caf5",
+			"id": "b2c48767-3f7c-4311-9b32-d0575be82446",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
