@@ -13836,7 +13836,61 @@
 								"header": [],
 								"url": "{{base_url}}/domainExports/{{domain_export_id}}"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "7b2dcd59-26c2-49ef-8984-e4d413ac4d55",
+									"name": "Get Domain Export by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/domainExports/{{domain_export_id}}"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 19 May 2022 14:06:54 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"id\": \"a27e2e3e-db16-4ebe-b7e8-4f4ac1f8c756\",\n    \"exported\": {\n        \"domainType\": \"DataModel\",\n        \"domainId\": \"b35d77f5-4fe2-45d7-82a4-15ddd695f547\"\n    },\n    \"exporter\": {\n        \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter\",\n        \"name\": \"DataModelJsonExporterService\",\n        \"nersion\": \"3.1.0\"\n    },\n    \"export\": {\n        \"fileName\": \"Complex Test DataModel.json\",\n        \"fileType\": \"text/json\",\n        \"contentType\": \"application/mdm+json\",\n        \"fileSize\": 4590\n    },\n    \"exportedOn\": \"2022-05-19T14:05:36.883Z\",\n    \"exportedBy\": \"unlogged_user@mdm-core.com\",\n    \"links\": {\n        \"relative\": \"/api/domainExports/a27e2e3e-db16-4ebe-b7e8-4f4ac1f8c756/download\",\n        \"absolute\": \"http://localhost:8080/api/domainExports/a27e2e3e-db16-4ebe-b7e8-4f4ac1f8c756/download\"\n    }\n}"
+								}
+							]
 						},
 						{
 							"name": "Delete Domain Export",
@@ -44803,7 +44857,7 @@
 	],
 	"variable": [
 		{
-			"id": "a8fb4eef-7afa-4ecd-b03c-9f82e43a0adc",
+			"id": "cbdb26a6-baab-4478-94a4-ca62d6ce298e",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
