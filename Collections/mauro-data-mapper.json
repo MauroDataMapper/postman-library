@@ -13585,8 +13585,9 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": []
+								"method": "DELETE",
+								"header": [],
+								"url": "{{base_url}}/asyncJobs/{{async_job_id}}"
 							},
 							"response": []
 						}
@@ -44436,7 +44437,7 @@
 	],
 	"variable": [
 		{
-			"id": "158e462b-0df5-40ac-a9c5-2532ab500223",
+			"id": "42ade6f4-5cbb-4d85-a458-6e6ea1bf5ba7",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
