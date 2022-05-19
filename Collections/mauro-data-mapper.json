@@ -13551,7 +13551,20 @@
 				},
 				{
 					"name": "Async Jobs",
-					"item": [],
+					"item": [
+						{
+							"name": "New Request",
+							"id": "86cf823f-f868-492e-b202-2a4cb18e3fac",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					],
 					"id": "351305e8-341d-4ca7-a401-02e50fbdbfc7"
 				}
 			],
@@ -44397,7 +44410,7 @@
 	],
 	"variable": [
 		{
-			"id": "6d0890c9-21e6-46f7-8cd2-fdd958ac903b",
+			"id": "3d08432b-846e-480f-86d7-31cb3714f703",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
