@@ -21174,7 +21174,27 @@
 												}
 											}
 										},
-										"url": "{{base_url}}/dataModels/export/{{exporter_namespace}}/{{exporter_name}}/{{exporter_version}}"
+										"url": {
+											"raw": "{{base_url}}/dataModels/export/{{exporter_namespace}}/{{exporter_name}}/{{exporter_version}}",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"dataModels",
+												"export",
+												"{{exporter_namespace}}",
+												"{{exporter_name}}",
+												"{{exporter_version}}"
+											],
+											"query": [
+												{
+													"key": "asynchronous",
+													"value": "true",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										}
 									},
 									"response": [
 										{
@@ -44911,7 +44931,7 @@
 	],
 	"variable": [
 		{
-			"id": "10c4285d-dec6-4867-a14f-45b536e87569",
+			"id": "7ddc8490-5bd7-418b-a57a-ccc1a1a7c75c",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
