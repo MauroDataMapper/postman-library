@@ -13564,6 +13564,18 @@
 								"url": "{{base_url}}/asyncJobs"
 							},
 							"response": []
+						},
+						{
+							"name": "New Request",
+							"id": "8da0aa3b-a19c-4913-a17f-6b65d2e939cc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "351305e8-341d-4ca7-a401-02e50fbdbfc7"
@@ -44411,7 +44423,7 @@
 	],
 	"variable": [
 		{
-			"id": "db683d61-1aad-46b2-bf4c-5d6461dcb435",
+			"id": "e1ddd697-8e56-4756-9858-c822f458c2e2",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
