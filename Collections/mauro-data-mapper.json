@@ -13644,7 +13644,8 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": []
+								"header": [],
+								"url": "{{base_url}}/domainExports/{{domain_export_id}}/download"
 							},
 							"response": []
 						}
@@ -44494,7 +44495,7 @@
 	],
 	"variable": [
 		{
-			"id": "35d452da-03c7-49c3-99a9-9fe59f6cc63c",
+			"id": "66b90578-5cf7-4dbe-b06b-c6d0d70e33b9",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
