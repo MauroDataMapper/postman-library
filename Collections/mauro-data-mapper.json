@@ -13983,7 +13983,61 @@
 								"header": [],
 								"url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/domainExports"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "09fcad2c-6ad0-4605-bee2-b8753fb517e2",
+									"name": "List Domain Exports for a Domain",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/domainExports"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 20 May 2022 15:00:23 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"count\": 2,\n    \"items\": [\n        {\n            \"id\": \"a1e99c62-b3b6-4adf-ae6d-3f7e3e4673cb\",\n            \"exported\": {\n                \"domainType\": \"DataModel\",\n                \"domainId\": \"f8b13020-e234-4a81-a2eb-31427837678c\"\n            },\n            \"exporter\": {\n                \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter\",\n                \"name\": \"DataModelJsonExporterService\",\n                \"nersion\": \"3.1.0\"\n            },\n            \"export\": {\n                \"fileName\": \"Complex Test DataModel.json\",\n                \"fileType\": \"text/json\",\n                \"contentType\": \"application/mdm+json\",\n                \"fileSize\": 4593\n            },\n            \"exportedOn\": \"2022-05-20T14:59:46.141Z\",\n            \"exportedBy\": \"unlogged_user@mdm-core.com\",\n            \"links\": {\n                \"relative\": \"/api/domainExports/a1e99c62-b3b6-4adf-ae6d-3f7e3e4673cb/download\",\n                \"absolute\": \"http://localhost:8080/api/domainExports/a1e99c62-b3b6-4adf-ae6d-3f7e3e4673cb/download\"\n            }\n        },\n        {\n            \"id\": \"119e8002-c747-44cf-a5b2-5f41bd2562c3\",\n            \"exported\": {\n                \"domainType\": \"DataModel\",\n                \"domainId\": \"f8b13020-e234-4a81-a2eb-31427837678c\"\n            },\n            \"exporter\": {\n                \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter\",\n                \"name\": \"DataModelJsonExporterService\",\n                \"nersion\": \"3.1.0\"\n            },\n            \"export\": {\n                \"fileName\": \"Complex Test DataModel.json\",\n                \"fileType\": \"text/json\",\n                \"contentType\": \"application/mdm+json\",\n                \"fileSize\": 4593\n            },\n            \"exportedOn\": \"2022-05-20T14:59:46.143Z\",\n            \"exportedBy\": \"unlogged_user@mdm-core.com\",\n            \"links\": {\n                \"relative\": \"/api/domainExports/119e8002-c747-44cf-a5b2-5f41bd2562c3/download\",\n                \"absolute\": \"http://localhost:8080/api/domainExports/119e8002-c747-44cf-a5b2-5f41bd2562c3/download\"\n            }\n        }\n    ]\n}"
+								}
+							]
 						}
 					],
 					"id": "2a23cb75-a2d5-4bb7-81a8-91cf164310fd"
@@ -44945,7 +44999,7 @@
 	],
 	"variable": [
 		{
-			"id": "9ac71c94-48ee-48e9-a6d8-f68fb316e2e7",
+			"id": "cd4237a6-1de8-4485-97ea-642e1ead0ddb",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
