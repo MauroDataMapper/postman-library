@@ -44305,7 +44305,7 @@
 							]
 						},
 						{
-							"name": "New Request",
+							"name": "Get all Subscribed Catalogue Types",
 							"id": "d54d602e-8dd2-4b24-8260-0db7eaaefa2b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -46952,7 +46952,7 @@
 	],
 	"variable": [
 		{
-			"id": "839b75eb-5301-4075-a568-cd1b13532a24",
+			"id": "1dc33824-d919-4880-a648-a41c7ae72681",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
