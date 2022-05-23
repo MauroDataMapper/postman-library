@@ -14048,7 +14048,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/domainExports"
+								"url": "{{base_url}}/{{resource_domain_type}}/{{resource_domain_id}}/domainExports/{{exporter_namespace}}/{{exporter_name}}"
 							},
 							"response": [
 								{
@@ -45066,7 +45066,7 @@
 	],
 	"variable": [
 		{
-			"id": "31b2a197-ef23-467c-b89a-a800d28c7337",
+			"id": "302b824c-5dc9-4c0b-bb62-4c8188be747f",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
