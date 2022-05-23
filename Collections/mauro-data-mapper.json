@@ -41757,7 +41757,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{    \r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\"\r\n}",
+											"raw": "{    \r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"url\": \"http://localhost:8080\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -41766,74 +41766,7 @@
 										},
 										"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
 									},
-									"response": [
-										{
-											"id": "9e7e5e12-01f0-4d55-bd8e-0c844fa469d0",
-											"name": "Update Subscribed Catalogue by id",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{    \r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Location",
-													"value": "http://localhost:8080/api/admin/subscribedCatalogues/84de6826-3594-4ca3-8d99-8bf56d9175e4"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=UTF-8"
-												},
-												{
-													"key": "Content-Language",
-													"value": "en-GB"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Sun, 20 Feb 2022 12:37:38 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"id\": \"84de6826-3594-4ca3-8d99-8bf56d9175e4\",\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n    \"label\": \"et-amet-quis\",\n    \"description\": \"dolorem\",\n    \"refreshPeriod\": 835\n}"
-										}
-									]
+									"response": []
 								},
 								{
 									"name": "Delete Subscribed Catalogue by id",
@@ -47195,7 +47128,7 @@
 	],
 	"variable": [
 		{
-			"id": "8e6231ff-26b1-4d84-9c53-43cd2cd2fd0b",
+			"id": "667858ee-81d4-44d2-b57f-e80475a25a2d",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
