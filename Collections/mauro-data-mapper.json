@@ -45007,7 +45007,7 @@
 								},
 								{
 									"id": "ac1c5d97-0c70-4466-9835-394183e9d065",
-									"name": "List all published models",
+									"name": "List all published models with available models",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -47246,7 +47246,7 @@
 	],
 	"variable": [
 		{
-			"id": "dda42110-f22e-45c6-b7a4-dd762bd4ad4b",
+			"id": "0534c6e3-756e-4ec2-8e6a-dce625b1f346",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
