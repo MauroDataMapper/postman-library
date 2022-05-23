@@ -43484,7 +43484,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{    \r\n    \"url\": \"{{$randomUrl}}\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
+											"raw": "{    \r\n    \"url\": \"{{$randomUrl}}\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -47065,7 +47065,7 @@
 	],
 	"variable": [
 		{
-			"id": "42b4bc75-804a-478c-9c2f-341446af1c49",
+			"id": "247d4645-bf40-47e5-b4e8-fba6c8230013",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
