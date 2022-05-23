@@ -44428,47 +44428,6 @@
 							},
 							"response": [
 								{
-									"id": "15208377-a09a-4fe1-a866-4e644a77d92a",
-									"name": "Get subscribed catalogue by id",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 28 Jun 2021 10:25:18 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"id\": \"cedf5c0d-bb30-456a-9261-dd7147c23350\",\n    \"url\": \"http://localhost:8082\",\n    \"label\": \"Mauro 2\",\n    \"refreshPeriod\": 7\n}"
-								},
-								{
 									"id": "80876a2a-7e77-45fe-98c8-3117a5f69a1f",
 									"name": "Get subscribed catalogue by id",
 									"originalRequest": {
@@ -47297,7 +47256,7 @@
 	],
 	"variable": [
 		{
-			"id": "b9171bfa-3025-45b2-ac73-779e9d4652ae",
+			"id": "f962d00f-d4ac-4623-a7ca-91f810180bb5",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
