@@ -44429,7 +44429,7 @@
 							"response": [
 								{
 									"id": "80876a2a-7e77-45fe-98c8-3117a5f69a1f",
-									"name": "Get subscribed catalogue by ID",
+									"name": "Get subscribed catalogue by id",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -47256,7 +47256,7 @@
 	],
 	"variable": [
 		{
-			"id": "3f975d9d-c8b9-4d3a-a378-7371bf0c46d0",
+			"id": "0d9056f3-4c95-4d56-a5b1-70ff9d94b87c",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
