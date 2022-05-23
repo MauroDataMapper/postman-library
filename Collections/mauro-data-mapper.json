@@ -43562,7 +43562,7 @@
 										},
 										{
 											"id": "256b65ba-d58d-4513-90ac-cfaf4a33ca45",
-											"name": "Create new Subscribed Catalogue (Mauro JSON)",
+											"name": "Cannot create new SC as not reachable (Mauro JSON)",
 											"originalRequest": {
 												"method": "POST",
 												"header": [],
@@ -47212,7 +47212,7 @@
 	],
 	"variable": [
 		{
-			"id": "fb03aa29-853e-43e1-adbf-8d13c08a7ea7",
+			"id": "fd31f337-bb74-4e99-8f50-01ef7d055895",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
