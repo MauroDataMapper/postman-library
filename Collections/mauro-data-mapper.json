@@ -41870,7 +41870,7 @@
 									},
 									"response": [
 										{
-											"id": "0523e1b3-9070-4b3d-9fe5-69f1c15a5613",
+											"id": "ff76c088-80ed-4bbc-94a8-4e723f6fd538",
 											"name": "Get Subscribed Catalogue by ID",
 											"originalRequest": {
 												"method": "GET",
@@ -41907,7 +41907,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Mon, 23 May 2022 16:45:31 GMT"
+													"value": "Mon, 23 May 2022 16:44:28 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -41920,7 +41920,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"id\": \"99d39552-2c8e-4aac-8c3d-7cb878d9242f\",\n    \"url\": \"http://localhost:8080\",\n    \"label\": \"qui-quia-dolor\",\n    \"subscribedCatalogueType\": \"Mauro JSON\",\n    \"description\": \"Porro voluptas explicabo iusto ducimus. Dolore veniam laudantium ullam rerum ducimus dolorem corrupti expedita quos. Non ea eveniet officia dolor nostrum quidem. Deserunt maxime necessitatibus. Consectetur et omnis.\",\n    \"refreshPeriod\": 5,\n    \"apiKey\": \"9eb21e4c-8a61-4f32-91ea-f4563792b08c\"\n}"
+											"body": "{\n    \"id\": \"99d39552-2c8e-4aac-8c3d-7cb878d9242f\",\n    \"url\": \"http://localhost:8080/api/feeds/all\",\n    \"label\": \"et-vero-enim\",\n    \"subscribedCatalogueType\": \"Atom\",\n    \"description\": \"Porro voluptas explicabo iusto ducimus. Dolore veniam laudantium ullam rerum ducimus dolorem corrupti expedita quos. Non ea eveniet officia dolor nostrum quidem. Deserunt maxime necessitatibus. Consectetur et omnis.\",\n    \"refreshPeriod\": 5,\n    \"apiKey\": \"9eb21e4c-8a61-4f32-91ea-f4563792b08c\"\n}"
 										}
 									]
 								},
@@ -47195,7 +47195,7 @@
 	],
 	"variable": [
 		{
-			"id": "9216c8b2-0863-45f8-8f2b-b3efcce7c3d5",
+			"id": "26ddd7fb-13b6-43c9-8e6c-8e7530c24a84",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
