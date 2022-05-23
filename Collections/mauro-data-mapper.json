@@ -45159,7 +45159,7 @@
 								},
 								{
 									"id": "2ad2507d-3d9f-4b54-a743-6cd000ca519d",
-									"name": "List all published models as XML",
+									"name": "List all published models as XML with available models",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -47245,7 +47245,7 @@
 	],
 	"variable": [
 		{
-			"id": "4c79be50-eb63-416d-99e8-619bf0c0053c",
+			"id": "82a20c32-96c1-4cd7-a423-7d50436b0f44",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
