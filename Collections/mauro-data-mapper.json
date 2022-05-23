@@ -43513,7 +43513,7 @@
 							"name": "Subscribed Catalogues",
 							"item": [
 								{
-									"name": "New Folder",
+									"name": "Old Folder",
 									"item": [],
 									"id": "d2b2769f-ffd8-4d41-a5fe-76d9e346df31"
 								},
@@ -47257,7 +47257,7 @@
 	],
 	"variable": [
 		{
-			"id": "755fbc21-4fbb-48e2-9180-9682af7732b4",
+			"id": "dc3ac771-d5d8-49d6-9247-9a92a55e5104",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
