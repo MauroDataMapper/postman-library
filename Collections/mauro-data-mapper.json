@@ -41601,7 +41601,381 @@
 							"item": [
 								{
 									"name": "New Folder",
-									"item": [],
+									"item": [
+										{
+											"name": "Update Subscribed Catalogue by id",
+											"id": "a9656844-4bdb-46e6-a90a-270c17d0d46d",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{    \r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"url\": \"http://localhost:8080\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
+											},
+											"response": [
+												{
+													"id": "fadb3989-dfaf-46fb-896b-5b169b32f597",
+													"name": "Update Subscribed Catalogue by id",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{    \r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"url\": \"http://localhost:8080\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "Location",
+															"value": "http://localhost:8090/api/admin/subscribedCatalogues/99d39552-2c8e-4aac-8c3d-7cb878d9242f"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json;charset=UTF-8"
+														},
+														{
+															"key": "Content-Language",
+															"value": "en-GB"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Mon, 23 May 2022 16:45:23 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"99d39552-2c8e-4aac-8c3d-7cb878d9242f\",\n    \"url\": \"http://localhost:8080\",\n    \"label\": \"qui-quia-dolor\",\n    \"subscribedCatalogueType\": \"Mauro JSON\",\n    \"description\": \"Porro voluptas explicabo iusto ducimus. Dolore veniam laudantium ullam rerum ducimus dolorem corrupti expedita quos. Non ea eveniet officia dolor nostrum quidem. Deserunt maxime necessitatibus. Consectetur et omnis.\",\n    \"refreshPeriod\": 5\n}"
+												}
+											]
+										},
+										{
+											"name": "Delete Subscribed Catalogue by ID",
+											"id": "fda95aa0-d37b-412f-8aff-7acf1652fd3b",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
+											},
+											"response": [
+												{
+													"id": "0882e53d-516c-4283-889d-7c7c022c3e6f",
+													"name": "Delete Subscribed Catalogue by ID",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
+													},
+													"status": "No Content",
+													"code": 204,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "Date",
+															"value": "Mon, 23 May 2022 16:46:21 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": null
+												}
+											]
+										},
+										{
+											"name": "Get Subscribed Catalogue by ID",
+											"id": "22688bcf-51fe-4667-b7c8-10fa9a7cd5d6",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
+											},
+											"response": [
+												{
+													"id": "0523e1b3-9070-4b3d-9fe5-69f1c15a5613",
+													"name": "Get Subscribed Catalogue by ID",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json;charset=UTF-8"
+														},
+														{
+															"key": "Content-Language",
+															"value": "en-GB"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Mon, 23 May 2022 16:45:31 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"id\": \"99d39552-2c8e-4aac-8c3d-7cb878d9242f\",\n    \"url\": \"http://localhost:8080\",\n    \"label\": \"qui-quia-dolor\",\n    \"subscribedCatalogueType\": \"Mauro JSON\",\n    \"description\": \"Porro voluptas explicabo iusto ducimus. Dolore veniam laudantium ullam rerum ducimus dolorem corrupti expedita quos. Non ea eveniet officia dolor nostrum quidem. Deserunt maxime necessitatibus. Consectetur et omnis.\",\n    \"refreshPeriod\": 5,\n    \"apiKey\": \"9eb21e4c-8a61-4f32-91ea-f4563792b08c\"\n}"
+												}
+											]
+										},
+										{
+											"name": "Test Connection of Subscribed Catalogue by id",
+											"id": "fb07c924-9f44-4990-aba1-1bce35863047",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{    \r\n    \"url\": \"http://www.bbc.co.uk\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test2\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}/testConnection"
+											},
+											"response": [
+												{
+													"id": "8f807b41-6805-4d41-9a37-5703bec1e342",
+													"name": "Test Connection of Subscribed Catalogue by ID (Successful)",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{    \r\n    \"url\": \"http://www.bbc.co.uk\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test2\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}/testConnection"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "plain",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 20 Feb 2022 12:38:31 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": null
+												}
+											]
+										},
+										{
+											"name": "List all subscribed catalogues",
+											"id": "8f4fa35b-f020-4375-a5a4-3baf7fb1e24e",
+											"protocolProfileBehavior": {
+												"disableBodyPruning": true
+											},
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/admin/subscribedCatalogues"
+											},
+											"response": [
+												{
+													"id": "5bc29968-bb85-44c2-9a13-561c1d7e45c1",
+													"name": "List all subscribed catalogues",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": "{{base_url}}/subscribedCatalogues"
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Vary",
+															"value": "Origin"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Method"
+														},
+														{
+															"key": "Vary",
+															"value": "Access-Control-Request-Headers"
+														},
+														{
+															"key": "Content-Type",
+															"value": "application/json;charset=UTF-8"
+														},
+														{
+															"key": "Content-Language",
+															"value": "en-GB"
+														},
+														{
+															"key": "Transfer-Encoding",
+															"value": "chunked"
+														},
+														{
+															"key": "Date",
+															"value": "Sun, 20 Feb 2022 12:35:50 GMT"
+														},
+														{
+															"key": "Keep-Alive",
+															"value": "timeout=60"
+														},
+														{
+															"key": "Connection",
+															"value": "keep-alive"
+														}
+													],
+													"cookie": [],
+													"responseTime": null,
+													"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"84de6826-3594-4ca3-8d99-8bf56d9175e4\",\n            \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n            \"label\": \"quisquam-quis-magnam\",\n            \"description\": \"dolorem\",\n            \"refreshPeriod\": 835\n        }\n    ]\n}"
+												}
+											]
+										}
+									],
 									"id": "e3b53320-8120-474f-a996-32ee0bd1a3a4"
 								},
 								{
@@ -41748,379 +42122,6 @@
 											"cookie": [],
 											"responseTime": null,
 											"body": "{\n    \"id\": \"84de6826-3594-4ca3-8d99-8bf56d9175e4\",\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n    \"label\": \"quisquam-quis-magnam\",\n    \"description\": \"dolorem\",\n    \"refreshPeriod\": 835\n}"
-										}
-									]
-								},
-								{
-									"name": "Update Subscribed Catalogue by id",
-									"id": "a9656844-4bdb-46e6-a90a-270c17d0d46d",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "PUT",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{    \r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"url\": \"http://localhost:8080\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
-									},
-									"response": [
-										{
-											"id": "fadb3989-dfaf-46fb-896b-5b169b32f597",
-											"name": "Update Subscribed Catalogue by id",
-											"originalRequest": {
-												"method": "PUT",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{    \r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"url\": \"http://localhost:8080\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Location",
-													"value": "http://localhost:8090/api/admin/subscribedCatalogues/99d39552-2c8e-4aac-8c3d-7cb878d9242f"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=UTF-8"
-												},
-												{
-													"key": "Content-Language",
-													"value": "en-GB"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 23 May 2022 16:45:23 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"id\": \"99d39552-2c8e-4aac-8c3d-7cb878d9242f\",\n    \"url\": \"http://localhost:8080\",\n    \"label\": \"qui-quia-dolor\",\n    \"subscribedCatalogueType\": \"Mauro JSON\",\n    \"description\": \"Porro voluptas explicabo iusto ducimus. Dolore veniam laudantium ullam rerum ducimus dolorem corrupti expedita quos. Non ea eveniet officia dolor nostrum quidem. Deserunt maxime necessitatibus. Consectetur et omnis.\",\n    \"refreshPeriod\": 5\n}"
-										}
-									]
-								},
-								{
-									"name": "Delete Subscribed Catalogue by ID",
-									"id": "fda95aa0-d37b-412f-8aff-7acf1652fd3b",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "DELETE",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
-									},
-									"response": [
-										{
-											"id": "0882e53d-516c-4283-889d-7c7c022c3e6f",
-											"name": "Delete Subscribed Catalogue by ID",
-											"originalRequest": {
-												"method": "DELETE",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
-											},
-											"status": "No Content",
-											"code": 204,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 23 May 2022 16:46:21 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										}
-									]
-								},
-								{
-									"name": "Get Subscribed Catalogue by ID",
-									"id": "22688bcf-51fe-4667-b7c8-10fa9a7cd5d6",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
-									},
-									"response": [
-										{
-											"id": "0523e1b3-9070-4b3d-9fe5-69f1c15a5613",
-											"name": "Get Subscribed Catalogue by ID",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=UTF-8"
-												},
-												{
-													"key": "Content-Language",
-													"value": "en-GB"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 23 May 2022 16:45:31 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"id\": \"99d39552-2c8e-4aac-8c3d-7cb878d9242f\",\n    \"url\": \"http://localhost:8080\",\n    \"label\": \"qui-quia-dolor\",\n    \"subscribedCatalogueType\": \"Mauro JSON\",\n    \"description\": \"Porro voluptas explicabo iusto ducimus. Dolore veniam laudantium ullam rerum ducimus dolorem corrupti expedita quos. Non ea eveniet officia dolor nostrum quidem. Deserunt maxime necessitatibus. Consectetur et omnis.\",\n    \"refreshPeriod\": 5,\n    \"apiKey\": \"9eb21e4c-8a61-4f32-91ea-f4563792b08c\"\n}"
-										}
-									]
-								},
-								{
-									"name": "Test Connection of Subscribed Catalogue by id",
-									"id": "fb07c924-9f44-4990-aba1-1bce35863047",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{    \r\n    \"url\": \"http://www.bbc.co.uk\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test2\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}/testConnection"
-									},
-									"response": [
-										{
-											"id": "8f807b41-6805-4d41-9a37-5703bec1e342",
-											"name": "Test Connection of Subscribed Catalogue by ID (Successful)",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{    \r\n    \"url\": \"http://www.bbc.co.uk\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test2\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}/testConnection"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Sun, 20 Feb 2022 12:38:31 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										}
-									]
-								},
-								{
-									"name": "List all subscribed catalogues",
-									"id": "8f4fa35b-f020-4375-a5a4-3baf7fb1e24e",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": "{{base_url}}/admin/subscribedCatalogues"
-									},
-									"response": [
-										{
-											"id": "5bc29968-bb85-44c2-9a13-561c1d7e45c1",
-											"name": "List all subscribed catalogues",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": "{{base_url}}/subscribedCatalogues"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=UTF-8"
-												},
-												{
-													"key": "Content-Language",
-													"value": "en-GB"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Sun, 20 Feb 2022 12:35:50 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"84de6826-3594-4ca3-8d99-8bf56d9175e4\",\n            \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n            \"label\": \"quisquam-quis-magnam\",\n            \"description\": \"dolorem\",\n            \"refreshPeriod\": 835\n        }\n    ]\n}"
 										}
 									]
 								}
@@ -43511,6 +43512,11 @@
 						{
 							"name": "Subscribed Catalogues",
 							"item": [
+								{
+									"name": "New Folder",
+									"item": [],
+									"id": "d2b2769f-ffd8-4d41-a5fe-76d9e346df31"
+								},
 								{
 									"name": "Create new Subscribed Catalogue (Mauro JSON)",
 									"id": "85f1d58f-a5ad-485b-a3ab-4b6ce28ec9b2",
@@ -47251,7 +47257,7 @@
 	],
 	"variable": [
 		{
-			"id": "4290c85e-76ba-4d8f-b50f-99faa15c0db0",
+			"id": "755fbc21-4fbb-48e2-9180-9682af7732b4",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
