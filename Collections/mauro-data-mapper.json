@@ -45294,7 +45294,7 @@
 								},
 								{
 									"id": "f1eacf6d-743f-42b9-9d99-154dfc85e35c",
-									"name": "List all published models as Atom feed",
+									"name": "List all published models as Atom feed with available models",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -47245,7 +47245,7 @@
 	],
 	"variable": [
 		{
-			"id": "a7bf8606-60c0-460c-be52-c1c74b39b4ad",
+			"id": "143f4b24-1dc2-4238-894d-c9ff5afae595",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
