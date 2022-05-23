@@ -43474,7 +43474,7 @@
 							"name": "Subscribed Catalogues",
 							"item": [
 								{
-									"name": "Create new Subscribed Catalogue",
+									"name": "Create new Subscribed Catalogue (Mauro JSON)",
 									"id": "85f1d58f-a5ad-485b-a3ab-4b6ce28ec9b2",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -43961,7 +43961,7 @@
 									]
 								},
 								{
-									"name": "New Request",
+									"name": "List all Subscribed Catalogue Types",
 									"id": "b230c045-b320-474e-8b11-1a610d4c4253",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -43970,7 +43970,57 @@
 										"method": "GET",
 										"header": []
 									},
-									"response": []
+									"response": [
+										{
+											"id": "a8ffc4b7-b1f1-45b1-9fc6-90a84eecbee3",
+											"name": "List all Subscribed Catalogue Types",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/admin/subscribedCatalogues/types"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 23 May 2022 16:15:30 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "[\n    \"Atom\",\n    \"Mauro JSON\"\n]"
+										}
+									]
 								}
 							],
 							"id": "94999160-35bd-4fb3-a537-e3ba05e95759"
@@ -47015,7 +47065,7 @@
 	],
 	"variable": [
 		{
-			"id": "c80578d0-b63d-43cc-9838-f241c49c0a10",
+			"id": "42b4bc75-804a-478c-9c2f-341446af1c49",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
