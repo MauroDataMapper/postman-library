@@ -43493,74 +43493,7 @@
 										},
 										"url": "{{base_url}}/admin/subscribedCatalogues"
 									},
-									"response": [
-										{
-											"id": "ef7754da-5df9-494c-bee4-7bdd722b0610",
-											"name": "Create new Subscribed Catalogue",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{    \r\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{base_url}}/admin/subscribedCatalogues"
-											},
-											"status": "Created",
-											"code": 201,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Location",
-													"value": "http://localhost:8080/api/admin/subscribedCatalogues/84de6826-3594-4ca3-8d99-8bf56d9175e4"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=UTF-8"
-												},
-												{
-													"key": "Content-Language",
-													"value": "en-GB"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Sun, 20 Feb 2022 12:35:42 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"id\": \"84de6826-3594-4ca3-8d99-8bf56d9175e4\",\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n    \"label\": \"quisquam-quis-magnam\",\n    \"description\": \"dolorem\",\n    \"refreshPeriod\": 835\n}"
-										}
-									]
+									"response": []
 								},
 								{
 									"name": "Create new Subscribed Catalogue (Atom)",
@@ -47154,7 +47087,7 @@
 	],
 	"variable": [
 		{
-			"id": "0db21da6-5d7b-43b9-8955-fb35d95f4e66",
+			"id": "c6180ccf-c0d2-49cd-be84-c2712e74e371",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
