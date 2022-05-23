@@ -44305,15 +44305,14 @@
 							]
 						},
 						{
-							"name": "List all Subscribed Catalogue Types",
+							"name": "Get all Subscribed Catalogue Types",
 							"id": "d54d602e-8dd2-4b24-8260-0db7eaaefa2b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
 								"method": "GET",
-								"header": [],
-								"url": "{{base_url}}/subscribedCatalogues/types"
+								"header": []
 							},
 							"response": [
 								{
@@ -47003,7 +47002,7 @@
 	],
 	"variable": [
 		{
-			"id": "5d2be5d1-61d7-49eb-b6de-824bbb717ad7",
+			"id": "0f25409f-436f-44cc-a5ee-338180b32fd3",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
