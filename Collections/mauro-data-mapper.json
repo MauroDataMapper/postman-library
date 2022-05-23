@@ -43706,6 +43706,64 @@
 											"cookie": [],
 											"responseTime": null,
 											"body": "{\n    \"id\": \"99d39552-2c8e-4aac-8c3d-7cb878d9242f\",\n    \"url\": \"http://localhost:8080/api/feeds/all\",\n    \"label\": \"et-vero-enim\",\n    \"subscribedCatalogueType\": \"Atom\",\n    \"description\": \"Porro voluptas explicabo iusto ducimus. Dolore veniam laudantium ullam rerum ducimus dolorem corrupti expedita quos. Non ea eveniet officia dolor nostrum quidem. Deserunt maxime necessitatibus. Consectetur et omnis.\",\n    \"refreshPeriod\": 5,\n    \"apiKey\": \"9eb21e4c-8a61-4f32-91ea-f4563792b08c\"\n}"
+										},
+										{
+											"id": "893e391d-e9ca-4d91-a8cc-a2a24e0169b1",
+											"name": "Create new Subscribed Catalogue (Atom)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{    \r\n    \"url\": \"{{$randomUrl}}\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/admin/subscribedCatalogues"
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 23 May 2022 16:41:51 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Invalid subscription to catalogue at [http://scarlett.biz], cannot connect to catalogue due to Could not load resource from endpoint [http://scarlett.biz]: Connect Error: scarlett.biz: nodename nor servname provided, or not known\"\n        }\n    ]\n}"
 										}
 									]
 								},
@@ -47154,7 +47212,7 @@
 	],
 	"variable": [
 		{
-			"id": "d3f79988-eec9-482d-9e64-d9214272f374",
+			"id": "3d92fec0-4877-448c-860f-fd26de677596",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
