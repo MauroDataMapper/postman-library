@@ -47195,7 +47195,7 @@
 	],
 	"variable": [
 		{
-			"id": "a6bbb8ca-b6ee-4f8b-b110-66ec20e7ed1b",
+			"id": "ccbbccc9-3938-488f-ba7d-a546f53a340f",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
