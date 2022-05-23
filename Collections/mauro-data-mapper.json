@@ -44546,7 +44546,7 @@
 							]
 						},
 						{
-							"name": "Test Connection of Subscribed Catalogue by id",
+							"name": "Test Connection of Subscribed Catalogue by ID",
 							"id": "763aa68b-42a2-47b4-9a71-0aac7809cdd5",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -47201,7 +47201,7 @@
 	],
 	"variable": [
 		{
-			"id": "3103d7cc-03ed-4e15-a8e7-df86051da1f9",
+			"id": "c057735e-c8d8-4d32-bc63-c78ab92e10dd",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
