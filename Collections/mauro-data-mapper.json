@@ -45410,7 +45410,7 @@
 								},
 								{
 									"id": "14fbdefa-a62d-44be-8b09-837d110128a3",
-									"name": "List all newer published models",
+									"name": "List all newer published models with newer versions available",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -47245,7 +47245,7 @@
 	],
 	"variable": [
 		{
-			"id": "c27957a3-226a-4e1a-bd2b-0d73f7393c68",
+			"id": "1c610bb9-c2de-47bd-aade-9482071b94d8",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
