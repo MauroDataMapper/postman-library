@@ -44849,6 +44849,64 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"id\": \"1d737978-2d39-45a1-b295-57930e247c61\",\n    \"subscribedModelId\": \"bfc0865f-1d5f-4958-917f-4b2f7b995951\",\n    \"folderId\": \"7b63bd7f-3098-425b-82be-da2107e0f2b4\",\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"federated\": true,\n    \"localModelId\": \"7854ed1d-c12a-4aeb-9b06-f70cbd2837e8\",\n    \"lastRead\": \"2021-06-28T11:20:57.252Z\"\n}"
+								},
+								{
+									"id": "0aa14918-062a-402d-adf4-cba6a75dc605",
+									"name": "Add new subscribed model",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"subscribedModel\": {\n        \"subscribedModelId\": \"{{published_model_id}}\",\n        \"subscribedModelType\": \"{{model_domain_type}}\",\n        \"folderId\": \"{{folder_id}}\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels"
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 23 May 2022 17:18:21 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Could not import SubscribedModel into local Catalogue, no published link found for URL [null] and/or content type [null]\"\n        }\n    ]\n}"
 								}
 							]
 						},
@@ -47256,7 +47314,7 @@
 	],
 	"variable": [
 		{
-			"id": "612f35a3-77b9-4b65-9afd-8fbc763cba21",
+			"id": "562ff30c-0413-48c5-b9b2-ce437d68f637",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
