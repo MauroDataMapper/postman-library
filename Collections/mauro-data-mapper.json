@@ -41855,7 +41855,58 @@
 										},
 										"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "0882e53d-516c-4283-889d-7c7c022c3e6f",
+											"name": "Delete Subscribed Catalogue by ID",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 23 May 2022 16:46:21 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
 								},
 								{
 									"name": "Get Subscribed Catalogue by ID",
@@ -47195,7 +47246,7 @@
 	],
 	"variable": [
 		{
-			"id": "ccbbccc9-3938-488f-ba7d-a546f53a340f",
+			"id": "f21951aa-c71b-4dd8-8cc2-626791463298",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
