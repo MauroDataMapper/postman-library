@@ -44416,7 +44416,7 @@
 							]
 						},
 						{
-							"name": "Get subscribed catalogue by id",
+							"name": "Get subscribed catalogue by ID",
 							"id": "aa0d96d3-944c-4347-bfe2-e20010533e50",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -47256,7 +47256,7 @@
 	],
 	"variable": [
 		{
-			"id": "f962d00f-d4ac-4623-a7ca-91f810180bb5",
+			"id": "dbad8b45-569b-4991-af7e-8c19c46fcea7",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
