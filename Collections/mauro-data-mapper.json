@@ -44852,7 +44852,7 @@
 								},
 								{
 									"id": "0aa14918-062a-402d-adf4-cba6a75dc605",
-									"name": "Add new subscribed model",
+									"name": "Add new subscribed model - Published Model ID does not exist in Subscribed Catalogue",
 									"originalRequest": {
 										"method": "POST",
 										"header": [],
@@ -47314,7 +47314,7 @@
 	],
 	"variable": [
 		{
-			"id": "562ff30c-0413-48c5-b9b2-ce437d68f637",
+			"id": "9f45fdc0-4678-4085-8810-338f54f4eab6",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
