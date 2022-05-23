@@ -41877,70 +41877,7 @@
 										},
 										"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
 									},
-									"response": [
-										{
-											"id": "b772d9bb-25ff-4ebb-a70f-8ebba9a803cd",
-											"name": "Get Subscribed Catalogue by id",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{    \r\n    \"url\": \"http://www.bbc.co.uk\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test2\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=UTF-8"
-												},
-												{
-													"key": "Content-Language",
-													"value": "en-GB"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Sun, 20 Feb 2022 12:36:33 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"id\": \"84de6826-3594-4ca3-8d99-8bf56d9175e4\",\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n    \"label\": \"quisquam-quis-magnam\",\n    \"description\": \"dolorem\",\n    \"refreshPeriod\": 835\n}"
-										}
-									]
+									"response": []
 								},
 								{
 									"name": "Test Connection of Subscribed Catalogue by id",
@@ -47213,7 +47150,7 @@
 	],
 	"variable": [
 		{
-			"id": "54e9b45c-4dc6-4a25-a2b5-8ff5ab2ee4f7",
+			"id": "aa29f097-d0e8-4190-ac5c-f6bf416bf387",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
