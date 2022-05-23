@@ -43642,64 +43642,6 @@
 									},
 									"response": [
 										{
-											"id": "d3afdba0-1521-48c7-993a-27775f23df88",
-											"name": "Cannot create SC as not contactable",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{    \r\n    \"url\": \"{{$randomUrl}}\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{base_url}}/admin/subscribedCatalogues"
-											},
-											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-											"code": 422,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=UTF-8"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Sun, 20 Feb 2022 12:34:55 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Invalid subscription to catalogue at [http://ashton.info], cannot connect to catalogue due to Could not load resource from endpoint [http://ashton.info/api/published/models].\\nResponse body [null]: Failed to decode the body for the given content type [text/html;charset=UTF-8]\"\n        }\n    ]\n}"
-										},
-										{
 											"id": "32c21cfe-0dae-46bc-be7a-acb78aef2b31",
 											"name": "Create new Subscribed Catalogue",
 											"originalRequest": {
@@ -47212,7 +47154,7 @@
 	],
 	"variable": [
 		{
-			"id": "c9dfe2ef-8cd7-428c-a5fc-a4ad2df18479",
+			"id": "8619eadf-dc70-4a51-9a72-15208a1a10a3",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
