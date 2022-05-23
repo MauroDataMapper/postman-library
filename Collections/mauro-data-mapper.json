@@ -41858,7 +41858,7 @@
 									"response": []
 								},
 								{
-									"name": "Get Subscribed Catalogue by id",
+									"name": "Get Subscribed Catalogue by ID",
 									"id": "22688bcf-51fe-4667-b7c8-10fa9a7cd5d6",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -47150,7 +47150,7 @@
 	],
 	"variable": [
 		{
-			"id": "aa29f097-d0e8-4190-ac5c-f6bf416bf387",
+			"id": "ac3a6b3a-c604-438d-b275-c8fbecb9491a",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
