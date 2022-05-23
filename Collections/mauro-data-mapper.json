@@ -43959,6 +43959,18 @@
 											"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"84de6826-3594-4ca3-8d99-8bf56d9175e4\",\n            \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n            \"label\": \"quisquam-quis-magnam\",\n            \"description\": \"dolorem\",\n            \"refreshPeriod\": 835\n        }\n    ]\n}"
 										}
 									]
+								},
+								{
+									"name": "New Request",
+									"id": "b230c045-b320-474e-8b11-1a610d4c4253",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
 								}
 							],
 							"id": "94999160-35bd-4fb3-a537-e3ba05e95759"
@@ -47003,7 +47015,7 @@
 	],
 	"variable": [
 		{
-			"id": "96326235-33d2-43db-9b3b-00c9d7ec275c",
+			"id": "c80578d0-b63d-43cc-9838-f241c49c0a10",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
