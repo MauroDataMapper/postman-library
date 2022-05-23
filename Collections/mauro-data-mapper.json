@@ -44303,6 +44303,18 @@
 									"body": null
 								}
 							]
+						},
+						{
+							"name": "New Request",
+							"id": "d54d602e-8dd2-4b24-8260-0db7eaaefa2b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
 						}
 					],
 					"id": "7bf2fef8-125b-4ca4-aebe-ef36cff6583c"
@@ -46940,7 +46952,7 @@
 	],
 	"variable": [
 		{
-			"id": "d4aa3810-bdb5-49a8-bfa7-7e319187cc41",
+			"id": "839b75eb-5301-4075-a568-cd1b13532a24",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
