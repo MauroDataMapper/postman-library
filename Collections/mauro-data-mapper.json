@@ -44942,7 +44942,49 @@
 								"header": [],
 								"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels/{{subscribed_model_id}}"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "7d5bed40-b8a6-4dd6-8b75-0c26bd36f011",
+									"name": "Delete Subscribed Model",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels/{{subscribed_model_id}}"
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 23 May 2022 17:20:17 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": null
+								}
+							]
 						},
 						{
 							"name": "List all newer models for subscribed model by id",
@@ -47280,7 +47322,7 @@
 	],
 	"variable": [
 		{
-			"id": "ee3f7a6c-b5cb-42d9-aa6c-0ee48b448392",
+			"id": "ea3278c3-2813-4af9-a110-f8a4272ed71e",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
