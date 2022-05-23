@@ -44705,98 +44705,6 @@
 							},
 							"response": [
 								{
-									"id": "515ace8c-e8e5-490f-8936-35a2be6ff155",
-									"name": "Add new subscribed model - When subscription already exists",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"subscribedModelId\":\"29e4c643-eb76-47f1-8a5e-df5201b89b25\",\n    \"subscribedModelType\":\"DataModel\",\n    \"folderId\": \"{{folder_id}}\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels"
-									},
-									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-									"code": 422,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 28 Jun 2021 11:07:17 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Property [subscribedModelId] of class [class uk.ac.ox.softeng.maurodatamapper.federation.SubscribedModel] with value [29e4c643-eb76-47f1-8a5e-df5201b89b25] must be unique\"\n        }\n    ]\n}"
-								},
-								{
-									"id": "6b0fb6d6-de1b-42cd-8e79-4e97cdedae10",
-									"name": "Add new subscribed model - Model id doesnt exist in subscribed catalogue",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"subscribedModelId\":\"{{$randomUUID}}\",\n    \"subscribedModelType\":\"DataModel\",\n    \"folderId\": \"{{folder_id}}\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels"
-									},
-									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-									"code": 422,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 28 Jun 2021 11:09:07 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Could not federate SubscribedModel into local Catalogue due to [Requested endpoint could not be found http://localhost:8082/api/dataModels/0e5c789a-3dbd-4a5e-8fe1-b4999493d073/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/2.0]\"\n        }\n    ]\n}"
-								},
-								{
 									"id": "569cb8ba-5c25-41c8-a4d4-5e6bd433a293",
 									"name": "Add new subscribed model",
 									"originalRequest": {
@@ -44849,6 +44757,52 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "{\n    \"id\": \"1d737978-2d39-45a1-b295-57930e247c61\",\n    \"subscribedModelId\": \"bfc0865f-1d5f-4958-917f-4b2f7b995951\",\n    \"folderId\": \"7b63bd7f-3098-425b-82be-da2107e0f2b4\",\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"federated\": true,\n    \"localModelId\": \"7854ed1d-c12a-4aeb-9b06-f70cbd2837e8\",\n    \"lastRead\": \"2021-06-28T11:20:57.252Z\"\n}"
+								},
+								{
+									"id": "515ace8c-e8e5-490f-8936-35a2be6ff155",
+									"name": "Add new subscribed model - When subscription already exists",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"subscribedModelId\":\"29e4c643-eb76-47f1-8a5e-df5201b89b25\",\n    \"subscribedModelType\":\"DataModel\",\n    \"folderId\": \"{{folder_id}}\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels"
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 28 Jun 2021 11:07:17 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Property [subscribedModelId] of class [class uk.ac.ox.softeng.maurodatamapper.federation.SubscribedModel] with value [29e4c643-eb76-47f1-8a5e-df5201b89b25] must be unique\"\n        }\n    ]\n}"
 								},
 								{
 									"id": "0aa14918-062a-402d-adf4-cba6a75dc605",
@@ -47314,7 +47268,7 @@
 	],
 	"variable": [
 		{
-			"id": "9f45fdc0-4678-4085-8810-338f54f4eab6",
+			"id": "bec52115-2b76-42bc-b4e2-f28a886792cc",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
