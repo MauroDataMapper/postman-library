@@ -43631,7 +43631,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{    \r\n    \"url\": \"{{$randomUrl}}\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
+											"raw": "{    \r\n    \"url\": \"{{$randomUrl}}\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -47212,7 +47212,7 @@
 	],
 	"variable": [
 		{
-			"id": "efbfc3d6-d5fa-413b-a331-39d79ce2b8cc",
+			"id": "b0d04a41-e39a-46b9-9597-86b94468de71",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
