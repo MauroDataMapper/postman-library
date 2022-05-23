@@ -44349,6 +44349,69 @@
 							"id": "d441bdf4-6b90-43c9-84f3-9e18282918f7"
 						},
 						{
+							"name": "List all Subscribed Catalogue Types",
+							"id": "d54d602e-8dd2-4b24-8260-0db7eaaefa2b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/subscribedCatalogues/types"
+							},
+							"response": [
+								{
+									"id": "4ef56b96-c2d0-406b-a6bd-a5da30854c3f",
+									"name": "List all Subscribed Catalogue Types",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/subscribedCatalogues/types"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 23 May 2022 16:14:38 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "[\n    \"Atom\",\n    \"Mauro JSON\"\n]"
+								}
+							]
+						},
+						{
 							"name": "List all subscribed catalogues",
 							"id": "4c8384dc-dd33-4bf7-839d-a6c38182a346",
 							"protocolProfileBehavior": {
@@ -44502,125 +44565,7 @@
 								},
 								"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/testConnection"
 							},
-							"response": [
-								{
-									"id": "d41821e0-c76d-493c-95ab-0745e4a2565f",
-									"name": "Test Connection of Subscribed Catalogue by id",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{    \r\n    \"url\": \"http://www.bbc.co.uk\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test2\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}/testConnection"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "plain",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Sun, 20 Feb 2022 12:38:31 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": null
-								}
-							]
-						},
-						{
-							"name": "List all Subscribed Catalogue Types",
-							"id": "d54d602e-8dd2-4b24-8260-0db7eaaefa2b",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{base_url}}/subscribedCatalogues/types"
-							},
-							"response": [
-								{
-									"id": "4ef56b96-c2d0-406b-a6bd-a5da30854c3f",
-									"name": "List all Subscribed Catalogue Types",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{base_url}}/subscribedCatalogues/types"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 23 May 2022 16:14:38 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "[\n    \"Atom\",\n    \"Mauro JSON\"\n]"
-								}
-							]
+							"response": []
 						}
 					],
 					"id": "7bf2fef8-125b-4ca4-aebe-ef36cff6583c"
@@ -47256,7 +47201,7 @@
 	],
 	"variable": [
 		{
-			"id": "82d9a848-a390-4242-9f21-8ea43968adc1",
+			"id": "3103d7cc-03ed-4e15-a8e7-df86051da1f9",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
