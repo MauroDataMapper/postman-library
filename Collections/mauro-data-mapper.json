@@ -44865,7 +44865,7 @@
 							]
 						},
 						{
-							"name": "Get subscribed model by id",
+							"name": "Get subscribed model by ID",
 							"id": "66f6d3af-e0a9-4571-a70b-527349ef1809",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -44877,8 +44877,8 @@
 							},
 							"response": [
 								{
-									"id": "207e465b-b922-465c-8170-a8b34848d84e",
-									"name": "Get subscribed model by id",
+									"id": "2b5ba3ab-5286-4520-9871-109d919c40e7",
+									"name": "Get subscribed model by ID",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -44888,6 +44888,18 @@
 									"code": 200,
 									"_postman_previewlanguage": "json",
 									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
 										{
 											"key": "Content-Type",
 											"value": "application/json;charset=UTF-8"
@@ -44902,7 +44914,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Mon, 28 Jun 2021 11:13:18 GMT"
+											"value": "Mon, 23 May 2022 17:20:09 GMT"
 										},
 										{
 											"key": "Keep-Alive",
@@ -44915,7 +44927,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "{\n    \"id\": \"449b9430-bddc-4c3e-9241-a8ed08cd01c0\",\n    \"subscribedModelId\": \"cd09a7ed-c872-4a95-825c-0af0266734df\",\n    \"folderId\": \"7b63bd7f-3098-425b-82be-da2107e0f2b4\",\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"localModelId\": \"cf20dbc5-559e-4782-8749-ce628964fb4a\",\n    \"lastRead\": \"2021-06-28T11:09:53.717Z\"\n}"
+									"body": "{\n    \"id\": \"946c73fc-67d7-413e-897c-32018d672b87\",\n    \"subscribedModelId\": \"99948cf2-71e8-4237-a5a7-48fc4f8f99fb\",\n    \"folderId\": \"b1996ce5-7a9a-4a92-9d61-c840fedc0cc1\",\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": true,\n    \"federated\": true,\n    \"localModelId\": \"281760e3-7cbc-4bea-9b2b-a3bd2f1b9aa9\",\n    \"lastRead\": \"2022-05-23T17:15:46.168Z\"\n}"
 								}
 							]
 						},
@@ -47268,7 +47280,7 @@
 	],
 	"variable": [
 		{
-			"id": "bec52115-2b76-42bc-b4e2-f28a886792cc",
+			"id": "ee3f7a6c-b5cb-42d9-aa6c-0ee48b448392",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
