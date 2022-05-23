@@ -44359,61 +44359,7 @@
 								"header": [],
 								"url": "{{base_url}}/subscribedCatalogues"
 							},
-							"response": [
-								{
-									"id": "9d1658f4-a732-464f-b603-2bd98f1befe4",
-									"name": "List all subscribed catalogues",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{base_url}}/subscribedCatalogues"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Sun, 20 Feb 2022 12:35:50 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"84de6826-3594-4ca3-8d99-8bf56d9175e4\",\n            \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n            \"label\": \"quisquam-quis-magnam\",\n            \"description\": \"dolorem\",\n            \"refreshPeriod\": 835\n        }\n    ]\n}"
-								}
-							]
+							"response": []
 						},
 						{
 							"name": "Get subscribed catalogue by id",
@@ -47244,7 +47190,7 @@
 	],
 	"variable": [
 		{
-			"id": "6350439d-b070-4659-941c-f153c7a93486",
+			"id": "324cce97-5789-415a-afb4-7aefe2556c51",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
