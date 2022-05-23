@@ -41866,15 +41866,6 @@
 									"request": {
 										"method": "GET",
 										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{    \r\n    \"url\": \"http://www.bbc.co.uk\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test2\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
 										"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
 									},
 									"response": []
@@ -47150,7 +47141,7 @@
 	],
 	"variable": [
 		{
-			"id": "b2939b7b-4d2c-4333-94ad-5ab5fe271d40",
+			"id": "fde8ffd2-9f23-4095-82bc-b3cd8b311225",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
