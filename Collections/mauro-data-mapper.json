@@ -44317,7 +44317,7 @@
 							"response": [
 								{
 									"id": "4ef56b96-c2d0-406b-a6bd-a5da30854c3f",
-									"name": "Get all Subscribed Catalogue Types",
+									"name": "List all Subscribed Catalogue Types",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -47002,7 +47002,7 @@
 	],
 	"variable": [
 		{
-			"id": "591460c2-44be-479f-a8f2-0cdf805f8eb0",
+			"id": "2debe6eb-2869-41ec-a054-3036cd3ecf41",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
