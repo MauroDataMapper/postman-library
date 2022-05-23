@@ -47212,7 +47212,7 @@
 	],
 	"variable": [
 		{
-			"id": "fd31f337-bb74-4e99-8f50-01ef7d055895",
+			"id": "c9dfe2ef-8cd7-428c-a5fc-a4ad2df18479",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
