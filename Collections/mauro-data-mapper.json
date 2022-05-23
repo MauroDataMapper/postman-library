@@ -43465,6 +43465,1880 @@
 			"id": "70cdca94-25a0-45a1-915d-c0379d5f9930"
 		},
 		{
+			"name": "Federation (branch mc-9833)",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Subscribed Catalogues",
+							"item": [
+								{
+									"name": "Create new Subscribed Catalogue",
+									"id": "85f1d58f-a5ad-485b-a3ab-4b6ce28ec9b2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{    \r\n    \"url\": \"{{$randomUrl}}\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/admin/subscribedCatalogues"
+									},
+									"response": [
+										{
+											"id": "1ef12f99-6ae6-4b33-846a-7d79db752cf4",
+											"name": "Cannot create SC as not contactable",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{    \r\n    \"url\": \"{{$randomUrl}}\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/admin/subscribedCatalogues"
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 20 Feb 2022 12:34:55 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Invalid subscription to catalogue at [http://ashton.info], cannot connect to catalogue due to Could not load resource from endpoint [http://ashton.info/api/published/models].\\nResponse body [null]: Failed to decode the body for the given content type [text/html;charset=UTF-8]\"\n        }\n    ]\n}"
+										},
+										{
+											"id": "ef7754da-5df9-494c-bee4-7bdd722b0610",
+											"name": "Create new Subscribed Catalogue",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{    \r\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/admin/subscribedCatalogues"
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Location",
+													"value": "http://localhost:8080/api/admin/subscribedCatalogues/84de6826-3594-4ca3-8d99-8bf56d9175e4"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 20 Feb 2022 12:35:42 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"84de6826-3594-4ca3-8d99-8bf56d9175e4\",\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n    \"label\": \"quisquam-quis-magnam\",\n    \"description\": \"dolorem\",\n    \"refreshPeriod\": 835\n}"
+										}
+									]
+								},
+								{
+									"name": "Update Subscribed Catalogue by id",
+									"id": "11d7bef2-e505-43a4-974a-30da1d6d572f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{    \r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
+									},
+									"response": [
+										{
+											"id": "345a5e9d-7537-4f0b-a531-14a946df72fc",
+											"name": "Update Subscribed Catalogue by id",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{    \r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Location",
+													"value": "http://localhost:8080/api/admin/subscribedCatalogues/84de6826-3594-4ca3-8d99-8bf56d9175e4"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 20 Feb 2022 12:37:38 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"84de6826-3594-4ca3-8d99-8bf56d9175e4\",\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n    \"label\": \"et-amet-quis\",\n    \"description\": \"dolorem\",\n    \"refreshPeriod\": 835\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete Subscribed Catalogue by id",
+									"id": "71d0cb14-0d6f-4766-8c81-574f87ffd525",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
+									},
+									"response": []
+								},
+								{
+									"name": "Get Subscribed Catalogue by id",
+									"id": "5197fe61-19fc-40d6-a661-96504f1734fc",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{    \r\n    \"url\": \"http://www.bbc.co.uk\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test2\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
+									},
+									"response": [
+										{
+											"id": "5714130b-97d1-45e6-8804-7176fae21b75",
+											"name": "Get Subscribed Catalogue by id",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{    \r\n    \"url\": \"http://www.bbc.co.uk\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test2\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 20 Feb 2022 12:36:33 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"84de6826-3594-4ca3-8d99-8bf56d9175e4\",\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n    \"label\": \"quisquam-quis-magnam\",\n    \"description\": \"dolorem\",\n    \"refreshPeriod\": 835\n}"
+										}
+									]
+								},
+								{
+									"name": "Test Connection of Subscribed Catalogue by id",
+									"id": "7b645987-33e3-439d-b339-ebb6fe21f215",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{    \r\n    \"url\": \"http://www.bbc.co.uk\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test2\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}/testConnection"
+									},
+									"response": [
+										{
+											"id": "b148150b-4315-48b8-96cf-deda8069988c",
+											"name": "Test Connection of Subscribed Catalogue by id",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{    \r\n    \"url\": \"http://www.bbc.co.uk\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test2\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}/testConnection"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 20 Feb 2022 12:38:31 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "List all subscribed catalogues",
+									"id": "d95712d6-7ec8-4361-adb1-69ca81540c5c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/admin/subscribedCatalogues"
+									},
+									"response": [
+										{
+											"id": "dbe71047-f0ce-4070-80db-1190c6c6bc81",
+											"name": "List all subscribed catalogues",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/subscribedCatalogues"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 20 Feb 2022 12:35:50 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"84de6826-3594-4ca3-8d99-8bf56d9175e4\",\n            \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n            \"label\": \"quisquam-quis-magnam\",\n            \"description\": \"dolorem\",\n            \"refreshPeriod\": 835\n        }\n    ]\n}"
+										}
+									]
+								}
+							],
+							"id": "94999160-35bd-4fb3-a537-e3ba05e95759"
+						}
+					],
+					"id": "6d1a5095-7033-46a5-a4a9-f978c3b2bdc9"
+				},
+				{
+					"name": "SubscribedCatalogues",
+					"item": [
+						{
+							"name": "Published Models",
+							"item": [
+								{
+									"name": "List all newer published models for a subscribed catalogue published model",
+									"id": "17fabfe8-8692-4578-b5a7-99962805673c",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/publishedModels/{{published_model_id}}/newerVersions"
+									},
+									"response": [
+										{
+											"id": "0133d294-49bc-4ef2-94da-769a6bc8744c",
+											"name": "List all newer published models for a subscribed catalogue published model",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/publishedModels/{{published_model_id}}/newerVersions"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 28 Apr 2022 14:01:22 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"lastUpdated\": \"2022-04-27T16:13:27.551Z\",\n    \"newerPublishedModels\": [\n        {\n            \"modelId\": \"08f62071-39ce-4b90-b275-94e4a134072d\",\n            \"title\": \"Model Version Tree DataModel 2.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"2.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:26.764Z\",\n            \"dateCreated\": \"2022-04-27T16:13:26.365Z\",\n            \"datePublished\": \"2022-04-27T16:13:26.734Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"previousModelId\": \"7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"49579892-76ac-4d21-8365-1779269388a7\",\n            \"title\": \"Model Version Tree DataModel 3.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"3.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:26.919Z\",\n            \"dateCreated\": \"2022-04-27T16:13:26.866Z\",\n            \"datePublished\": \"2022-04-27T16:13:26.895Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"previousModelId\": \"08f62071-39ce-4b90-b275-94e4a134072d\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"86b986e2-3b37-4296-99a6-fa61b9ec90ad\",\n            \"title\": \"Model Version Tree DataModel 4.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"4.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:27.248Z\",\n            \"dateCreated\": \"2022-04-27T16:13:27.021Z\",\n            \"datePublished\": \"2022-04-27T16:13:27.223Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"previousModelId\": \"49579892-76ac-4d21-8365-1779269388a7\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"3417072f-7333-4e9e-a0d8-1207d99b7c36\",\n            \"title\": \"Model Version Tree DataModel 5.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"5.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:27.551Z\",\n            \"dateCreated\": \"2022-04-27T16:13:27.487Z\",\n            \"datePublished\": \"2022-04-27T16:13:27.523Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"previousModelId\": \"86b986e2-3b37-4296-99a6-fa61b9ec90ad\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        }\n    ]\n}"
+										}
+									]
+								},
+								{
+									"name": "List all published models for a subscribed catalogue published model",
+									"id": "68d94f49-d10f-4507-ba90-0fc897dc4892",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/publishedModels"
+									},
+									"response": [
+										{
+											"id": "d77c29f0-1247-479d-b6d7-99ef45fcaa56",
+											"name": "List all published models for a subscribed catalogue published model",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/publishedModels"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 28 Apr 2022 13:56:09 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"count\": 9,\n    \"items\": [\n        {\n            \"modelId\": \"90ba8a99-c68b-4a2e-9d5a-baade82209cc\",\n            \"title\": \"Complex Test CodeSet 1.0.0\",\n            \"label\": \"Complex Test CodeSet\",\n            \"version\": \"1.0.0\",\n            \"modelType\": \"CodeSet\",\n            \"lastUpdated\": \"2022-04-27T16:13:30.018Z\",\n            \"dateCreated\": \"2022-04-27T16:13:29.994Z\",\n            \"datePublished\": \"2022-04-27T16:13:30.002Z\",\n            \"author\": \"Test Bootstrap\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/codeSets/90ba8a99-c68b-4a2e-9d5a-baade82209cc/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetJsonExporterService/4.0\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/codeSets/90ba8a99-c68b-4a2e-9d5a-baade82209cc/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetXmlExporterService/5.0\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"8f165109-ab29-4e9b-8a25-b1c5817c6807\",\n            \"title\": \"Finalised Example Test DataModel 1.0.0\",\n            \"label\": \"Finalised Example Test DataModel\",\n            \"version\": \"1.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:25.307Z\",\n            \"dateCreated\": \"2022-04-27T16:13:25.279Z\",\n            \"datePublished\": \"2022-04-27T16:13:25.27Z\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/8f165109-ab29-4e9b-8a25-b1c5817c6807/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/8f165109-ab29-4e9b-8a25-b1c5817c6807/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb\",\n            \"title\": \"Model Version Tree DataModel 1.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"1.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:25.807Z\",\n            \"dateCreated\": \"2022-04-27T16:13:25.632Z\",\n            \"datePublished\": \"2022-04-27T16:13:25.685Z\",\n            \"author\": \"bill\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"08f62071-39ce-4b90-b275-94e4a134072d\",\n            \"title\": \"Model Version Tree DataModel 2.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"2.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:26.764Z\",\n            \"dateCreated\": \"2022-04-27T16:13:26.365Z\",\n            \"datePublished\": \"2022-04-27T16:13:26.734Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"49579892-76ac-4d21-8365-1779269388a7\",\n            \"title\": \"Model Version Tree DataModel 3.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"3.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:26.919Z\",\n            \"dateCreated\": \"2022-04-27T16:13:26.866Z\",\n            \"datePublished\": \"2022-04-27T16:13:26.895Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"86b986e2-3b37-4296-99a6-fa61b9ec90ad\",\n            \"title\": \"Model Version Tree DataModel 4.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"4.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:27.248Z\",\n            \"dateCreated\": \"2022-04-27T16:13:27.021Z\",\n            \"datePublished\": \"2022-04-27T16:13:27.223Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"3417072f-7333-4e9e-a0d8-1207d99b7c36\",\n            \"title\": \"Model Version Tree DataModel 5.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"5.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:27.551Z\",\n            \"dateCreated\": \"2022-04-27T16:13:27.487Z\",\n            \"datePublished\": \"2022-04-27T16:13:27.523Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"95db4738-c09c-470b-bd0a-d6af5f0f2659\",\n            \"title\": \"Model Version Tree DataModel fork 1.0.0\",\n            \"label\": \"Model Version Tree DataModel fork\",\n            \"version\": \"1.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:26.126Z\",\n            \"dateCreated\": \"2022-04-27T16:13:26.076Z\",\n            \"datePublished\": \"2022-04-27T16:13:26.102Z\",\n            \"author\": \"bill\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/95db4738-c09c-470b-bd0a-d6af5f0f2659/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/95db4738-c09c-470b-bd0a-d6af5f0f2659/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"6971e70b-ebe4-470d-9c69-47639c2e2cc8\",\n            \"title\": \"Simple Test CodeSet 1.0.0\",\n            \"label\": \"Simple Test CodeSet\",\n            \"version\": \"1.0.0\",\n            \"modelType\": \"CodeSet\",\n            \"lastUpdated\": \"2022-04-27T16:13:29.964Z\",\n            \"dateCreated\": \"2022-04-27T16:13:29.944Z\",\n            \"datePublished\": \"2022-04-27T16:13:29.949Z\",\n            \"author\": \"Test Bootstrap\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/codeSets/6971e70b-ebe4-470d-9c69-47639c2e2cc8/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetJsonExporterService/4.0\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/codeSets/6971e70b-ebe4-470d-9c69-47639c2e2cc8/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetXmlExporterService/5.0\"\n                }\n            ]\n        }\n    ]\n}"
+										}
+									]
+								}
+							],
+							"id": "d441bdf4-6b90-43c9-84f3-9e18282918f7"
+						},
+						{
+							"name": "List all subscribed catalogues",
+							"id": "4c8384dc-dd33-4bf7-839d-a6c38182a346",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/subscribedCatalogues"
+							},
+							"response": [
+								{
+									"id": "9d1658f4-a732-464f-b603-2bd98f1befe4",
+									"name": "List all subscribed catalogues",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/subscribedCatalogues"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Feb 2022 12:35:50 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"84de6826-3594-4ca3-8d99-8bf56d9175e4\",\n            \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n            \"label\": \"quisquam-quis-magnam\",\n            \"description\": \"dolorem\",\n            \"refreshPeriod\": 835\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Get subscribed catalogue by id",
+							"id": "aa0d96d3-944c-4347-bfe2-e20010533e50",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}"
+							},
+							"response": [
+								{
+									"id": "15208377-a09a-4fe1-a866-4e644a77d92a",
+									"name": "Get subscribed catalogue by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 28 Jun 2021 10:25:18 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"id\": \"cedf5c0d-bb30-456a-9261-dd7147c23350\",\n    \"url\": \"http://localhost:8082\",\n    \"label\": \"Mauro 2\",\n    \"refreshPeriod\": 7\n}"
+								}
+							]
+						},
+						{
+							"name": "Test Connection of Subscribed Catalogue by id",
+							"id": "763aa68b-42a2-47b4-9a71-0aac7809cdd5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \r\n    \"url\": \"http://www.bbc.co.uk\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/testConnection"
+							},
+							"response": [
+								{
+									"id": "d41821e0-c76d-493c-95ab-0745e4a2565f",
+									"name": "Test Connection of Subscribed Catalogue by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{    \r\n    \"url\": \"http://www.bbc.co.uk\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test2\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}/testConnection"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "plain",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Feb 2022 12:38:31 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": null
+								}
+							]
+						}
+					],
+					"id": "7bf2fef8-125b-4ca4-aebe-ef36cff6583c"
+				},
+				{
+					"name": "SubscribedModels",
+					"item": [
+						{
+							"name": "List all subscribed models in a subscribed catalogue",
+							"id": "8864347c-6407-499b-9b12-add6b99b77df",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels"
+							},
+							"response": [
+								{
+									"id": "cfa93c4a-c45e-4cc6-92cf-867c8449fba5",
+									"name": "List all subscribed models in a subscribed catalogue",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 28 Jun 2021 11:20:18 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"count\": 2,\n    \"items\": [\n        {\n            \"id\": \"48f9e524-6103-492e-a122-be18ea398a24\",\n            \"subscribedModelId\": \"29e4c643-eb76-47f1-8a5e-df5201b89b25\",\n            \"folderId\": \"7b63bd7f-3098-425b-82be-da2107e0f2b4\",\n            \"federated\": true,\n            \"localModelId\": \"8658b2cf-2c6f-48fc-beb5-98224fb12f87\"\n        },\n        {\n            \"id\": \"449b9430-bddc-4c3e-9241-a8ed08cd01c0\",\n            \"subscribedModelId\": \"cd09a7ed-c872-4a95-825c-0af0266734df\",\n            \"folderId\": \"7b63bd7f-3098-425b-82be-da2107e0f2b4\",\n            \"federated\": true,\n            \"localModelId\": \"cf20dbc5-559e-4782-8749-ce628964fb4a\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "Add new subscribed model",
+							"id": "3b38379b-2fee-49dc-9552-e4b0035e6065",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"subscribedModelId\":\"{{published_model_id}}\",\n    \"subscribedModelType\":\"{{model_domain_type}}\",\n    \"folderId\": \"{{folder_id}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels"
+							},
+							"response": [
+								{
+									"id": "515ace8c-e8e5-490f-8936-35a2be6ff155",
+									"name": "Add new subscribed model - When subscription already exists",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"subscribedModelId\":\"29e4c643-eb76-47f1-8a5e-df5201b89b25\",\n    \"subscribedModelType\":\"DataModel\",\n    \"folderId\": \"{{folder_id}}\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels"
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 28 Jun 2021 11:07:17 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Property [subscribedModelId] of class [class uk.ac.ox.softeng.maurodatamapper.federation.SubscribedModel] with value [29e4c643-eb76-47f1-8a5e-df5201b89b25] must be unique\"\n        }\n    ]\n}"
+								},
+								{
+									"id": "6b0fb6d6-de1b-42cd-8e79-4e97cdedae10",
+									"name": "Add new subscribed model - Model id doesnt exist in subscribed catalogue",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"subscribedModelId\":\"{{$randomUUID}}\",\n    \"subscribedModelType\":\"DataModel\",\n    \"folderId\": \"{{folder_id}}\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels"
+									},
+									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+									"code": 422,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 28 Jun 2021 11:09:07 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Could not federate SubscribedModel into local Catalogue due to [Requested endpoint could not be found http://localhost:8082/api/dataModels/0e5c789a-3dbd-4a5e-8fe1-b4999493d073/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/2.0]\"\n        }\n    ]\n}"
+								},
+								{
+									"id": "569cb8ba-5c25-41c8-a4d4-5e6bd433a293",
+									"name": "Add new subscribed model",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"subscribedModelId\":\"bfc0865f-1d5f-4958-917f-4b2f7b995951\",\n    \"subscribedModelType\":\"DataModel\",\n    \"folderId\": \"{{folder_id}}\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Location",
+											"value": "http://localhost:8080/subscribedModel/show/1d737978-2d39-45a1-b295-57930e247c61"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 28 Jun 2021 11:20:58 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"id\": \"1d737978-2d39-45a1-b295-57930e247c61\",\n    \"subscribedModelId\": \"bfc0865f-1d5f-4958-917f-4b2f7b995951\",\n    \"folderId\": \"7b63bd7f-3098-425b-82be-da2107e0f2b4\",\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"federated\": true,\n    \"localModelId\": \"7854ed1d-c12a-4aeb-9b06-f70cbd2837e8\",\n    \"lastRead\": \"2021-06-28T11:20:57.252Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Get subscribed model by id",
+							"id": "66f6d3af-e0a9-4571-a70b-527349ef1809",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels/{{subscribed_model_id}}"
+							},
+							"response": [
+								{
+									"id": "207e465b-b922-465c-8170-a8b34848d84e",
+									"name": "Get subscribed model by id",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels/{{subscribed_model_id}}"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 28 Jun 2021 11:13:18 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"id\": \"449b9430-bddc-4c3e-9241-a8ed08cd01c0\",\n    \"subscribedModelId\": \"cd09a7ed-c872-4a95-825c-0af0266734df\",\n    \"folderId\": \"7b63bd7f-3098-425b-82be-da2107e0f2b4\",\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": false,\n    \"localModelId\": \"cf20dbc5-559e-4782-8749-ce628964fb4a\",\n    \"lastRead\": \"2021-06-28T11:09:53.717Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete Subscribed Model",
+							"id": "ab907b47-0d32-403e-84f1-4d44e5170811",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels/{{subscribed_model_id}}"
+							},
+							"response": []
+						},
+						{
+							"name": "List all newer models for subscribed model by id",
+							"id": "e5939489-8fd1-42c8-b948-ca2a6ea1596e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels/{{subscribed_model_id}}/newerVersions"
+							},
+							"response": []
+						},
+						{
+							"name": "Update subscribed model by id",
+							"id": "a96d523a-bca3-4a4d-8bc8-e4c18c90f99f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels/{{subscribed_model_id}}"
+							},
+							"response": []
+						}
+					],
+					"id": "b7c52d8d-b5c3-481e-bc2c-91078d300689"
+				},
+				{
+					"name": "Published Models",
+					"item": [
+						{
+							"name": "List all published models",
+							"id": "d047cdcd-2edd-4548-9570-ca6a4172bd14",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/published/models"
+							},
+							"response": [
+								{
+									"id": "08a7e461-5ad8-4348-aadc-5dd625855764",
+									"name": "List all published models",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/published/models"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 28 Apr 2022 13:44:21 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"authority\": {\n        \"label\": \"Mauro Data Mapper\",\n        \"url\": \"http://localhost\"\n    },\n    \"lastUpdated\": \"2022-04-28T13:44:21.931Z\",\n    \"publishedModels\": []\n}"
+								},
+								{
+									"id": "43d27cb2-968d-49e5-96a3-49d7c13b81c3",
+									"name": "List all published models with available models",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/published/models"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 28 Apr 2022 13:34:48 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"authority\": {\n        \"label\": \"Mauro Data Mapper\",\n        \"url\": \"http://localhost\"\n    },\n    \"lastUpdated\": \"2022-04-27T16:13:30.018Z\",\n    \"publishedModels\": [\n        {\n            \"modelId\": \"90ba8a99-c68b-4a2e-9d5a-baade82209cc\",\n            \"title\": \"Complex Test CodeSet 1.0.0\",\n            \"label\": \"Complex Test CodeSet\",\n            \"version\": \"1.0.0\",\n            \"modelType\": \"CodeSet\",\n            \"lastUpdated\": \"2022-04-27T16:13:30.018Z\",\n            \"dateCreated\": \"2022-04-27T16:13:29.994Z\",\n            \"datePublished\": \"2022-04-27T16:13:30.002Z\",\n            \"author\": \"Test Bootstrap\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/codeSets/90ba8a99-c68b-4a2e-9d5a-baade82209cc/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetJsonExporterService/4.0\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/codeSets/90ba8a99-c68b-4a2e-9d5a-baade82209cc/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetXmlExporterService/5.0\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"6971e70b-ebe4-470d-9c69-47639c2e2cc8\",\n            \"title\": \"Simple Test CodeSet 1.0.0\",\n            \"label\": \"Simple Test CodeSet\",\n            \"version\": \"1.0.0\",\n            \"modelType\": \"CodeSet\",\n            \"lastUpdated\": \"2022-04-27T16:13:29.964Z\",\n            \"dateCreated\": \"2022-04-27T16:13:29.944Z\",\n            \"datePublished\": \"2022-04-27T16:13:29.949Z\",\n            \"author\": \"Test Bootstrap\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/codeSets/6971e70b-ebe4-470d-9c69-47639c2e2cc8/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetJsonExporterService/4.0\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/codeSets/6971e70b-ebe4-470d-9c69-47639c2e2cc8/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetXmlExporterService/5.0\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"8f165109-ab29-4e9b-8a25-b1c5817c6807\",\n            \"title\": \"Finalised Example Test DataModel 1.0.0\",\n            \"label\": \"Finalised Example Test DataModel\",\n            \"version\": \"1.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:25.307Z\",\n            \"dateCreated\": \"2022-04-27T16:13:25.279Z\",\n            \"datePublished\": \"2022-04-27T16:13:25.27Z\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/8f165109-ab29-4e9b-8a25-b1c5817c6807/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/8f165109-ab29-4e9b-8a25-b1c5817c6807/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb\",\n            \"title\": \"Model Version Tree DataModel 1.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"1.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:25.807Z\",\n            \"dateCreated\": \"2022-04-27T16:13:25.632Z\",\n            \"datePublished\": \"2022-04-27T16:13:25.685Z\",\n            \"author\": \"bill\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"95db4738-c09c-470b-bd0a-d6af5f0f2659\",\n            \"title\": \"Model Version Tree DataModel fork 1.0.0\",\n            \"label\": \"Model Version Tree DataModel fork\",\n            \"version\": \"1.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:26.126Z\",\n            \"dateCreated\": \"2022-04-27T16:13:26.076Z\",\n            \"datePublished\": \"2022-04-27T16:13:26.102Z\",\n            \"author\": \"bill\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/95db4738-c09c-470b-bd0a-d6af5f0f2659/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/95db4738-c09c-470b-bd0a-d6af5f0f2659/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"08f62071-39ce-4b90-b275-94e4a134072d\",\n            \"title\": \"Model Version Tree DataModel 2.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"2.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:26.764Z\",\n            \"dateCreated\": \"2022-04-27T16:13:26.365Z\",\n            \"datePublished\": \"2022-04-27T16:13:26.734Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"49579892-76ac-4d21-8365-1779269388a7\",\n            \"title\": \"Model Version Tree DataModel 3.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"3.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:26.919Z\",\n            \"dateCreated\": \"2022-04-27T16:13:26.866Z\",\n            \"datePublished\": \"2022-04-27T16:13:26.895Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"86b986e2-3b37-4296-99a6-fa61b9ec90ad\",\n            \"title\": \"Model Version Tree DataModel 4.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"4.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:27.248Z\",\n            \"dateCreated\": \"2022-04-27T16:13:27.021Z\",\n            \"datePublished\": \"2022-04-27T16:13:27.223Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"3417072f-7333-4e9e-a0d8-1207d99b7c36\",\n            \"title\": \"Model Version Tree DataModel 5.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"5.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:27.551Z\",\n            \"dateCreated\": \"2022-04-27T16:13:27.487Z\",\n            \"datePublished\": \"2022-04-27T16:13:27.523Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "List all published models as XML",
+							"id": "4157a7b6-e731-4629-bcb3-a9761e3bf841",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/published/models?format=xml",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"published",
+										"models"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "xml",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "9dafb35f-a4dc-4b5b-b144-d5f925a2c8a8",
+									"name": "List all published models as XML",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/published/models?format=xml",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"published",
+												"models"
+											],
+											"query": [
+												{
+													"key": "format",
+													"value": "xml",
+													"type": "text"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "xml",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/xml;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 28 Apr 2022 13:36:34 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "<?xml version='1.0'?>\n<index>\n    <authority>\n        <label>Mauro Data Mapper</label>\n        <url>http://localhost</url>\n    </authority>\n    <lastUpdated>2022-04-28T13:36:34.055Z</lastUpdated>\n    <publishedModels></publishedModels>\n</index>"
+								},
+								{
+									"id": "4af4aefd-9136-4545-8749-0ce9f975af92",
+									"name": "List all published models as XML with models available",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/published/models?format=xml",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"published",
+												"models"
+											],
+											"query": [
+												{
+													"key": "format",
+													"value": "xml",
+													"type": "text"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "xml",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/xml;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 28 Apr 2022 13:36:48 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "<?xml version='1.0'?>\n<index>\n    <authority>\n        <label>Mauro Data Mapper</label>\n        <url>http://localhost</url>\n    </authority>\n    <lastUpdated>2022-04-27T16:13:30.018Z</lastUpdated>\n    <publishedModels>\n        <publishedModel>\n            <modelId>90ba8a99-c68b-4a2e-9d5a-baade82209cc</modelId>\n            <title>Complex Test CodeSet 1.0.0</title>\n            <label>Complex Test CodeSet</label>\n            <version>1.0.0</version>\n            <modelType>CodeSet</modelType>\n            <lastUpdated>2022-04-27T16:13:30.018Z</lastUpdated>\n            <dateCreated>2022-04-27T16:13:29.994Z</dateCreated>\n            <datePublished>2022-04-27T16:13:30.002Z</datePublished>\n            <author>Test Bootstrap</author>\n            <links>\n                <link>\n                    <contentType>application/mdm+json</contentType>\n                    <url>http://localhost:8080/api/codeSets/90ba8a99-c68b-4a2e-9d5a-baade82209cc/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetJsonExporterService/4.0</url>\n                </link>\n                <link>\n                    <contentType>application/mdm+xml</contentType>\n                    <url>http://localhost:8080/api/codeSets/90ba8a99-c68b-4a2e-9d5a-baade82209cc/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetXmlExporterService/5.0</url>\n                </link>\n            </links>\n        </publishedModel>\n        <publishedModel>\n            <modelId>6971e70b-ebe4-470d-9c69-47639c2e2cc8</modelId>\n            <title>Simple Test CodeSet 1.0.0</title>\n            <label>Simple Test CodeSet</label>\n            <version>1.0.0</version>\n            <modelType>CodeSet</modelType>\n            <lastUpdated>2022-04-27T16:13:29.964Z</lastUpdated>\n            <dateCreated>2022-04-27T16:13:29.944Z</dateCreated>\n            <datePublished>2022-04-27T16:13:29.949Z</datePublished>\n            <author>Test Bootstrap</author>\n            <links>\n                <link>\n                    <contentType>application/mdm+json</contentType>\n                    <url>http://localhost:8080/api/codeSets/6971e70b-ebe4-470d-9c69-47639c2e2cc8/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetJsonExporterService/4.0</url>\n                </link>\n                <link>\n                    <contentType>application/mdm+xml</contentType>\n                    <url>http://localhost:8080/api/codeSets/6971e70b-ebe4-470d-9c69-47639c2e2cc8/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetXmlExporterService/5.0</url>\n                </link>\n            </links>\n        </publishedModel>\n        <publishedModel>\n            <modelId>8f165109-ab29-4e9b-8a25-b1c5817c6807</modelId>\n            <title>Finalised Example Test DataModel 1.0.0</title>\n            <label>Finalised Example Test DataModel</label>\n            <version>1.0.0</version>\n            <modelType>DataModel</modelType>\n            <lastUpdated>2022-04-27T16:13:25.307Z</lastUpdated>\n            <dateCreated>2022-04-27T16:13:25.279Z</dateCreated>\n            <datePublished>2022-04-27T16:13:25.27Z</datePublished>\n            <links>\n                <link>\n                    <contentType>application/mdm+json</contentType>\n                    <url>http://localhost:8080/api/dataModels/8f165109-ab29-4e9b-8a25-b1c5817c6807/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1</url>\n                </link>\n                <link>\n                    <contentType>application/mdm+xml</contentType>\n                    <url>http://localhost:8080/api/dataModels/8f165109-ab29-4e9b-8a25-b1c5817c6807/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1</url>\n                </link>\n            </links>\n        </publishedModel>\n        <publishedModel>\n            <modelId>7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb</modelId>\n            <title>Model Version Tree DataModel 1.0.0</title>\n            <label>Model Version Tree DataModel</label>\n            <version>1.0.0</version>\n            <modelType>DataModel</modelType>\n            <lastUpdated>2022-04-27T16:13:25.807Z</lastUpdated>\n            <dateCreated>2022-04-27T16:13:25.632Z</dateCreated>\n            <datePublished>2022-04-27T16:13:25.685Z</datePublished>\n            <author>bill</author>\n            <links>\n                <link>\n                    <contentType>application/mdm+json</contentType>\n                    <url>http://localhost:8080/api/dataModels/7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1</url>\n                </link>\n                <link>\n                    <contentType>application/mdm+xml</contentType>\n                    <url>http://localhost:8080/api/dataModels/7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1</url>\n                </link>\n            </links>\n        </publishedModel>\n        <publishedModel>\n            <modelId>95db4738-c09c-470b-bd0a-d6af5f0f2659</modelId>\n            <title>Model Version Tree DataModel fork 1.0.0</title>\n            <label>Model Version Tree DataModel fork</label>\n            <version>1.0.0</version>\n            <modelType>DataModel</modelType>\n            <lastUpdated>2022-04-27T16:13:26.126Z</lastUpdated>\n            <dateCreated>2022-04-27T16:13:26.076Z</dateCreated>\n            <datePublished>2022-04-27T16:13:26.102Z</datePublished>\n            <author>bill</author>\n            <links>\n                <link>\n                    <contentType>application/mdm+json</contentType>\n                    <url>http://localhost:8080/api/dataModels/95db4738-c09c-470b-bd0a-d6af5f0f2659/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1</url>\n                </link>\n                <link>\n                    <contentType>application/mdm+xml</contentType>\n                    <url>http://localhost:8080/api/dataModels/95db4738-c09c-470b-bd0a-d6af5f0f2659/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1</url>\n                </link>\n            </links>\n        </publishedModel>\n        <publishedModel>\n            <modelId>08f62071-39ce-4b90-b275-94e4a134072d</modelId>\n            <title>Model Version Tree DataModel 2.0.0</title>\n            <label>Model Version Tree DataModel</label>\n            <version>2.0.0</version>\n            <modelType>DataModel</modelType>\n            <lastUpdated>2022-04-27T16:13:26.764Z</lastUpdated>\n            <dateCreated>2022-04-27T16:13:26.365Z</dateCreated>\n            <datePublished>2022-04-27T16:13:26.734Z</datePublished>\n            <author>Dante</author>\n            <description>Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \"paradises for mortal men\" though now they are classified as savage Feral Worlds by the Imperium.\n\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\n\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \"the Blood\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.</description>\n            <links>\n                <link>\n                    <contentType>application/mdm+json</contentType>\n                    <url>http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1</url>\n                </link>\n                <link>\n                    <contentType>application/mdm+xml</contentType>\n                    <url>http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1</url>\n                </link>\n            </links>\n        </publishedModel>\n        <publishedModel>\n            <modelId>49579892-76ac-4d21-8365-1779269388a7</modelId>\n            <title>Model Version Tree DataModel 3.0.0</title>\n            <label>Model Version Tree DataModel</label>\n            <version>3.0.0</version>\n            <modelType>DataModel</modelType>\n            <lastUpdated>2022-04-27T16:13:26.919Z</lastUpdated>\n            <dateCreated>2022-04-27T16:13:26.866Z</dateCreated>\n            <datePublished>2022-04-27T16:13:26.895Z</datePublished>\n            <author>Dante</author>\n            <description>Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \"paradises for mortal men\" though now they are classified as savage Feral Worlds by the Imperium.\n\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\n\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \"the Blood\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.</description>\n            <links>\n                <link>\n                    <contentType>application/mdm+json</contentType>\n                    <url>http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1</url>\n                </link>\n                <link>\n                    <contentType>application/mdm+xml</contentType>\n                    <url>http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1</url>\n                </link>\n            </links>\n        </publishedModel>\n        <publishedModel>\n            <modelId>86b986e2-3b37-4296-99a6-fa61b9ec90ad</modelId>\n            <title>Model Version Tree DataModel 4.0.0</title>\n            <label>Model Version Tree DataModel</label>\n            <version>4.0.0</version>\n            <modelType>DataModel</modelType>\n            <lastUpdated>2022-04-27T16:13:27.248Z</lastUpdated>\n            <dateCreated>2022-04-27T16:13:27.021Z</dateCreated>\n            <datePublished>2022-04-27T16:13:27.223Z</datePublished>\n            <author>Dante</author>\n            <description>Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \"paradises for mortal men\" though now they are classified as savage Feral Worlds by the Imperium.\n\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\n\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \"the Blood\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.</description>\n            <links>\n                <link>\n                    <contentType>application/mdm+json</contentType>\n                    <url>http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1</url>\n                </link>\n                <link>\n                    <contentType>application/mdm+xml</contentType>\n                    <url>http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1</url>\n                </link>\n            </links>\n        </publishedModel>\n        <publishedModel>\n            <modelId>3417072f-7333-4e9e-a0d8-1207d99b7c36</modelId>\n            <title>Model Version Tree DataModel 5.0.0</title>\n            <label>Model Version Tree DataModel</label>\n            <version>5.0.0</version>\n            <modelType>DataModel</modelType>\n            <lastUpdated>2022-04-27T16:13:27.551Z</lastUpdated>\n            <dateCreated>2022-04-27T16:13:27.487Z</dateCreated>\n            <datePublished>2022-04-27T16:13:27.523Z</datePublished>\n            <author>Dante</author>\n            <description>Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \"paradises for mortal men\" though now they are classified as savage Feral Worlds by the Imperium.\n\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\n\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \"the Blood\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.</description>\n            <links>\n                <link>\n                    <contentType>application/mdm+json</contentType>\n                    <url>http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1</url>\n                </link>\n                <link>\n                    <contentType>application/mdm+xml</contentType>\n                    <url>http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1</url>\n                </link>\n            </links>\n        </publishedModel>\n    </publishedModels>\n</index>"
+								}
+							]
+						},
+						{
+							"name": "List all published models as Atom feed",
+							"id": "7e52cb04-2b0d-460d-bf4f-b36e6db82140",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/feeds/all"
+							},
+							"response": [
+								{
+									"id": "c2eba00d-29c2-40fd-a939-6352256d2117",
+									"name": "List all published models as Atom feed",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/feeds/all"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "xml",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Set-Cookie",
+											"value": "JSESSIONID=27E2785A692897CFB3B66109AE554399; Path=/; HttpOnly"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/atom+xml;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 28 Apr 2022 13:43:13 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\">\n    <title>Mauro Data Mapper - All Models</title>\n    <id>tag:localhost,2021-01-27:/api/feeds/all</id>\n    <author>\n        <name>Mauro Data Mapper</name>\n        <uri>http://localhost</uri>\n    </author>\n    <updated>2022-04-28T14:43:13Z</updated>\n    <link rel=\"self\" type=\"application/atom+xml\" href=\"http://localhost:8080/api/feeds/all\" title=\"Mauro Data Mapper - All Models\" />\n</feed>"
+								},
+								{
+									"id": "2b2f6e41-d1f2-4e1f-a4b7-4cbd05b89d07",
+									"name": "List all published models as Atom feed with models available",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/feeds/all"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "xml",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/atom+xml;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 28 Apr 2022 13:33:57 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<feed xmlns=\"http://www.w3.org/2005/Atom\">\n    <title>Mauro Data Mapper - All Models</title>\n    <id>tag:localhost,2021-01-27:/api/feeds/all</id>\n    <author>\n        <name>Mauro Data Mapper</name>\n        <uri>http://localhost</uri>\n    </author>\n    <updated>2022-04-27T17:13:30Z</updated>\n    <link rel=\"self\" type=\"application/atom+xml\" href=\"http://localhost:8080/api/feeds/all\" title=\"Mauro Data Mapper - All Models\" />\n    <entry>\n        <id>urn:uuid:90ba8a99-c68b-4a2e-9d5a-baade82209cc</id>\n        <title>Complex Test CodeSet 1.0.0</title>\n        <updated>2022-04-27T17:13:30Z</updated>\n        <author>\n            <name>Test Bootstrap</name>\n        </author>\n        <published>2022-04-27T17:13:30Z</published>\n        <category term=\"CodeSet\" />\n        <link rel=\"alternate\" type=\"application/mdm+json\" href=\"http://localhost:8080/api/codeSets/90ba8a99-c68b-4a2e-9d5a-baade82209cc/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetJsonExporterService/4.0\" />\n        <link rel=\"alternate\" type=\"application/mdm+xml\" href=\"http://localhost:8080/api/codeSets/90ba8a99-c68b-4a2e-9d5a-baade82209cc/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetXmlExporterService/5.0\" />\n    </entry>\n    <entry>\n        <id>urn:uuid:6971e70b-ebe4-470d-9c69-47639c2e2cc8</id>\n        <title>Simple Test CodeSet 1.0.0</title>\n        <updated>2022-04-27T17:13:29Z</updated>\n        <author>\n            <name>Test Bootstrap</name>\n        </author>\n        <published>2022-04-27T17:13:29Z</published>\n        <category term=\"CodeSet\" />\n        <link rel=\"alternate\" type=\"application/mdm+json\" href=\"http://localhost:8080/api/codeSets/6971e70b-ebe4-470d-9c69-47639c2e2cc8/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetJsonExporterService/4.0\" />\n        <link rel=\"alternate\" type=\"application/mdm+xml\" href=\"http://localhost:8080/api/codeSets/6971e70b-ebe4-470d-9c69-47639c2e2cc8/export/uk.ac.ox.softeng.maurodatamapper.terminology.provider.exporter/CodeSetXmlExporterService/5.0\" />\n    </entry>\n    <entry>\n        <id>urn:uuid:8f165109-ab29-4e9b-8a25-b1c5817c6807</id>\n        <title>Finalised Example Test DataModel 1.0.0</title>\n        <updated>2022-04-27T17:13:25Z</updated>\n        <published>2022-04-27T17:13:25Z</published>\n        <category term=\"DataModel\" />\n        <link rel=\"alternate\" type=\"application/mdm+json\" href=\"http://localhost:8080/api/dataModels/8f165109-ab29-4e9b-8a25-b1c5817c6807/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\" />\n        <link rel=\"alternate\" type=\"application/mdm+xml\" href=\"http://localhost:8080/api/dataModels/8f165109-ab29-4e9b-8a25-b1c5817c6807/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\" />\n    </entry>\n    <entry>\n        <id>urn:uuid:7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb</id>\n        <title>Model Version Tree DataModel 1.0.0</title>\n        <updated>2022-04-27T17:13:25Z</updated>\n        <author>\n            <name>bill</name>\n        </author>\n        <published>2022-04-27T17:13:25Z</published>\n        <category term=\"DataModel\" />\n        <link rel=\"alternate\" type=\"application/mdm+json\" href=\"http://localhost:8080/api/dataModels/7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\" />\n        <link rel=\"alternate\" type=\"application/mdm+xml\" href=\"http://localhost:8080/api/dataModels/7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\" />\n    </entry>\n    <entry>\n        <id>urn:uuid:95db4738-c09c-470b-bd0a-d6af5f0f2659</id>\n        <title>Model Version Tree DataModel fork 1.0.0</title>\n        <updated>2022-04-27T17:13:26Z</updated>\n        <author>\n            <name>bill</name>\n        </author>\n        <published>2022-04-27T17:13:26Z</published>\n        <category term=\"DataModel\" />\n        <link rel=\"alternate\" type=\"application/mdm+json\" href=\"http://localhost:8080/api/dataModels/95db4738-c09c-470b-bd0a-d6af5f0f2659/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\" />\n        <link rel=\"alternate\" type=\"application/mdm+xml\" href=\"http://localhost:8080/api/dataModels/95db4738-c09c-470b-bd0a-d6af5f0f2659/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\" />\n    </entry>\n    <entry>\n        <id>urn:uuid:08f62071-39ce-4b90-b275-94e4a134072d</id>\n        <title>Model Version Tree DataModel 2.0.0</title>\n        <updated>2022-04-27T17:13:26Z</updated>\n        <author>\n            <name>Dante</name>\n        </author>\n        <summary>Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \"paradises for mortal men\" though now they are classified as savage Feral Worlds by the Imperium.\n\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\n\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \"the Blood\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.</summary>\n        <published>2022-04-27T17:13:26Z</published>\n        <category term=\"DataModel\" />\n        <link rel=\"alternate\" type=\"application/mdm+json\" href=\"http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\" />\n        <link rel=\"alternate\" type=\"application/mdm+xml\" href=\"http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\" />\n    </entry>\n    <entry>\n        <id>urn:uuid:49579892-76ac-4d21-8365-1779269388a7</id>\n        <title>Model Version Tree DataModel 3.0.0</title>\n        <updated>2022-04-27T17:13:26Z</updated>\n        <author>\n            <name>Dante</name>\n        </author>\n        <summary>Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \"paradises for mortal men\" though now they are classified as savage Feral Worlds by the Imperium.\n\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\n\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \"the Blood\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.</summary>\n        <published>2022-04-27T17:13:26Z</published>\n        <category term=\"DataModel\" />\n        <link rel=\"alternate\" type=\"application/mdm+json\" href=\"http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\" />\n        <link rel=\"alternate\" type=\"application/mdm+xml\" href=\"http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\" />\n    </entry>\n    <entry>\n        <id>urn:uuid:86b986e2-3b37-4296-99a6-fa61b9ec90ad</id>\n        <title>Model Version Tree DataModel 4.0.0</title>\n        <updated>2022-04-27T17:13:27Z</updated>\n        <author>\n            <name>Dante</name>\n        </author>\n        <summary>Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \"paradises for mortal men\" though now they are classified as savage Feral Worlds by the Imperium.\n\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\n\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \"the Blood\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.</summary>\n        <published>2022-04-27T17:13:27Z</published>\n        <category term=\"DataModel\" />\n        <link rel=\"alternate\" type=\"application/mdm+json\" href=\"http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\" />\n        <link rel=\"alternate\" type=\"application/mdm+xml\" href=\"http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\" />\n    </entry>\n    <entry>\n        <id>urn:uuid:3417072f-7333-4e9e-a0d8-1207d99b7c36</id>\n        <title>Model Version Tree DataModel 5.0.0</title>\n        <updated>2022-04-27T17:13:27Z</updated>\n        <author>\n            <name>Dante</name>\n        </author>\n        <summary>Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \"paradises for mortal men\" though now they are classified as savage Feral Worlds by the Imperium.\n\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\n\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \"the Blood\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.</summary>\n        <published>2022-04-27T17:13:27Z</published>\n        <category term=\"DataModel\" />\n        <link rel=\"alternate\" type=\"application/mdm+json\" href=\"http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\" />\n        <link rel=\"alternate\" type=\"application/mdm+xml\" href=\"http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\" />\n    </entry>\n</feed>"
+								}
+							]
+						},
+						{
+							"name": "List all newer published models",
+							"id": "57aca6de-6ed3-46fe-9ba0-21d04ac4edd1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/published/models/{{published_model_id}}/newerVersions"
+							},
+							"response": [
+								{
+									"id": "a1cf62ab-6311-445c-b06e-ba43020515b2",
+									"name": "List all newer published models",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/published/models/{{published_model_id}}/newerVersions"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 20 Feb 2022 12:46:07 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"lastUpdated\": \"2022-02-20T12:46:07.792Z\",\n    \"newerPublishedModels\": []\n}"
+								},
+								{
+									"id": "07a9730e-0c61-42ac-9f96-82dfcda7a3de",
+									"name": "List all newer published models with newer versions available",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/published/models/{{published_model_id}}/newerVersions"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 28 Apr 2022 13:40:21 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"lastUpdated\": \"2022-04-27T16:13:27.551Z\",\n    \"newerPublishedModels\": [\n        {\n            \"modelId\": \"08f62071-39ce-4b90-b275-94e4a134072d\",\n            \"title\": \"Model Version Tree DataModel 2.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"2.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:26.764Z\",\n            \"dateCreated\": \"2022-04-27T16:13:26.365Z\",\n            \"datePublished\": \"2022-04-27T16:13:26.734Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"previousModelId\": \"7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"49579892-76ac-4d21-8365-1779269388a7\",\n            \"title\": \"Model Version Tree DataModel 3.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"3.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:26.919Z\",\n            \"dateCreated\": \"2022-04-27T16:13:26.866Z\",\n            \"datePublished\": \"2022-04-27T16:13:26.895Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"previousModelId\": \"08f62071-39ce-4b90-b275-94e4a134072d\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"86b986e2-3b37-4296-99a6-fa61b9ec90ad\",\n            \"title\": \"Model Version Tree DataModel 4.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"4.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:27.248Z\",\n            \"dateCreated\": \"2022-04-27T16:13:27.021Z\",\n            \"datePublished\": \"2022-04-27T16:13:27.223Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"previousModelId\": \"49579892-76ac-4d21-8365-1779269388a7\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"3417072f-7333-4e9e-a0d8-1207d99b7c36\",\n            \"title\": \"Model Version Tree DataModel 5.0.0\",\n            \"label\": \"Model Version Tree DataModel\",\n            \"version\": \"5.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-04-27T16:13:27.551Z\",\n            \"dateCreated\": \"2022-04-27T16:13:27.487Z\",\n            \"datePublished\": \"2022-04-27T16:13:27.523Z\",\n            \"author\": \"Dante\",\n            \"description\": \"Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \\\"paradises for mortal men\\\" though now they are classified as savage Feral Worlds by the Imperium.\\n\\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\\n\\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \\\"the Blood\\\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.\",\n            \"previousModelId\": \"86b986e2-3b37-4296-99a6-fa61b9ec90ad\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mdm+json\",\n                    \"url\": \"http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\"\n                },\n                {\n                    \"contentType\": \"application/mdm+xml\",\n                    \"url\": \"http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1\"\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "List all newer published models as XML",
+							"id": "145b5091-6d6b-402e-9515-12ca470728b8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/published/models/{{published_model_id}}/newerVersions?format=xml",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"published",
+										"models",
+										"{{published_model_id}}",
+										"newerVersions"
+									],
+									"query": [
+										{
+											"key": "format",
+											"value": "xml",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "99137c9f-c83c-4d2a-b6e5-e34f4a7c0134",
+									"name": "List all newer published models as XML",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/published/models/{{published_model_id}}/newerVersions?format=xml",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"published",
+												"models",
+												"{{published_model_id}}",
+												"newerVersions"
+											],
+											"query": [
+												{
+													"key": "format",
+													"value": "xml",
+													"type": "text"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "xml",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/xml;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 28 Apr 2022 13:42:29 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "<?xml version='1.0'?>\n<newerVersions>\n    <lastUpdated>2022-04-28T13:42:29.24Z</lastUpdated>\n    <newerPublishedModels></newerPublishedModels>\n</newerVersions>"
+								},
+								{
+									"id": "7064420c-a523-4362-9b46-c6edb9f5d2a2",
+									"name": "List all newer published models as XML",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/published/models/{{published_model_id}}/newerVersions?format=xml",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"published",
+												"models",
+												"{{published_model_id}}",
+												"newerVersions"
+											],
+											"query": [
+												{
+													"key": "format",
+													"value": "xml",
+													"type": "text"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "xml",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "text/xml;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 28 Apr 2022 13:41:20 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "<?xml version='1.0'?>\n<newerVersions>\n    <lastUpdated>2022-04-27T16:13:27.551Z</lastUpdated>\n    <newerPublishedModels>\n        <publishedModel>\n            <modelId>08f62071-39ce-4b90-b275-94e4a134072d</modelId>\n            <title>Model Version Tree DataModel 2.0.0</title>\n            <label>Model Version Tree DataModel</label>\n            <version>2.0.0</version>\n            <modelType>DataModel</modelType>\n            <lastUpdated>2022-04-27T16:13:26.764Z</lastUpdated>\n            <dateCreated>2022-04-27T16:13:26.365Z</dateCreated>\n            <datePublished>2022-04-27T16:13:26.734Z</datePublished>\n            <author>Dante</author>\n            <description>Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \"paradises for mortal men\" though now they are classified as savage Feral Worlds by the Imperium.\n\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\n\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \"the Blood\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.</description>\n            <previousModelId>7166b5d9-5e3c-4c9c-bd67-6ddb0a8cabbb</previousModelId>\n            <links>\n                <link>\n                    <contentType>application/mdm+json</contentType>\n                    <url>http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1</url>\n                </link>\n                <link>\n                    <contentType>application/mdm+xml</contentType>\n                    <url>http://localhost:8080/api/dataModels/08f62071-39ce-4b90-b275-94e4a134072d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1</url>\n                </link>\n            </links>\n        </publishedModel>\n        <publishedModel>\n            <modelId>49579892-76ac-4d21-8365-1779269388a7</modelId>\n            <title>Model Version Tree DataModel 3.0.0</title>\n            <label>Model Version Tree DataModel</label>\n            <version>3.0.0</version>\n            <modelType>DataModel</modelType>\n            <lastUpdated>2022-04-27T16:13:26.919Z</lastUpdated>\n            <dateCreated>2022-04-27T16:13:26.866Z</dateCreated>\n            <datePublished>2022-04-27T16:13:26.895Z</datePublished>\n            <author>Dante</author>\n            <description>Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \"paradises for mortal men\" though now they are classified as savage Feral Worlds by the Imperium.\n\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\n\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \"the Blood\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.</description>\n            <previousModelId>08f62071-39ce-4b90-b275-94e4a134072d</previousModelId>\n            <links>\n                <link>\n                    <contentType>application/mdm+json</contentType>\n                    <url>http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1</url>\n                </link>\n                <link>\n                    <contentType>application/mdm+xml</contentType>\n                    <url>http://localhost:8080/api/dataModels/49579892-76ac-4d21-8365-1779269388a7/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1</url>\n                </link>\n            </links>\n        </publishedModel>\n        <publishedModel>\n            <modelId>86b986e2-3b37-4296-99a6-fa61b9ec90ad</modelId>\n            <title>Model Version Tree DataModel 4.0.0</title>\n            <label>Model Version Tree DataModel</label>\n            <version>4.0.0</version>\n            <modelType>DataModel</modelType>\n            <lastUpdated>2022-04-27T16:13:27.248Z</lastUpdated>\n            <dateCreated>2022-04-27T16:13:27.021Z</dateCreated>\n            <datePublished>2022-04-27T16:13:27.223Z</datePublished>\n            <author>Dante</author>\n            <description>Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \"paradises for mortal men\" though now they are classified as savage Feral Worlds by the Imperium.\n\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\n\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \"the Blood\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.</description>\n            <previousModelId>49579892-76ac-4d21-8365-1779269388a7</previousModelId>\n            <links>\n                <link>\n                    <contentType>application/mdm+json</contentType>\n                    <url>http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1</url>\n                </link>\n                <link>\n                    <contentType>application/mdm+xml</contentType>\n                    <url>http://localhost:8080/api/dataModels/86b986e2-3b37-4296-99a6-fa61b9ec90ad/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1</url>\n                </link>\n            </links>\n        </publishedModel>\n        <publishedModel>\n            <modelId>3417072f-7333-4e9e-a0d8-1207d99b7c36</modelId>\n            <title>Model Version Tree DataModel 5.0.0</title>\n            <label>Model Version Tree DataModel</label>\n            <version>5.0.0</version>\n            <modelType>DataModel</modelType>\n            <lastUpdated>2022-04-27T16:13:27.551Z</lastUpdated>\n            <dateCreated>2022-04-27T16:13:27.487Z</dateCreated>\n            <datePublished>2022-04-27T16:13:27.523Z</datePublished>\n            <author>Dante</author>\n            <description>Baal is the nominal homeworld of the Blood Angels Chapter of the Adeptus Astartes located in the Baal System of the Segmentum Ultima. Baal itself is a dry, dusty Desert World, scarcely inhabited by anyone other than mutants and feral animals.\nHowever its two moons, Baal Prime and Baal Secundus, support notable Human settlements and were once \"paradises for mortal men\" though now they are classified as savage Feral Worlds by the Imperium.\n\nLittle is known about the past circumstances of these two moons, but at some time in the distant past, probably during the Age of Technology or the Age of Strife, a cataclysmic conflict arose and led to the widespread use of both viral and nuclear weapons of mass destruction, destroying the ecosystems of both satellites and contaminating their biospheres with intense radioactive fallout, chemical pollution and deadly biological agents.\n\nThe mighty fortress-monastery of the Blood Angels, the Arx Angelicum, was built on the desert surface of the world of Baal proper, and since the time of Sanguinius, the Blood Angels have continued to recruit from among the tribes of the people known as \"the Blood\" on Baal Secundus and the tribes of Baal Prime, where a Human colony was reestablished shortly after the time of the Horus Heresy.</description>\n            <previousModelId>86b986e2-3b37-4296-99a6-fa61b9ec90ad</previousModelId>\n            <links>\n                <link>\n                    <contentType>application/mdm+json</contentType>\n                    <url>http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1</url>\n                </link>\n                <link>\n                    <contentType>application/mdm+xml</contentType>\n                    <url>http://localhost:8080/api/dataModels/3417072f-7333-4e9e-a0d8-1207d99b7c36/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.1</url>\n                </link>\n            </links>\n        </publishedModel>\n    </newerPublishedModels>\n</newerVersions>"
+								}
+							]
+						}
+					],
+					"id": "190397ec-b695-4483-a0af-e0a345c9421d"
+				}
+			],
+			"id": "a7ff532a-1152-43ff-9054-d5d4c793f766"
+		},
+		{
 			"name": "Profiles",
 			"item": [
 				{
@@ -45066,7 +46940,7 @@
 	],
 	"variable": [
 		{
-			"id": "93e00086-6923-48a9-be4c-6d90d13d26d3",
+			"id": "d4aa3810-bdb5-49a8-bfa7-7e319187cc41",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
