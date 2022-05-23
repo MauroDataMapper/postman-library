@@ -45566,7 +45566,7 @@
 								},
 								{
 									"id": "89aa0d32-1c14-4e34-898c-5cf4c3942167",
-									"name": "List all newer published models as XML",
+									"name": "List all newer published models as XML with newer versions available",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -47244,7 +47244,7 @@
 	],
 	"variable": [
 		{
-			"id": "82e4cced-a2d1-4863-aae8-c9f506daad5d",
+			"id": "23c87bf2-c04f-49c9-8377-2a4f8f346f4e",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
