@@ -44865,7 +44865,7 @@
 							]
 						},
 						{
-							"name": "Add new subscribed model Copy",
+							"name": "Add new subscribed model (specifying content type and/or URL)",
 							"id": "06267680-6644-437f-bdfc-69c32a35eb14",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -47344,7 +47344,7 @@
 	],
 	"variable": [
 		{
-			"id": "9553eae8-8331-4204-b901-c4ea497483c6",
+			"id": "34f03a5b-67c1-4dc6-9d12-b584daf7094c",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
