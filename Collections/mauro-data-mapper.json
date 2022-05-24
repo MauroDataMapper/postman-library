@@ -44875,7 +44875,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"subscribedModel\": {\n        \"subscribedModelId\": \"{{published_model_id}}\",\n        \"subscribedModelType\": \"{{model_domain_type}}\",\n        \"folderId\": \"{{folder_id}}\"\n    }\n}",
+									"raw": "{\n    \"subscribedModel\": {\n        \"subscribedModelId\": \"{{published_model_id}}\",\n        \"subscribedModelType\": \"{{model_domain_type}}\",\n        \"folderId\": \"{{folder_id}}\"\n    },\n    \"url\": \"http://localhost:8090/api/dataModels/ba8d3f26-620f-4628-8f5a-29f77541fa6d/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.1\",\n    \"contentType\": \"application/mauro.datamodel+json\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -47344,7 +47344,7 @@
 	],
 	"variable": [
 		{
-			"id": "06949cd3-975e-490e-b542-1a747aba45ca",
+			"id": "b40ce93c-1776-4310-bce8-5ff95b6ebf6b",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
