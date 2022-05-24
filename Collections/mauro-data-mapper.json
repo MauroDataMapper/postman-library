@@ -45043,7 +45043,7 @@
 							]
 						},
 						{
-							"name": "Add new subscribed model (specifying optional content type and/or URL and ImporterProviderService",
+							"name": "Add new subscribed model (specifying optional content type and/or URL and ImporterProviderService)",
 							"id": "aced48d5-fa14-4dcf-8404-b68696844e86",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -47522,7 +47522,7 @@
 	],
 	"variable": [
 		{
-			"id": "4d1b320f-c47c-4ce2-abf5-647e61e53ccd",
+			"id": "6f3ae9b3-fc1f-4a5c-846b-3643e03055d9",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
