@@ -45062,7 +45062,74 @@
 								},
 								"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels"
 							},
-							"response": []
+							"response": [
+								{
+									"id": "56811453-0bb4-41db-a058-1b31db35b574",
+									"name": "Add new subscribed model (specifying optional content type and/or URL and ImporterProviderService)",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"subscribedModel\": {\n        \"subscribedModelId\": \"{{published_model_id}}\",\n        \"subscribedModelType\": \"{{model_domain_type}}\",\n        \"folderId\": \"{{folder_id}}\"\n    },\n    \"contentType\": \"application/mauro.datamodel+json\",\n    \"importerProviderService\": {\n        \"name\": \"DataModelJsonImporterService\",\n        \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.importer\"\n    }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels"
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Location",
+											"value": "http://localhost:8080/subscribedModel/show/99a6ce4a-4fd2-45ec-af6f-8b1c78c1eb7a"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 24 May 2022 11:32:33 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"id\": \"99a6ce4a-4fd2-45ec-af6f-8b1c78c1eb7a\",\n    \"subscribedModelId\": \"9dc9356a-a59c-42ad-8550-7ea69f9af0af\",\n    \"folderId\": \"b1996ce5-7a9a-4a92-9d61-c840fedc0cc1\",\n    \"readableByEveryone\": false,\n    \"readableByAuthenticatedUsers\": true,\n    \"federated\": true,\n    \"localModelId\": \"0b22b1f0-bb70-4818-b358-867b6457dbe5\",\n    \"lastRead\": \"2022-05-24T11:32:32.701Z\"\n}"
+								}
+							]
 						},
 						{
 							"name": "Get subscribed model by ID",
@@ -47522,7 +47589,7 @@
 	],
 	"variable": [
 		{
-			"id": "f6bd08e3-80dd-4b07-9fac-673a710d3de3",
+			"id": "721281c3-7dfc-4d04-8735-71a9a018e5d0",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
