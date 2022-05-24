@@ -45053,7 +45053,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"subscribedModel\": {\n        \"subscribedModelId\": \"{{published_model_id}}\",\n        \"subscribedModelType\": \"{{model_domain_type}}\",\n        \"folderId\": \"{{folder_id}}\"\n    },\n    \"importerProviderService\": {\n        \"name\": \"DataModelJsonImporterService\",\n        \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.importer\",\n        \"version\": \"3.1\"\n    }\n}",
+									"raw": "{\n    \"subscribedModel\": {\n        \"subscribedModelId\": \"{{published_model_id}}\",\n        \"subscribedModelType\": \"{{model_domain_type}}\",\n        \"folderId\": \"{{folder_id}}\"\n    },\n    \"contentType\": \"application/mauro.datamodel+json\",\n    \"importerProviderService\": {\n        \"name\": \"DataModelJsonImporterService\",\n        \"namespace\": \"uk.ac.ox.softeng.maurodatamapper.datamodel.provider.importer\",\n    }\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -47522,7 +47522,7 @@
 	],
 	"variable": [
 		{
-			"id": "d17d2a70-629f-46cd-8317-4db3d4bd520e",
+			"id": "e8ba10eb-2ac2-433b-ae50-52532eac192f",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
