@@ -44884,66 +44884,7 @@
 								},
 								"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels"
 							},
-							"response": [
-								{
-									"id": "c0499b82-5c2c-4ed2-ad30-62c51825b3df",
-									"name": "Add new subscribed model - Published Model ID does not exist in Subscribed Catalogue",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"subscribedModel\": {\n        \"subscribedModelId\": \"{{published_model_id}}\",\n        \"subscribedModelType\": \"{{model_domain_type}}\",\n        \"folderId\": \"{{folder_id}}\"\n    }\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels"
-									},
-									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-									"code": 422,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 23 May 2022 17:18:21 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Could not import SubscribedModel into local Catalogue, no published link found for URL [null] and/or content type [null]\"\n        }\n    ]\n}"
-								}
-							]
+							"response": []
 						},
 						{
 							"name": "Get subscribed model by ID",
@@ -47403,7 +47344,7 @@
 	],
 	"variable": [
 		{
-			"id": "ed879e80-636b-491c-899a-721ffb3ee95a",
+			"id": "9553eae8-8331-4204-b901-c4ea497483c6",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
