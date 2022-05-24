@@ -44886,52 +44886,6 @@
 							},
 							"response": [
 								{
-									"id": "da2d6318-dc10-49d0-86fa-1752ea763311",
-									"name": "Add new subscribed model - When subscription already exists",
-									"originalRequest": {
-										"method": "POST",
-										"header": [],
-										"body": {
-											"mode": "raw",
-											"raw": "{\n    \"subscribedModelId\":\"29e4c643-eb76-47f1-8a5e-df5201b89b25\",\n    \"subscribedModelType\":\"DataModel\",\n    \"folderId\": \"{{folder_id}}\"\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/subscribedModels"
-									},
-									"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-									"code": 422,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 28 Jun 2021 11:07:17 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Property [subscribedModelId] of class [class uk.ac.ox.softeng.maurodatamapper.federation.SubscribedModel] with value [29e4c643-eb76-47f1-8a5e-df5201b89b25] must be unique\"\n        }\n    ]\n}"
-								},
-								{
 									"id": "c0499b82-5c2c-4ed2-ad30-62c51825b3df",
 									"name": "Add new subscribed model - Published Model ID does not exist in Subscribed Catalogue",
 									"originalRequest": {
@@ -47449,7 +47403,7 @@
 	],
 	"variable": [
 		{
-			"id": "418efe7c-0d29-4419-90a5-e3fc08567be6",
+			"id": "ed879e80-636b-491c-899a-721ffb3ee95a",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
