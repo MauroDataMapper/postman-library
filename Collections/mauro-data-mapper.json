@@ -45254,7 +45254,7 @@
 							]
 						},
 						{
-							"name": "List all newer models for subscribed model by id",
+							"name": "List all newer models for subscribed model by ID",
 							"id": "e5939489-8fd1-42c8-b948-ca2a6ea1596e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -47639,7 +47639,7 @@
 	],
 	"variable": [
 		{
-			"id": "4f64fbb6-dcf1-41bd-ab9c-962019ae776b",
+			"id": "693f6b43-2e3e-4eb4-af02-c7cf35baf003",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
