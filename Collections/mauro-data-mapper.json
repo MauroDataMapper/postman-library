@@ -45267,7 +45267,7 @@
 							"response": [
 								{
 									"id": "f158e4e4-7ad7-48e1-90f2-35724e6e38c2",
-									"name": "List all newer models for subscribed model by id",
+									"name": "List all newer models for subscribed model by ID",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -47639,7 +47639,7 @@
 	],
 	"variable": [
 		{
-			"id": "356109e1-723c-492b-855f-f0e4190bdbf2",
+			"id": "fad5652a-5d1a-4027-8a73-676104d00c41",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
