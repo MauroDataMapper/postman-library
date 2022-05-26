@@ -47296,6 +47296,11 @@
 					"id": "5731cced-522c-4234-afde-f681e88e5d2e"
 				},
 				{
+					"name": "New Folder",
+					"item": [],
+					"id": "832a9633-911e-4204-a997-6abe0f957037"
+				},
+				{
 					"name": "List all dynamic profile providers",
 					"id": "e11e6745-2fe3-4f92-bbd0-bc29f5c31f25",
 					"protocolProfileBehavior": {
@@ -47639,7 +47644,7 @@
 	],
 	"variable": [
 		{
-			"id": "1ab3c607-2cc9-44bc-9789-45eabb185a49",
+			"id": "899199c3-6b16-462b-8715-71f86d33d771",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
