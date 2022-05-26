@@ -47441,6 +47441,15 @@
 							"request": {
 								"method": "POST",
 								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
 							},
 							"response": [
@@ -47913,7 +47922,7 @@
 	],
 	"variable": [
 		{
-			"id": "3142b0fd-b2d8-481c-bf55-01d735523490",
+			"id": "fe8cef02-f275-4bbb-97d5-026116f6f7ff",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
