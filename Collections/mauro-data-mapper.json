@@ -47922,6 +47922,28 @@
 										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
 									},
 									"response": []
+								},
+								{
+									"name": "Delete import profile Copy",
+									"id": "230bd736-1c71-44e4-a541-0c2d8dff9c23",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+									},
+									"response": []
 								}
 							],
 							"id": "2e7cf4bc-70b3-4ab0-a90a-633d03bc8590"
@@ -48148,7 +48170,7 @@
 												}
 											}
 										},
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
 									},
 									"response": [
 										{
@@ -48233,7 +48255,7 @@
 												}
 											}
 										},
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
 									},
 									"response": []
 								}
@@ -48901,7 +48923,7 @@
 	],
 	"variable": [
 		{
-			"id": "d80e8722-74d1-4f8b-a84c-5ebda066d381",
+			"id": "39f844d0-c455-42b0-a494-4b6170a935ed",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
