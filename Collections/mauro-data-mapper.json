@@ -47296,7 +47296,7 @@
 					"id": "5731cced-522c-4234-afde-f681e88e5d2e"
 				},
 				{
-					"name": "Import Type Profiles",
+					"name": "DataType Import Type Profiles",
 					"item": [
 						{
 							"name": "List unused import profiles",
@@ -48238,6 +48238,11 @@
 					"id": "f65c4d26-d984-4dad-a71f-45e8898aff5e"
 				},
 				{
+					"name": "New Folder",
+					"item": [],
+					"id": "93f5f774-3f58-4b24-933e-47937f2abebd"
+				},
+				{
 					"name": "List all dynamic profile providers",
 					"id": "e11e6745-2fe3-4f92-bbd0-bc29f5c31f25",
 					"protocolProfileBehavior": {
@@ -48581,7 +48586,7 @@
 	],
 	"variable": [
 		{
-			"id": "6a4099d7-1bb2-43b6-94e1-aaaa68d30687",
+			"id": "ec367a52-9134-4b5c-b97c-a8dc30896fa5",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
