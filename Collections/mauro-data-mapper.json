@@ -47296,167 +47296,304 @@
 					"id": "5731cced-522c-4234-afde-f681e88e5d2e"
 				},
 				{
-					"name": "DataType Import Type Profiles",
+					"name": "Import Type Profiles",
 					"item": [
 						{
-							"name": "List unused import profiles",
-							"id": "dd14f60e-52a5-4cc6-8cc4-af6995a891be",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
-							},
-							"response": [
+							"name": "DataType Import Type Profiles",
+							"item": [
 								{
-									"id": "62836325-71a7-44ea-9d53-2cf79641a6ca",
-									"name": "List unused import profiles",
-									"originalRequest": {
+									"name": "List used import profiles",
+									"id": "33fdb17d-cf77-480e-b646-a4a63119a0a2",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
 										"method": "GET",
 										"header": [],
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataTypes/{{data_type_id}}/import/profiles/used"
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
+									"response": [
 										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Thu, 26 May 2022 11:53:29 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
+											"id": "a0242e91-b26a-43a0-b31d-b28256b5679d",
+											"name": "List used import profiles",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/used"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 26 May 2022 11:55:15 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": \"62acd8dd-800c-4696-8a9f-a7d2c8bec0b8\",\n            \"domainType\": \"DataClass\",\n            \"path\": \"dm:Complex Test DataModel$main|dc:emptyclass\"\n        }\n    }\n]"
 										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": null,\n            \"domainType\": null,\n            \"path\": null\n        }\n    }\n]"
-								}
-							]
-						},
-						{
-							"name": "Get import profile",
-							"id": "59a74697-d54a-438f-9dbe-926ac2c7947a",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
-							},
-							"response": [
-								{
-									"id": "b0bd94ef-014c-4b32-8d38-8a6114963a2d",
-									"name": "Get import profile",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Thu, 26 May 2022 17:06:20 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}"
-								}
-							]
-						},
-						{
-							"name": "Validate import profile",
-							"id": "ca0c34da-e093-4f91-b05c-e7b41e7c5305",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
+									]
 								},
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
-							},
-							"response": [
 								{
-									"id": "6aeebacb-b437-45b8-8899-1b3bee648449",
+									"name": "List unused import profiles",
+									"id": "dd14f60e-52a5-4cc6-8cc4-af6995a891be",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataTypes/{{data_type_id}}/import/profiles/unused"
+									},
+									"response": [
+										{
+											"id": "62836325-71a7-44ea-9d53-2cf79641a6ca",
+											"name": "List unused import profiles",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 26 May 2022 11:53:29 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": null,\n            \"domainType\": null,\n            \"path\": null\n        }\n    }\n]"
+										}
+									]
+								},
+								{
+									"name": "Get import profile",
+									"id": "59a74697-d54a-438f-9dbe-926ac2c7947a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataTypes/{{data_type_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+									},
+									"response": [
+										{
+											"id": "b0bd94ef-014c-4b32-8d38-8a6114963a2d",
+											"name": "Get import profile",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 26 May 2022 17:06:20 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}"
+										}
+									]
+								},
+								{
 									"name": "Validate import profile",
-									"originalRequest": {
+									"id": "ca0c34da-e093-4f91-b05c-e7b41e7c5305",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataTypes/{{data_type_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
+									},
+									"response": [
+										{
+											"id": "6aeebacb-b437-45b8-8899-1b3bee648449",
+											"name": "Validate import profile",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Required\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 26 May 2022 17:16:51 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Save import profile",
+									"id": "ef1ab815-99e7-4176-ba61-1134e5a99c71",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
 										"method": "POST",
 										"header": [],
 										"body": {
@@ -47468,314 +47605,247 @@
 												}
 											}
 										},
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataTypes/{{data_type_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Thu, 26 May 2022 17:16:51 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}"
+									"response": []
 								}
-							]
+							],
+							"id": "832a9633-911e-4204-a997-6abe0f957037"
 						},
 						{
-							"name": "Save import profile",
-							"id": "ef1ab815-99e7-4176-ba61-1134e5a99c71",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
-							},
-							"response": []
-						},
-						{
-							"name": "List used import profiles",
-							"id": "33fdb17d-cf77-480e-b646-a4a63119a0a2",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/used"
-							},
-							"response": [
+							"name": "DataClass Import Type Profiles",
+							"item": [
 								{
-									"id": "a0242e91-b26a-43a0-b31d-b28256b5679d",
-									"name": "List used import profiles",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/used"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Thu, 26 May 2022 11:55:15 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": \"62acd8dd-800c-4696-8a9f-a7d2c8bec0b8\",\n            \"domainType\": \"DataClass\",\n            \"path\": \"dm:Complex Test DataModel$main|dc:emptyclass\"\n        }\n    }\n]"
-								}
-							]
-						}
-					],
-					"id": "832a9633-911e-4204-a997-6abe0f957037"
-				},
-				{
-					"name": "DataClass Import Type Profiles",
-					"item": [
-						{
-							"name": "List unused import profiles",
-							"id": "bb2bff8f-9d8d-45f0-99ff-9a21ef83027e",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
-							},
-							"response": [
-								{
-									"id": "81f19632-de26-4a9a-aee3-66ef96e58fc0",
 									"name": "List unused import profiles",
-									"originalRequest": {
+									"id": "bb2bff8f-9d8d-45f0-99ff-9a21ef83027e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
 										"method": "GET",
 										"header": [],
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/unused"
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
+									"response": [
 										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Thu, 26 May 2022 11:53:29 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
+											"id": "81f19632-de26-4a9a-aee3-66ef96e58fc0",
+											"name": "List unused import profiles",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 26 May 2022 11:53:29 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": null,\n            \"domainType\": null,\n            \"path\": null\n        }\n    }\n]"
 										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": null,\n            \"domainType\": null,\n            \"path\": null\n        }\n    }\n]"
-								}
-							]
-						},
-						{
-							"name": "Get import profile",
-							"id": "8e8ab344-bbd7-4e43-91dd-51a0202622be",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
-							},
-							"response": [
-								{
-									"id": "736717b4-be2d-4e18-87db-6c8c13c5126b",
-									"name": "Get import profile",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Thu, 26 May 2022 17:06:20 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}"
-								}
-							]
-						},
-						{
-							"name": "Validate import profile",
-							"id": "caef1adb-88e0-4850-83a3-b7f87e7a864b",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
+									]
 								},
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
-							},
-							"response": [
 								{
-									"id": "eee13355-f4a7-4c25-a615-0a5939be9b33",
+									"name": "Get import profile",
+									"id": "8e8ab344-bbd7-4e43-91dd-51a0202622be",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+									},
+									"response": [
+										{
+											"id": "736717b4-be2d-4e18-87db-6c8c13c5126b",
+											"name": "Get import profile",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 26 May 2022 17:06:20 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}"
+										}
+									]
+								},
+								{
 									"name": "Validate import profile",
-									"originalRequest": {
+									"id": "caef1adb-88e0-4850-83a3-b7f87e7a864b",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
 										"method": "POST",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Required\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
+											"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
+									},
+									"response": [
+										{
+											"id": "eee13355-f4a7-4c25-a615-0a5939be9b33",
+											"name": "Validate import profile",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Required\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 26 May 2022 17:16:51 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Save import profile",
+									"id": "739eb4bf-4a0f-427b-861b-9735b13485c4",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -47784,312 +47854,379 @@
 										},
 										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Thu, 26 May 2022 17:16:51 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}"
-								}
-							]
-						},
-						{
-							"name": "Save import profile",
-							"id": "739eb4bf-4a0f-427b-861b-9735b13485c4",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
+									"response": []
 								},
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
-							},
-							"response": []
-						},
-						{
-							"name": "List used import profiles",
-							"id": "0aa9c6c8-24cf-4b9b-860f-f85897ee0334",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/used"
-							},
-							"response": [
 								{
-									"id": "ba9fd8f8-d76b-4985-85c7-acf764b06667",
 									"name": "List used import profiles",
-									"originalRequest": {
+									"id": "0aa9c6c8-24cf-4b9b-860f-f85897ee0334",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
 										"method": "GET",
 										"header": [],
 										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/used"
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
+									"response": [
 										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Thu, 26 May 2022 11:55:15 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
+											"id": "ba9fd8f8-d76b-4985-85c7-acf764b06667",
+											"name": "List used import profiles",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/used"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 26 May 2022 11:55:15 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": \"62acd8dd-800c-4696-8a9f-a7d2c8bec0b8\",\n            \"domainType\": \"DataClass\",\n            \"path\": \"dm:Complex Test DataModel$main|dc:emptyclass\"\n        }\n    }\n]"
 										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": \"62acd8dd-800c-4696-8a9f-a7d2c8bec0b8\",\n            \"domainType\": \"DataClass\",\n            \"path\": \"dm:Complex Test DataModel$main|dc:emptyclass\"\n        }\n    }\n]"
+									]
 								}
-							]
-						}
-					],
-					"id": "2e7cf4bc-70b3-4ab0-a90a-633d03bc8590"
-				},
-				{
-					"name": "DataElement Import Type Profiles",
-					"item": [
+							],
+							"id": "2e7cf4bc-70b3-4ab0-a90a-633d03bc8590"
+						},
 						{
-							"name": "List unused import profiles",
-							"id": "a913cdca-1b0f-44c8-ba68-d980c899c6c5",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
-							},
-							"response": [
+							"name": "DataElement Import Type Profiles",
+							"item": [
 								{
-									"id": "058e2259-b251-43e7-af7b-cfce7808040d",
+									"name": "List used import profiles",
+									"id": "ca0d3809-94e3-4bca-a388-de2534be0499",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/used"
+									},
+									"response": [
+										{
+											"id": "216b69ef-2bf1-414a-83c5-9c19a8db898a",
+											"name": "List used import profiles",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/used"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 26 May 2022 11:55:15 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": \"62acd8dd-800c-4696-8a9f-a7d2c8bec0b8\",\n            \"domainType\": \"DataClass\",\n            \"path\": \"dm:Complex Test DataModel$main|dc:emptyclass\"\n        }\n    }\n]"
+										}
+									]
+								},
+								{
 									"name": "List unused import profiles",
-									"originalRequest": {
+									"id": "a913cdca-1b0f-44c8-ba68-d980c899c6c5",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
 										"method": "GET",
 										"header": [],
 										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
+									"response": [
 										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Thu, 26 May 2022 11:53:29 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
+											"id": "058e2259-b251-43e7-af7b-cfce7808040d",
+											"name": "List unused import profiles",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 26 May 2022 11:53:29 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": null,\n            \"domainType\": null,\n            \"path\": null\n        }\n    }\n]"
 										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": null,\n            \"domainType\": null,\n            \"path\": null\n        }\n    }\n]"
-								}
-							]
-						},
-						{
-							"name": "Get import profile",
-							"id": "afea3108-a093-4d00-8096-ad56afdca45f",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
-							},
-							"response": [
+									]
+								},
 								{
-									"id": "fd95f9fa-660b-4083-be22-6a438888aa5e",
 									"name": "Get import profile",
-									"originalRequest": {
+									"id": "afea3108-a093-4d00-8096-ad56afdca45f",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
 										"method": "GET",
 										"header": [],
 										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
+									"response": [
 										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Thu, 26 May 2022 17:06:20 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
+											"id": "fd95f9fa-660b-4083-be22-6a438888aa5e",
+											"name": "Get import profile",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 26 May 2022 17:06:20 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}"
 										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}"
-								}
-							]
-						},
-						{
-							"name": "Validate import profile",
-							"id": "18a559b2-e9d3-4847-8c74-5d3c52cfe50e",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
+									]
 								},
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
-							},
-							"response": [
 								{
-									"id": "2440920a-e963-4144-be86-e90480571f62",
 									"name": "Validate import profile",
-									"originalRequest": {
+									"id": "18a559b2-e9d3-4847-8c74-5d3c52cfe50e",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
 										"method": "POST",
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Required\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
+											"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
+									},
+									"response": [
+										{
+											"id": "2440920a-e963-4144-be86-e90480571f62",
+											"name": "Validate import profile",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Required\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 26 May 2022 17:16:51 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Save import profile",
+									"id": "7a6082d0-07e6-4cf5-ac97-44c83846f9c0",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -48098,144 +48235,13 @@
 										},
 										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
 									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Thu, 26 May 2022 17:16:51 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}"
+									"response": []
 								}
-							]
-						},
-						{
-							"name": "Save import profile",
-							"id": "7a6082d0-07e6-4cf5-ac97-44c83846f9c0",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
-							},
-							"response": []
-						},
-						{
-							"name": "List used import profiles",
-							"id": "ca0d3809-94e3-4bca-a388-de2534be0499",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/used"
-							},
-							"response": [
-								{
-									"id": "216b69ef-2bf1-414a-83c5-9c19a8db898a",
-									"name": "List used import profiles",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/used"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Thu, 26 May 2022 11:55:15 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": \"62acd8dd-800c-4696-8a9f-a7d2c8bec0b8\",\n            \"domainType\": \"DataClass\",\n            \"path\": \"dm:Complex Test DataModel$main|dc:emptyclass\"\n        }\n    }\n]"
-								}
-							]
+							],
+							"id": "f65c4d26-d984-4dad-a71f-45e8898aff5e"
 						}
 					],
-					"id": "f65c4d26-d984-4dad-a71f-45e8898aff5e"
+					"id": "93f5f774-3f58-4b24-933e-47937f2abebd"
 				},
 				{
 					"name": "List all dynamic profile providers",
@@ -48581,7 +48587,7 @@
 	],
 	"variable": [
 		{
-			"id": "ecef8a1d-98ce-4fc3-af22-d4555029fd58",
+			"id": "f4b29e4b-73d0-44d3-8c4b-1326e211b523",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
