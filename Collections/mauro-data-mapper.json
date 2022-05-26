@@ -47297,7 +47297,21 @@
 				},
 				{
 					"name": "Import Type Profiles",
-					"item": [],
+					"item": [
+						{
+							"name": "List unused import profiles",
+							"id": "dd14f60e-52a5-4cc6-8cc4-af6995a891be",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
+							},
+							"response": []
+						}
+					],
 					"id": "832a9633-911e-4204-a997-6abe0f957037"
 				},
 				{
@@ -47644,7 +47658,7 @@
 	],
 	"variable": [
 		{
-			"id": "e98edce7-5550-47e6-b288-702d19d28d14",
+			"id": "dcd74c4b-b452-49ba-916e-2180c694b4d3",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
