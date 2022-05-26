@@ -48005,7 +48005,7 @@
 									"request": {
 										"method": "GET",
 										"header": [],
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/unused"
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{other_data_class_id}}/import/profiles/unused"
 									},
 									"response": [
 										{
@@ -48072,7 +48072,7 @@
 									"request": {
 										"method": "GET",
 										"header": [],
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
 									},
 									"response": [
 										{
@@ -48901,7 +48901,7 @@
 	],
 	"variable": [
 		{
-			"id": "bb76ed9b-7fed-485b-95eb-dfb8101ee753",
+			"id": "d80e8722-74d1-4f8b-a84c-5ebda066d381",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
