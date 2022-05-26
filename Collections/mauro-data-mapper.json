@@ -47439,9 +47439,9 @@
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
+								"method": "POST",
 								"header": [],
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
 							},
 							"response": [
 								{
@@ -47913,7 +47913,7 @@
 	],
 	"variable": [
 		{
-			"id": "0b34b1fb-10c3-4ac4-9f09-4d22d87e840a",
+			"id": "3142b0fd-b2d8-481c-bf55-01d735523490",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
