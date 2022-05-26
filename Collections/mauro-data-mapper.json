@@ -47454,12 +47454,21 @@
 							},
 							"response": [
 								{
-									"id": "46b7e74e-d277-4c22-b408-c209d058ce5a",
-									"name": "List unused import profiles",
+									"id": "6aeebacb-b437-45b8-8899-1b3bee648449",
+									"name": "Validate import profile",
 									"originalRequest": {
-										"method": "GET",
+										"method": "POST",
 										"header": [],
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
 									},
 									"status": "OK",
 									"code": 200,
@@ -47491,7 +47500,7 @@
 										},
 										{
 											"key": "Date",
-											"value": "Thu, 26 May 2022 11:53:29 GMT"
+											"value": "Thu, 26 May 2022 17:16:51 GMT"
 										},
 										{
 											"key": "Keep-Alive",
@@ -47504,7 +47513,7 @@
 									],
 									"cookie": [],
 									"responseTime": null,
-									"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": null,\n            \"domainType\": null,\n            \"path\": null\n        }\n    }\n]"
+									"body": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}"
 								}
 							]
 						},
@@ -47922,7 +47931,7 @@
 	],
 	"variable": [
 		{
-			"id": "90652d09-7841-4f01-9ffb-fd4a5b5230ff",
+			"id": "b589fcba-f1a3-4359-860a-be1f36b54aec",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
