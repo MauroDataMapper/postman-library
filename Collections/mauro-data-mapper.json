@@ -47310,6 +47310,19 @@
 								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
 							},
 							"response": []
+						},
+						{
+							"name": "List used import profiles",
+							"id": "33fdb17d-cf77-480e-b646-a4a63119a0a2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
+							},
+							"response": []
 						}
 					],
 					"id": "832a9633-911e-4204-a997-6abe0f957037"
@@ -47658,7 +47671,7 @@
 	],
 	"variable": [
 		{
-			"id": "dcd74c4b-b452-49ba-916e-2180c694b4d3",
+			"id": "f7eff914-6e36-4f1b-bcca-4e3f3a8ad36d",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
