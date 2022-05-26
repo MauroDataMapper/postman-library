@@ -48148,7 +48148,7 @@
 												}
 											}
 										},
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
 									},
 									"response": [
 										{
@@ -48901,7 +48901,7 @@
 	],
 	"variable": [
 		{
-			"id": "d80e8722-74d1-4f8b-a84c-5ebda066d381",
+			"id": "e86d7163-f851-40fb-94df-87759c666c49",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
