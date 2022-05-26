@@ -47616,6 +47616,73 @@
 							"name": "DataClass Import Type Profiles",
 							"item": [
 								{
+									"name": "List used import profiles",
+									"id": "0aa9c6c8-24cf-4b9b-860f-f85897ee0334",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/used"
+									},
+									"response": [
+										{
+											"id": "ba9fd8f8-d76b-4985-85c7-acf764b06667",
+											"name": "List used import profiles",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/used"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Thu, 26 May 2022 11:55:15 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": \"62acd8dd-800c-4696-8a9f-a7d2c8bec0b8\",\n            \"domainType\": \"DataClass\",\n            \"path\": \"dm:Complex Test DataModel$main|dc:emptyclass\"\n        }\n    }\n]"
+										}
+									]
+								},
+								{
 									"name": "List unused import profiles",
 									"id": "bb2bff8f-9d8d-45f0-99ff-9a21ef83027e",
 									"protocolProfileBehavior": {
@@ -47855,73 +47922,6 @@
 										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
 									},
 									"response": []
-								},
-								{
-									"name": "List used import profiles",
-									"id": "0aa9c6c8-24cf-4b9b-860f-f85897ee0334",
-									"protocolProfileBehavior": {
-										"disableBodyPruning": true
-									},
-									"request": {
-										"method": "GET",
-										"header": [],
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/used"
-									},
-									"response": [
-										{
-											"id": "ba9fd8f8-d76b-4985-85c7-acf764b06667",
-											"name": "List used import profiles",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/used"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=UTF-8"
-												},
-												{
-													"key": "Content-Language",
-													"value": "en-GB"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Thu, 26 May 2022 11:55:15 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.62acd8dd-800c-4696-8a9f-a7d2c8bec0b8.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": \"62acd8dd-800c-4696-8a9f-a7d2c8bec0b8\",\n            \"domainType\": \"DataClass\",\n            \"path\": \"dm:Complex Test DataModel$main|dc:emptyclass\"\n        }\n    }\n]"
-										}
-									]
 								}
 							],
 							"id": "2e7cf4bc-70b3-4ab0-a90a-633d03bc8590"
@@ -48587,7 +48587,7 @@
 	],
 	"variable": [
 		{
-			"id": "1d586031-3683-478b-891b-631291af97b8",
+			"id": "ca4d7e27-8984-4f31-ac01-ff68d4b9e17e",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
