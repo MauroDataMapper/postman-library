@@ -47366,7 +47366,7 @@
 							]
 						},
 						{
-							"name": "Get import profiles",
+							"name": "Get import profile",
 							"id": "59a74697-d54a-438f-9dbe-926ac2c7947a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -47846,7 +47846,7 @@
 	],
 	"variable": [
 		{
-			"id": "9f8d4e45-ef60-44ee-8857-e3add00143bf",
+			"id": "ac0af0d5-278a-49b4-958e-39dd195b3e1b",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
