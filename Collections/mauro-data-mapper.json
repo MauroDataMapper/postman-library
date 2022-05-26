@@ -47374,7 +47374,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
+								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
 							},
 							"response": [
 								{
@@ -47846,7 +47846,7 @@
 	],
 	"variable": [
 		{
-			"id": "d67ba7bc-2161-494a-92cd-9dc7bac3e69b",
+			"id": "9f8d4e45-ef60-44ee-8857-e3add00143bf",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
