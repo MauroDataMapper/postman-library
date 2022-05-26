@@ -47429,6 +47429,59 @@
 									"cookie": [],
 									"responseTime": null,
 									"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": null,\n            \"domainType\": null,\n            \"path\": null\n        }\n    }\n]"
+								},
+								{
+									"id": "b0bd94ef-014c-4b32-8d38-8a6114963a2d",
+									"name": "Get import profile",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 26 May 2022 17:06:20 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"sections\": [\n        {\n            \"name\": \"Data Element usage properties\",\n            \"description\": \"Fields relating to the use of this Data Element within a Data Set\",\n            \"fields\": [\n                {\n                    \"fieldName\": \"Mandation\",\n                    \"metadataPropertyName\": \"mandation\",\n                    \"currentValue\": \"Optional\",\n                    \"dataType\": \"enumeration\",\n                    \"allowedValues\": [\n                        \"Mandatory\",\n                        \"Required\",\n                        \"Optional\",\n                        \"Pilot\"\n                    ],\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 1,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Whether this item is mandatory or not\"\n                },\n                {\n                    \"fieldName\": \"Multiplicity\",\n                    \"metadataPropertyName\": \"multiplicity\",\n                    \"currentValue\": \"1\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"Any multiplicity set on this Data Element for this use in a Data Set\"\n                },\n                {\n                    \"fieldName\": \"Rules\",\n                    \"metadataPropertyName\": \"rules\",\n                    \"currentValue\": \"\",\n                    \"dataType\": \"string\",\n                    \"maxMultiplicity\": 1,\n                    \"minMultiplicity\": 0,\n                    \"uneditable\": false,\n                    \"editableAfterFinalisation\": true,\n                    \"derived\": false,\n                    \"description\": \"(For use in CDS datasets) The rules on how this value may must be completed in the dataset\"\n                }\n            ]\n        }\n    ],\n    \"id\": \"4c896442-30a5-4ccf-a4ab-8d62368abe36\",\n    \"label\": \"V2 Data Element\",\n    \"domainType\": \"DataElement\"\n}"
 								}
 							]
 						},
@@ -47922,7 +47975,7 @@
 	],
 	"variable": [
 		{
-			"id": "fe8cef02-f275-4bbb-97d5-026116f6f7ff",
+			"id": "6f14b7c4-68e1-4a36-b1a7-06609a3ed4d2",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
