@@ -47378,59 +47378,6 @@
 							},
 							"response": [
 								{
-									"id": "e56d186e-b3f3-4cd8-9596-7ef4191f4f72",
-									"name": "List unused import profiles",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Thu, 26 May 2022 11:53:29 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": null,\n            \"domainType\": null,\n            \"path\": null\n        }\n    }\n]"
-								},
-								{
 									"id": "b0bd94ef-014c-4b32-8d38-8a6114963a2d",
 									"name": "Get import profile",
 									"originalRequest": {
@@ -47975,7 +47922,7 @@
 	],
 	"variable": [
 		{
-			"id": "6f14b7c4-68e1-4a36-b1a7-06609a3ed4d2",
+			"id": "90652d09-7841-4f01-9ffb-fd4a5b5230ff",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
