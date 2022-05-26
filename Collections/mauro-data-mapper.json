@@ -48005,7 +48005,7 @@
 									"request": {
 										"method": "GET",
 										"header": [],
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{other_data_class_id}}/import/profiles/unused"
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/unused"
 									},
 									"response": [
 										{
@@ -48072,7 +48072,7 @@
 									"request": {
 										"method": "GET",
 										"header": [],
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
 									},
 									"response": [
 										{
@@ -48148,7 +48148,7 @@
 												}
 											}
 										},
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
 									},
 									"response": [
 										{
@@ -48233,7 +48233,7 @@
 												}
 											}
 										},
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
 									},
 									"response": []
 								}
@@ -48901,7 +48901,7 @@
 	],
 	"variable": [
 		{
-			"id": "f0b1224e-7938-41b2-9f18-06ed03e05a42",
+			"id": "bb76ed9b-7fed-485b-95eb-dfb8101ee753",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
