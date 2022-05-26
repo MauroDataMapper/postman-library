@@ -47767,7 +47767,7 @@
 												}
 											}
 										},
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
 									},
 									"response": [
 										{
@@ -47852,7 +47852,7 @@
 												}
 											}
 										},
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataClasses/{{other_data_class_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
 									},
 									"response": []
 								},
@@ -48587,7 +48587,7 @@
 	],
 	"variable": [
 		{
-			"id": "e3eb6374-e62f-4be7-9e22-a7bc06534e6d",
+			"id": "cd6e0719-938b-4ba1-93e6-c1def35f8bb9",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
