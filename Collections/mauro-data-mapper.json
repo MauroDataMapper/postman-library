@@ -48624,7 +48624,7 @@
 										"disableBodyPruning": true
 									},
 									"request": {
-										"method": "POST",
+										"method": "DELETE",
 										"header": [],
 										"body": {
 											"mode": "raw",
@@ -48989,7 +48989,7 @@
 	],
 	"variable": [
 		{
-			"id": "7ff20ecf-b51f-4533-a6bc-6403976bef2f",
+			"id": "3a49dea7-0512-434c-bf14-ce8cae33b0e9",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
