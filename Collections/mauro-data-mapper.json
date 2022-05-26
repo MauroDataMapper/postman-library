@@ -48238,7 +48238,7 @@
 					"id": "f65c4d26-d984-4dad-a71f-45e8898aff5e"
 				},
 				{
-					"name": "New Folder",
+					"name": "Import Type Profiles",
 					"item": [],
 					"id": "93f5f774-3f58-4b24-933e-47937f2abebd"
 				},
@@ -48586,7 +48586,7 @@
 	],
 	"variable": [
 		{
-			"id": "ec367a52-9134-4b5c-b97c-a8dc30896fa5",
+			"id": "36a592bd-3a60-4877-a6ab-2e58c191d501",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
