@@ -47433,6 +47433,73 @@
 							]
 						},
 						{
+							"name": "Validate import profile",
+							"id": "ca0c34da-e093-4f91-b05c-e7b41e7c5305",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
+							},
+							"response": [
+								{
+									"id": "46b7e74e-d277-4c22-b408-c209d058ce5a",
+									"name": "List unused import profiles",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/unused"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en-GB"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Thu, 26 May 2022 11:53:29 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "[\n    {\n        \"name\": \"ImportedDataElementDynamicProfileProviderService\",\n        \"version\": \"SNAPSHOT\",\n        \"displayName\": \"NHSDD DE DO NOT COMMIT\",\n        \"namespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"allowsExtraMetadataKeys\": false,\n        \"knownMetadataKeys\": [\n            \"import_id\",\n            \"import_domainType\",\n            \"import_path\",\n            \"mandation\",\n            \"multiplicity\",\n            \"rules\"\n        ],\n        \"providerType\": \"Profile\",\n        \"metadataNamespace\": \"import.NOT_ASSIGNED.nhsdd.testing\",\n        \"domains\": [\n            \"DataElement\"\n        ],\n        \"editableAfterFinalisation\": true,\n        \"importingOwner\": {\n            \"id\": null,\n            \"domainType\": null,\n            \"path\": null\n        }\n    }\n]"
+								}
+							]
+						},
+						{
 							"name": "List used import profiles",
 							"id": "33fdb17d-cf77-480e-b646-a4a63119a0a2",
 							"protocolProfileBehavior": {
@@ -47846,7 +47913,7 @@
 	],
 	"variable": [
 		{
-			"id": "ac0af0d5-278a-49b4-958e-39dd195b3e1b",
+			"id": "0b34b1fb-10c3-4ac4-9f09-4d22d87e840a",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
