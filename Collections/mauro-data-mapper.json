@@ -47468,7 +47468,7 @@
 												}
 											}
 										},
-										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}/validate"
+										"url": "{{base_url}}/dataModels/{{data_model_id}}/dataClasses/{{data_class_id}}/dataElements/{{data_element_id}}/import/profiles/{{profile_namespace}}/{{profile_name}}"
 									},
 									"status": "OK",
 									"code": 200,
@@ -47953,7 +47953,7 @@
 	],
 	"variable": [
 		{
-			"id": "05922af0-569e-4520-82a8-fef206927248",
+			"id": "68f05c11-7d86-491c-b96e-884ac33c8239",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
