@@ -32830,19 +32830,6 @@
 							]
 						},
 						{
-							"name": "Finalise Terminology",
-							"id": "6c6b5173-28d5-44e4-9f49-af89ce8cf8ab",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"url": "{{base_url}}/terminologies/{{terminology_id}}/finalise"
-							},
-							"response": []
-						},
-						{
 							"name": "Update Terminology by id",
 							"id": "dab0f9b6-2efb-42d7-bcb6-9941740fc4dd",
 							"protocolProfileBehavior": {
@@ -48989,7 +48976,7 @@
 	],
 	"variable": [
 		{
-			"id": "ee2b5f28-c545-4b21-9f0b-43981844f788",
+			"id": "25f77fab-ede8-42a7-b501-ea8618989f59",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
