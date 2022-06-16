@@ -41578,7 +41578,7 @@
 			"id": "941d3aa1-1e8b-49de-b0a9-6710b34fc417"
 		},
 		{
-			"name": "Federation (branch mc-9833)",
+			"name": "Federation",
 			"item": [
 				{
 					"name": "Admin",
@@ -47102,7 +47102,7 @@
 	],
 	"variable": [
 		{
-			"id": "cfba04c8-93b9-42cd-978e-69372cd08ba2",
+			"id": "4108748e-e085-4742-ad1c-e74e708b8ecc",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
