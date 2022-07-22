@@ -47076,6 +47076,11 @@
 				}
 			],
 			"id": "8ef10223-83fb-4680-bfe0-76bd2d32d41a"
+		},
+		{
+			"name": "New Folder",
+			"item": [],
+			"id": "e8cd940c-cbe2-4647-aad9-9a03a6f1549e"
 		}
 	],
 	"event": [
@@ -47102,7 +47107,7 @@
 	],
 	"variable": [
 		{
-			"id": "4108748e-e085-4742-ad1c-e74e708b8ecc",
+			"id": "ca291e54-d52d-4d2f-ba1f-adf1bc000f34",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
