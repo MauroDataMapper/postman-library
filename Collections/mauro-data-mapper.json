@@ -47078,7 +47078,7 @@
 			"id": "8ef10223-83fb-4680-bfe0-76bd2d32d41a"
 		},
 		{
-			"name": "New Folder",
+			"name": "PR 245",
 			"item": [],
 			"id": "e8cd940c-cbe2-4647-aad9-9a03a6f1549e"
 		}
@@ -47107,7 +47107,7 @@
 	],
 	"variable": [
 		{
-			"id": "ca291e54-d52d-4d2f-ba1f-adf1bc000f34",
+			"id": "9ea47504-f35c-4b91-a81e-d76052a7f0cc",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
