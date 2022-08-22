@@ -41660,14 +41660,14 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{    \r\n    \"url\": \"{{$randomUrl}}\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}},\r\n    \"subscribedCatalogueAuthenticationCredentialsType\": \"API Key\",\r\n    \"subscribedCatalogueAuthenticationCredentials\": {\r\n        \"apiKey\": \"fa413ddd-e926-4131-8585-4da084db236a\"\r\n    },\r\n    \"subscribedModel\": {\r\n        \"id\": \"744dd61e-295d-484c-96e0-a398b9621765\"\r\n    }\r\n}",
+											"raw": "{\r\n    \"url\": \"{{$randomUrl}}\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}},\r\n    \"subscribedCatalogueAuthenticationCredentialsType\": \"OAuth (Client Credentials)\",\r\n    \"apiKeyx\": \"744dd61e-295d-484c-96e0-a398b9621765\",\r\n    \"clientId\": \"bill@microsoft.com\",\r\n    \"clientSecret\": \"i<3linux\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
 												}
 											}
 										},
-										"url": "{{base_url}}/admin/subscribedCatalogues/test"
+										"url": "{{base_url}}/admin/subscribedCatalogues"
 									},
 									"response": [
 										{
@@ -47107,7 +47107,7 @@
 	],
 	"variable": [
 		{
-			"id": "9d5f4ce1-cb67-4153-a37b-288d122a776a",
+			"id": "78487c2d-c172-44f5-9513-5e54674bba8c",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
