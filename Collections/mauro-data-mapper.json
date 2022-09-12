@@ -41660,7 +41660,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"url\": \"{{$randomUrl}}\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}},\r\n    \"subscribedCatalogueAuthenticationCredentialsType\": \"OAuth (Client Credentials)\",\r\n    \"apiKeyx\": \"744dd61e-295d-484c-96e0-a398b9621765\",\r\n    \"clientId\": \"bill@microsoft.com\",\r\n    \"clientSecret\": \"i<3linux\"\r\n}",
+											"raw": "{\r\n    \"url\": \"https://ontology.nhs.uk/production1/synd/syndication.xml\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"label\": \"NHS Digital Terminology Server\",\r\n    \"refreshPeriod\": {{$randomInt}},\r\n    \"subscribedCatalogueAuthenticationType\": \"OAuth (Client Credentials)\",\r\n    \"apiKey\": \"a50befd8-6c4c-40e5-aef4-daf0494a4848\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -47107,7 +47107,7 @@
 	],
 	"variable": [
 		{
-			"id": "78487c2d-c172-44f5-9513-5e54674bba8c",
+			"id": "0388fcdd-80f5-404c-a6b2-779a65cd0316",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
