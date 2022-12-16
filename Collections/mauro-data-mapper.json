@@ -47083,7 +47083,7 @@
 			"id": "e8cd940c-cbe2-4647-aad9-9a03a6f1549e"
 		},
 		{
-			"name": "New Folder",
+			"name": "Demo requests - Dec 2022",
 			"item": [],
 			"id": "357d2dbf-778a-448c-a8f3-9857d35cfec1"
 		}
@@ -47112,7 +47112,7 @@
 	],
 	"variable": [
 		{
-			"id": "3413c3b6-8bcb-4066-becd-3b304865271c",
+			"id": "46ce7605-fe77-416e-bc5e-bea7a6c08661",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
