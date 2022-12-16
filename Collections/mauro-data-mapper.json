@@ -47084,7 +47084,20 @@
 		},
 		{
 			"name": "Demo requests - Dec 2022",
-			"item": [],
+			"item": [
+				{
+					"name": "New Request",
+					"id": "68ab7c52-82ae-4b19-981e-d1269aa797fb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
 			"id": "357d2dbf-778a-448c-a8f3-9857d35cfec1"
 		}
 	],
@@ -47112,7 +47125,7 @@
 	],
 	"variable": [
 		{
-			"id": "46ce7605-fe77-416e-bc5e-bea7a6c08661",
+			"id": "0549f24d-9fa8-4623-a3a7-c852f3432d9a",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
