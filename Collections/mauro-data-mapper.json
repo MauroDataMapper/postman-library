@@ -47086,7 +47086,7 @@
 			"name": "Demo requests - Dec 2022",
 			"item": [
 				{
-					"name": "New Request",
+					"name": "Freemarker template on DataModel",
 					"id": "68ab7c52-82ae-4b19-981e-d1269aa797fb",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -47125,7 +47125,7 @@
 	],
 	"variable": [
 		{
-			"id": "0549f24d-9fa8-4623-a3a7-c852f3432d9a",
+			"id": "c76c2d6d-37ff-435f-bec0-cc7c01cd8593",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
