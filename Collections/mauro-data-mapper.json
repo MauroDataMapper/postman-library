@@ -47092,8 +47092,13 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
-						"header": []
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "# ${dataClass.label}\n## ${dataClass.path}\n\nHere's a custom rendering of the DataClass generated via Apache Freemarker...\n\n## Data Elements\n\n<#list dataClass.dataElements?sort_by('idx') as element>\n    #### ${element.label} <small> *Type*: ${element.dataType.label} </small>\n    <blockquote>${element.description!'N/A'}</blockquote>\n    <p>Min: ${element.minMultiplicity} | Max: ${element.maxMultiplicity}</p>\n</#list>"
+						},
+						"url": "{{base_url}}/dataClass/2fefa8a6-5cce-4da6-95b9-7fc08b185a43/template"
 					},
 					"response": []
 				}
@@ -47125,7 +47130,7 @@
 	],
 	"variable": [
 		{
-			"id": "c76c2d6d-37ff-435f-bec0-cc7c01cd8593",
+			"id": "70168cba-0c04-4c3a-a1f7-c159f6e3d032",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
