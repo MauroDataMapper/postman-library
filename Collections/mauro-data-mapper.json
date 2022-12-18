@@ -47111,7 +47111,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "{{base_url}}/dataModels/9c513b24-2faf-4a30-8bfb-51d764924987/suggestLinks/cdd45adc-53a8-44fe-9c14-66b57f052973"
+						"url": "{{base_url}}/dataModels/cdd45adc-53a8-44fe-9c14-66b57f052973/suggestLinks/9c513b24-2faf-4a30-8bfb-51d764924987"
 					},
 					"response": [
 						{
@@ -47197,7 +47197,7 @@
 	],
 	"variable": [
 		{
-			"id": "312db4b0-15eb-44de-a975-9f3e8475830c",
+			"id": "f25b6394-2269-45ec-8bbd-ad369cdb7e55",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
