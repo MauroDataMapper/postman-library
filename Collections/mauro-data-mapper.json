@@ -47101,6 +47101,73 @@
 						"url": "{{base_url}}/dataClass/2fefa8a6-5cce-4da6-95b9-7fc08b185a43/template"
 					},
 					"response": []
+				},
+				{
+					"name": "Suggest Links between 2 Data Models Copy",
+					"id": "6a6e8062-711b-498a-90f2-e5e7cd2ebba6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/dataModels/9c513b24-2faf-4a30-8bfb-51d764924987/suggestLinks/cdd45adc-53a8-44fe-9c14-66b57f052973"
+					},
+					"response": [
+						{
+							"id": "f18d4ce4-ae27-4fa4-b735-6a863f897044",
+							"name": "Suggest Links between 2 Data Models",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/dataModels/{{other_model_id}}/suggestLinks/{{data_model_id}}"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Method"
+								},
+								{
+									"key": "Vary",
+									"value": "Access-Control-Request-Headers"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json;charset=UTF-8"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en-GB"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Feb 2022 16:09:20 GMT"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=60"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"links\": [\n        {\n            \"sourceDataElement\": {\n                \"id\": \"91effa7c-ab58-4b5d-a81e-c75d6281ba9b\",\n                \"domainType\": \"DataElement\",\n                \"label\": \"Data Element\",\n                \"model\": \"4ba7e2cc-e8b4-40ce-b16f-689d44cba0de\",\n                \"breadcrumbs\": [\n                    {\n                        \"id\": \"4ba7e2cc-e8b4-40ce-b16f-689d44cba0de\",\n                        \"label\": \"a ut voluptatem\",\n                        \"domainType\": \"DataModel\",\n                        \"finalised\": false\n                    },\n                    {\n                        \"id\": \"03daca8d-e54d-40be-b68f-284f10e2d053\",\n                        \"label\": \"Data Class\",\n                        \"domainType\": \"DataClass\"\n                    }\n                ],\n                \"dataClass\": \"03daca8d-e54d-40be-b68f-284f10e2d053\",\n                \"dataType\": {\n                    \"id\": \"01268039-3481-418f-9fa8-63fbb8806110\",\n                    \"domainType\": \"PrimitiveType\",\n                    \"label\": \"String\",\n                    \"model\": \"4ba7e2cc-e8b4-40ce-b16f-689d44cba0de\",\n                    \"breadcrumbs\": [\n                        {\n                            \"id\": \"4ba7e2cc-e8b4-40ce-b16f-689d44cba0de\",\n                            \"label\": \"a ut voluptatem\",\n                            \"domainType\": \"DataModel\",\n                            \"finalised\": false\n                        }\n                    ]\n                }\n            },\n            \"results\": [\n                {\n                    \"dataElement\": {\n                        \"id\": \"e6c44ca9-058f-42f9-aa86-8b7be477c648\",\n                        \"domainType\": \"DataElement\",\n                        \"label\": \"Data Element\",\n                        \"model\": \"df14c019-1cae-4930-8e64-de3a98950a3a\",\n                        \"breadcrumbs\": [\n                            {\n                                \"id\": \"df14c019-1cae-4930-8e64-de3a98950a3a\",\n                                \"label\": \"a ut voluptatem\",\n                                \"domainType\": \"DataModel\",\n                                \"finalised\": false\n                            },\n                            {\n                                \"id\": \"28d494d7-3a2b-4945-9d42-8605a86f4a9d\",\n                                \"label\": \"Data Class\",\n                                \"domainType\": \"DataClass\"\n                            }\n                        ],\n                        \"dataClass\": \"28d494d7-3a2b-4945-9d42-8605a86f4a9d\",\n                        \"dataType\": {\n                            \"id\": \"fee152cb-deee-4baa-a3ec-eb8fb2dfb00a\",\n                            \"domainType\": \"PrimitiveType\",\n                            \"label\": \"String\",\n                            \"model\": \"df14c019-1cae-4930-8e64-de3a98950a3a\",\n                            \"breadcrumbs\": [\n                                {\n                                    \"id\": \"df14c019-1cae-4930-8e64-de3a98950a3a\",\n                                    \"label\": \"a ut voluptatem\",\n                                    \"domainType\": \"DataModel\",\n                                    \"finalised\": false\n                                }\n                            ]\n                        }\n                    },\n                    \"score\": 3.133048\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
 				}
 			],
 			"id": "357d2dbf-778a-448c-a8f3-9857d35cfec1"
@@ -47130,7 +47197,7 @@
 	],
 	"variable": [
 		{
-			"id": "70168cba-0c04-4c3a-a1f7-c159f6e3d032",
+			"id": "312db4b0-15eb-44de-a975-9f3e8475830c",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
