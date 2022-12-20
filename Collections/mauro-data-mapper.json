@@ -41660,7 +41660,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"url\": \"https://ontology.nhs.uk/production1/synd/syndication.xml\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"label\": \"NHS Digital Terminology Server\",\r\n    \"refreshPeriod\": {{$randomInt}},\r\n    \"subscribedCatalogueAuthenticationType\": \"OAuth (Client Credentials)\",\r\n    \"apiKey\": \"a50befd8-6c4c-40e5-aef4-daf0494a4848\"\r\n}",
+											"raw": "{\r\n    \"url\": \"https://ontology.nhs.uk/production1/synd/syndication.xml\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"label\": \"NHS Digital Terminology Server\",\r\n    \"refreshPeriod\": {{$randomInt}},\r\n    \"subscribedCatalogueAuthenticationType\": \"OAuth (Client Credentials)\",\r\n    \"apiKey\": \"<<api key>>\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -47197,7 +47197,7 @@
 	],
 	"variable": [
 		{
-			"id": "926863ff-9a06-4958-850e-ca6629738fa3",
+			"id": "75fe4b32-7e0b-4ccb-a83f-3e1ecf05fac4",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
