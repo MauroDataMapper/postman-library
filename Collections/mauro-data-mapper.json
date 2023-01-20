@@ -42537,55 +42537,6 @@
 							},
 							"response": [
 								{
-									"id": "95720a45-0051-4ebe-8380-f4df9d1b1bb9",
-									"name": "List all Subscribed Catalogue Types",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{base_url}}/subscribedCatalogues/types"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 23 May 2022 16:14:38 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "[\n    \"Atom\",\n    \"Mauro JSON\"\n]"
-								},
-								{
 									"id": "bf22827a-d82e-4491-bee0-909a13335d26",
 									"name": "List all Subscribed Catalogue Authentication Types",
 									"originalRequest": {
@@ -47309,7 +47260,7 @@
 	],
 	"variable": [
 		{
-			"id": "7fc7b377-c8af-4f02-a167-9f6cc3281ce8",
+			"id": "bdd6cee9-e4af-4d59-9c9a-2faa6bc27fa6",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
