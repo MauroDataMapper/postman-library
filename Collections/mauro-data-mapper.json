@@ -41658,59 +41658,9 @@
 									"request": {
 										"method": "GET",
 										"header": [],
-										"url": "{{base_url}}/admin/subscribedCatalogues/authenticationTypes"
+										"url": "{{base_url}}/subscribedCatalogues/authenticationTypes"
 									},
-									"response": [
-										{
-											"id": "190dc11f-87d1-4282-9c28-b5bd71b2a985",
-											"name": "List all Subscribed Catalogue Authentication Types",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": "{{base_url}}/admin/subscribedCatalogues/authenticationTypes"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=UTF-8"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Fri, 20 Jan 2023 14:12:15 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "[\n    \"API Key\",\n    \"No Authentication\",\n    \"OAuth (Client Credentials)\"\n]"
-										}
-									]
+									"response": []
 								},
 								{
 									"name": "Create new Subscribed Catalogue (Mauro JSON)",
@@ -47323,7 +47273,7 @@
 	],
 	"variable": [
 		{
-			"id": "f1d5fdb7-9302-43ae-a695-f24ad51ca5c9",
+			"id": "c622fb44-729c-4f34-a0c5-3a7e69b6a012",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
