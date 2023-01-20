@@ -41658,12 +41658,12 @@
 									"request": {
 										"method": "GET",
 										"header": [],
-										"url": "{{base_url}}/subscribedCatalogues/authenticationTypes"
+										"url": "{{base_url}}/admin/subscribedCatalogues/authenticationTypes"
 									},
 									"response": [
 										{
 											"id": "190dc11f-87d1-4282-9c28-b5bd71b2a985",
-											"name": "List all Subscribed Catalogue Authentication Types Copy",
+											"name": "List all Subscribed Catalogue Authentication Types",
 											"originalRequest": {
 												"method": "GET",
 												"header": [],
@@ -47323,7 +47323,7 @@
 	],
 	"variable": [
 		{
-			"id": "d2bae23c-938b-4948-b209-f5f0481181b2",
+			"id": "1078382d-e94c-41c8-b3e4-3ef7b724eb8d",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
