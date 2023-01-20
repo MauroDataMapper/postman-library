@@ -42525,6 +42525,69 @@
 							]
 						},
 						{
+							"name": "List all Subscribed Catalogue Authentication Types",
+							"id": "7b6a00b4-e0e8-4bb8-8382-dad8332a8da9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{base_url}}/subscribedCatalogues/types"
+							},
+							"response": [
+								{
+									"id": "95720a45-0051-4ebe-8380-f4df9d1b1bb9",
+									"name": "List all Subscribed Catalogue Types",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/subscribedCatalogues/types"
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json;charset=UTF-8"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 23 May 2022 16:14:38 GMT"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=60"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "[\n    \"Atom\",\n    \"Mauro JSON\"\n]"
+								}
+							]
+						},
+						{
 							"name": "List all subscribed catalogues",
 							"id": "4c8384dc-dd33-4bf7-839d-a6c38182a346",
 							"protocolProfileBehavior": {
@@ -47197,7 +47260,7 @@
 	],
 	"variable": [
 		{
-			"id": "75fe4b32-7e0b-4ccb-a83f-3e1ecf05fac4",
+			"id": "0eb1179a-b9e4-486a-9f6a-f9e750134f24",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
