@@ -42533,7 +42533,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{base_url}}/subscribedCatalogues/types"
+								"url": "{{base_url}}/subscribedCatalogues/authenticationTypes"
 							},
 							"response": [
 								{
@@ -47260,7 +47260,7 @@
 	],
 	"variable": [
 		{
-			"id": "0eb1179a-b9e4-486a-9f6a-f9e750134f24",
+			"id": "2e12ec04-dce9-4d11-8f16-1c59c577f1c2",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
