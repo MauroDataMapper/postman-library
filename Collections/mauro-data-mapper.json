@@ -41650,6 +41650,19 @@
 									]
 								},
 								{
+									"name": "List all Subscribed Catalogue Authentication Types",
+									"id": "8e304bbb-35d2-47b7-9b3b-1c0a0a8bfce4",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": "{{base_url}}/subscribedCatalogues/authenticationTypes"
+									},
+									"response": []
+								},
+								{
 									"name": "Create new Subscribed Catalogue (Mauro JSON)",
 									"id": "85f1d58f-a5ad-485b-a3ab-4b6ce28ec9b2",
 									"protocolProfileBehavior": {
@@ -47260,7 +47273,7 @@
 	],
 	"variable": [
 		{
-			"id": "bdd6cee9-e4af-4d59-9c9a-2faa6bc27fa6",
+			"id": "c704c419-4bb7-45c5-92ff-43bdd4a44ed6",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
