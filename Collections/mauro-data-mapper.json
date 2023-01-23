@@ -42199,7 +42199,7 @@
 										},
 										{
 											"id": "64ec61a9-025d-4bc5-8fb6-ce2da9fd93ca",
-											"name": "Create new Subscribed Catalogue (Atom, OAuth Client Credentials)",
+											"name": "Cannot create new SC as not contactable",
 											"originalRequest": {
 												"method": "POST",
 												"header": [],
@@ -50268,7 +50268,7 @@
 	],
 	"variable": [
 		{
-			"id": "d0934252-2c90-4acc-9452-35ddcfeda638",
+			"id": "c65a4c5c-60f2-439d-aa22-2ee90bd104c1",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
