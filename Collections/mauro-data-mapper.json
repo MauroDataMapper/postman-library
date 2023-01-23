@@ -42173,7 +42173,31 @@
 										},
 										"url": "{{base_url}}/admin/subscribedCatalogues"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "e2fab1c9-98a1-43e8-8000-54a24bdc8dff",
+											"name": "Create new Subscribed Catalogue (Atom, OAuth Client Credentials)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"url\": \"https://ontology.nhs.uk/production1/synd/syndication.xml\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"subscribedCatalogueAuthenticationType\": \"OAuth (Client Credentials)\",\r\n    \"tokenUrl\": \"https://ontology.nhs.uk/authorisation/auth/realms/nhs-digital-terminology/protocol/openid-connect/token\",\r\n    \"clientId\": \"{{client_id}}\",\r\n    \"clientSecret\": \"{{client_secret}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/admin/subscribedCatalogues"
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"responseTime": null,
+											"body": null
+										}
+									]
 								},
 								{
 									"name": "Get Subscribed Catalogue by ID",
@@ -50186,7 +50210,7 @@
 	],
 	"variable": [
 		{
-			"id": "d1aff708-46d7-4c83-8066-2873e598bf3c",
+			"id": "f835d779-2467-4bea-a430-e08770e98ae3",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
