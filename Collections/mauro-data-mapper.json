@@ -41734,72 +41734,6 @@
 									},
 									"response": [
 										{
-											"id": "abeb7674-36e5-4d7e-87d2-a2fd20db0526",
-											"name": "Create new Subscribed Catalogue (Mauro JSON, API Key)",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"refreshPeriod\": {{$randomInt}},\r\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\r\n    \"apiKey\": \"{{api_key_id}}\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{base_url}}/admin/subscribedCatalogues"
-											},
-											"status": "Created",
-											"code": 201,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Location",
-													"value": "http://localhost:8080/api/admin/subscribedCatalogues/59e502a6-bd5a-4a7e-9ad5-ff7a0f4d3434"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=UTF-8"
-												},
-												{
-													"key": "Content-Language",
-													"value": "en-GB"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 23 Jan 2023 09:47:43 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"id\": \"59e502a6-bd5a-4a7e-9ad5-ff7a0f4d3434\",\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n    \"label\": \"perferendis-beatae-voluptatum\",\n    \"subscribedCatalogueType\": \"Mauro JSON\",\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\n    \"refreshPeriod\": 595,\n    \"apiKey\": \"f00616a7-c07f-48fe-b6cf-fb99f7076de5\"\n}"
-										},
-										{
 											"id": "fc454e37-3375-4a62-bee6-0d226bb3e254",
 											"name": "Cannot create new SC as not contactable",
 											"originalRequest": {
@@ -50164,7 +50098,7 @@
 	],
 	"variable": [
 		{
-			"id": "df86d14e-4173-41fb-8fb5-6bbff9dd4a34",
+			"id": "0c169c44-5735-4733-a7dd-832ab5471981",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
