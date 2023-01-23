@@ -42916,61 +42916,7 @@
 								"header": [],
 								"url": "{{base_url}}/subscribedCatalogues"
 							},
-							"response": [
-								{
-									"id": "be64b07a-a34d-4e95-af3f-887564dd317c",
-									"name": "List all subscribed catalogues",
-									"originalRequest": {
-										"method": "GET",
-										"header": [],
-										"url": "{{base_url}}/subscribedCatalogues"
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "Vary",
-											"value": "Origin"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Method"
-										},
-										{
-											"key": "Vary",
-											"value": "Access-Control-Request-Headers"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json;charset=UTF-8"
-										},
-										{
-											"key": "Content-Language",
-											"value": "en-GB"
-										},
-										{
-											"key": "Transfer-Encoding",
-											"value": "chunked"
-										},
-										{
-											"key": "Date",
-											"value": "Mon, 23 May 2022 17:09:55 GMT"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=60"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"count\": 1,\n    \"items\": [\n        {\n            \"id\": \"911d9875-0590-44ea-832a-90fd8150bccc\",\n            \"url\": \"http://localhost:8090\",\n            \"label\": \"tempora-maiores-velit\",\n            \"subscribedCatalogueType\": \"Mauro JSON\",\n            \"description\": \"Ipsum dolorem eveniet rem rerum ut omnis.\",\n            \"refreshPeriod\": 793\n        }\n    ]\n}"
-								}
-							]
+							"response": []
 						},
 						{
 							"name": "Get subscribed catalogue by ID",
@@ -50272,7 +50218,7 @@
 	],
 	"variable": [
 		{
-			"id": "04dcbf9d-10ad-4399-b4cc-e1e6a3b70464",
+			"id": "bef49790-f799-428b-86df-ef8449400e92",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
