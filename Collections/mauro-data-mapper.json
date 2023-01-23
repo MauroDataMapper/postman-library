@@ -41723,7 +41723,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"refreshPeriod\": {{$randomInt}},\r\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\r\n    \"apiKey\": \"{{api_key_id}}\"\r\n}",
+											"raw": "{\r\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"refreshPeriod\": {{$randomInt}},\r\n    \"subscribedCatalogueAuthenticationType\": \"No Authentication\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -42017,7 +42017,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
+											"raw": "{\r\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/feeds/all\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -42092,6 +42092,168 @@
 											"cookie": [],
 											"responseTime": null,
 											"body": "{\n    \"id\": \"2cf9d7f8-9281-4cf8-b280-1002ffdc97fb\",\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/feeds/all\",\n    \"label\": \"molestiae-est-velit\",\n    \"subscribedCatalogueType\": \"Atom\",\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\n    \"description\": \"ducimus laboriosam exercitationem\",\n    \"refreshPeriod\": 206,\n    \"apiKey\": \"f00616a7-c07f-48fe-b6cf-fb99f7076de5\"\n}"
+										},
+										{
+											"id": "fa665208-a3b3-48b0-bdc0-9fee0254fccd",
+											"name": "Cannot create new SC as not contactable",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"url\": \"https://example.com/feed.xml\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/admin/subscribedCatalogues"
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 23 Jan 2023 09:52:40 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Invalid subscription to catalogue at [https://example.com/feed.xml], cannot connect to catalogue due to Requested endpoint could not be found https://example.com/feed.xml\"\n        }\n    ]\n}"
+										}
+									]
+								},
+								{
+									"name": "Create new Subscribed Catalogue (Atom, OAuth Client Credentials)",
+									"id": "92852ad3-9f7c-40c5-a768-39f465a5c7aa",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"url\": \"https://ontology.nhs.uk/production1/synd/syndication.xml\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"subscribedCatalogueAuthenticationType\": \"OAuth (Client Credentials)\",\r\n    \"tokenUrl\": \"https://ontology.nhs.uk/authorisation/auth/realms/nhs-digital-terminology/protocol/openid-connect/token\",\r\n    \"clientId\": \"{{client_id}}\",\r\n    \"clientSecret\": \"{{client_secret}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/admin/subscribedCatalogues"
+									},
+									"response": [
+										{
+											"id": "e2fab1c9-98a1-43e8-8000-54a24bdc8dff",
+											"name": "Create new Subscribed Catalogue (Atom, OAuth Client Credentials)",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"url\": \"https://ontology.nhs.uk/production1/synd/syndication.xml\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"subscribedCatalogueAuthenticationType\": \"OAuth (Client Credentials)\",\r\n    \"tokenUrl\": \"https://ontology.nhs.uk/authorisation/auth/realms/nhs-digital-terminology/protocol/openid-connect/token\",\r\n    \"clientId\": \"{{client_id}}\",\r\n    \"clientSecret\": \"{{client_secret}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/admin/subscribedCatalogues"
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"id\": \"09b56be4-52c3-43d7-8b98-0e41c8918b2a\",\n    \"url\": \"https://ontology.nhs.uk/production1/synd/syndication.xml\",\n    \"label\": \"dolorem-velit-non\",\n    \"subscribedCatalogueType\": \"Atom\",\n    \"subscribedCatalogueAuthenticationType\": \"OAuth (Client Credentials)\",\n    \"description\": \"quia vel non\",\n    \"refreshPeriod\": 789,\n    \"tokenUrl\": \"https://ontology.nhs.uk/authorisation/auth/realms/nhs-digital-terminology/protocol/openid-connect/token\",\n    \"clientId\": \"{{client_id}}\",\n    \"clientSecret\": \"{{client_secret}}\"\n}"
+										},
+										{
+											"id": "64ec61a9-025d-4bc5-8fb6-ce2da9fd93ca",
+											"name": "Cannot create new SC as not contactable",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"url\": \"https://example.com/feed.xml\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"subscribedCatalogueAuthenticationType\": \"OAuth (Client Credentials)\",\r\n    \"tokenUrl\": \"https://ontology.nhs.uk/authorisation/auth/realms/nhs-digital-terminology/protocol/openid-connect/token\",\r\n    \"clientId\": \"{{client_id}}\",\r\n    \"clientSecret\": \"{{client_secret}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": "{{base_url}}/admin/subscribedCatalogues"
+											},
+											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+											"code": 422,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 23 Jan 2023 09:59:16 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Invalid subscription to catalogue at [https://example.com/feed.xml], cannot connect to catalogue due to Requested endpoint could not be found https://example.com/feed.xml\"\n        }\n    ]\n}"
 										}
 									]
 								},
@@ -42108,7 +42270,7 @@
 									},
 									"response": [
 										{
-											"id": "0523e1b3-9070-4b3d-9fe5-69f1c15a5613",
+											"id": "f7bbae09-afad-4b51-aab4-ab260013d947",
 											"name": "Get Subscribed Catalogue by ID",
 											"originalRequest": {
 												"method": "GET",
@@ -42145,7 +42307,7 @@
 												},
 												{
 													"key": "Date",
-													"value": "Mon, 23 May 2022 16:45:31 GMT"
+													"value": "Mon, 23 Jan 2023 10:12:12 GMT"
 												},
 												{
 													"key": "Keep-Alive",
@@ -42158,7 +42320,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"id\": \"99d39552-2c8e-4aac-8c3d-7cb878d9242f\",\n    \"url\": \"http://localhost:8080\",\n    \"label\": \"qui-quia-dolor\",\n    \"subscribedCatalogueType\": \"Mauro JSON\",\n    \"description\": \"Porro voluptas explicabo iusto ducimus. Dolore veniam laudantium ullam rerum ducimus dolorem corrupti expedita quos. Non ea eveniet officia dolor nostrum quidem. Deserunt maxime necessitatibus. Consectetur et omnis.\",\n    \"refreshPeriod\": 5,\n    \"apiKey\": \"9eb21e4c-8a61-4f32-91ea-f4563792b08c\"\n}"
+											"body": "{\n    \"id\": \"9014a782-6842-4831-b4c6-a6fa07e2764d\",\n    \"url\": \"http://localhost:8080\",\n    \"label\": \"non-debitis-sapiente\",\n    \"subscribedCatalogueType\": \"Mauro JSON\",\n    \"subscribedCatalogueAuthenticationType\": \"No Authentication\",\n    \"refreshPeriod\": 443\n}"
 										}
 									]
 								},
@@ -42412,61 +42574,7 @@
 										"header": [],
 										"url": "{{base_url}}/admin/subscribedCatalogues"
 									},
-									"response": [
-										{
-											"id": "31fdcffe-8670-4d45-aa03-fe0b2f3d4956",
-											"name": "List all subscribed catalogues",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"url": "{{base_url}}/admin/subscribedCatalogues"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=UTF-8"
-												},
-												{
-													"key": "Content-Language",
-													"value": "en-GB"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 23 May 2022 16:57:39 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"count\": 2,\n    \"items\": [\n        {\n            \"id\": \"86ca0c81-1b26-4c06-b6e0-5529528c50ed\",\n            \"url\": \"http://localhost:8080\",\n            \"label\": \"voluptas-doloremque-hic\",\n            \"subscribedCatalogueType\": \"Mauro JSON\",\n            \"description\": \"similique\",\n            \"refreshPeriod\": 760\n        },\n        {\n            \"id\": \"8561bfae-5765-4907-90cc-83ee76d0c5ca\",\n            \"url\": \"http://localhost:8080/api/feeds/all\",\n            \"label\": \"qui-libero-quia\",\n            \"subscribedCatalogueType\": \"Atom\",\n            \"description\": \"Corporis ratione sed est consequuntur perspiciatis quia nulla veniam.\\nNisi sed non voluptatem tempore voluptas unde.\\nEt rerum deleniti quibusdam dignissimos sunt odit ipsum qui.\",\n            \"refreshPeriod\": 730\n        }\n    ]\n}"
-										}
-									]
+									"response": []
 								}
 							],
 							"id": "94999160-35bd-4fb3-a537-e3ba05e95759"
@@ -50106,7 +50214,7 @@
 	],
 	"variable": [
 		{
-			"id": "d2ee20fa-f2c1-4495-8638-02ff63910273",
+			"id": "56fc44a8-9729-45a8-84e2-6ffe4cf57e91",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
