@@ -42175,72 +42175,6 @@
 									},
 									"response": [
 										{
-											"id": "dc2270a6-4126-4ea2-bee3-5f58064f9e11",
-											"name": "Create new Subscribed Catalogue (Atom, API Key)",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{\r\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/feeds/all\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{base_url}}/admin/subscribedCatalogues"
-											},
-											"status": "Created",
-											"code": 201,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Location",
-													"value": "http://localhost:8080/api/admin/subscribedCatalogues/2cf9d7f8-9281-4cf8-b280-1002ffdc97fb"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=UTF-8"
-												},
-												{
-													"key": "Content-Language",
-													"value": "en-GB"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 23 Jan 2023 09:52:08 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"id\": \"2cf9d7f8-9281-4cf8-b280-1002ffdc97fb\",\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/feeds/all\",\n    \"label\": \"molestiae-est-velit\",\n    \"subscribedCatalogueType\": \"Atom\",\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\n    \"description\": \"ducimus laboriosam exercitationem\",\n    \"refreshPeriod\": 206,\n    \"apiKey\": \"f00616a7-c07f-48fe-b6cf-fb99f7076de5\"\n}"
-										},
-										{
 											"id": "e153fff4-a8f3-466a-9b33-2aab84be8df6",
 											"name": "Cannot create new SC as not contactable",
 											"originalRequest": {
@@ -50311,7 +50245,7 @@
 	],
 	"variable": [
 		{
-			"id": "188cd3c7-9a7c-48ab-99b0-4b1c48800e13",
+			"id": "6f12f8eb-332e-4565-81d9-84ba6bb8965e",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
