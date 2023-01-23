@@ -42017,7 +42017,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{    \r\n    \"url\": \"{{$randomUrl}}\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
+											"raw": "{\r\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -50039,7 +50039,7 @@
 	],
 	"variable": [
 		{
-			"id": "c359e059-8069-42a5-ae23-3593a65bd4ac",
+			"id": "3762e256-1abd-47e5-8af7-7b92ac392a2f",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
