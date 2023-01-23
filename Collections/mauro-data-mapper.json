@@ -41723,7 +41723,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"url\": \"https://ontology.nhs.uk/production1/synd/syndication.xml\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"label\": \"NHS Digital Terminology Server\",\r\n    \"refreshPeriod\": {{$randomInt}},\r\n    \"subscribedCatalogueAuthenticationType\": \"OAuth (Client Credentials)\",\r\n    \"apiKey\": \"<<api key>>\"\r\n}",
+											"raw": "{\r\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\",\r\n    \"label\": \"Mauro Continuous Deployment Server\",\r\n    \"refreshPeriod\": {{$randomInt}},\r\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\r\n    \"apiKey\": \"{{api_key_id}}\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -50017,7 +50017,7 @@
 	],
 	"variable": [
 		{
-			"id": "3713a365-9674-4cf0-95cd-97fede5b7c85",
+			"id": "fa712ea6-bb76-44d3-89c2-61503516603d",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
