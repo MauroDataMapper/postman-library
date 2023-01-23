@@ -41578,7 +41578,7 @@
 			"id": "941d3aa1-1e8b-49de-b0a9-6710b34fc417"
 		},
 		{
-			"name": "Federation",
+			"name": "Federation - PR 388",
 			"item": [
 				{
 					"name": "Admin",
@@ -50017,7 +50017,7 @@
 	],
 	"variable": [
 		{
-			"id": "893272d7-5ae8-4aba-9428-b0a1b7461d17",
+			"id": "6b2298c0-5ad2-47b6-99fb-b158c12e8a02",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
