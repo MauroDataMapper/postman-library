@@ -41734,72 +41734,6 @@
 									},
 									"response": [
 										{
-											"id": "d6fe62f3-537b-4e38-a607-b370a56eb10a",
-											"name": "Create new Subscribed Catalogue (Mauro JSON)",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{    \r\n    \"url\": \"http://localhost:8080\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{base_url}}/admin/subscribedCatalogues"
-											},
-											"status": "Created",
-											"code": 201,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Location",
-													"value": "http://localhost:8090/api/admin/subscribedCatalogues/86ca0c81-1b26-4c06-b6e0-5529528c50ed"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=UTF-8"
-												},
-												{
-													"key": "Content-Language",
-													"value": "en-GB"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 23 May 2022 16:40:42 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"id\": \"86ca0c81-1b26-4c06-b6e0-5529528c50ed\",\n    \"url\": \"http://localhost:8080\",\n    \"label\": \"voluptas-doloremque-hic\",\n    \"subscribedCatalogueType\": \"Mauro JSON\",\n    \"description\": \"similique\",\n    \"refreshPeriod\": 760,\n    \"apiKey\": \"9eb21e4c-8a61-4f32-91ea-f4563792b08c\"\n}"
-										},
-										{
 											"id": "256b65ba-d58d-4513-90ac-cfaf4a33ca45",
 											"name": "Cannot create new SC as not reachable (Mauro JSON)",
 											"originalRequest": {
@@ -50017,7 +49951,7 @@
 	],
 	"variable": [
 		{
-			"id": "6b2298c0-5ad2-47b6-99fb-b158c12e8a02",
+			"id": "da900bb4-0f7a-4c75-8261-ff9026e67f59",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
