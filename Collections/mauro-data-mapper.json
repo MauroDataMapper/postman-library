@@ -42506,62 +42506,7 @@
 										},
 										"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}/testConnection"
 									},
-									"response": [
-										{
-											"id": "8f807b41-6805-4d41-9a37-5703bec1e342",
-											"name": "Test Connection of Subscribed Catalogue by ID (Successful)",
-											"originalRequest": {
-												"method": "GET",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{    \r\n    \"url\": \"http://www.bbc.co.uk\",\r\n    \"apiKey\": \"4e8aabbb-543c-48ca-9ea2-e6f4032d6af4\",\r\n    \"label\": \"Test2\"\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{base_url}}/admin/subscribedCatalogues/{{subscribed_catalogue_id}}/testConnection"
-											},
-											"status": "OK",
-											"code": 200,
-											"_postman_previewlanguage": "plain",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Sun, 20 Feb 2022 12:38:31 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": null
-										}
-									]
+									"response": []
 								},
 								{
 									"name": "List all subscribed catalogues",
@@ -50214,7 +50159,7 @@
 	],
 	"variable": [
 		{
-			"id": "5e334d38-c9b2-494a-9f87-9b9cebeac041",
+			"id": "28d94ad4-caf8-473f-84c2-00436ea350f4",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
