@@ -42007,7 +42007,7 @@
 									]
 								},
 								{
-									"name": "Create new Subscribed Catalogue (Atom)",
+									"name": "Create new Subscribed Catalogue (Atom, API Key)",
 									"id": "994f64ad-967b-4f45-8a94-3176e5d0e2fd",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -50039,7 +50039,7 @@
 	],
 	"variable": [
 		{
-			"id": "0b375386-8279-4c6c-a8db-e415583a007a",
+			"id": "c359e059-8069-42a5-ae23-3593a65bd4ac",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
