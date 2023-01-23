@@ -41713,7 +41713,7 @@
 									]
 								},
 								{
-									"name": "Create new Subscribed Catalogue (Mauro JSON)",
+									"name": "Create new Subscribed Catalogue (Mauro JSON, API Key)",
 									"id": "85f1d58f-a5ad-485b-a3ab-4b6ce28ec9b2",
 									"protocolProfileBehavior": {
 										"disableBodyPruning": true
@@ -41723,7 +41723,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\",\r\n    \"label\": \"Mauro Continuous Deployment Server\",\r\n    \"refreshPeriod\": {{$randomInt}},\r\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\r\n    \"apiKey\": \"{{api_key_id}}\"\r\n}",
+											"raw": "{\r\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"refreshPeriod\": {{$randomInt}},\r\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\r\n    \"apiKey\": \"{{api_key_id}}\"\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -49892,7 +49892,7 @@
 	],
 	"variable": [
 		{
-			"id": "2037d053-a6da-42a5-819c-badaf64c38e3",
+			"id": "e9f6bd17-cf7f-47be-ab5b-f9ff51d79b0b",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
