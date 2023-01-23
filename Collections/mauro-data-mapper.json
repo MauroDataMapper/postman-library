@@ -41944,7 +41944,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"id\": \"59e502a6-bd5a-4a7e-9ad5-ff7a0f4d3434\",\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n    \"label\": \"perferendis-beatae-voluptatum\",\n    \"subscribedCatalogueType\": \"Mauro JSON\",\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\n    \"refreshPeriod\": 595,\n    \"apiKey\": \"f00616a7-c07f-48fe-b6cf-fb99f7076de5\"\n}"
+											"body": "{\n    \"id\": \"59e502a6-bd5a-4a7e-9ad5-ff7a0f4d3434\",\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment\",\n    \"label\": \"perferendis-beatae-voluptatum\",\n    \"subscribedCatalogueType\": \"Mauro JSON\",\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\n    \"refreshPeriod\": 595,\n    \"apiKey\": \"{{api_key_id}}\"\n}"
 										},
 										{
 											"id": "0a180d9f-f869-4421-b92b-ed694c655a91",
@@ -50268,7 +50268,7 @@
 	],
 	"variable": [
 		{
-			"id": "159ce4e0-0efb-4a59-9517-f0f584115bdb",
+			"id": "92218fd7-5266-4c7a-8f86-1bbe1fe8adda",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
