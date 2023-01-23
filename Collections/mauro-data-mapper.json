@@ -44134,7 +44134,7 @@
 							"response": [
 								{
 									"id": "503b3835-dc35-4173-8b1d-bcf20e646609",
-									"name": "List all published models as Atom feed",
+									"name": "List all published models as Atom feed with available models",
 									"originalRequest": {
 										"method": "GET",
 										"header": [],
@@ -50223,7 +50223,7 @@
 	],
 	"variable": [
 		{
-			"id": "5b771fa3-7017-43a9-a6a3-55bb6c2d4bcd",
+			"id": "91d4cefa-ab93-4034-a442-977cceed04e2",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
