@@ -42154,6 +42154,28 @@
 									]
 								},
 								{
+									"name": "Create new Subscribed Catalogue (Atom, OAuth Client Credentials)",
+									"id": "92852ad3-9f7c-40c5-a768-39f465a5c7aa",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/feeds/all\",\r\n    \"subscribedCatalogueType\": \"Atom\",\r\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": "{{base_url}}/admin/subscribedCatalogues"
+									},
+									"response": []
+								},
+								{
 									"name": "Get Subscribed Catalogue by ID",
 									"id": "22688bcf-51fe-4667-b7c8-10fa9a7cd5d6",
 									"protocolProfileBehavior": {
@@ -50164,7 +50186,7 @@
 	],
 	"variable": [
 		{
-			"id": "f6269010-370c-4b42-a858-75a929e24626",
+			"id": "79a1361c-8ddc-4e5c-991a-858eab20b530",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
