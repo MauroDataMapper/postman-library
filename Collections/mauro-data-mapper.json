@@ -42095,7 +42095,7 @@
 										},
 										{
 											"id": "fa665208-a3b3-48b0-bdc0-9fee0254fccd",
-											"name": "Create new Subscribed Catalogue (Atom, API Key)",
+											"name": "Cannot create new SC as not contactable",
 											"originalRequest": {
 												"method": "POST",
 												"header": [],
@@ -50164,7 +50164,7 @@
 	],
 	"variable": [
 		{
-			"id": "265d5234-3ab0-443d-b160-039bcad72e7c",
+			"id": "f6269010-370c-4b42-a858-75a929e24626",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
