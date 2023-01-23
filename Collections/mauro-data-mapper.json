@@ -41732,66 +41732,7 @@
 										},
 										"url": "{{base_url}}/admin/subscribedCatalogues"
 									},
-									"response": [
-										{
-											"id": "256b65ba-d58d-4513-90ac-cfaf4a33ca45",
-											"name": "Cannot create new SC as not reachable (Mauro JSON)",
-											"originalRequest": {
-												"method": "POST",
-												"header": [],
-												"body": {
-													"mode": "raw",
-													"raw": "{    \r\n    \"url\": \"{{$randomUrl}}\",\r\n    \"apiKey\": \"{{api_key_id}}\",\r\n    \"subscribedCatalogueType\": \"Mauro JSON\",\r\n    \"label\": \"{{$randomLoremSlug}}\",\r\n    \"description\": \"{{$randomLoremText}}\",\r\n    \"refreshPeriod\": {{$randomInt}}\r\n}",
-													"options": {
-														"raw": {
-															"language": "json"
-														}
-													}
-												},
-												"url": "{{base_url}}/admin/subscribedCatalogues"
-											},
-											"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
-											"code": 422,
-											"_postman_previewlanguage": "json",
-											"header": [
-												{
-													"key": "Vary",
-													"value": "Origin"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Method"
-												},
-												{
-													"key": "Vary",
-													"value": "Access-Control-Request-Headers"
-												},
-												{
-													"key": "Content-Type",
-													"value": "application/json;charset=UTF-8"
-												},
-												{
-													"key": "Transfer-Encoding",
-													"value": "chunked"
-												},
-												{
-													"key": "Date",
-													"value": "Mon, 23 May 2022 16:40:57 GMT"
-												},
-												{
-													"key": "Keep-Alive",
-													"value": "timeout=60"
-												},
-												{
-													"key": "Connection",
-													"value": "keep-alive"
-												}
-											],
-											"cookie": [],
-											"responseTime": null,
-											"body": "{\n    \"total\": 1,\n    \"errors\": [\n        {\n            \"message\": \"Invalid subscription to catalogue at [http://louie.org], cannot connect to catalogue due to Could not load resource from endpoint [http://louie.org/api/published/models].\\nResponse body [null]: Failed to decode the body for the given content type [text/html;charset=UTF-8]\"\n        }\n    ]\n}"
-										}
-									]
+									"response": []
 								},
 								{
 									"name": "Create new Subscribed Catalogue (Atom)",
@@ -49951,7 +49892,7 @@
 	],
 	"variable": [
 		{
-			"id": "da900bb4-0f7a-4c75-8261-ff9026e67f59",
+			"id": "2037d053-a6da-42a5-819c-badaf64c38e3",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
