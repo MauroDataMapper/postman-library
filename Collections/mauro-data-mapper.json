@@ -41658,9 +41658,59 @@
 									"request": {
 										"method": "GET",
 										"header": [],
-										"url": "{{base_url}}/subscribedCatalogues/authenticationTypes"
+										"url": "{{base_url}}/admin/subscribedCatalogues/authenticationTypes"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "190dc11f-87d1-4282-9c28-b5bd71b2a985",
+											"name": "List all Subscribed Catalogue Authentication Types",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/admin/subscribedCatalogues/authenticationTypes"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 20 Jan 2023 14:12:15 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "[\n    \"API Key\",\n    \"No Authentication\",\n    \"OAuth (Client Credentials)\"\n]"
+										}
+									]
 								},
 								{
 									"name": "Create new Subscribed Catalogue (Mauro JSON)",
@@ -47154,11 +47204,6 @@
 			"id": "8ef10223-83fb-4680-bfe0-76bd2d32d41a"
 		},
 		{
-			"name": "PR 245",
-			"item": [],
-			"id": "e8cd940c-cbe2-4647-aad9-9a03a6f1549e"
-		},
-		{
 			"name": "Demo requests - Dec 2022",
 			"item": [
 				{
@@ -47273,7 +47318,7 @@
 	],
 	"variable": [
 		{
-			"id": "c622fb44-729c-4f34-a0c5-3a7e69b6a012",
+			"id": "b770fc96-3d28-4322-9c4f-eda3fa850492",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
