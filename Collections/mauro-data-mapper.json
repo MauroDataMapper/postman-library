@@ -44536,7 +44536,7 @@
 			"id": "a7ff532a-1152-43ff-9054-d5d4c793f766"
 		},
 		{
-			"name": "Federation - Copy",
+			"name": "Federation",
 			"item": [
 				{
 					"name": "Admin",
@@ -50276,7 +50276,7 @@
 	],
 	"variable": [
 		{
-			"id": "22254dd0-7cd0-484c-a8f3-7a0ffcb2d404",
+			"id": "7eec44d6-4fde-44ec-aefc-316d2b54acfe",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
