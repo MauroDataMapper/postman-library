@@ -42653,7 +42653,61 @@
 										"header": [],
 										"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/publishedModels"
 									},
-									"response": []
+									"response": [
+										{
+											"id": "bbabc20e-9da7-45bb-bd0e-1fbf002e2ed8",
+											"name": "List all published models for a subscribed catalogue",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": "{{base_url}}/subscribedCatalogues/{{subscribed_catalogue_id}}/publishedModels"
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json;charset=UTF-8"
+												},
+												{
+													"key": "Content-Language",
+													"value": "en-GB"
+												},
+												{
+													"key": "Transfer-Encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Date",
+													"value": "Mon, 23 Jan 2023 10:23:26 GMT"
+												},
+												{
+													"key": "Keep-Alive",
+													"value": "timeout=60"
+												},
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												}
+											],
+											"cookie": [],
+											"responseTime": null,
+											"body": "{\n    \"count\": 3,\n    \"items\": [\n        {\n            \"modelId\": \"427d1243-4f89-46e8-8f8f-8424890b5083\",\n            \"label\": \"Empty Test Data Model\",\n            \"version\": \"1.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2021-11-17T15:59:53.41Z\",\n            \"dateCreated\": \"2021-11-17T15:47:53.22Z\",\n            \"datePublished\": \"2021-11-17T15:59:53.047Z\",\n            \"author\": \"MDM CD user\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mauro.datamodel+json\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/427d1243-4f89-46e8-8f8f-8424890b5083/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.2\"\n                },\n                {\n                    \"contentType\": \"application/mauro.datamodel+xml\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/427d1243-4f89-46e8-8f8f-8424890b5083/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.2\"\n                },\n                {\n                    \"contentType\": \"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/427d1243-4f89-46e8-8f8f-8424890b5083/export/uk.ac.ox.softeng.maurodatamapper.plugins.excel.datamodel/ExcelDataModelExporterProviderService/5.3.0-SNAPSHOT\"\n                },\n                {\n                    \"contentType\": \"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/427d1243-4f89-46e8-8f8f-8424890b5083/export/uk.ac.ox.softeng.maurodatamapper.plugins.excel.datamodel/SimpleExcelDataModelExporterProviderService/5.3.0-SNAPSHOT\"\n                },\n                {\n                    \"contentType\": \"application/fhir+json\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/427d1243-4f89-46e8-8f8f-8424890b5083/export/uk.ac.ox.softeng.maurodatamapper.plugins.fhir.datamodel/FhirDataModelExporterProviderService/2.3.0-SNAPSHOT\"\n                },\n                {\n                    \"contentType\": \"application/xml\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/427d1243-4f89-46e8-8f8f-8424890b5083/export/uk.ac.ox.softeng.maurodatamapper.plugins.xsd.datamodel.provider.exporter/XsdExporterProviderService/1.3.0-SNAPSHOT\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"70219dfc-2649-4bda-8e37-d90c26e8c3c9\",\n            \"label\": \"Sophia Test\",\n            \"version\": \"1.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2022-01-25T17:30:26.976Z\",\n            \"dateCreated\": \"2022-01-25T17:30:18.723Z\",\n            \"datePublished\": \"2022-01-25T17:30:26.817Z\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mauro.datamodel+json\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/70219dfc-2649-4bda-8e37-d90c26e8c3c9/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.2\"\n                },\n                {\n                    \"contentType\": \"application/mauro.datamodel+xml\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/70219dfc-2649-4bda-8e37-d90c26e8c3c9/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.2\"\n                },\n                {\n                    \"contentType\": \"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/70219dfc-2649-4bda-8e37-d90c26e8c3c9/export/uk.ac.ox.softeng.maurodatamapper.plugins.excel.datamodel/ExcelDataModelExporterProviderService/5.3.0-SNAPSHOT\"\n                },\n                {\n                    \"contentType\": \"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/70219dfc-2649-4bda-8e37-d90c26e8c3c9/export/uk.ac.ox.softeng.maurodatamapper.plugins.excel.datamodel/SimpleExcelDataModelExporterProviderService/5.3.0-SNAPSHOT\"\n                },\n                {\n                    \"contentType\": \"application/fhir+json\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/70219dfc-2649-4bda-8e37-d90c26e8c3c9/export/uk.ac.ox.softeng.maurodatamapper.plugins.fhir.datamodel/FhirDataModelExporterProviderService/2.3.0-SNAPSHOT\"\n                },\n                {\n                    \"contentType\": \"application/xml\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/70219dfc-2649-4bda-8e37-d90c26e8c3c9/export/uk.ac.ox.softeng.maurodatamapper.plugins.xsd.datamodel.provider.exporter/XsdExporterProviderService/1.3.0-SNAPSHOT\"\n                }\n            ]\n        },\n        {\n            \"modelId\": \"89e71829-5a9c-44ab-a6da-e2cd3969772c\",\n            \"label\": \"Test model\",\n            \"version\": \"1.0.0\",\n            \"modelType\": \"DataModel\",\n            \"lastUpdated\": \"2021-12-13T10:34:16.571Z\",\n            \"dateCreated\": \"2021-12-13T10:34:05.279Z\",\n            \"datePublished\": \"2021-12-13T10:34:16.362Z\",\n            \"links\": [\n                {\n                    \"contentType\": \"application/mauro.datamodel+json\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/89e71829-5a9c-44ab-a6da-e2cd3969772c/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelJsonExporterService/3.2\"\n                },\n                {\n                    \"contentType\": \"application/mauro.datamodel+xml\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/89e71829-5a9c-44ab-a6da-e2cd3969772c/export/uk.ac.ox.softeng.maurodatamapper.datamodel.provider.exporter/DataModelXmlExporterService/5.2\"\n                },\n                {\n                    \"contentType\": \"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/89e71829-5a9c-44ab-a6da-e2cd3969772c/export/uk.ac.ox.softeng.maurodatamapper.plugins.excel.datamodel/ExcelDataModelExporterProviderService/5.3.0-SNAPSHOT\"\n                },\n                {\n                    \"contentType\": \"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/89e71829-5a9c-44ab-a6da-e2cd3969772c/export/uk.ac.ox.softeng.maurodatamapper.plugins.excel.datamodel/SimpleExcelDataModelExporterProviderService/5.3.0-SNAPSHOT\"\n                },\n                {\n                    \"contentType\": \"application/fhir+json\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/89e71829-5a9c-44ab-a6da-e2cd3969772c/export/uk.ac.ox.softeng.maurodatamapper.plugins.fhir.datamodel/FhirDataModelExporterProviderService/2.3.0-SNAPSHOT\"\n                },\n                {\n                    \"contentType\": \"application/xml\",\n                    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/dataModels/89e71829-5a9c-44ab-a6da-e2cd3969772c/export/uk.ac.ox.softeng.maurodatamapper.plugins.xsd.datamodel.provider.exporter/XsdExporterProviderService/1.3.0-SNAPSHOT\"\n                }\n            ]\n        }\n    ]\n}"
+										}
+									]
 								},
 								{
 									"name": "List all newer published models for a subscribed catalogue published model",
@@ -50214,7 +50268,7 @@
 	],
 	"variable": [
 		{
-			"id": "6d42c609-e92e-470d-949d-1923c2f1918b",
+			"id": "f461cd07-a539-4d79-b369-c52365b68476",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
