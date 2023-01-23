@@ -42091,7 +42091,7 @@
 											],
 											"cookie": [],
 											"responseTime": null,
-											"body": "{\n    \"id\": \"2cf9d7f8-9281-4cf8-b280-1002ffdc97fb\",\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/feeds/all\",\n    \"label\": \"molestiae-est-velit\",\n    \"subscribedCatalogueType\": \"Atom\",\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\n    \"description\": \"ducimus laboriosam exercitationem\",\n    \"refreshPeriod\": 206,\n    \"apiKey\": \"f00616a7-c07f-48fe-b6cf-fb99f7076de5\"\n}"
+											"body": "{\n    \"id\": \"2cf9d7f8-9281-4cf8-b280-1002ffdc97fb\",\n    \"url\": \"https://modelcatalogue.cs.ox.ac.uk/continuous-deployment/api/feeds/all\",\n    \"label\": \"molestiae-est-velit\",\n    \"subscribedCatalogueType\": \"Atom\",\n    \"subscribedCatalogueAuthenticationType\": \"API Key\",\n    \"description\": \"ducimus laboriosam exercitationem\",\n    \"refreshPeriod\": 206,\n    \"apiKey\": \"{{api_key_id}}\"\n}"
 										},
 										{
 											"id": "fa665208-a3b3-48b0-bdc0-9fee0254fccd",
@@ -50268,7 +50268,7 @@
 	],
 	"variable": [
 		{
-			"id": "92218fd7-5266-4c7a-8f86-1bbe1fe8adda",
+			"id": "ae27ba35-2448-416b-b2ed-ed9510ffa14b",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
