@@ -42195,7 +42195,7 @@
 											"header": null,
 											"cookie": [],
 											"responseTime": null,
-											"body": null
+											"body": "{\n    \"id\": \"09b56be4-52c3-43d7-8b98-0e41c8918b2a\",\n    \"url\": \"https://ontology.nhs.uk/production1/synd/syndication.xml\",\n    \"label\": \"dolorem-velit-non\",\n    \"subscribedCatalogueType\": \"Atom\",\n    \"subscribedCatalogueAuthenticationType\": \"OAuth (Client Credentials)\",\n    \"description\": \"quia vel non\",\n    \"refreshPeriod\": 789,\n    \"tokenUrl\": \"https://ontology.nhs.uk/authorisation/auth/realms/nhs-digital-terminology/protocol/openid-connect/token\",\n    \"clientId\": \"{{client_id}}\",\n    \"clientSecret\": \"{{client_secret}}\"\n}"
 										}
 									]
 								},
@@ -50210,7 +50210,7 @@
 	],
 	"variable": [
 		{
-			"id": "f835d779-2467-4bea-a430-e08770e98ae3",
+			"id": "55c944cb-b2a1-4899-aa72-cd3f3c80caaf",
 			"key": "base_url",
 			"value": "http://localhost/api",
 			"type": "string"
